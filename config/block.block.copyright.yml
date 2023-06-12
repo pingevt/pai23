@@ -1,0 +1,22 @@
+uuid: 097bef85-3f91-4d7e-8745-a6dcb1279d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.copyright
+  module:
+    - simple_block
+  theme:
+    - pai
+id: copyright
+theme: pai
+region: footer
+weight: 0
+provider: null
+plugin: 'simple_block:copyright'
+settings:
+  id: 'simple_block:copyright'
+  label: Copyright
+  label_display: '0'
+  provider: simple_block
+visibility: {  }

@@ -1,0 +1,9 @@
+name: PAI - Utility
+description: Random funcs and methods to assist in the site.
+package: PAI
+
+type: module
+core_version_requirement: ^10
+
+version: 1.0.0
+

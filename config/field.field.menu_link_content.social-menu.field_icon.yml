@@ -1,0 +1,29 @@
+uuid: 6cd21271-dbe4-455c-adcf-af15be851c11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_icon
+    - system.menu.social-menu
+    - taxonomy.vocabulary.icons
+id: menu_link_content.social-menu.field_icon
+field_name: field_icon
+entity_type: menu_link_content
+bundle: social-menu
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      icons: icons
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

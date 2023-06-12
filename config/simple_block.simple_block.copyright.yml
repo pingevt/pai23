@@ -1,0 +1,11 @@
+uuid: 364a8054-2ee2-4a53-8c39-50cdfdece2e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: copyright
+title: Copyright
+content:
+  value: '<p>©[current-date:custom:Y] Pete Inge</p>'
+  format: full_html

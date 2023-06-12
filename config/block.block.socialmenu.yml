@@ -1,0 +1,25 @@
+uuid: 205679bd-095d-482b-bbf4-bede185affb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-menu
+  module:
+    - system
+  theme:
+    - pai
+id: socialmenu
+theme: pai
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:social-menu'
+settings:
+  id: 'system_menu_block:social-menu'
+  label: 'Social Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

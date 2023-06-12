@@ -1,0 +1,27 @@
+uuid: 75ef9e05-1d92-4a56-a379-956899a3998b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.social-menu.field_icon
+    - system.menu.social-menu
+id: menu_link_content.social-menu.default
+targetEntityType: menu_link_content
+bundle: social-menu
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: icon
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

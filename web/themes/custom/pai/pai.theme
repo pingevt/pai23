@@ -5,9 +5,29 @@
  * Theming functionality for PAI Theme.
  */
 
+use Drupal\Core\Render\Markup;
+
 /**
  * Implements hook_preprocess_region().
  */
 function pai_preprocess_region(&$variables) {
   $variables['attributes']['class'][] = "region--" . $variables['elements']['#region'];
+}
+
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function pai_preprocess_menu(array &$variables) {
+  if ($variables['menu_name'] == 'social-menu') {
+    foreach ($variables['items'] as $idx => &$item) {
+      $menu_entity = $item['entity'];
+      $icon_field = $menu_entity->get('field_icon');
+      $variables['items'][$idx]['icon'] = Markup::create($icon_field->entity->field_svg_data->value);
+
+      $item['url']->mergeOptions([
+        'attributes' => [],
+      ]);
+    }
+  }
 }

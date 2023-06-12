@@ -1,0 +1,36 @@
+uuid: a9d3e3b3-49ea-4521-a33b-25013d07784d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.social-menu.field_icon
+    - system.menu.social-menu
+  module:
+    - link
+    - menu_item_extras
+id: menu_link_content.social-menu.default
+targetEntityType: menu_link_content
+bundle: social-menu
+mode: default
+content:
+  field_icon:
+    type: options_select
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    type: menu_item_extras_view_mode_selector_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

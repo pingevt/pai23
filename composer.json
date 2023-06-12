@@ -55,7 +55,8 @@
         "drupal/metatag": "^1.25",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/highlightjs_input_filter": "^1.0",
-        "drupal/recreate_block_content": "^3.0"
+        "drupal/recreate_block_content": "^3.0",
+        "drupal/menu_item_extras": "^3.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
