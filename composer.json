@@ -20,7 +20,36 @@
         "drupal/core-recommended": "^10",
         "pantheon-systems/drupal-integrations": "^10",
         "cweagans/composer-patches": "^1.7",
-        "drush/drush": "^11 || ^12"
+        "drush/drush": "^11 || ^12",
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/config_devel": "^1.9",
+        "drupal/config_direct_save": "^3.0",
+        "drupal/config_filter": "^2.4",
+        "drupal/crop": "^2.3",
+        "drupal/devel": "^5.1",
+        "drupal/devel_kint_extras": "^1.1",
+        "drupal/devel_php": "^1.5",
+        "drupal/diff": "^1.1",
+        "drupal/focal_point": "^2.0",
+        "drupal/google_tag": "^2.0",
+        "drupal/imagick": "^1.6",
+        "drupal/key": "^1.17",
+        "drupal/key_auth": "^2.1",
+        "drupal/key_value_field": "^1.3",
+        "drupal/pantheon_advanced_page_cache": "^2.1",
+        "drupal/paragraphs": "^1.15",
+        "drupal/pathauto": "^1.11",
+        "drupal/redirect": "^1.8",
+        "drupal/redis": "^1.7",
+        "drupal/search_api": "^1.29",
+        "drupal/search_api_pantheon": "^8.1",
+        "drupal/search_api_solr": "^4.2",
+        "drupal/simple_block": "^1.4",
+        "drupal/token": "^1.11",
+        "drupal/token_filter": "^2.0",
+        "drupal/viewsreference": "^1.8",
+        "pingevt/timing_monitor": "^1.0@alpha",
+        "joachim-n/composer-manifest": "^1.1"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -28,7 +57,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
@@ -78,7 +107,9 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "oomphinc/composer-installers-extender": true,
+            "joachim-n/composer-manifest": true
         }
     }
 }
