@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.article.field_content
+    - field.field.node.article.field_featured_media
     - field.field.node.article.field_tags
     - field.field.node.article.field_tech
     - node.type.article
@@ -43,4 +44,5 @@ content:
     weight: 2
     region: content
 hidden:
+  field_featured_media: true
   links: true

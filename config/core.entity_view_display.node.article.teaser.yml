@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.field_content
+    - field.field.node.article.field_featured_media
     - field.field.node.article.field_tags
     - field.field.node.article.field_tech
     - node.type.article
@@ -30,5 +31,6 @@ content:
     region: content
 hidden:
   field_content: true
+  field_featured_media: true
   field_tags: true
   field_tech: true
