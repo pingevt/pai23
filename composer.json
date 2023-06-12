@@ -49,7 +49,9 @@
         "drupal/token_filter": "^2.0",
         "drupal/viewsreference": "^1.8",
         "pingevt/timing_monitor": "^1.0@alpha",
-        "joachim-n/composer-manifest": "^1.1"
+        "joachim-n/composer-manifest": "^1.1",
+        "drupal/gin": "^3.0@RC",
+        "drupal/gin_login": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

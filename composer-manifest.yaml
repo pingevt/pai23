@@ -50,6 +50,9 @@ packages:
     drupal/diff: 1.1.0
     drupal/entity_reference_revisions: 1.10.0
     drupal/focal_point: 2.0.0
+    drupal/gin: 3.0.0-rc3
+    drupal/gin_login: 2.0.2
+    drupal/gin_toolbar: 1.0.0-rc1
     drupal/google_tag: 2.0.2
     drupal/imagick: 1.6.0
     drupal/jquery_ui: 1.6.0
