@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.page
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.view_reference
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - entity_reference_revisions
@@ -23,9 +25,17 @@ settings:
   handler_settings:
     target_bundles:
       wysiwyg: wysiwyg
+      view_reference: view_reference
+      from_library: from_library
     negate: 0
     target_bundles_drag_drop:
+      from_library:
+        weight: -5
+        enabled: true
+      view_reference:
+        weight: -6
+        enabled: true
       wysiwyg:
-        weight: 2
+        weight: -7
         enabled: true
 field_type: entity_reference_revisions

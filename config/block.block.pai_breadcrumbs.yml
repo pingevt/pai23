@@ -1,6 +1,6 @@
 uuid: 8160c6bb-df6e-4347-8bd7-6cb7db4c2888
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
 id: pai_breadcrumbs
 theme: pai
-region: breadcrumb
-weight: 0
+region: header
+weight: -3
 provider: null
 plugin: system_breadcrumb_block
 settings:

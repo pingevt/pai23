@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.rss
     - field.field.node.article.field_content
     - field.field.node.article.field_featured_media
+    - field.field.node.article.field_short_description
+    - field.field.node.article.field_subtitle
     - field.field.node.article.field_tags
     - field.field.node.article.field_tech
     - node.type.article
@@ -24,5 +26,7 @@ content:
 hidden:
   field_content: true
   field_featured_media: true
+  field_short_description: true
+  field_subtitle: true
   field_tags: true
   field_tech: true

@@ -11,7 +11,7 @@ _core:
 id: pai_site_branding
 theme: pai
 region: header
-weight: -5
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:

@@ -5,11 +5,14 @@ dependencies:
   config:
     - field.field.node.article.field_content
     - field.field.node.article.field_featured_media
+    - field.field.node.article.field_short_description
+    - field.field.node.article.field_subtitle
     - field.field.node.article.field_tags
     - field.field.node.article.field_tech
     - node.type.article
   module:
     - entity_reference_revisions
+    - text
     - user
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
@@ -25,6 +28,21 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_short_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 0
     region: content
   field_tags:
@@ -33,7 +51,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_tech:
     type: entity_reference_label
@@ -41,7 +59,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   field_featured_media: true
