@@ -1,0 +1,22 @@
+uuid: c013182d-d53f-430c-9eb5-cd5bf6447561
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - pai
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: pai_help
+theme: pai
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

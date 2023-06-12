@@ -1,0 +1,29 @@
+uuid: f94892be-99ef-4c22-97de-d0469fb16edd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tech
+    - node.type.article
+    - taxonomy.vocabulary.tech
+id: node.article.field_tech
+field_name: field_tech
+entity_type: node
+bundle: article
+label: Tech
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tech: tech
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: tags
+field_type: entity_reference

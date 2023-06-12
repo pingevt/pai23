@@ -1,0 +1,10 @@
+uuid: 6009347a-4883-4c80-bfb9-f9b040c3e750
+langcode: en
+status: true
+dependencies: {  }
+id: wysiwyg
+label: WYSIWYG
+icon_uuid: null
+icon_default: null
+description: 'Text field'
+behavior_plugins: {  }

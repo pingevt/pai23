@@ -1,0 +1,34 @@
+uuid: 98084480-b942-43d1-a6d5-5c9510952ae0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.field_content
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_tech
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_content: true
+  field_tags: true
+  field_tech: true

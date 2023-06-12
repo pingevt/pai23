@@ -1,0 +1,24 @@
+uuid: 7710de55-f71d-4ac9-ba35-16f62af82c0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - filter
+    - media
+    - shortcut
+    - system
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'view media'

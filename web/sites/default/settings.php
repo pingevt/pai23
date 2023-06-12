@@ -17,6 +17,11 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 include __DIR__ . "/settings.pantheon.php";
 
 /**
+ * Place the config directory outside of the Drupal root.
+ */
+$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
+
+/**
  * Skipping permissions hardening will make scaffolding
  * work better, but will also raise a warning when you
  * install Drupal.
