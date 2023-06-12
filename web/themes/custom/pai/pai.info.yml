@@ -1,0 +1,32 @@
+name: Pete Inge the theme
+type: theme
+description: A theme for Drupal 10
+base theme: stable9
+
+libraries:
+  - pai/global-css
+  - pai/global-js
+
+regions:
+  header: 'Header'
+  mobile_header: 'Mobile Header'
+  page_top: 'Page Top'
+  page_bottom: 'Page Bottom'
+  breadcrumb: 'Breadcrumb'
+  admin_tabs: 'Admin Tabs'
+  messages: 'Admin Messages'
+  content: 'Content'
+  promo_footer: 'Promo Footer'
+  footer: 'Footer'
+  sub_footer: 'Sub-Footer'
+
+ckeditor5-stylesheets:
+  - assets/dist/css/editor5.css
+
+
+
+version: '1.0.0'
+core_version_requirement: ^9 || ^10
+
+
+dependencies:
