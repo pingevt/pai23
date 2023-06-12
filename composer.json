@@ -51,7 +51,8 @@
         "pingevt/timing_monitor": "^1.0@alpha",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_login": "^2.0",
-        "drupal/layout_paragraphs": "^2.0"
+        "drupal/layout_paragraphs": "^2.0",
+        "drupal/metatag": "^1.25"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
