@@ -1,3 +1,38 @@
 # Put overrides to your pantheon.upstream.yml file here.
 # For more information, see: https://pantheon.io/docs/pantheon-yml/
 api_version: 1
+web_docroot: true
+enforce_https: transitional
+php_version: 8.2
+database:
+  version: 10.4
+drush_version: 10
+build_step: true
+workflows:
+  # deploy_product:         #create site
+  sync_code:              #push code to DEV/MULTI-DEV
+    after:
+      -
+        type: webphp
+        description: Import configuration from .yml files
+        script: private/drush_config_import.php
+      # -
+      #   type: webphp
+      #   description: Log to New Relic
+      #   script: private/new_relic_deploy.php
+  deploy:                 #push code to TEST/LIVE
+    after:
+      -
+        type: webphp
+        description: Import configuration from .yml files
+        script: private/drush_config_import.php
+      # -
+      #   type: webphp
+      #   description: Log to New Relic
+      #   script: private/new_relic_deploy.php
+  clone_database:
+    after:                 #clone DB from one env to another
+      -
+        type: webphp
+        description: Import configuration from .yml files
+        script: private/drush_config_import.php
