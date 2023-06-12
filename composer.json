@@ -52,7 +52,8 @@
         "drupal/gin": "^3.0@RC",
         "drupal/gin_login": "^2.0",
         "drupal/layout_paragraphs": "^2.0",
-        "drupal/metatag": "^1.25"
+        "drupal/metatag": "^1.25",
+        "drupal/entity_usage": "^2.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
