@@ -1,0 +1,12 @@
+footer {
+  background-color: var(--c-gray);
+  margin-top: 3rem;
+  border-top: 6px solid var(--c-red);
+  padding: 2rem 0 4rem;
+
+  .region--footer {
+    max-width: $content-container;
+    margin: 0 auto;
+  }
+
+}

@@ -39,6 +39,7 @@ $breakpoints: (
   /* Colors - secondary */
   --c-black: #000;
   --c-white: #fff;
+  --c-gray: #eeeeee;
 
   /* Fonts */
   --f-sans: "Open Sans", sans-serif;

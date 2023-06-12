@@ -1,0 +1,9 @@
+main {
+  min-height: 65vh;
+
+  .layout-content {
+    max-width: $content-container;
+    margin: 0 auto;
+  }
+}
+

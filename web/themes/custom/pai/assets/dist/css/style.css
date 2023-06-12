@@ -157,6 +157,7 @@ acronym[title]{
   --c-red:#993333;
   --c-black:#000;
   --c-white:#fff;
+  --c-gray:#eeeeee;
   --f-sans:"Open Sans", sans-serif;
   --f-serif:Georgia, serif;
   --cubic-basic:cubic-bezier(0.55, 0.085, 0, 0.99);
@@ -712,5 +713,25 @@ header nav ul:not(.contextual-links) li{
 header nav ul:not(.contextual-links) li:last-child{
           margin-right:0;
         }
+main{
+  min-height:65vh;
+}
+main .layout-content{
+    max-width:1600px;
+    margin:0 auto;
+  }
+footer{
+  background-color:#eeeeee;
+  background-color:var(--c-gray);
+  margin-top:3rem;
+  border-top:6px solid #993333;
+  border-top:6px solid var(--c-red);
+  padding:2rem 0 4rem;
+
+}
+footer .region--footer{
+    max-width:1600px;
+    margin:0 auto;
+  }
 
 /*# sourceMappingURL=style.css.map */
