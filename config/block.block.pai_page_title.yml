@@ -8,8 +8,8 @@ _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
 id: pai_page_title
 theme: pai
-region: header
-weight: -5
+region: content
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

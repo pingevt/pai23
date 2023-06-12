@@ -8,8 +8,8 @@ _core:
   default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
 id: pai_primary_local_tasks
 theme: pai
-region: header
-weight: -4
+region: admin_tabs
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

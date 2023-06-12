@@ -4,3 +4,10 @@
  * @file
  * Theming functionality for PAI Theme.
  */
+
+/**
+ * Implements hook_preprocess_region().
+ */
+function pai_preprocess_region(&$variables) {
+  $variables['attributes']['class'][] = "region--" . $variables['elements']['#region'];
+}

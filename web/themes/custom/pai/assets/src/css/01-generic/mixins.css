@@ -1,0 +1,414 @@
+/* ========================================
+  Typography
+=========================================== */
+/**
+  Headings
+*/
+@mixin f-title--h1 {
+  font-family: var(--f-serif);
+  font-size: 42px;
+  line-height: 105%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 52px;
+    line-height: 98%;
+  }
+
+  @media (--lg) {
+    font-size: 65px;
+  }
+}
+
+@mixin f-title--h2 {
+  font-family: var(--f-serif);
+  font-size: 38px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 38px;
+    line-height: 105%;
+  }
+
+  @media (--lg) {
+    font-size: 52px;
+    line-height: 105%;
+  }
+}
+
+@mixin f-title--h3 {
+  font-family: var(--f-serif);
+  font-size: 34px;
+  line-height: 105%;
+  font-weight: 300;
+
+  @media (--sm) {
+    font-size: 42px;
+  }
+}
+
+@mixin f-title--h3-serif {
+  font-family: var(--f-serif);
+  font-size: 34px;
+  line-height: 105%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 44px;
+    line-height: 1.2;
+  }
+}
+
+@mixin f-title--h4 {
+  font-family: var(--f-serif);
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 28px;
+  }
+}
+
+@mixin f-title--h4-sans {
+  @include f-title--h4;
+  font-family: var(--f-sans);
+  font-weight: 700;
+}
+
+@mixin f-title--h5 {
+  font-family: var(--f-serif);
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+
+@mixin f-title--h5-sans {
+  font-family: var(--f-sans);
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 700;
+
+  @media (--sm) {
+    font-size: 23px;
+    line-height: 130%;
+  }
+}
+
+@mixin f-title--h6 {
+  font-family: var(--f-sans);
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 700;
+
+  @media (--sm) {
+    font-size: 19px;
+    line-height: 130%;
+  }
+}
+
+/**
+  Subhead
+*/
+@mixin f-title--subhead {
+  font-family: var(--f-sans);
+  font-size: 17.5px;
+  line-height: 155%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 22px;
+    line-height: 150%;
+  }
+
+  @media (--lg) {
+    font-size: 22px;
+    line-height: 150%;
+  }
+}
+
+/**
+  Body copy
+*/
+
+@mixin f-text--body {
+  /** Body Regular in the style guide */
+  font-family: var(--f-sans);
+  font-size: 15px;
+  line-height: 165%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 17px;
+    line-height: 170%;
+  }
+}
+
+@mixin f-text--body-serif {
+  /** Body Regular Serif in the style guide */
+  font-family: var(--f-serif);
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 21px;
+  }
+}
+
+@mixin f-text--body-small {
+  /** Body Small in the style guide */
+  font-family: var(--f-sans);
+  font-size: 13px;
+  line-height: 150%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+
+@mixin f-text--body-small-serif {
+  /** Body Small Serif in the style guide */
+  font-family: var(--f-serif);
+  font-size: 15px;
+  line-height: 19.5px;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 16px;
+    line-height: 135%;
+  }
+}
+
+/**
+  CTAs
+*/
+@mixin f-text--main-cta {
+  font-family: var(--f-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+
+  @media (--sm) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@mixin f-text--cta-all-caps {
+  font-family: var(--f-sans);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (--sm) {
+    /* No change on desktop */
+  }
+}
+
+@mixin f-text--small-cta {
+  font-family: var(--f-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+
+  @media (--sm) {
+    /* No change on desktop */
+  }
+}
+
+/**
+  Eyebrows
+*/
+@mixin f-text--eyebrow {
+  font-family: var(--f-sans);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (--sm) {
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.05em;
+  }
+}
+
+@mixin f-text--card-eyebrow {
+  font-family: var(--f-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @media (--sm) {
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+  }
+}
+
+/**
+  Pull Quotes
+*/
+@mixin f-text--pull-quote {
+  font-family: var(--f-serif);
+  font-size: 21px;
+  line-height: 120%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 32px;
+    line-height: 135%;
+  }
+}
+
+@mixin f-text--pull-quote-credit {
+  font-family: var(--f-sans);
+  font-size: 13px;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: italic;
+
+  @media (--sm) {
+    font-size: 14px;
+  }
+}
+
+/**
+  Caption
+*/
+@mixin f-text--caption {
+  font-family: var(--f-sans);
+  font-size: 11px;
+  line-height: 130%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 12px;
+    line-height: 125%;
+  }
+}
+
+@mixin f-text--caption-italic {
+  @include f-text--caption;
+  font-style: italic;
+}
+
+/**
+  Breadcrumbs
+*/
+@mixin f-text--breadcrumb {
+  font-family: var(--f-sans);
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 600;
+
+  @media (--sm) {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+  }
+}
+
+/**
+  Metadata
+*/
+@mixin f-text--metadata {
+  font-family: var(--f-sans);
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 12px;
+  }
+}
+
+/**
+  Miscellaneous
+*/
+@mixin f-text--megamenu-header {
+  font-family: var(--f-serif);
+  font-size: 28px;
+  line-height: 110%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 36px;
+  }
+
+  @media (--md) {
+    font-size: 41px;
+  }
+}
+
+@mixin f-text--search-result {
+  font-family: var(--f-sans);
+  font-size: 22px;
+  line-height: 130%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+
+@mixin f-text--megamenu-subhead {
+  font-family: var(--f-serif);
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+
+  @media (--sm) {
+    font-size: 28px;
+    line-height: 120%;
+  }
+}
+
+@mixin f-text--person-list-name {
+  font-family: var(--f-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+
+  @media (--sm) {
+    /* No change on desktop */
+  }
+}
+
+@mixin f-text--program-card-text {
+  font-family: var(--f-sans);
+  font-size: 13px;
+  line-height: 140%;
+  font-weight: 400;
+
+  @media (--sm) {
+    /* No change on desktop */
+  }
+}
+
+@mixin f-text--program-table-iteration {
+  font-family: var(--f-sans);
+  font-size: 12px;
+  line-height: 140%;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  @media (--sm) {
+    line-height: 150%;
+  }
+}

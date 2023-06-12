@@ -1,0 +1,64 @@
+$content-container: 1600px;
+
+$breakpoints: (
+  xxs: 385px;
+  xs: 480px,
+  xs-sm: 620px,
+  sm: 750px,
+  sm-md: 950px,
+  md: 1100px,
+  lg: 1280px,
+  xl: 1728px,
+  xxl: 1920px
+);
+
+/* Media Queries */
+/* WARNING: this -must- be manually updated to mirror the $breakpoints var above. The @custom-media plugin doesn't support vars */
+@custom-media --xxs   (min-width: 385px);
+@custom-media --xs    (min-width: 480px);
+@custom-media --xs-sm (min-width: 620px);
+@custom-media --sm    (min-width: 750px);
+@custom-media --sm-md (min-width: 950px);
+@custom-media --md    (min-width: 1100px);
+@custom-media --lg    (min-width: 1280px);
+@custom-media --xl    (min-width: 1728px);
+@custom-media --xxl   (min-width: 1920px);
+
+/* CSS Variables */
+:root {
+  /* Colors - primary */
+  /* --c-crimson: #a51c30;
+  --c-charcoal: #565656;
+  --c-midnight-blue: #213153;
+  --c-dark-aqua: #006072;
+  --c-cornflower-blue: #185C90;
+  --c-mortar: #6E6259; */
+
+  --c-red: #993333;
+
+  /* Colors - secondary */
+  --c-black: #000;
+  --c-white: #fff;
+
+  /* Fonts */
+  --f-sans: "Open Sans", sans-serif;
+  --f-serif: Georgia, serif;
+
+  /* Grid */
+  /* --grid-gutter: 20px;
+  --grid-margin-mobile: 20px;
+  --grid-margin: 30px;
+  --grid-margin-desktop: 5vw;
+  --content-max-width: 1600px;
+  --fw-grid-first-padding: calc((100vw - var(--content-max-width)) / 2);
+  --column-content-max-width: var(--content-max-width) / 12;
+  --max-width-padding: calc(
+    (100vw - (var(--content-max-width) - (var(--grid-gutter) * 2))) / 2
+  ); */
+
+    /* Misc */
+  --cubic-basic: cubic-bezier(0.55, 0.085, 0, 0.99);
+  --cubic-move: cubic-bezier(0.55, 0.085, 0, 0.99);
+  --cubic-slide: cubic-bezier(0.09, 0.41, 0.25, 1);
+  --basic-transition: 0.24s var(--cubic-basic);
+}

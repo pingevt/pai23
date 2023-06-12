@@ -1,0 +1,10 @@
+svg.logo {
+  path {
+    fill: var(--c-black);
+
+    &.circle {
+      fill: var(--c-red);
+
+    }
+  }
+}

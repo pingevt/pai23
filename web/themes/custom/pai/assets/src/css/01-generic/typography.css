@@ -1,0 +1,39 @@
+.f-title--h1 { @include f-title--h1; }
+.f-title--h2 { @include f-title--h2; }
+.f-title--h3 { @include f-title--h3; }
+.f-title--h3-serif { @include f-title--h3-serif; }
+.f-title--h4 { @include f-title--h4; }
+.f-title--h5 { @include f-title--h5; }
+.f-title--h5-sans { @include f-title--h5-sans; }
+.f-title--h6 { @include f-title--h6; }
+
+.f-title--subhead { @include f-title--subhead; }
+.f-title--homepage-subhead { @include f-title--subhead; }
+
+.f-text--body { @include f-text--body; }
+.f-text--body-serif { @include f-text--body-serif; }
+.f-text--body-small { @include f-text--body-small; }
+.f-text--body-small-serif { @include f-text--body-small-serif; }
+
+.f-text--main-cta { @include f-text--main-cta; }
+.f-text--small-cta { @include f-text--small-cta; }
+.f-text--cta-all-caps { @include f-text--cta-all-caps; }
+
+.f-text--eyebrow { @include f-text--eyebrow; }
+.f-text--card-eyebrow { @include f-text--card-eyebrow; }
+
+.f-text--pull-quote { @include f-text--pull-quote; }
+.f-text--pull-quote-credit { @include f-text--pull-quote-credit; }
+
+.f-text--caption { @include f-text--caption; }
+.f-text--caption-italic { @include f-text--caption-italic; }
+
+.f-text--breadcrumb { @include f-text--breadcrumb; }
+.f-text--metadata { @include f-text--metadata; }
+
+.f-text--megamenu-header { @include f-text--megamenu-header; }
+.f-text--megamenu-subhead { @include f-text--megamenu-subhead; }
+.f-text--person-list-name { @include f-text--person-list-name; }
+.f-text--program-card-text { @include f-text--program-card-text; }
+.f-text--program-table-iteration { @include f-text--program-table-iteration; }
+.f-text--search-result { @include f-text--search-result; }
