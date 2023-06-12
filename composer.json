@@ -98,8 +98,16 @@
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
     },
     "scripts": {
+        "post-install-cmd": [
+            "rm -f web/.eslintrc.json",
+            "rm -f web/core/.eslintrc.json"
+        ],
         "pre-update-cmd": ["DrupalComposerManaged\\ComposerScripts::preUpdate"],
-        "post-update-cmd": ["DrupalComposerManaged\\ComposerScripts::postUpdate"]
+        "post-update-cmd": [
+            "DrupalComposerManaged\\ComposerScripts::postUpdate",
+            "rm -f web/.eslintrc.json",
+            "rm -f web/core/.eslintrc.json"
+        ]
     },
     "config": {
         "preferred-install": "dist",

@@ -97,3 +97,14 @@
 
 # Ignore .env files as they are personal
 #/.env
+
+# BC Cadet
+.cadet
+/node_modules
+/stats/build-log.json
+.DS_Store
+
+.vscode
+.nova
+.local-gulpconfig.json
+bldrConfigLocal.js
