@@ -1,0 +1,45 @@
+{
+  "short_name": "Pete Inge",
+  "name": "Pete Inge",
+  "icons": [
+    {
+      "src": "/themes/custom/pai/assets/dist/images/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/themes/custom/pai/assets/dist/images/icon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/themes/custom/pai/assets/dist/images/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/themes/custom/pai/assets/dist/images/icon-180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/themes/custom/pai/assets/dist/images/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/themes/custom/pai/assets/dist/images/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#993333",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#993333",
+  "shortcuts": [],
+  "description": "",
+  "screenshots": []
+}

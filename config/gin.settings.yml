@@ -1,7 +1,9 @@
 _core:
   default_config_hash: UvSCt3S_NldJPFzvhSNOy9vWoPPFhmsmTC12vtVss9s
 favicon:
-  use_default: true
+  mimetype: image/vnd.microsoft.icon
+  path: 'public://ADMIN.ico'
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true

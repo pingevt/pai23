@@ -58,7 +58,7 @@ const paiThemeConfig = {
   //   watch: [`${utilityBaseSrcPath}/js/**/*.js`],
   }],
   images: {
-    src: `${baseSrcPath}/images/*.{jpg,JPG,jpeg,JPEG,gif,png,svg}`,
+    src: `${baseSrcPath}/images/*.{jpg,JPG,jpeg,JPEG,gif,png,svg,ico}`,
     dest: `${baseDestPath}/images/`,
     watch: [`${baseSrcPath}/images/**/*`],
   },
