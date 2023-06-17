@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.article.field_content
+    - field.field.node.article.field_display_title
     - field.field.node.article.field_featured_media
     - field.field.node.article.field_related_articles
     - field.field.node.article.field_short_description
@@ -29,17 +30,9 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
-  field_related_articles:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_subtitle:
+  field_display_title:
     type: string
     label: hidden
     settings:
@@ -47,13 +40,29 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_related_articles:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_tech:
     type: entity_reference_label
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   field_featured_media: true

@@ -14,7 +14,6 @@ function pai_preprocess_region(&$variables) {
   $variables['attributes']['class'][] = "region--" . $variables['elements']['#region'];
 }
 
-
 /**
  * Implements hook_preprocess_menu().
  */
@@ -28,6 +27,27 @@ function pai_preprocess_menu(array &$variables) {
       $item['url']->mergeOptions([
         'attributes' => [],
       ]);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function pai_preprocess_node(array &$variables) {
+  $node = $variables['elements']['#node'];
+
+  $bundle = $node->bundle();
+
+  if ($node->hasField('field_display_title')) {
+    // Title.
+    $title = $node->label();
+    $display_title = $node->field_display_title->getValue();
+
+    if (!empty($display_title)) {
+      $display_title = current($display_title);
+      $title = preg_replace("/<\\/?p(.|\\s)*?>/", "", $display_title['value']);
+      $variables['label'] = Markup::create($title);
     }
   }
 }
