@@ -1,0 +1,35 @@
+uuid: bc321b61-2924-4e65-a30f-83893297d14a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tech.field_link
+    - taxonomy.vocabulary.tech
+  module:
+    - link
+    - text
+id: taxonomy_term.tech.default
+targetEntityType: taxonomy_term
+bundle: tech
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

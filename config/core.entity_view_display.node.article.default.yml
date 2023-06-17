@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.field_client
     - field.field.node.article.field_content
     - field.field.node.article.field_display_title
     - field.field.node.article.field_featured_media
@@ -22,6 +23,14 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
+  field_client:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_content:
     type: layout_paragraphs
     label: hidden

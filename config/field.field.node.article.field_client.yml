@@ -1,0 +1,29 @@
+uuid: 5eaf335c-ffc8-4419-a5a1-7fb5b36400dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client
+    - node.type.article
+    - taxonomy.vocabulary.clients
+id: node.article.field_client
+field_name: field_client
+entity_type: node
+bundle: article
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      clients: clients
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

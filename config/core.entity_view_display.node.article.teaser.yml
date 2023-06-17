@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.article.field_client
     - field.field.node.article.field_content
     - field.field.node.article.field_display_title
     - field.field.node.article.field_featured_media
@@ -48,6 +49,7 @@ content:
     weight: 1
     region: content
 hidden:
+  field_client: true
   field_content: true
   field_display_title: true
   field_related_articles: true

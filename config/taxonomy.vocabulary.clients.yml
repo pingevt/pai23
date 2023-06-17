@@ -1,0 +1,8 @@
+uuid: f8d66143-d485-41fa-a585-5164dd1dad34
+langcode: en
+status: true
+dependencies: {  }
+name: Clients
+vid: clients
+description: ''
+weight: 0
