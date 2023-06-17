@@ -58,7 +58,8 @@
         "drupal/recreate_block_content": "^3.0",
         "drupal/menu_item_extras": "^3.0",
         "drupal/editoria11y": "^2.0",
-        "drupal/simple_sitemap": "^4.1"
+        "drupal/simple_sitemap": "^4.1",
+        "drupal/node_revision_delete": "^2.0@alpha"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -80,6 +81,9 @@
                 "[project-root]/.gitattributes": false
             }
         },
+        "installer-types": [
+            "custom-drupal-module"
+        ],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
@@ -96,7 +100,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patches": {
+            "drupal/save_edit": {
+                "D10 compatability https://www.drupal.org/project/save_edit/issues/3289467": "https://www.drupal.org/files/issues/2022-06-16/save_edit.1.x-dev.rector.patch"
+            }
+        }
     },
     "autoload": {
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
