@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e025139ea89283f0d424c558f251cabb",
+    "content-hash": "4374fb170ff11efcbfed8c9f8331b7cb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2177,6 +2177,76 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/datalayer",
+            "version": "2.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/datalayer.git",
+                "reference": "2.0.0-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/datalayer-2.0.0-rc1.zip",
+                "reference": "2.0.0-rc1",
+                "shasum": "f7175ba5f77d3f8e601f9ae60e8b2a4572686b6a"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-rc1",
+                    "datestamp": "1673987576",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Lind",
+                    "homepage": "https://www.drupal.org/u/doublejosh",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "blake.thompson",
+                    "homepage": "https://www.drupal.org/user/1803642"
+                },
+                {
+                    "name": "doublejosh",
+                    "homepage": "https://www.drupal.org/user/199720"
+                },
+                {
+                    "name": "eojthebrave",
+                    "homepage": "https://www.drupal.org/user/79230"
+                },
+                {
+                    "name": "josephdpurcell@gmail.com",
+                    "homepage": "https://www.drupal.org/user/2944035"
+                },
+                {
+                    "name": "WidgetsBurritos",
+                    "homepage": "https://www.drupal.org/user/2508346"
+                }
+            ],
+            "description": "Output page meta data for client-side availability.",
+            "homepage": "https://www.drupal.org/project/datalayer",
+            "keywords": [
+                "Data Layer",
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/datalayer",
+                "issues": "https://www.drupal.org/project/issues/datalayer"
             }
         },
         {
@@ -14350,7 +14420,8 @@
         "pingevt/timing_monitor": 15,
         "drupal/gin": 5,
         "drupal/entity_usage": 10,
-        "drupal/node_revision_delete": 15
+        "drupal/node_revision_delete": 15,
+        "drupal/datalayer": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -1,0 +1,27 @@
+uuid: a70e85c6-08a2-4397-960c-d81e48591192
+langcode: en
+status: true
+dependencies: {  }
+id: GTM-WZQ8RB4.648de8fea2c9c3.60680924
+label: GTM-WZQ8RB4
+weight: 0
+tag_container_ids:
+  - GTM-WZQ8RB4
+advanced_settings:
+  gtm:
+    data_layer: dataLayer
+    include_classes: false
+    allowlist_classes: ''
+    blocklist_classes: ''
+    include_environment: false
+    environment_id: ''
+    environment_token: ''
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  search: {  }
+  custom: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS

@@ -75,7 +75,8 @@
         "drupal/dropzonejs": "^2.8",
         "enyo/dropzone": "^5.7",
         "drupal/entity_browser": "^2.9",
-        "drupal/media_bulk_upload": "^3.0"
+        "drupal/media_bulk_upload": "^3.0",
+        "drupal/datalayer": "^2.0@RC"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
