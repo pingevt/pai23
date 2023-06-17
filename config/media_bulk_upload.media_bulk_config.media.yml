@@ -1,0 +1,16 @@
+uuid: 0d5d29e9-c2dd-4997-bf91-54909a3cce67
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: 'Media Bulk upload'
+media_types:
+  audio: audio
+  document: document
+  image: image
+  video: video
+  remote_video: 0
+form_mode: default
+upload_location: 'public://tmp_media'
+show_alt: null
+show_title: null

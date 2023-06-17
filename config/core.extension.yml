@@ -19,9 +19,12 @@ module:
   devel_kint_extras: 0
   devel_php: 0
   diff: 0
+  dropzonejs: 0
+  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
   editoria11y: 0
+  entity_browser: 0
   entity_reference_revisions: 0
   entity_usage: 0
   field: 0
@@ -44,6 +47,7 @@ module:
   layout_paragraphs_library: 0
   link: 0
   media: 0
+  media_bulk_upload: 0
   media_library: 0
   menu_item_extras: 0
   menu_link_content: 0
