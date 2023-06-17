@@ -5,14 +5,14 @@ dependencies:
   config:
     - field.field.node.article.field_content
     - field.field.node.article.field_featured_media
+    - field.field.node.article.field_related_articles
     - field.field.node.article.field_short_description
     - field.field.node.article.field_subtitle
     - field.field.node.article.field_tags
     - field.field.node.article.field_tech
     - node.type.article
   module:
-    - entity_reference_revisions
-    - text
+    - layout_paragraphs
     - user
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
@@ -22,7 +22,7 @@ bundle: article
 mode: default
 content:
   field_content:
-    type: entity_reference_revisions_entity_view
+    type: layout_paragraphs
     label: hidden
     settings:
       view_mode: default
@@ -30,10 +30,11 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_short_description:
-    type: text_default
-    label: above
-    settings: {  }
+  field_related_articles:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
     third_party_settings: {  }
     weight: 4
     region: content
@@ -63,4 +64,5 @@ content:
     region: content
 hidden:
   field_featured_media: true
+  field_short_description: true
   links: true

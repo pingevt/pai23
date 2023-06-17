@@ -1,11 +1,12 @@
 uuid: cb1ce343-c71b-4019-b2e1-3f757bbd9136
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.rss
     - field.field.node.article.field_content
     - field.field.node.article.field_featured_media
+    - field.field.node.article.field_related_articles
     - field.field.node.article.field_short_description
     - field.field.node.article.field_subtitle
     - field.field.node.article.field_tags
@@ -26,6 +27,7 @@ content:
 hidden:
   field_content: true
   field_featured_media: true
+  field_related_articles: true
   field_short_description: true
   field_subtitle: true
   field_tags: true

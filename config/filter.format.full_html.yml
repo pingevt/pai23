@@ -62,19 +62,24 @@ filters:
   media_embed:
     id: media_embed
     provider: media
-    status: false
+    status: true
     weight: -39
     settings:
       default_view_mode: default
       allowed_view_modes: {  }
-      allowed_media_types: {  }
+      allowed_media_types:
+        audio: audio
+        document: document
+        image: image
+        remote_video: remote_video
+        video: video
   token_filter:
     id: token_filter
     provider: token_filter
     status: true
     weight: -48
     settings:
-      replace_empty: '0'
+      replace_empty: '1'
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter

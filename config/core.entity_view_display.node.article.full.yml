@@ -1,9 +1,9 @@
-uuid: 98084480-b942-43d1-a6d5-5c9510952ae0
+uuid: 1d1c7466-918b-4889-ac0b-a9e92086ab07
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.full
     - field.field.node.article.field_content
     - field.field.node.article.field_featured_media
     - field.field.node.article.field_related_articles
@@ -13,30 +13,31 @@ dependencies:
     - field.field.node.article.field_tech
     - node.type.article
   module:
-    - text
+    - entity_reference_revisions
     - user
 _core:
-  default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
-id: node.article.teaser
+  default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
+id: node.article.full
 targetEntityType: node
 bundle: article
-mode: teaser
+mode: full
 content:
-  field_featured_media:
-    type: entity_reference_entity_view
+  field_content:
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
-      link: false
+      link: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
-  field_short_description:
-    type: text_default
+  field_related_articles:
+    type: entity_reference_label
     label: hidden
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_subtitle:
     type: string
@@ -44,11 +45,18 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
+    region: content
+  field_tech:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
-  field_content: true
-  field_related_articles: true
+  field_featured_media: true
+  field_short_description: true
   field_tags: true
-  field_tech: true
   links: true
