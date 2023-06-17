@@ -1,0 +1,22 @@
+uuid: cb0b01e1-9995-4a6c-ae73-62de16a81590
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: tech
+label: Tech
+type: 'canonical_entities:taxonomy_term'
+pattern: 'tech/[term:name]'
+selection_criteria:
+  a9bafb5c-adfb-42cf-8539-a617d6a0c704:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: a9bafb5c-adfb-42cf-8539-a617d6a0c704
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      tech: tech
+selection_logic: and
+weight: -5
+relationships: {  }

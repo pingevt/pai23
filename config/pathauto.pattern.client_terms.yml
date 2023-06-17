@@ -1,0 +1,22 @@
+uuid: c974cea9-3ead-4d63-a8aa-6ef43db0bf1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: client_terms
+label: 'Client Terms'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'clients/[term:name]'
+selection_criteria:
+  07dcaed1-b379-4dca-b011-00bee85fdd00:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 07dcaed1-b379-4dca-b011-00bee85fdd00
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      clients: clients
+selection_logic: and
+weight: -5
+relationships: {  }
