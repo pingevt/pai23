@@ -19,9 +19,16 @@
  *   - class: HTML classes.
  */
 #}
-<div data-drupal-messages>
+
+<div data-drupal-messages class="{% if message_list|length > 0 %}messages--full{% else %}messages--empty{% endif %} ">
 {% for type, messages in message_list %}
-  <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
+  {%
+    set classes = [
+      'messages',
+      'messages--' ~ type,
+    ]
+  %}
+  <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
     {% if type == 'error' %}
       <div role="alert">
     {% endif %}
@@ -29,9 +36,9 @@
       <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
     {% endif %}
     {% if messages|length > 1 %}
-      <ul>
+      <ul class="messages__list">
         {% for message in messages %}
-          <li>{{ message }}</li>
+          <li class="messages__item">{{ message }}</li>
         {% endfor %}
       </ul>
     {% else %}
@@ -41,5 +48,7 @@
       </div>
     {% endif %}
   </div>
+  {# Remove type specific classes. #}
+  {% set attributes = attributes.removeClass(classes) %}
 {% endfor %}
 </div>
