@@ -1,0 +1,25 @@
+uuid: 9974254b-9102-4d38-b71e-8b72f314263c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+    - imagick
+name: 2x3__focal_point_scale_and_crop__xs_sm
+label: 2x3__focal_point_scale_and_crop__xs_sm
+effects:
+  b101a186-afa0-41f9-a612-bb7ca8de75b9:
+    uuid: b101a186-afa0-41f9-a612-bb7ca8de75b9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 620
+      height: 930
+      crop_type: focal_point
+  43ab9883-0a62-4921-b0e8-7f68d42f89a2:
+    uuid: 43ab9883-0a62-4921-b0e8-7f68d42f89a2
+    id: image_convert
+    weight: 2
+    data:
+      format: webp
+      quality: '92'

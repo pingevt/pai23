@@ -1,0 +1,73 @@
+## $xs:         (480 / 16)  * 1em;
+## $xs-sm       (620 / 16)  * 1em;
+## $sm:         (750 / 16)  * 1em;
+## $sm-md:      (950 / 16)  * 1em;
+## $nav-break:  (1000 / 16)  * 1em;
+## $md:         (1100 / 16) * 1em;
+## $lg:         (1280 / 16) * 1em;
+## $xl:         (1728 / 16) * 1em;
+## ------------------------------------------
+
+pai.xs:
+  label: xs
+  mediaQuery: 'screen and (min-width: 480px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+pai.xs-sm:
+  label: xs-sm
+  mediaQuery: 'screen and (min-width: 620px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+pai.sm:
+  label: sm
+  mediaQuery: 'screen and (min-width: 750px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+pai.sm-md:
+  label: sm-md
+  mediaQuery: 'screen and (min-width: 950px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+pai.nav-break:
+  label: nav break
+  mediaQuery: 'screen and (min-width: 1000px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+pai.md:
+  label: md
+  mediaQuery: 'screen and (min-width: 1100px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+pai.lg:
+  label: lg
+  mediaQuery: 'screen and (min-width: 1280px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+pai.xl:
+  label: xl
+  mediaQuery: 'screen and (min-width: 1728)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+pai.viewport_sizing:
+  label: Viewport Sizing
+  mediaQuery: ''
+  weight: -1
+  multipliers:
+    - 1x
+    - 2x

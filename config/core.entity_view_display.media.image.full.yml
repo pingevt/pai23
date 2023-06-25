@@ -1,0 +1,36 @@
+uuid: b76920ef-a889-4376-b60f-7c61c83d66de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_tags
+    - image.style.large
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.full
+targetEntityType: media
+bundle: image
+mode: full
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_tags: true
+  name: true
+  thumbnail: true
+  uid: true
