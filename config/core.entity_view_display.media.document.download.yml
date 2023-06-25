@@ -1,8 +1,9 @@
-uuid: 9b518ab1-4823-43db-ba89-333596ed070f
+uuid: 61a74f3f-f19b-4750-8cf4-01fe88896873
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.download
     - field.field.media.document.field_media_document
     - field.field.media.document.field_media_tags
     - media.type.document
@@ -10,10 +11,10 @@ dependencies:
     - file
 _core:
   default_config_hash: XxUyhaTuM0OUUZpr8G6jdrFBEh5eag7auWxBKhm6cvY
-id: media.document.default
+id: media.document.download
 targetEntityType: media
 bundle: document
-mode: default
+mode: download
 content:
   field_media_document:
     type: file_default

@@ -1,8 +1,9 @@
-uuid: 9b518ab1-4823-43db-ba89-333596ed070f
+uuid: bbdb740c-ba1f-4ba5-8090-4c41af06e680
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.wysiwyg
     - field.field.media.document.field_media_document
     - field.field.media.document.field_media_tags
     - media.type.document
@@ -10,10 +11,10 @@ dependencies:
     - file
 _core:
   default_config_hash: XxUyhaTuM0OUUZpr8G6jdrFBEh5eag7auWxBKhm6cvY
-id: media.document.default
+id: media.document.wysiwyg
 targetEntityType: media
 bundle: document
-mode: default
+mode: wysiwyg
 content:
   field_media_document:
     type: file_default

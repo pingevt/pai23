@@ -2,6 +2,9 @@ uuid: 7aece016-eabf-47f5-ba2a-3591efc1c4b0
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.download
+    - core.entity_view_mode.media.wysiwyg
   module:
     - editor
     - highlightjs_input_filter
@@ -43,7 +46,7 @@ filters:
     status: false
     weight: -44
     settings:
-      allowed_html: '<p class="lede">'
+      allowed_html: '<p class="lede"> <ul class="col-2 col-3 col-4"> <h2 class="underline"> <h3 class="underline"> <h4 class="underline"> <h5 class="underline"> <h6 class="underline">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_autop:
@@ -83,8 +86,10 @@ filters:
     status: true
     weight: -39
     settings:
-      default_view_mode: default
-      allowed_view_modes: {  }
+      default_view_mode: wysiwyg
+      allowed_view_modes:
+        download: download
+        wysiwyg: wysiwyg
       allowed_media_types:
         audio: audio
         document: document

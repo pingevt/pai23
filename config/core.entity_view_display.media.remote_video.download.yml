@@ -1,0 +1,40 @@
+uuid: 2a247bf1-438a-49be-a039-f11285352412
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.download
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_media_tags
+    - media.type.remote_video
+  module:
+    - media
+_core:
+  default_config_hash: zQoBQ0BtnMM_rlDdgftyu6eI4AVs9mo5K8xq7NFO2Zc
+id: media.remote_video.download
+targetEntityType: media
+bundle: remote_video
+mode: download
+content:
+  field_media_oembed_video:
+    type: oembed
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

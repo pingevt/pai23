@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_view
     - paragraphs.paragraphs_type.view_reference
+    - views.view.archive
   module:
     - viewsreference
 id: paragraph.view_reference.field_view
@@ -15,7 +16,16 @@ label: View
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: default
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 84f78f42-fbad-4a01-ae5c-15a4f9f44b3a
 default_value_callback: ''
 settings:
   handler: 'default:view'
@@ -28,8 +38,10 @@ settings:
     page: 0
     feed: 0
     attachment: 0
+    entity_browser: 0
   preselect_views:
     homepage_grid: homepage_grid
+    work: work
     block_content: 0
     content: 0
     content_recent: 0
@@ -38,6 +50,7 @@ settings:
     media: 0
     media_library: 0
     paragraphs_library: 0
+    paragraphs_library_browser: 0
     redirect: 0
     taxonomy_term: 0
     user_admin_people: 0

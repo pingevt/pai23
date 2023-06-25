@@ -15,6 +15,7 @@ settings:
     items:
       - bold
       - italic
+      - underline
       - strikethrough
       - superscript
       - subscript
@@ -25,17 +26,32 @@ settings:
       - bulletedList
       - numberedList
       - '|'
+      - alignment
+      - indent
+      - outdent
+      - '|'
+      - '-'
       - blockQuote
       - drupalMedia
       - insertTable
       - horizontalLine
+      - specialCharacters
       - '|'
       - heading
       - style
       - codeBlock
       - '|'
+      - undo
+      - redo
+      - '|'
       - sourceEditing
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_heading:
       enabled_headings:
         - heading2
@@ -53,8 +69,32 @@ settings:
         -
           label: Lede
           element: '<p class="lede">'
+        -
+          label: '2 column list'
+          element: '<ul class="col-2">'
+        -
+          label: '3 column list'
+          element: '<ul class="col-3">'
+        -
+          label: '4 column list'
+          element: '<ul class="col-4">'
+        -
+          label: 'h2 Underline'
+          element: '<h2 class="underline">'
+        -
+          label: 'h3 Underline'
+          element: '<h3 class="underline">'
+        -
+          label: 'h4 Underline'
+          element: '<h4 class="underline">'
+        -
+          label: 'h5 Underline'
+          element: '<h5 class="underline">'
+        -
+          label: 'h6 Underline'
+          element: '<h6 class="underline">'
     media_media:
-      allow_view_mode_override: false
+      allow_view_mode_override: true
 image_upload:
   status: true
   scheme: public

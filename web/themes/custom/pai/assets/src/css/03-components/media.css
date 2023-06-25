@@ -1,0 +1,23 @@
+.media {
+
+  &.media--type-document {
+    &.media--view-mode-download {
+
+      a {
+        display: inline-block;
+        padding: 1rem;
+        background-color: var(--c-delft-blue);
+        color: var(--c-white);
+        border-radius: 100px;
+        font-weight: 600;
+
+        transition: background-color 0.24s var(--cubic-basic), color 0.24s var(--cubic-basic);
+      }
+
+      &:hover a {
+        background-color: var(--c-saffron);
+        color: var(--c-delft-blue);
+      }
+    }
+  }
+}

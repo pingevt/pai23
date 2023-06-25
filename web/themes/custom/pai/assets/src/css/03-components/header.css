@@ -61,7 +61,7 @@ header.c-global-header {
 
     @media (--sm) {
       width: 50%;
-      text-align: left;
+      text-align: right;
     }
 
     ul:not(.contextual-links) {

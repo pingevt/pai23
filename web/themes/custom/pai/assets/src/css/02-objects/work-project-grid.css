@@ -1,0 +1,50 @@
+
+.view-work {
+
+  .form-checkboxes.form--inline {
+    li {
+      display: inline-block;
+    }
+  }
+
+  header  {
+    margin-bottom: 1rem;
+
+    h2 {
+      @include f-title--h2;
+      border-bottom: 5px solid var(--c-saffron);
+    }
+  }
+
+  .view-content {
+    ul.results-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
+
+      li {
+        /* background: green; */
+      }
+    }
+  }
+
+  .more-link {
+    margin-top: 2rem;
+    text-align: center;
+
+    a {
+      @include f-text--main-cta;
+      color: var(--c-polynesian-blue);
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

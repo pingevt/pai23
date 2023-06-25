@@ -43,11 +43,87 @@ p {
 
   &.lede {
     @include f-text--body-large;
-    max-width: 40em;
+    /* max-width: 40em; */
     /* font-weight: 600; */
   }
 
   + p {
     margin-top: 1em;
+  }
+}
+
+h1 { @include f-title--h1; }
+h2 { @include f-title--h2; }
+h3 { @include f-title--h3; }
+h4 { @include f-title--h4; }
+h5 { @include f-title--h5; }
+h6 { @include f-title--h6; }
+
+.paragraph--type--wysiwyg {
+
+  h2 {
+    &.underline {
+      border-bottom: 5px solid var(--c-saffron);
+    }
+  }
+
+  h3 {
+    &.underline {
+      border-bottom: 3px solid var(--c-delft-blue);
+    }
+  }
+
+  h4 {
+    &.underline {
+      border-bottom: 3px solid var(--c-polynesian-blue);
+    }
+
+  }
+
+  h5 {
+
+    &.underline {
+      border-bottom: 3px solid var(--c-cerulean);
+    }
+  }
+
+  h6 {
+
+    &.underline {
+      border-bottom: 3px solid var(--c-powder-blue);
+    }
+  }
+
+  ul {
+    margin: 1em 0;
+    padding-left: 40px;
+
+    li::before {
+      content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: var(--c-red); /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+      font-size: 115%;
+    }
+
+    &.col-2 {
+      columns: 2;
+    }
+    &.col-3 {
+      columns: 3;
+    }
+    &.col-4 {
+      columns: 4;
+    }
+  }
+
+  .u-float-left {
+    float: left;
+  }
+
+  .u-float-right {
+    float: right;
   }
 }

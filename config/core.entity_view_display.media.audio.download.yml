@@ -1,0 +1,35 @@
+uuid: 92bd3b81-3e32-46cf-81e2-10e85828c4b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.download
+    - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_media_tags
+    - media.type.audio
+  module:
+    - file
+_core:
+  default_config_hash: AS765MdDfNpK6K5eE7WVnBvpynClz_havy1R3bO3gVo
+id: media.audio.download
+targetEntityType: media
+bundle: audio
+mode: download
+content:
+  field_media_audio_file:
+    type: file_audio
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_tags: true
+  name: true
+  thumbnail: true
+  uid: true

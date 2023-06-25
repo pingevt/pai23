@@ -8,12 +8,14 @@
 // Objects
 @import "02-objects/logo.css";
 @import "02-objects/homepage-project-grid.css";
+@import "02-objects/work-project-grid.css";
 
 // Components
 @import "03-components/header.css";
 @import "03-components/main.css";
 @import "03-components/page.css";
 @import "03-components/article.css";
+@import "03-components/media.css";
 @import "03-components/footer.css";
 
 // Overrides
