@@ -1,9 +1,27 @@
 main {
   min-height: 65vh;
 
+  .region--messages {
+    max-width: $content-container;
+    margin: 0 auto;
+  }
+
   .layout-content {
     max-width: $content-container;
     margin: 0 auto;
+  }
+}
+
+
+
+#block-pai-page-title {
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr $text-container 1fr;
+
+  h1 {
+    @include f-title--h1;
+    grid-column-start: 2;
   }
 }
 

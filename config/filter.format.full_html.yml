@@ -43,14 +43,26 @@ filters:
     status: false
     weight: -44
     settings:
-      allowed_html: ''
+      allowed_html: '<p class="lede">'
       filter_html_help: true
       filter_html_nofollow: false
-  filter_highlightjs:
-    id: filter_highlightjs
-    provider: highlightjs_input_filter
-    status: true
-    weight: -46
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -42
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -43
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -40
     settings: {  }
   filter_url:
     id: filter_url
@@ -59,6 +71,12 @@ filters:
     weight: -41
     settings:
       filter_url_length: 72
+  filter_highlightjs:
+    id: filter_highlightjs
+    provider: highlightjs_input_filter
+    status: true
+    weight: -46
+    settings: {  }
   media_embed:
     id: media_embed
     provider: media
@@ -80,21 +98,3 @@ filters:
     weight: -48
     settings:
       replace_empty: '1'
-  filter_html_image_secure:
-    id: filter_html_image_secure
-    provider: filter
-    status: false
-    weight: -40
-    settings: {  }
-  filter_autop:
-    id: filter_autop
-    provider: filter
-    status: false
-    weight: -42
-    settings: {  }
-  filter_html_escape:
-    id: filter_html_escape
-    provider: filter
-    status: false
-    weight: -43
-    settings: {  }

@@ -1,4 +1,5 @@
 $content-container: 1600px;
+$text-container: 1200px;
 
 $breakpoints: (
   xxs: 385px;

@@ -1,0 +1,117 @@
+.region--messages {
+  background: var(--c-gray);
+
+  .messages--full {
+    background-color: var(--c-parchment-lighter);
+    padding: 20px 0;
+  }
+
+  .messages {
+    padding: 1.5rem 2rem 1.5rem 3.5rem;
+    /* LTR */
+    word-wrap: break-word;
+    border: 0.1rem solid;
+    border-width: 0.1rem 0.1rem 0.1rem 0;
+    /* LTR */
+    border-radius: 0.2rem;
+    background: no-repeat 1rem 1.7rem;
+    /* LTR */
+    overflow-wrap: break-word;
+  }
+
+  [dir="rtl"] .messages {
+    padding-right: 3.5rem;
+    padding-left: 2rem;
+    text-align: right;
+    border-width: 0.1rem 0 0.1rem 0.1rem;
+    background-position: right 1rem top 1.7rem;
+  }
+
+  .messages+.messages {
+    margin-top: 1.538em;
+  }
+
+  .messages__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .messages__item+.messages__item {
+    margin-top: 0.769em;
+  }
+
+  /* See .color-success in Seven's colors.css */
+  .messages--status {
+    color: #325e1c;
+    border-color: #c9e1bd #c9e1bd #c9e1bd transparent;
+    /* LTR */
+    background-color: #f3faef;
+    box-shadow: -0.8rem 0 0 #77b259;
+    /* LTR */
+  }
+
+  [dir="rtl"] .messages--status {
+    margin-left: 0;
+    border-color: #c9e1bd transparent #c9e1bd #c9e1bd;
+    box-shadow: 0.8rem 0 0 #77b259;
+  }
+
+  /* See .color-warning in Seven's colors.css */
+  .messages--warning {
+    color: #734c00;
+    border-color: #f4daa6 #f4daa6 #f4daa6 transparent;
+    /* LTR */
+    background-color: #fdf8ed;
+    box-shadow: -0.8rem 0 0 #e09600;
+    /* LTR */
+  }
+
+  [dir="rtl"] .messages--warning {
+    border-color: #f4daa6 transparent #f4daa6 #f4daa6;
+    box-shadow: 0.8rem 0 0 #e09600;
+  }
+
+  /* See .color-error in Seven's colors.css */
+  .messages--error {
+    color: #a51b00;
+    border-color: #f9c9bf #f9c9bf #f9c9bf transparent;
+    /* LTR */
+    background-color: #fcf4f2;
+    box-shadow: -0.8rem 0 0 #e62600;
+    /* LTR */
+  }
+
+  [dir="rtl"] .messages--error {
+    border-color: #f9c9bf transparent #f9c9bf #f9c9bf;
+    box-shadow: 0.8rem 0 0 #e62600;
+  }
+
+  .messages--error p.error {
+    color: #a51b00;
+  }
+
+  .messages {
+    margin: 1rem 0;
+    border-width: 0.1rem 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    background-size: 1.3rem;
+    background-position: 0.5rem 50%;
+  }
+
+  .messages--error {
+    border-color: #e32700;
+  }
+
+  .messages--warning {
+    border-color: #e29700;
+  }
+
+  .messages--status {
+    border-color: #73b355;
+  }
+}

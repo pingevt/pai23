@@ -188,6 +188,30 @@
   }
 }
 
+@mixin f-text--body-large {
+  font-family: var(--f-sans);
+  font-size: 17px;
+  line-height: 175%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 19px;
+    line-height: 170%;
+  }
+}
+
+@mixin f-text--body-large-serif {
+  font-family: var(--f-serif);
+  font-size: 17px;
+  line-height: 175%;
+  font-weight: 400;
+
+  @media (--sm) {
+    font-size: 19px;
+    line-height: 170%;
+  }
+}
+
 /**
   CTAs
 */

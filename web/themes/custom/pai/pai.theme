@@ -11,7 +11,13 @@ use Drupal\Core\Render\Markup;
  * Implements hook_preprocess_region().
  */
 function pai_preprocess_region(&$variables) {
+  $variables['attributes']['class'][] = "region";
   $variables['attributes']['class'][] = "region--" . $variables['elements']['#region'];
+
+  // \Drupal::messenger()->addMessage("hello", "error", FALSE);
+  // \Drupal::messenger()->addMessage("hello", "warning", TRUE);
+  // \Drupal::messenger()->addMessage("hello", "status", TRUE);
+  // \Drupal::messenger()->addMessage("hello", "log", TRUE);
 }
 
 /**
@@ -36,8 +42,9 @@ function pai_preprocess_menu(array &$variables) {
  */
 function pai_preprocess_node(array &$variables) {
   $node = $variables['elements']['#node'];
-
   $bundle = $node->bundle();
+
+  $variables['content_attributes']['class'][] = "node-content";
 
   if ($node->hasField('field_display_title')) {
     // Title.
@@ -50,4 +57,6 @@ function pai_preprocess_node(array &$variables) {
       $variables['label'] = Markup::create($title);
     }
   }
+
+  // ksm($variables);
 }

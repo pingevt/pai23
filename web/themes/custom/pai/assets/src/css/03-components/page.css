@@ -1,0 +1,18 @@
+.node.node--type-page {
+  &.node--view-mode-full {
+
+    > .node-content {
+      display: grid;
+      grid-template-columns: 1fr $text-container 1fr;
+    }
+
+    .paragraph.paragraph--type--wysiwyg {
+      grid-column: 2 / span 1;
+    }
+    .paragraph.paragraph--type--view-reference {
+      grid-column: 1 / span 3;
+
+      margin: 10rem 0;
+    }
+  }
+}

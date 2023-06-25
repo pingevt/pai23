@@ -528,6 +528,38 @@ acronym[title]{
     font-size:1.5rem;
     line-height:120%; }
   }
+p{
+  font-family:"Open Sans", sans-serif;
+  font-family:var(--f-sans);
+  font-size:0.9375rem;
+  line-height:165%;
+  font-weight:400;
+}
+@media (min-width: 750px){
+p{
+    font-size:1.0625rem;
+    line-height:170%
+}
+  }
+p.lede{
+  font-family:"Open Sans", sans-serif;
+  font-family:var(--f-sans);
+  font-size:1.0625rem;
+  line-height:175%;
+  font-weight:400;
+  }
+@media (min-width: 750px){
+p.lede{
+    font-size:1.1875rem;
+    line-height:170%;
+  }
+  }
+p.lede{
+    max-width:40em;
+}
+p + p{
+    margin-top:1em;
+  }
 *,
 *:before,
 *:after{
@@ -638,39 +670,78 @@ svg.logo path.circle{
       fill:var(--c-red);
 
     }
-header{
+.view-homepage-grid header{
+    margin-bottom:1rem;
+  }
+.view-homepage-grid header h2{
+  font-family:Georgia, serif;
+  font-family:var(--f-serif);
+  font-size:2.375rem;
+  line-height:2.5rem;
+  font-weight:400;
+    }
+@media (min-width: 750px){
+.view-homepage-grid header h2{
+    font-size:2.375rem;
+    line-height:105%;
+    }
+  }
+@media (min-width: 1280px){
+.view-homepage-grid header h2{
+    font-size:3.25rem;
+    line-height:105%;
+    }
+  }
+.view-homepage-grid .view-content ul.results-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      grid-gap:2rem;
+    }
+.view-homepage-grid .view-content ul.results-list li{
+        background:green;
+      }
+.view-homepage-grid .attachment-after{
+    margin-top:3rem;
+    padding-top:4rem;
+    border-top:2px solid #993333;
+    border-top:2px solid var(--c-red);
+  }
+.view-homepage-grid .attachment-after .view-content ul.results-list{
+        grid-template-columns:1fr 1fr 1fr;
+      }
+header.c-global-header{
 
   border-bottom:10px solid #993333;
 
   border-bottom:10px solid var(--c-red);
 }
-header .region--header{
+header.c-global-header .region--header{
     display:flex;
     flex-wrap:wrap;
     align-items:center;
     max-width:1600px;
     margin:0 auto;
   }
-header .site-branding{
+header.c-global-header .site-branding{
     width:100%;
   }
 @media (min-width: 750px){
-header .site-branding{
+header.c-global-header .site-branding{
       width:50%
   }
     }
-header .site-branding .block-content{
+header.c-global-header .site-branding .block-content{
       display:flex;
       flex-wrap:wrap;
       align-items:center;
       text-align:center;
     }
 @media (min-width: 750px){
-header .site-branding .block-content{
+header.c-global-header .site-branding .block-content{
         text-align:left
     }
       }
-header .site-branding .site-logo{
+header.c-global-header .site-branding .site-logo{
       display:grid;
       align-items:center;
       justify-items:center;
@@ -678,51 +749,93 @@ header .site-branding .site-logo{
       width:100%;
     }
 @media (min-width: 750px){
-header .site-branding .site-logo{
+header.c-global-header .site-branding .site-logo{
         width:100px
     }
       }
-header .site-branding .site-logo svg{
+header.c-global-header .site-branding .site-logo svg{
         max-width:100px;
       }
-header .site-branding .site-name{
+header.c-global-header .site-branding .site-name{
       font-family:Georgia, serif;
       font-family:var(--f-serif);
       font-size:3rem;
       width:100%;
     }
 @media (min-width: 750px){
-header .site-branding .site-name{
+header.c-global-header .site-branding .site-name{
         width:auto
     }
       }
-header nav{
+header.c-global-header nav{
     width:100%;
     text-align:center;
   }
 @media (min-width: 750px){
-header nav{
+header.c-global-header nav{
       width:50%;
       text-align:left
   }
     }
-header nav ul:not(.contextual-links) li{
+header.c-global-header nav ul:not(.contextual-links) li{
         display:inline-block;
         margin-right:1rem;
       }
-header nav ul:not(.contextual-links) li:last-child{
+header.c-global-header nav ul:not(.contextual-links) li:last-child{
           margin-right:0;
         }
 main{
   min-height:65vh;
 }
+main .region--messages{
+    max-width:1600px;
+    margin:0 auto;
+  }
 main .layout-content{
     max-width:1600px;
     margin:0 auto;
   }
+#block-pai-page-title{
+  padding:2rem 0;
+  display:grid;
+  grid-template-columns:1fr 1200px 1fr;
+}
+#block-pai-page-title h1{
+  font-family:Georgia, serif;
+  font-family:var(--f-serif);
+  font-size:2.625rem;
+  line-height:105%;
+  font-weight:400;
+  }
+@media (min-width: 750px){
+#block-pai-page-title h1{
+    font-size:3.25rem;
+    line-height:98%;
+  }
+  }
+@media (min-width: 1280px){
+#block-pai-page-title h1{
+    font-size:4.0625rem;
+  }
+  }
+#block-pai-page-title h1{
+    grid-column-start:2;
+}
 .node.node--unpublished{
     background:pink;
   }
+.node.node--type-page.node--view-mode-full > .node-content{
+      display:grid;
+      grid-template-columns:1fr 1200px 1fr;
+    }
+.node.node--type-page.node--view-mode-full .paragraph.paragraph--type--wysiwyg{
+      grid-column:2 / span 1;
+    }
+.node.node--type-page.node--view-mode-full .paragraph.paragraph--type--view-reference{
+      grid-column:1 / span 3;
+
+      margin:10rem 0;
+    }
 footer{
   background-color:#eeeeee;
   background-color:var(--c-gray);
@@ -735,6 +848,117 @@ footer{
 footer .region--footer{
     max-width:1600px;
     margin:0 auto;
+  }
+.region--messages{
+  background:#eeeeee;
+  background:var(--c-gray);
+}
+.region--messages .messages--full{
+    background-color:var(--c-parchment-lighter);
+    padding:20px 0;
+  }
+.region--messages .messages{
+    padding:1.5rem 2rem 1.5rem 3.5rem;
+    word-wrap:break-word;
+    border:0.1rem solid;
+    border-width:0.1rem 0.1rem 0.1rem 0;
+    border-radius:0.2rem;
+    background:no-repeat 1rem 1.7rem;
+    word-wrap:break-word;
+  }
+.region--messages [dir="rtl"] .messages{
+    padding-right:3.5rem;
+    padding-left:2rem;
+    text-align:right;
+    border-width:0.1rem 0 0.1rem 0.1rem;
+    background-position:right 1rem top 1.7rem;
+  }
+.region--messages .messages+.messages{
+    margin-top:1.538em;
+  }
+.region--messages .messages__list{
+    margin:0;
+    padding:0;
+    list-style:none;
+    max-width:1200px;
+    margin:0 auto;
+  }
+.region--messages .messages__item+.messages__item{
+    margin-top:0.769em;
+  }
+.region--messages .messages--status{
+    color:#325e1c;
+    border-color:#c9e1bd #c9e1bd #c9e1bd transparent;
+    background-color:#f3faef;
+    box-shadow:-0.8rem 0 0 #77b259;
+  }
+.region--messages [dir="rtl"] .messages--status{
+    margin-left:0;
+    border-color:#c9e1bd transparent #c9e1bd #c9e1bd;
+    box-shadow:0.8rem 0 0 #77b259;
+  }
+.region--messages .messages--warning{
+    color:#734c00;
+    border-color:#f4daa6 #f4daa6 #f4daa6 transparent;
+    background-color:#fdf8ed;
+    box-shadow:-0.8rem 0 0 #e09600;
+  }
+.region--messages [dir="rtl"] .messages--warning{
+    border-color:#f4daa6 transparent #f4daa6 #f4daa6;
+    box-shadow:0.8rem 0 0 #e09600;
+  }
+.region--messages .messages--error{
+    color:#a51b00;
+    border-color:#f9c9bf #f9c9bf #f9c9bf transparent;
+    background-color:#fcf4f2;
+    box-shadow:-0.8rem 0 0 #e62600;
+  }
+.region--messages [dir="rtl"] .messages--error{
+    border-color:#f9c9bf transparent #f9c9bf #f9c9bf;
+    box-shadow:0.8rem 0 0 #e62600;
+  }
+.region--messages .messages--error p.error{
+    color:#a51b00;
+  }
+.region--messages .messages{
+    margin:1rem 0;
+    border-width:0.1rem 0;
+    border-radius:0;
+    background-color:transparent;
+    box-shadow:none;
+    background-size:1.3rem;
+    background-position:0.5rem 50%;
+  }
+.region--messages .messages--error{
+    border-color:#e32700;
+  }
+.region--messages .messages--warning{
+    border-color:#e29700;
+  }
+.region--messages .messages--status{
+    border-color:#73b355;
+  }
+.u-sr-only{
+  clip:rect(0 0 0 0);
+  -webkit-clip-path:inset(100%);
+          clip-path:inset(100%);
+  height:1px;
+  overflow:hidden;
+  position:absolute;
+  white-space:nowrap;
+  width:1px;
+}
+.u-sr-focusable:focus{
+    clip:auto !important;
+  }
+.u-sr-focusable:focus{
+    -webkit-clip-path:none;
+            clip-path:none;
+    height:auto;
+    overflow:visible;
+    position:static;
+    white-space:normal;
+    width:auto;
   }
 
 /*# sourceMappingURL=style.css.map */

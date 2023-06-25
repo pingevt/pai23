@@ -192,8 +192,8 @@ display:
           default_row_class: true
           uses_fields: false
           type: ul
-          wrapper_class: item-list
-          class: ''
+          wrapper_class: ''
+          class: results-list
       row:
         type: 'entity:node'
         options:
@@ -208,7 +208,20 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>Featured Projects</h2>'
+            format: full_html
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -278,6 +291,21 @@ display:
         title: false
         filters: false
         filter_groups: false
+        header: false
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>Other Works</h2>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
       displays:
         featured_projects: featured_projects

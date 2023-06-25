@@ -37,3 +37,17 @@
 .f-text--program-card-text { @include f-text--program-card-text; }
 .f-text--program-table-iteration { @include f-text--program-table-iteration; }
 .f-text--search-result { @include f-text--search-result; }
+
+p {
+  @include f-text--body;
+
+  &.lede {
+    @include f-text--body-large;
+    max-width: 40em;
+    /* font-weight: 600; */
+  }
+
+  + p {
+    margin-top: 1em;
+  }
+}

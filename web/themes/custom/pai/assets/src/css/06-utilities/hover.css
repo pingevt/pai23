@@ -1,0 +1,33 @@
+.u-btn-grow-arrow {
+  .u-btn-grow-arrow__svg path {
+    transition: all 0.3s var(--cubic-basic);
+  }
+}
+
+.u-btn-grow-arrow--parent:hover,
+.u-btn-grow-arrow--parent:focus,
+.u-btn-grow-arrow:hover,
+.u-btn-grow-arrow:focus {
+  .u-btn-grow-arrow__svg path {
+    d: path(
+      "M24.3431 0.929124L30.7071 7.29308C31.0976 7.68361 31.0976 8.31677 30.7071 8.7073L24.3431 15.0713C23.9526 15.4618 23.3195 15.4618 22.9289 15.0713C22.5384 14.6807 22.5384 14.0476 22.9289 13.657L27.5858 9.00019H0V7.00019H27.5858L22.9289 2.34334C22.5384 1.95281 22.5384 1.31965 22.9289 0.929124C23.3195 0.538599 23.9526 0.538599 24.3431 0.929124Z"
+    );
+  }
+}
+
+.u-hover-text {
+  border-bottom: 2px solid transparent;
+  transition: border 0.24s var(--cubic-basic);
+  width: fit-content;
+}
+
+.u-hover-text--parent:hover,
+.u-hover-text--parent:focus {
+  .u-hover-text {
+    border-color: var(--c-black);
+  }
+}
+.u-hover-text:hover,
+.u-hover-text:focus {
+  border-color: var(--c-black);
+}

@@ -31,6 +31,7 @@ settings:
       - horizontalLine
       - '|'
       - heading
+      - style
       - codeBlock
       - '|'
       - sourceEditing
@@ -47,6 +48,11 @@ settings:
       startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: Lede
+          element: '<p class="lede">'
     media_media:
       allow_view_mode_override: false
 image_upload:
