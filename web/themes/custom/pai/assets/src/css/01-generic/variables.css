@@ -37,6 +37,16 @@ $breakpoints: (
 
   --c-red: #993333;
 
+
+
+  --c-auburn: #993333ff;
+  --c-delft-blue: #1d3461ff;
+  --c-polynesian-blue: #1f487eff;
+  --c-cerulean: #247ba0ff;
+  --c-powder-blue: #8da9c4ff;
+  --c-ivory: #F9F9EDff;
+  --c-saffron: #F4C95Dff;
+
   /* Colors - secondary */
   --c-black: #000;
   --c-white: #fff;
@@ -58,7 +68,7 @@ $breakpoints: (
     (100vw - (var(--content-max-width) - (var(--grid-gutter) * 2))) / 2
   ); */
 
-    /* Misc */
+  /* Misc */
   --cubic-basic: cubic-bezier(0.55, 0.085, 0, 0.99);
   --cubic-move: cubic-bezier(0.55, 0.085, 0, 0.99);
   --cubic-slide: cubic-bezier(0.09, 0.41, 0.25, 1);

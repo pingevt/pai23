@@ -1,0 +1,13 @@
+name: 'Other View filter'
+description: 'Adds a filter to views that uses the results of another view.'
+type: module
+package: Views
+core_version_requirement: ^9 || ^10
+
+dependencies:
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2021-12-27
+version: '8.x-1.2+1-dev'
+project: 'other_view_filter'
+datestamp: 1640616889

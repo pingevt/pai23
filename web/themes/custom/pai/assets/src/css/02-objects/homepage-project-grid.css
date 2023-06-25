@@ -6,6 +6,7 @@
 
     h2 {
       @include f-title--h2;
+      border-bottom: 5px solid var(--c-saffron);
     }
   }
 
@@ -16,7 +17,7 @@
       grid-gap: 2rem;
 
       li {
-        background: green;
+        /* background: green; */
       }
     }
   }
@@ -24,13 +25,24 @@
   .attachment-after {
     margin-top: 3rem;
     padding-top: 4rem;
-    border-top: 2px solid var(--c-red);
+    /* border-top: 2px solid var(--c-red); */
 
 
     .view-content {
       ul.results-list {
         grid-template-columns: 1fr 1fr 1fr;
       }
+    }
+  }
+
+  .more-link {
+    margin-top: 2rem;
+    text-align: center;
+
+    a {
+      @include f-text--main-cta;
+      color: var(--c-polynesian-blue);
+      text-decoration: underline;
     }
   }
 }

@@ -1,0 +1,51 @@
+
+{% set main_heading_lvl = heading_lvl|default('3') %}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <a href="{{ url }}">
+    <div{{ content_attributes }}>
+      <div class="c-node-article--title-block">
+        <h{{main_heading_lvl}}{{ title_attributes }}>
+          {{ label }}
+        </h{{main_heading_lvl}}>
+
+        {% if not node.field_subtitle.isEmpty() and content.field_subtitle %}
+          <div class="c-node-article--subtitle">
+            {{ content.field_subtitle }}
+          </div>
+        {% endif %}
+      </div>
+
+      {# {{ content }} #}
+
+      {% if not node.field_featured_media.isEmpty() and content.field_featured_media %}
+        <div class="c-node-article--media-block">
+          {{ content.field_featured_media }}
+        </div>
+      {% endif %}
+
+      {% if not node.field_short_description.isEmpty() and content.field_short_description %}
+        <div class="c-node-article--desc-block">
+          {{ content.field_short_description }}
+        </div>
+      {% endif %}
+
+    </div>
+  </a>
+
+</article>

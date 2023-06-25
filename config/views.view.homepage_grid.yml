@@ -10,6 +10,7 @@ dependencies:
     - 'taxonomy_term:tags:b85f0204-53c4-40a1-9042-e3009fcaf2d7'
   module:
     - node
+    - other_view_filter
     - taxonomy
     - user
 id: homepage_grid
@@ -208,6 +209,11 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_more: true
+      use_more_always: true
+      use_more_text: 'View all'
+      link_display: custom_url
+      link_url: work
       header:
         area:
           id: area
@@ -261,7 +267,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 9
+          items_per_page: 6
       filters:
         status:
           id: status
@@ -283,15 +289,63 @@ display:
           plugin_id: bundle
           value:
             article: article
+        other_view_filter:
+          id: other_view_filter
+          table: node_field_data
+          field: other_view_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: other_views_filter
+          operator: 'not in'
+          value:
+            'homepage_grid:featured_projects': 'homepage_grid:featured_projects'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          inherit_contextual_filters: 0
       filter_groups:
         operator: AND
         groups:
           1: AND
       defaults:
         title: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
         filters: false
         filter_groups: false
         header: false
+      use_more: false
+      use_more_always: true
+      use_more_text: 'View all'
       header:
         area:
           id: area

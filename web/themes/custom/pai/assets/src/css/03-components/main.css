@@ -29,4 +29,8 @@ main {
   &.node--unpublished {
     background: pink;
   }
+
+  img {
+    width: 100%;
+  }
 }

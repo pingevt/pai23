@@ -16,15 +16,18 @@
 }
 
 .u-hover-text {
-  border-bottom: 2px solid transparent;
-  transition: border 0.24s var(--cubic-basic);
-  width: fit-content;
+  /* border-bottom: 2px solid transparent; */
+  transition: text-decoration-color 0.24s var(--cubic-basic);
+  /* width: fit-content; */
+  text-decoration: underline;
+  text-decoration-color: transparent;
 }
 
 .u-hover-text--parent:hover,
 .u-hover-text--parent:focus {
   .u-hover-text {
-    border-color: var(--c-black);
+    /* border-color: var(--c-black); */
+    text-decoration-color: var(--c-red);
   }
 }
 .u-hover-text:hover,

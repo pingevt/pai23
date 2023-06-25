@@ -207,8 +207,8 @@
   font-weight: 400;
 
   @media (--sm) {
-    font-size: 19px;
-    line-height: 170%;
+    font-size: 16px;
+    line-height: 135%;
   }
 }
 
