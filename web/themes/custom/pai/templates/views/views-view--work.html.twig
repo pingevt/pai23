@@ -13,17 +13,17 @@
   {{ title }}
   {{ title_suffix }}
 
-  {% if header %}
-    <header>
-      {{ header }}
-    </header>
-  {% endif %}
-
   {% if exposed %}
     <div class="view-filters">
       <h3 class="u-sr-only view-filters__header">Filter Results</h3>
       {{ exposed }}
     </div>
+  {% endif %}
+
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
   {% endif %}
 
   {% if attachment_before %}

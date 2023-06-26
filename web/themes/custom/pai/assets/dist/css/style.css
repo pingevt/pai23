@@ -79,11 +79,17 @@ acronym[title]{
 
   --c-auburn:rgba(153,51,51,1);
   --c-delft-blue:rgba(29,52,97,1);
+  --c-dim-gray:#6C756B;
   --c-polynesian-blue:rgba(31,72,126,1);
   --c-cerulean:rgba(36,123,160,1);
   --c-powder-blue:rgba(141,169,196,1);
   --c-ivory:rgba(249,249,237,1);
   --c-saffron:rgba(244,201,93,1);
+
+  --c-dartmouth-green:#006A3E;
+  --c-iris:#5944AE;
+  --c-light-red:#FF7571;
+  --c-deep-sky-blue:#00BAFF;
   --c-black:#000;
   --c-white:#fff;
   --c-gray:#eeeeee;
@@ -783,11 +789,59 @@ svg.logo path.circle{
       color:var(--c-polynesian-blue);
       text-decoration:underline;
 }
-.view-work .form-checkboxes.form--inline li{
-      display:inline-block;
+.view-work .view-filters{
+
+    margin-bottom:3rem;
+  }
+.view-work form{
+    display:grid;
+    grid-template-columns:80% 20%;
+  }
+.view-work form fieldset{
+      grid-column:1 / span 1;
+      margin-bottom:0.75rem;
     }
+.view-work form .form-actions{
+      grid-column:2 / span 1;
+      grid-row:1 / span 2;
+
+      display:flex;
+      justify-content:flex-end;
+      align-items:flex-end;
+    }
+.view-work form .form-actions input{
+        padding:1rem 1.25rem;
+        background-color:rgba(31,72,126,1);
+        background-color:var(--c-polynesian-blue);
+        color:#fff;
+        color:var(--c-white);
+        font-weight:600;
+        border-radius:1.5rem;
+
+        cursor:pointer;
+
+        margin-right:1rem;
+      }
+.view-work form .form-actions input:last-child{
+          margin-right:0;
+        }
+.view-work form legend{
+      font-weight:600;
+    }
+.view-work form .form-checkboxes.form--inline li{
+        display:inline-block;
+        margin-right:1rem;
+      }
+.view-work form .form-checkboxes.form--inline li label{
+          padding-left:0.5rem;
+        }
+.view-work form .form-checkboxes.form--inline li:last-child{
+          margin-right:0;
+        }
 .view-work header{
     margin-bottom:1rem;
+    border-bottom:1px solid rgba(31,72,126,1);
+    border-bottom:1px solid var(--c-polynesian-blue);
   }
 .view-work header h2{
   font-family:Georgia, serif;

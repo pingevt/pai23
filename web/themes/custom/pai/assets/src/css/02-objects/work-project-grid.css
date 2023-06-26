@@ -1,14 +1,75 @@
 
 .view-work {
 
-  .form-checkboxes.form--inline {
-    li {
-      display: inline-block;
+  .view-filters {
+
+    /* border-top: 2px solid var(--c-cerulean);
+    border-bottom: 2px solid var(--c-cerulean); */
+    /* padding: 1.25rem 0; */
+    /* color: var(--c-ivory); */
+
+    margin-bottom: 3rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+    fieldset {
+      grid-column: 1 / span 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .form-actions {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+
+      /* margin-bottom: 1rem; */
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      input {
+        padding: 1rem 1.25rem;
+        background-color: var(--c-polynesian-blue);
+        color: var(--c-white);
+        font-weight: 600;
+        border-radius: 1.5rem;
+
+        cursor: pointer;
+
+        margin-right: 1rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    legend {
+      font-weight: 600;
+    }
+
+    .form-checkboxes.form--inline {
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+
+        label {
+          padding-left: 0.5rem;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 
   header  {
     margin-bottom: 1rem;
+    border-bottom: 1px solid var(--c-polynesian-blue);
 
     h2 {
       @include f-title--h2;
