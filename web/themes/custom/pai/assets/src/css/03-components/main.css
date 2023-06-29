@@ -1,3 +1,7 @@
+.layout-container {
+  overflow: hidden;
+}
+
 main {
   min-height: 65vh;
 

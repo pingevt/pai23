@@ -2,6 +2,10 @@ header.c-global-header {
 
   border-bottom: 6px solid var(--c-red);
 
+  @media (--sm) {
+    border-bottom-color: transparent;
+  }
+
   .region--header {
     display: flex;
     flex-wrap: wrap;
@@ -42,7 +46,7 @@ header.c-global-header {
         max-width: 110px;
         position: relative;
         top: 15px;
-        background: var(--c-white);
+        /* background: var(--c-white); */
       }
     }
 
@@ -70,17 +74,34 @@ header.c-global-header {
         text-decoration: underline;
         text-decoration-color: transparent;
       }
+    }
+  }
 
-      @media (--sm) {
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 107%;
-          height: 100%;
-          background-color: var(--c-white);
-        }
+  .branding {
+    display: inline-block;
+    position: relative;
+    padding-right: 16px;
+
+    @media (--sm) {
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 6px;
+
+        background-color: var(--c-red);
+        transition: background-color 0.24s var(--cubic-basic);
+
+        bottom: 11px;
+        left: 100%;
+        width: 400%;
+      }
+
+      &:before {
+        left: auto;
+        right: 100%;
+        width: 400%;
       }
     }
 
@@ -90,7 +111,12 @@ header.c-global-header {
       }
 
       a {
-        text-decoration-color: var(--c-red);
+        /* text-decoration-color: var(--c-red); */
+      }
+
+      &:before,
+      &:after {
+        background-color: var(--c-saffron);
       }
     }
   }
