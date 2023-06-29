@@ -9,4 +9,25 @@ footer {
     margin: 0 auto;
   }
 
+  ul.menu {
+    li {
+      display: inline-block;
+
+      svg {
+        transition: color 0.25s var(--cubic-basic) 0s;
+      }
+
+      &:hover {
+        svg {
+          color: var(--c-polynesian-blue);
+        }
+      }
+    }
+  }
+
+  #block-copyright {
+    color: var(--c-delft-blue);
+    font-weight: 600;
+  }
+
 }

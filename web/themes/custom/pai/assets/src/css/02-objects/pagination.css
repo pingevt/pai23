@@ -1,0 +1,39 @@
+.pager {
+  margin-top: 40px;
+  margin-bottom: 80px;
+
+  text-align: center;
+
+  .pager__list {
+    text-align: center;
+  }
+
+  .pager__item {
+    display: inline-block;
+
+    @include f-text--body;
+
+    a,
+    button {
+      padding: 0 10px;
+
+      &[aria-current="page"],
+      &[aria-current="true"] {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+
+    &.pager__item--previous {
+      svg {
+        margin-right: 6px;
+      }
+    }
+
+    &.pager__item--next {
+      svg {
+        margin-left: 6px;
+      }
+    }
+  }
+}

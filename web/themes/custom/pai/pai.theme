@@ -5,6 +5,7 @@
  * Theming functionality for PAI Theme.
  */
 
+use Drupal\Core\Render\Element;
 use Drupal\Core\Render\Markup;
 
 /**
@@ -38,7 +39,7 @@ function pai_preprocess_menu(array &$variables) {
 }
 
 /**
- * Implements hook_preprocess_menu().
+ * Implements hook_preprocess_node().
  */
 function pai_preprocess_node(array &$variables) {
   $node = $variables['elements']['#node'];
@@ -58,5 +59,41 @@ function pai_preprocess_node(array &$variables) {
     }
   }
 
+  // ksm($variables);
+}
+
+/**
+ * Implements hook_preprocess_media().
+ */
+function pai_preprocess_media(array &$variables) {
+
+  // For teaser images, which will be links, we need to set alt to an empty string.
+  if ($variables['view_mode'] == "teaser") {
+    foreach (Element::children($variables['content']['field_media_image']) as $idx) {
+      $values = $variables['content']['field_media_image'][$idx]['#item']->getValue();
+      $values['alt'] = "";
+      $variables['content']['field_media_image'][$idx]['#item']->setValue($values);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_responsive_image_formatter().
+ */
+function pai_preprocess_responsive_image_formatter(array &$variables) {
+  // ksm($variables);
+}
+
+/**
+ * Implements hook_preprocess_responsive_image().
+ */
+function pai_preprocess_responsive_image(array &$variables) {
+  // ksm($variables);
+}
+
+/**
+ * Implements hook_preprocess_image().
+ */
+function pai_preprocess_image(array &$variables) {
   // ksm($variables);
 }

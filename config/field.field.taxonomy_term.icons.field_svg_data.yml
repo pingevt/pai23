@@ -10,7 +10,7 @@ field_name: field_svg_data
 entity_type: taxonomy_term
 bundle: icons
 label: 'SVG Data'
-description: ''
+description: 'This should be all the code including the svg tag. For consistency, the svg canvas should be set to 30px x 30px. And any fill should be defined as "currentColor".'
 required: false
 translatable: false
 default_value: {  }

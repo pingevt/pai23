@@ -15,7 +15,7 @@
 
   {% if exposed %}
     <div class="view-filters">
-      <h3 class="u-sr-only view-filters__header">Filter Results</h3>
+      <h2 class="u-sr-only view-filters__header">Filter Results</h2>
       {{ exposed }}
     </div>
   {% endif %}
@@ -34,7 +34,7 @@
 
   {% if rows -%}
     <div class="view-content">
-      <h3 class="u-sr-only view-content__header">Results</h3>
+      <h2 class="u-sr-only view-content__header">Results</h2>
       {{ rows }}
     </div>
   {% elseif empty -%}
@@ -42,7 +42,7 @@
   {% else -%}
     <div class="c-no-results" tabIndex="0">
       <p class="c-no-results--label">No results found</p>
-      <p class="c-no-results--msg">Please try a different search term or adjusting the filters.</p>
+      <p class="c-no-results--msg">Please try adjusting the filters.</p>
     </div>
   {% endif %}
 

@@ -6,8 +6,9 @@
 @import "01-generic/global.css";
 
 // Objects
-@import "02-objects/logo.css";
 @import "02-objects/homepage-project-grid.css";
+@import "02-objects/logo.css";
+@import "02-objects/pagination.css";
 @import "02-objects/work-project-grid.css";
 
 // Components

@@ -39,6 +39,7 @@ settings:
       - '|'
       - heading
       - style
+      - code
       - codeBlock
       - '|'
       - undo

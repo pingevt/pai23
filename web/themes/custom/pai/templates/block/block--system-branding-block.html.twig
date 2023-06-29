@@ -19,15 +19,19 @@
 
   {% block content %}
     <div class="block-content">
-      {% if site_logo %}
-        <a href="{{ path('<front>') }}" rel="home"  class="site-logo">
-          {# <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" /> #}
-          {% include directory ~ "/templates/svgs/logo.svg" %}
-        </a>
-      {% endif %}
-      {% if site_name %}
-        <a href="{{ path('<front>') }}" rel="home" class="site-name">{{ site_name }}</a>
-      {% endif %}
+      <div class="branding">
+        {% if site_logo %}
+          <a href="{{ path('<front>') }}" rel="home"  class="site-logo">
+            {# <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" /> #}
+            {% include directory ~ "/templates/svgs/logo.svg" %}
+          </a>
+        {% endif %}
+        {% if site_name %}
+          <div class="site-name">
+            <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+          </div>
+        {% endif %}
+      </div>
     </div>
   {% endblock %}
 </div>
