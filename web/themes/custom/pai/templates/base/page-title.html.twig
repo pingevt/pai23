@@ -16,4 +16,8 @@
 {% if title %}
   <h1{{ title_attributes }}>{{ title }}</h1>
 {% endif %}
+
+{% if subtitle %}
+  <div class="c-subtitle">{{ subtitle }}</div>
+{% endif %}
 {{ title_suffix }}

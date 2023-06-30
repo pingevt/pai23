@@ -131,6 +131,10 @@ h6 { @include f-title--h6; }
     }
   }
 
+  hr {
+    margin: 2rem 0;
+  }
+
   .u-float-left {
     float: left;
   }

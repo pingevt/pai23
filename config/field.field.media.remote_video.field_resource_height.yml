@@ -1,0 +1,23 @@
+uuid: ade05e6b-9af2-4bc1-8574-ace741b86102
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_resource_height
+    - media.type.remote_video
+id: media.remote_video.field_resource_height
+field_name: field_resource_height
+entity_type: media
+bundle: remote_video
+label: 'Resource Height'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

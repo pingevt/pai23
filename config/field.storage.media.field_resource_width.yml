@@ -1,0 +1,20 @@
+uuid: e1b58c7d-4e03-44e1-a1f2-34c7fc40bdcf
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_resource_width
+field_name: field_resource_width
+entity_type: media
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -6,6 +6,8 @@ dependencies:
     - core.entity_form_mode.media.media_library
     - field.field.media.remote_video.field_media_oembed_video
     - field.field.media.remote_video.field_media_tags
+    - field.field.media.remote_video.field_resource_height
+    - field.field.media.remote_video.field_resource_width
     - media.type.remote_video
 _core:
   default_config_hash: TBgPW-uaXRaICBwLaVc16rXpRiLSknDIdF9q0XL7qso
@@ -18,6 +20,8 @@ hidden:
   created: true
   field_media_oembed_video: true
   field_media_tags: true
+  field_resource_height: true
+  field_resource_width: true
   name: true
   path: true
   status: true

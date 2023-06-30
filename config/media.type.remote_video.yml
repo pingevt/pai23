@@ -1,7 +1,12 @@
 uuid: 57afee23-daa9-443b-921c-a5d087ffce6f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: null
 _core:
   default_config_hash: hIBTnDGgDKnCiP6HUZm1m7600DHUEpC6FN3LQ4sUgZ4
 id: remote_video
@@ -18,3 +23,5 @@ source_configuration:
     - Vimeo
 field_map:
   title: name
+  width: field_resource_width
+  height: field_resource_height

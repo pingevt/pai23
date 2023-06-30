@@ -34,6 +34,12 @@ main {
 
   h1 {
     @include f-title--h1;
+    margin: 1rem 0 1rem;
+    grid-column-start: 2;
+  }
+
+  .c-subtitle {
+    @include f-title--h3;
     grid-column-start: 2;
   }
 }

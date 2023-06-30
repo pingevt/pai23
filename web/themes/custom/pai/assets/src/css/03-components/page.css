@@ -1,7 +1,7 @@
 .node.node--type-page {
   &.node--view-mode-full {
 
-    > .node-content {
+    /* > .node-content {
       display: grid;
       grid-template-columns: 5% 1fr 5%;
 
@@ -29,6 +29,6 @@
       &:first-child {
         margin-top: 0;
       }
-    }
+    } */
   }
 }

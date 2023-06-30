@@ -22,6 +22,28 @@ function pai_preprocess_region(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_page_title().
+ */
+function pai_preprocess_page_title(&$variables) {
+
+  $variables['subtitle'] = NULL;
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (isset($node) && !empty($node) && !is_object($node)) {
+    $node = Node::load($node);
+
+  }
+
+
+  if ($node && $node->bundle() == "article") {
+
+    if (!$node->field_subtitle->isEmpty()) {
+      $variables['subtitle'] = $node->field_subtitle->view('full');
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_menu().
  */
 function pai_preprocess_menu(array &$variables) {
@@ -66,6 +88,7 @@ function pai_preprocess_node(array &$variables) {
  * Implements hook_preprocess_media().
  */
 function pai_preprocess_media(array &$variables) {
+  $media = $variables['media'];
 
   // For teaser images, which will be links, we need to set alt to an empty string.
   if ($variables['view_mode'] == "teaser") {
@@ -74,6 +97,28 @@ function pai_preprocess_media(array &$variables) {
       $values['alt'] = "";
       $variables['content']['field_media_image'][$idx]['#item']->setValue($values);
     }
+  }
+
+  switch ( $media->bundle()) {
+    case 'remote_video':
+      // Grab aspect ratio, if we can.
+      // Default to 16x9.
+      $variables['aspect'] = 56.25;
+
+      $width = $media->field_resource_width->value;
+      $height = $media->field_resource_height->value;
+
+      // Check so we don't devide by zero.
+      try {
+        if ($width && $height && $width !== 0) {
+          $variables['aspect'] = $height / $width * 100;
+        }
+      }
+      catch (\Exception $e) {
+        ksm($e);
+      }
+
+      break;
   }
 }
 
