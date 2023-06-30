@@ -599,18 +599,36 @@ h6{
       margin-left:-1em;
       font-size:115%;
     }
+@media (min-width: 750px){
 .paragraph--type--wysiwyg ul.col-2{
-      -moz-columns:2;
-           columns:2;
+        -moz-columns:2;
+             columns:2
     }
+      }
+@media (min-width: 750px){
 .paragraph--type--wysiwyg ul.col-3{
-      -moz-columns:3;
-           columns:3;
+        -moz-columns:2;
+             columns:2
     }
+      }
+@media (min-width: 1100px){
+.paragraph--type--wysiwyg ul.col-3{
+        -moz-columns:3;
+             columns:3
+    }
+      }
+@media (min-width: 750px){
 .paragraph--type--wysiwyg ul.col-4{
-      -moz-columns:4;
-           columns:4;
+        -moz-columns:2;
+             columns:2
     }
+      }
+@media (min-width: 1100px){
+.paragraph--type--wysiwyg ul.col-4{
+        -moz-columns:4;
+             columns:4
+    }
+      }
 .paragraph--type--wysiwyg .u-float-left{
     float:left;
   }
@@ -746,18 +764,48 @@ table.xdebug-error th{
 }
 .view-homepage-grid .view-content ul.results-list{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:1fr;
       grid-gap:2rem;
     }
+@media (min-width: 750px){
+.view-homepage-grid .view-content ul.results-list{
+        grid-template-columns:1fr 1fr
+    }
+      }
 .view-homepage-grid .view-content ul.results-list li{
       }
 .view-homepage-grid .attachment-after{
-    margin-top:3rem;
-    padding-top:4rem;
+    margin-top:0.75rem;
+    padding-top:1rem;
   }
+@media (min-width: 750px){
+.view-homepage-grid .attachment-after{
+      margin-top:1.5rem;
+      padding-top:2rem
+  }
+    }
+@media (min-width: 950px){
+.view-homepage-grid .attachment-after{
+      margin-top:3rem;
+      padding-top:4rem
+  }
+    }
 .view-homepage-grid .attachment-after .view-content ul.results-list{
-        grid-template-columns:1fr 1fr 1fr;
+        grid-template-columns:1fr;
+
       }
+@media (min-width: 750px){
+.view-homepage-grid .attachment-after .view-content ul.results-list{
+          grid-template-columns:1fr 1fr
+
+      }
+        }
+@media (min-width: 1100px){
+.view-homepage-grid .attachment-after .view-content ul.results-list{
+          grid-template-columns:1fr 1fr 1fr
+
+      }
+        }
 .view-homepage-grid .more-link{
     margin-top:2rem;
     text-align:center;
@@ -836,20 +884,34 @@ svg.logo path.circle{
   }
 .view-work form{
     display:grid;
-    grid-template-columns:80% 20%;
+    grid-template-columns:1fr;
   }
-.view-work form fieldset{
-      grid-column:1 / span 1;
-      margin-bottom:0.75rem;
+@media (min-width: 1100px){
+.view-work form{
+      grid-template-columns:80% 20%
+  }
     }
+@media (min-width: 1100px){
+.view-work form fieldset{
+        grid-column:1 / span 1;
+        margin-bottom:0.75rem
+    }
+      }
 .view-work form .form-actions{
-      grid-column:2 / span 1;
-      grid-row:1 / span 2;
 
       display:flex;
-      justify-content:flex-end;
-      align-items:flex-end;
+      justify-content:flex-start;
+      align-items:flex-start;
+      margin-top:2rem;
     }
+@media (min-width: 1100px){
+.view-work form .form-actions{
+        grid-column:2 / span 1;
+        grid-row:1 / span 2;
+        justify-content:flex-end;
+        align-items:flex-end
+    }
+      }
 .view-work form .form-actions input{
         padding:1rem 1.25rem;
         background-color:rgba(31,72,126,1);
@@ -909,9 +971,19 @@ svg.logo path.circle{
 }
 .view-work .view-content ul.results-list{
       display:grid;
-      grid-template-columns:1fr 1fr 1fr;
+      grid-template-columns:1fr;
       grid-gap:2rem;
     }
+@media (min-width: 750px){
+.view-work .view-content ul.results-list{
+        grid-template-columns:1fr 1fr
+    }
+      }
+@media (min-width: 1100px){
+.view-work .view-content ul.results-list{
+        grid-template-columns:1fr 1fr 1fr
+    }
+      }
 .view-work .view-content ul.results-list li{
       }
 .view-work .more-link{
@@ -951,6 +1023,7 @@ header.c-global-header .region--header{
     display:flex;
     flex-wrap:wrap;
     align-items:baseline;
+    width:95%;
     max-width:1600px;
     margin:0 auto;
   }
@@ -959,7 +1032,7 @@ header.c-global-header .site-branding{
   }
 @media (min-width: 750px){
 header.c-global-header .site-branding{
-      width:50%
+      width:58%
   }
     }
 header.c-global-header .site-branding .block-content{
@@ -1063,7 +1136,7 @@ header.c-global-header nav{
   }
 @media (min-width: 750px){
 header.c-global-header nav{
-      width:50%;
+      width:42%;
       text-align:right
   }
     }
@@ -1099,14 +1172,20 @@ main .region--messages{
     margin:0 auto;
   }
 main .layout-content{
+    width:95%;
     max-width:1600px;
     margin:0 auto;
   }
 #block-pai-page-title{
   padding:2rem 0;
   display:grid;
-  grid-template-columns:1fr 1200px 1fr;
+  grid-template-columns:5% 1fr 5%;
 }
+@media (min-width: 1280px){
+#block-pai-page-title{
+    grid-template-columns:1fr 1200px 1fr
+}
+  }
 #block-pai-page-title h1{
   font-family:Georgia, serif;
   font-family:var(--f-serif);
@@ -1136,16 +1215,30 @@ main .layout-content{
   }
 .node.node--type-page.node--view-mode-full > .node-content{
       display:grid;
-      grid-template-columns:1fr 1200px 1fr;
+      grid-template-columns:5% 1fr 5%;
     }
+@media (min-width: 1280px){
+.node.node--type-page.node--view-mode-full > .node-content{
+        grid-template-columns:1fr 1200px 1fr
+    }
+      }
 .node.node--type-page.node--view-mode-full .paragraph.paragraph--type--wysiwyg{
       grid-column:2 / span 1;
       max-width:50em;
     }
 .node.node--type-page.node--view-mode-full .paragraph.paragraph--type--view-reference{
       grid-column:1 / span 3;
-      margin:7rem 0;
     }
+@media (min-width: 750px){
+.node.node--type-page.node--view-mode-full .paragraph.paragraph--type--view-reference{
+        margin:3.5rem 0
+    }
+      }
+@media (min-width: 950px){
+.node.node--type-page.node--view-mode-full .paragraph.paragraph--type--view-reference{
+        margin:7rem 0
+    }
+      }
 .node.node--type-page.node--view-mode-full .paragraph.paragraph--type--view-reference:first-child{
         margin-top:0;
       }
@@ -1264,6 +1357,7 @@ footer{
 
 }
 footer .region--footer{
+    width:95%;
     max-width:1600px;
     margin:0 auto;
   }

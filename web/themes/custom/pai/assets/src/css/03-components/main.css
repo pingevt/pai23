@@ -11,17 +11,26 @@ main {
   }
 
   .layout-content {
+    width: 95%;
     max-width: $content-container;
     margin: 0 auto;
+
+    /* @media (--lg) {
+      width: 95%;
+    } */
+
+    /* background: #aaaaaaaa; */
   }
 }
-
-
 
 #block-pai-page-title {
   padding: 2rem 0;
   display: grid;
-  grid-template-columns: 1fr $text-container 1fr;
+  grid-template-columns: 5% 1fr 5%;
+
+  @media (--lg) {
+    grid-template-columns: 1fr $text-container 1fr;
+  }
 
   h1 {
     @include f-title--h1;

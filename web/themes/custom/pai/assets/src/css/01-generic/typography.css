@@ -109,13 +109,25 @@ h6 { @include f-title--h6; }
     }
 
     &.col-2 {
-      columns: 2;
+      @media (--sm) {
+        columns: 2;
+      }
     }
     &.col-3 {
-      columns: 3;
+      @media (--sm) {
+        columns: 2;
+      }
+      @media (--md) {
+        columns: 3;
+      }
     }
     &.col-4 {
-      columns: 4;
+      @media (--sm) {
+        columns: 2;
+      }
+      @media (--md) {
+        columns: 4;
+      }
     }
   }
 

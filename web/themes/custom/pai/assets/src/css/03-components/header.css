@@ -10,6 +10,7 @@ header.c-global-header {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    width: 95%;
     max-width: $content-container;
     margin: 0 auto;
   }
@@ -18,7 +19,7 @@ header.c-global-header {
     width: 100%;
 
     @media (--sm) {
-      width: 50%;
+      width: 58%;
     }
 
     .block-content {
@@ -126,7 +127,7 @@ header.c-global-header {
     text-align: center;
 
     @media (--sm) {
-      width: 50%;
+      width: 42%;
       text-align: right;
     }
 

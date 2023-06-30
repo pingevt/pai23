@@ -5,6 +5,7 @@ footer {
   padding: 2rem 0 4rem;
 
   .region--footer {
+    width: 95%;
     max-width: $content-container;
     margin: 0 auto;
   }
