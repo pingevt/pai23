@@ -109,6 +109,10 @@ h6 { @include f-title--h6; }
     margin: 1em 0;
     padding-left: 40px;
 
+    ul, ol {
+      margin: 0;
+    }
+
     li::before {
       content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
       color: var(--c-red); /* Change the color */

@@ -602,6 +602,9 @@ h6{
     margin:1em 0;
     padding-left:40px;
   }
+.paragraph--type--wysiwyg ul ul, .paragraph--type--wysiwyg ul ol, .paragraph--type--wysiwyg ol ul, .paragraph--type--wysiwyg ol ol{
+      margin:0;
+    }
 .paragraph--type--wysiwyg ul li::before, .paragraph--type--wysiwyg ol li::before{
       content:"\2022";
       color:#993333;
