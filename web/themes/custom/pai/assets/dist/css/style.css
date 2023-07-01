@@ -1179,45 +1179,89 @@ header.c-global-header .site-branding .site-name a{
         text-decoration:underline;
         text-decoration-color:transparent;
       }
-header.c-global-header .branding{
+header.c-global-header .branding-wrapper{
     display:inline-block;
     position:relative;
-    padding-right:16px;
   }
+header.c-global-header .branding-wrapper .branding{
+      display:inline-block;
+      position:relative;
+      padding-right:16px;
+    }
 @media (min-width: 750px){
-      header.c-global-header .branding:before,
-      header.c-global-header .branding:after{
+
+        header.c-global-header .branding-wrapper .branding:before,
+        header.c-global-header .branding-wrapper .branding:after{
+          content:"";
+          display:block;
+          position:absolute;
+          height:6px;
+
+          background-color:#993333;
+
+          background-color:var(--c-red);
+          transition:width 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+          transition:width 1s var(--cubic-basic);
+
+          bottom:11px;
+          left:100%;
+          width:400%;
+        }
+
+        header.c-global-header .branding-wrapper .branding:before{
+          left:auto;
+          right:100%;
+          width:0%;
+
+          background:linear-gradient(-90deg, rgba(29,52,97,1) 60%, transparent);
+
+          background:linear-gradient(-90deg, var(--c-delft-blue) 60%, transparent);
+          width:0%;
+        }
+      }
+@media (min-width: 750px){
+      header.c-global-header .branding-wrapper:before,
+      header.c-global-header .branding-wrapper:after{
         content:"";
         display:block;
         position:absolute;
         height:6px;
+        background:linear-gradient(90deg, rgba(29,52,97,1) 60%, transparent);
+        background:linear-gradient(90deg, var(--c-delft-blue) 60%, transparent);
+        transition:width 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+        transition:width 1s var(--cubic-basic);
+
+        bottom:11px;
+        left:100%;
+        width:0%;
+      }
+
+      header.c-global-header .branding-wrapper:before{
+        left:auto;
+        right:100%;
+        width:400%;
 
         background-color:#993333;
 
         background-color:var(--c-red);
-        transition:background-color 0.24s cubic-bezier(0.55, 0.085, 0, 0.99);
-        transition:background-color 0.24s var(--cubic-basic);
-
-        bottom:11px;
-        left:100%;
-        width:400%;
-      }
-
-      header.c-global-header .branding:before{
-        left:auto;
-        right:100%;
-        width:400%;
       }
     }
-header.c-global-header .branding:hover .circle{
+header.c-global-header .branding-wrapper:hover .circle{
         transform:translateY(15px);
       }
-header.c-global-header .branding:hover a{
+header.c-global-header .branding-wrapper:hover a{
       }
-header.c-global-header .branding:hover:before,
-      header.c-global-header .branding:hover:after{
-        background-color:rgba(244,201,93,1);
-        background-color:var(--c-saffron);
+header.c-global-header .branding-wrapper:hover .branding:before{
+        width:400%;
+      }
+header.c-global-header .branding-wrapper:hover .branding:after{
+
+      }
+header.c-global-header .branding-wrapper:hover:before{
+
+      }
+header.c-global-header .branding-wrapper:hover:after{
+        width:400%;
       }
 header.c-global-header nav{
     width:100%;

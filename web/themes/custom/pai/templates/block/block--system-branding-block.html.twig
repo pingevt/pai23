@@ -19,7 +19,11 @@
 
   {% block content %}
     <div class="block-content">
-      <div class="branding">
+      <div class="branding-wrapper">
+        <div class="branding">
+
+
+
         {% if site_logo %}
           <a href="{{ path('<front>') }}" rel="home"  class="site-logo">
             {# <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" /> #}
@@ -31,6 +35,8 @@
             <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
           </div>
         {% endif %}
+
+        </div>
       </div>
     </div>
   {% endblock %}
