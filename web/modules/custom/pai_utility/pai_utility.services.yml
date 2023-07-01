@@ -1,0 +1,5 @@
+services:
+  pai_utility.taxonomy_subscriber:
+    class: Drupal\pai_utility\EventSubscriber\TaxonomySubscriber
+    tags:
+      - { name: event_subscriber }
