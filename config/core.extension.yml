@@ -74,6 +74,7 @@ module:
   phpass: 0
   recreate_block_content: 0
   redirect: 0
+  redirect_404: 0
   redis: 0
   responsive_image: 0
   shortcut: 0
