@@ -1,0 +1,35 @@
+uuid: 6ff9d63e-b7a4-45ed-9ee2-23c2e3330026
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16x9__focal_point_scale_and_crop__lg
+    - image.style.16x9__focal_point_scale_and_crop__md
+    - image.style.16x9__focal_point_scale_and_crop__nav_break
+    - image.style.16x9__focal_point_scale_and_crop__sm
+    - image.style.16x9__focal_point_scale_and_crop__sm_md
+    - image.style.16x9__focal_point_scale_and_crop__xl
+    - image.style.16x9__focal_point_scale_and_crop__xs
+    - image.style.16x9__focal_point_scale_and_crop__xs_sm
+  theme:
+    - pai
+id: image_gallery_16x9
+label: 'Image Gallery 16x9'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 30vw
+      sizes_image_styles:
+        - 16x9__focal_point_scale_and_crop__lg
+        - 16x9__focal_point_scale_and_crop__md
+        - 16x9__focal_point_scale_and_crop__nav_break
+        - 16x9__focal_point_scale_and_crop__sm
+        - 16x9__focal_point_scale_and_crop__sm_md
+        - 16x9__focal_point_scale_and_crop__xl
+        - 16x9__focal_point_scale_and_crop__xs
+        - 16x9__focal_point_scale_and_crop__xs_sm
+    breakpoint_id: pai.viewport_sizing
+    multiplier: 1x
+breakpoint_group: pai
+fallback_image_style: 16x9__focal_point_scale_and_crop__md

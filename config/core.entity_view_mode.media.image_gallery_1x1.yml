@@ -1,0 +1,10 @@
+uuid: cf51c0dd-8b74-4988-9789-b43f765b30bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_gallery_1x1
+label: 'Image Gallery 1x1'
+targetEntityType: media
+cache: true

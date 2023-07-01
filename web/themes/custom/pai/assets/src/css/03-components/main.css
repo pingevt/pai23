@@ -33,9 +33,13 @@ main {
   }
 
   h1 {
-    @include f-title--h1;
     margin: 1rem 0 1rem;
+    @include f-title--h1;
     grid-column-start: 2;
+
+    @media (--lg) {
+      margin: 2rem 0 1rem;
+    }
   }
 
   .c-subtitle {

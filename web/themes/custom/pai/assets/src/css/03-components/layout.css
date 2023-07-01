@@ -46,7 +46,7 @@
     }
   }
 
-  &>.layout__region {
+  & > .layout__region {
     flex: 0 1 100%;
   }
 

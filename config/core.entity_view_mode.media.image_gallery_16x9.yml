@@ -1,0 +1,10 @@
+uuid: 2be6a49d-6267-4edd-b47c-59928418705b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_gallery_16x9
+label: 'Image Gallery 16x9'
+targetEntityType: media
+cache: true

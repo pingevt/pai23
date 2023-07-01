@@ -105,6 +105,16 @@
       } */
     }
 
+    .layout {
+      .paragraph.paragraph--type--media {
+        margin: $space-xxs 0;
+
+        @media (--sm-md) {
+          margin: $space-xs 0;
+        }
+      }
+    }
+
     .c-tech-list {
       grid-column: 2 / span 1;
       max-width: 50em;
