@@ -6,18 +6,51 @@ dependencies:
     - core.entity_form_mode.media.media_library
     - field.field.media.video.field_media_tags
     - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_resource_height
+    - field.field.media.video.field_resource_width
     - media.type.video
+  module:
+    - file
 _core:
   default_config_hash: kGv8YsopqHvzTzb7QTINWcv0fnNa5ZDQyZxpOQR2vro
 id: media.video.media_library
 targetEntityType: media
 bundle: video
 mode: media_library
-content: {  }
+content:
+  field_media_tags:
+    type: entity_reference_autocomplete_tags
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_video_file:
+    type: file_generic
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_resource_height:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_resource_width:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
-  field_media_tags: true
-  field_media_video_file: true
   name: true
   path: true
   status: true

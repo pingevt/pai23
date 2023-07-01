@@ -1,0 +1,20 @@
+{%
+  set title_classes = [
+    "field--title",
+    label_display == 'visually_hidden' ? 'visually-hidden',
+    label_display == 'inline' ? 'inline',
+  ]
+%}
+
+<div{{ attributes.addClass("node-meta__item") }}>
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  {% if multiple %}
+    <div>
+  {% endif %}
+  {% for item in items %}
+    <div{{ item.attributes.addClass('field--item') }}>{{ item.content }}</div>
+  {% endfor %}
+  {% if multiple %}
+    </div>
+  {% endif %}
+</div>

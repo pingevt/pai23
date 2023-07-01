@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.media.video.field_media_tags
     - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_resource_height
+    - field.field.media.video.field_resource_width
     - media.type.video
   module:
     - file
@@ -32,6 +34,8 @@ content:
 hidden:
   created: true
   field_media_tags: true
+  field_resource_height: true
+  field_resource_width: true
   name: true
   thumbnail: true
   uid: true

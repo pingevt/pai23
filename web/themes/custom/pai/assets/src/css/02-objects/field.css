@@ -1,0 +1,11 @@
+
+
+div.field-title.inline {
+  display: inline-block;
+  font-weight: 600;
+
+  & + div {
+    display: inline-block;
+  }
+}
+

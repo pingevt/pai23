@@ -61,6 +61,19 @@ h6 { @include f-title--h6; }
 
 .paragraph--type--wysiwyg {
 
+  a {
+    color: var(--c-red);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.blue {
+      color: var(--c-polynesian-blue);
+    }
+  }
+
   h2 {
     &.underline {
       border-bottom: 5px solid var(--c-saffron);
@@ -77,24 +90,22 @@ h6 { @include f-title--h6; }
     &.underline {
       border-bottom: 3px solid var(--c-polynesian-blue);
     }
-
   }
 
   h5 {
-
     &.underline {
       border-bottom: 3px solid var(--c-cerulean);
     }
   }
 
   h6 {
-
     &.underline {
       border-bottom: 3px solid var(--c-powder-blue);
     }
   }
 
-  ul {
+  ul,
+  ol {
     margin: 1em 0;
     padding-left: 40px;
 
@@ -113,6 +124,7 @@ h6 { @include f-title--h6; }
         columns: 2;
       }
     }
+
     &.col-3 {
       @media (--sm) {
         columns: 2;
@@ -121,6 +133,7 @@ h6 { @include f-title--h6; }
         columns: 3;
       }
     }
+
     &.col-4 {
       @media (--sm) {
         columns: 2;
@@ -128,6 +141,18 @@ h6 { @include f-title--h6; }
       @media (--md) {
         columns: 4;
       }
+    }
+  }
+
+  ol {
+    margin: 1em 0;
+    padding-left: 40px;
+    counter-reset: item;
+
+    li::before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      font-weight: normal;
     }
   }
 

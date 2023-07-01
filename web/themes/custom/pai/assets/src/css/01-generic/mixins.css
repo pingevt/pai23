@@ -436,3 +436,29 @@
     line-height: 150%;
   }
 }
+
+
+
+
+
+
+
+
+
+@mixin c-content-column {
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+
+  @media (--lg) {
+    grid-template-columns: 1fr $text-container 1fr;
+  }
+}
+
+@mixin c-content-column__center {
+  grid-column: 2 / span 1;
+}
+
+@mixin c-content-column__center-text {
+  @include c-content-column__center;
+  max-width: 50em;
+}

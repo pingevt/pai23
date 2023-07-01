@@ -71,6 +71,9 @@ settings:
           label: Lede
           element: '<p class="lede">'
         -
+          label: 'Blue Link'
+          element: '<a class="blue">'
+        -
           label: '2 column list'
           element: '<ul class="col-2">'
         -

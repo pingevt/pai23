@@ -14,8 +14,20 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
+  <div {{ meta_attributes }}>
+    <div class="node-meta__wrapper">
+      <div class="node-meta__item">
+        <div class="field--title">Date</div>
+        <div class="field--item">{{ node.getCreatedTime()|format_date('html_date') }}</div>
+      </div>
+      {{ content.field_client }}
+    </div>
+  </div>
+
   <div{{ content_attributes }}>
-    {{ content|without('field_subtitle') }}
+    {{ content.field_content }}
+    {{ content.field_tech }}
+    {{ content.field_related_articles }}
   </div>
 
 </article>

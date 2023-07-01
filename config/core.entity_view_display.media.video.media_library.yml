@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.media.media_library
     - field.field.media.video.field_media_tags
     - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_resource_height
+    - field.field.media.video.field_resource_width
     - image.style.thumbnail
     - media.type.video
   module:
@@ -32,5 +34,7 @@ hidden:
   created: true
   field_media_tags: true
   field_media_video_file: true
+  field_resource_height: true
+  field_resource_width: true
   name: true
   uid: true

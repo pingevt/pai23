@@ -3,16 +3,34 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.media.field_caption
+    - field.field.paragraph.media.field_credit
     - field.field.paragraph.media.field_media
     - paragraphs.paragraphs_type.media
+  module:
+    - text
 id: paragraph.media.default
 targetEntityType: paragraph
 bundle: media
 mode: default
 content:
+  field_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_credit:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_media:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false

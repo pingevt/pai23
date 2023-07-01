@@ -1,0 +1,23 @@
+uuid: a22f2a2c-43ef-44c7-9374-b5b453aeeb1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_resource_height
+    - media.type.video
+id: media.video.field_resource_height
+field_name: field_resource_height
+entity_type: media
+bundle: video
+label: 'Resource Height'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

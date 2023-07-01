@@ -69,4 +69,27 @@
       }
     }
   }
+
+  &.node--view-mode-full {
+
+  }
+}
+
+
+.paragraph--type--wysiwyg {
+  /* h2 {
+    border-bottom: 5px solid var(--c-saffron);
+  }
+  h3 {
+    border-bottom: 4px solid var(--c-cerulean);
+  }
+  h4 {
+    border-bottom: 3px solid var(--c-powder-blue);
+  }
+  h5 {
+    border-bottom: 2px solid var(--c-delft-blue);
+  }
+  h6 {
+    border-bottom: 1px solid var(--c-dim-gray);
+  } */
 }
