@@ -11,7 +11,6 @@ dependencies:
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_resource_height
     - field.field.media.image.field_resource_width
-    - image.style.large
     - media.type.image
   module:
     - image
@@ -26,8 +25,8 @@ content:
     type: image
     label: visually_hidden
     settings:
-      image_link: ''
-      image_style: large
+      image_link: file
+      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }

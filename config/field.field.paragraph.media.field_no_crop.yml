@@ -1,0 +1,21 @@
+uuid: eac4cdaa-0004-44b6-8431-f75a254ec67d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_no_crop
+    - paragraphs.paragraphs_type.media
+id: paragraph.media.field_no_crop
+field_name: field_no_crop
+entity_type: paragraph
+bundle: media
+label: 'No crop'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

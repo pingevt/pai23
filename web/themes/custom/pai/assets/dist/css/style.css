@@ -971,6 +971,18 @@ div.field-title.inline + div{
           width:30.7%;
         }
       }
+@media (min-width: 750px){
+.c-image--no-crop{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    row-gap:3.2rem
+}
+
+    .c-image--no-crop .media{
+      max-width:30%;
+    }
+  }
 svg.logo path{
     fill:#000;
     fill:var(--c-black);

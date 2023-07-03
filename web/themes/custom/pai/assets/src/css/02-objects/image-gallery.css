@@ -100,3 +100,17 @@
     }
   }
 }
+
+.c-image--no-crop {
+
+  @media (--sm) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: $space-l;
+
+    .media {
+      max-width: 30%;
+    }
+  }
+}

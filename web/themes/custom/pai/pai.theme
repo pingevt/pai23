@@ -121,13 +121,17 @@ function pai_preprocess_paragraph(array &$variables) {
 
   switch ($bundle) {
     case 'media':
+      $mini = ($paragraph->field_make_mini->value == 1);
+      $no_crop = ($paragraph->field_no_crop->value == 1);
+
+      if ($no_crop) {
+        $variables['attributes']['class'][] = "c-image--no-crop";
+      }
 
       $media_count = $paragraph->field_media->count();
-      if ($media_count > 1) {
+      if ($media_count > 1 && !$no_crop) {
         // Add component class.
         $variables['attributes']['class'][] = "c-image-gallery";
-
-        $mini = ($paragraph->field_make_mini->value == 1);
 
         $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
 
@@ -170,6 +174,12 @@ function pai_preprocess_paragraph(array &$variables) {
           ];
         }
       }
+
+      // if ($media_count > 1 && $no_crop) {
+      //   $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
+      //   $referenced_entities = $paragraph->field_media->referencedEntities();
+      //   // $display_mode = "ful"
+      // }
       break;
   }
 }
