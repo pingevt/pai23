@@ -1,0 +1,21 @@
+uuid: 815ce435-206a-4d30-b82e-34758ad6b165
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_mime_type
+field_name: field_mime_type
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

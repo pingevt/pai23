@@ -1,0 +1,23 @@
+uuid: dcd2faef-cb9a-45a5-949f-4644c8c981cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_resource_width
+    - media.type.image
+id: media.image.field_resource_width
+field_name: field_resource_width
+entity_type: media
+bundle: image
+label: 'Resource Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

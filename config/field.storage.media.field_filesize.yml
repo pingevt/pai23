@@ -1,0 +1,18 @@
+uuid: 0e3c728d-06e6-43ac-b311-5d0f399aa734
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_filesize
+field_name: field_filesize
+entity_type: media
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

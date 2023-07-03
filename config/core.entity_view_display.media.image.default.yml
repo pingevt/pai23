@@ -3,8 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_filename
+    - field.field.media.image.field_filesize
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_tags
+    - field.field.media.image.field_mime_type
+    - field.field.media.image.field_resource_height
+    - field.field.media.image.field_resource_width
     - image.style.large
     - media.type.image
   module:
@@ -16,6 +21,14 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
+  field_filename:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_media_image:
     type: image
     label: visually_hidden
@@ -29,7 +42,11 @@ content:
     region: content
 hidden:
   created: true
+  field_filesize: true
   field_media_tags: true
+  field_mime_type: true
+  field_resource_height: true
+  field_resource_width: true
   name: true
   thumbnail: true
   uid: true

@@ -1,0 +1,23 @@
+uuid: 2ef49efd-2e62-4307-842e-e398e269e211
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_filesize
+    - media.type.document
+id: media.document.field_filesize
+field_name: field_filesize
+entity_type: media
+bundle: document
+label: Filesize
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.document.field_filename
+    - field.field.media.document.field_filesize
     - field.field.media.document.field_media_document
     - field.field.media.document.field_media_tags
+    - field.field.media.document.field_mime_type
     - media.type.document
   module:
     - file
@@ -15,6 +18,25 @@ targetEntityType: media
 bundle: document
 mode: default
 content:
+  field_filename:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_filesize:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_media_document:
     type: file_default
     label: visually_hidden
@@ -22,6 +44,14 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_mime_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   created: true

@@ -1,7 +1,12 @@
 uuid: dd2fafca-d8e5-42a9-a390-c097193afcb1
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 _core:
   default_config_hash: 6Qope5wG7HUpV0tPOBMtDI_GZkHFcF1Xj4hgD9Cu_hM
 id: image
@@ -13,4 +18,8 @@ new_revision: true
 source_configuration:
   source_field: field_media_image
 field_map:
-  name: name
+  name: field_filename
+  mimetype: field_mime_type
+  filesize: field_filesize
+  width: field_resource_width
+  height: field_resource_height

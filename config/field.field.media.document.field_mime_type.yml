@@ -1,0 +1,19 @@
+uuid: b02cecea-df73-445c-910a-584946de4acb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_mime_type
+    - media.type.document
+id: media.document.field_mime_type
+field_name: field_mime_type
+entity_type: media
+bundle: document
+label: 'MIME type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

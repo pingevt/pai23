@@ -1,0 +1,23 @@
+uuid: 808851fc-84fc-404f-9af1-b0f796e69f2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_resource_height
+    - media.type.image
+id: media.image.field_resource_height
+field_name: field_resource_height
+entity_type: media
+bundle: image
+label: 'Resource Height'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

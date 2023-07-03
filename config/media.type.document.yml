@@ -1,7 +1,12 @@
 uuid: 07a8a1c5-8074-4b88-84f1-29e6dac4f732
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 _core:
   default_config_hash: _D9q3XSnP6ik9we9UuoTvZsQKPuYNp_G9PfwVtWzgnQ
 id: document
@@ -13,4 +18,6 @@ new_revision: true
 source_configuration:
   source_field: field_media_document
 field_map:
-  name: name
+  name: field_filename
+  mimetype: field_mime_type
+  filesize: field_filesize
