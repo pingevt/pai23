@@ -1,0 +1,10 @@
+uuid: 8de825d1-d3b1-4cc3-b2e4-ed58e15fe38c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_gallery_4x3
+label: 'Image Gallery 4x3'
+targetEntityType: media
+cache: true

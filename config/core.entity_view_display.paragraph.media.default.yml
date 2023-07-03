@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.media.field_caption
     - field.field.paragraph.media.field_credit
+    - field.field.paragraph.media.field_make_mini
     - field.field.paragraph.media.field_media
     - paragraphs.paragraphs_type.media
   module:
@@ -37,4 +38,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_make_mini: true

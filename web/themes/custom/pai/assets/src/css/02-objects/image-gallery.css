@@ -26,6 +26,10 @@
         aspect-ratio: 16 / 9;
       }
 
+      &.image-gallery-4-3 {
+        aspect-ratio: 16 / 9;
+      }
+
       &.image-gallery-1-1 {
         aspect-ratio: 16 / 9;
       }
@@ -37,6 +41,10 @@
 
         &.image-gallery-16-9 {
           width: 62%;
+        }
+
+        &.image-gallery-4-3 {
+          width: 35%;
         }
 
         &.image-gallery-1-1 {
@@ -54,6 +62,10 @@
         aspect-ratio: 16 / 9;
       }
 
+      .media--view-mode-wysiwyg-4-3 img {
+        aspect-ratio: 4 / 3;
+      }
+
       .media--view-mode-wysiwyg-3-2 img {
         aspect-ratio: 3 / 2;
       }
@@ -66,6 +78,24 @@
     .o-image__figure {
       figcaption {
         margin-top: 12px;
+      }
+    }
+  }
+
+  &.c-image-gallery--mini {
+    .c-image-gallery__list li {
+      @media (--sm) {
+        &.image-gallery-16-9 {
+          width: 41%;
+        }
+
+        &.image-gallery-4-3 {
+          width: 23%;
+        }
+
+        &.image-gallery-1-1 {
+          width: 30.7%;
+        }
       }
     }
   }

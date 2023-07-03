@@ -1,0 +1,58 @@
+uuid: 030c598f-535e-4ea8-a9c0-85c8c70b69a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16x9__focal_point_scale_and_crop__lg
+    - image.style.16x9__focal_point_scale_and_crop__md
+    - image.style.16x9__focal_point_scale_and_crop__nav_break
+    - image.style.16x9__focal_point_scale_and_crop__sm
+    - image.style.16x9__focal_point_scale_and_crop__sm_md
+    - image.style.16x9__focal_point_scale_and_crop__xl
+    - image.style.16x9__focal_point_scale_and_crop__xs
+    - image.style.16x9__focal_point_scale_and_crop__xs_sm
+    - image.style.4x3__focal_point_scale_and_crop__lg
+    - image.style.4x3__focal_point_scale_and_crop__md
+    - image.style.4x3__focal_point_scale_and_crop__nav_break
+    - image.style.4x3__focal_point_scale_and_crop__sm
+    - image.style.4x3__focal_point_scale_and_crop__sm_md
+    - image.style.4x3__focal_point_scale_and_crop__xl
+    - image.style.4x3__focal_point_scale_and_crop__xs
+    - image.style.4x3__focal_point_scale_and_crop__xs_sm
+  theme:
+    - pai
+id: image_gallery_4x3
+label: 'Image Gallery 4x3'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - 4x3__focal_point_scale_and_crop__lg
+        - 4x3__focal_point_scale_and_crop__md
+        - 4x3__focal_point_scale_and_crop__nav_break
+        - 4x3__focal_point_scale_and_crop__sm
+        - 4x3__focal_point_scale_and_crop__sm_md
+        - 4x3__focal_point_scale_and_crop__xl
+        - 4x3__focal_point_scale_and_crop__xs
+        - 4x3__focal_point_scale_and_crop__xs_sm
+    breakpoint_id: pai.sm
+    multiplier: 1x
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - 16x9__focal_point_scale_and_crop__lg
+        - 16x9__focal_point_scale_and_crop__md
+        - 16x9__focal_point_scale_and_crop__nav_break
+        - 16x9__focal_point_scale_and_crop__sm
+        - 16x9__focal_point_scale_and_crop__sm_md
+        - 16x9__focal_point_scale_and_crop__xl
+        - 16x9__focal_point_scale_and_crop__xs
+        - 16x9__focal_point_scale_and_crop__xs_sm
+    breakpoint_id: pai.viewport_sizing
+    multiplier: 1x
+breakpoint_group: pai
+fallback_image_style: 4x3__focal_point_scale_and_crop__md

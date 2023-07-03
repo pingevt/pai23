@@ -1,8 +1,9 @@
-uuid: 505e5a9d-d4fb-4590-abc4-7ba1c0380924
+uuid: f95258f0-83a9-4975-94d9-e7a4f48f8819
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.image_gallery_4x3
     - field.field.media.image.field_filename
     - field.field.media.image.field_filesize
     - field.field.media.image.field_media_image
@@ -10,23 +11,23 @@ dependencies:
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_resource_height
     - field.field.media.image.field_resource_width
-    - image.style.large
     - media.type.image
+    - responsive_image.styles.image_gallery_4x3
   module:
-    - image
+    - responsive_image
 _core:
   default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
-id: media.image.default
+id: media.image.image_gallery_4x3
 targetEntityType: media
 bundle: image
-mode: default
+mode: image_gallery_4x3
 content:
   field_media_image:
-    type: image
+    type: responsive_image
     label: visually_hidden
     settings:
+      responsive_image_style: image_gallery_4x3
       image_link: ''
-      image_style: large
       image_loading:
         attribute: lazy
     third_party_settings: {  }

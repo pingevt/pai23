@@ -1,0 +1,21 @@
+uuid: 34f1a1eb-0b23-4012-b64e-684fc89b1624
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_make_mini
+    - paragraphs.paragraphs_type.media
+id: paragraph.media.field_make_mini
+field_name: field_make_mini
+entity_type: paragraph
+bundle: media
+label: 'Make Mini'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

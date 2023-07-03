@@ -127,25 +127,43 @@ function pai_preprocess_paragraph(array &$variables) {
         // Add component class.
         $variables['attributes']['class'][] = "c-image-gallery";
 
+        $mini = ($paragraph->field_make_mini->value == 1);
+
         $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
 
-        $flip_flop = [
-          "image_gallery_16x9",
-          "image_gallery_1x1",
-          "image_gallery_1x1",
-          "image_gallery_16x9",
-        ];
+        if ($mini) {
+          $variables['attributes']['class'][] = "c-image-gallery--mini";
+
+          $flip_flop = [
+            "image_gallery_16x9",
+            "image_gallery_1x1",
+            "image_gallery_4x3",
+            "image_gallery_4x3",
+            "image_gallery_1x1",
+            "image_gallery_16x9",
+          ];
+        }
+        else {
+          $flip_flop = [
+            "image_gallery_16x9",
+            "image_gallery_1x1",
+            "image_gallery_1x1",
+            "image_gallery_16x9",
+          ];
+        }
         $referenced_entities = $paragraph->field_media->referencedEntities();
 
-        if ($media_count % 2 == 1) {
+        if ($media_count % 2 == 1  && !$mini) {
           $ext = array_shift($referenced_entities);
           $variables['data']['image_data'][] = [
             'entity' => $view_builder->view($ext, "image_gallery_16x9"),
             'class' => "image-gallery-full",
           ];
         }
+
+        $ffx = $mini? 6 : 4;
         foreach ($referenced_entities as $k => $img) {
-          $display_mode = $flip_flop[$k % 4];
+          $display_mode = $flip_flop[$k % $ffx];
           $variables['data']['image_data'][] = [
             'entity' => $view_builder->view($img, $display_mode),
             'class' => str_replace(["_", "x"], "-", $display_mode),
