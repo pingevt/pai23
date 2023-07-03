@@ -9,6 +9,7 @@ dependencies:
     - editor
     - highlightjs_input_filter
     - media
+    - pai_utility
     - token_filter
 _core:
   default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
@@ -46,7 +47,7 @@ filters:
     status: false
     weight: -44
     settings:
-      allowed_html: '<p class="lede"> <a class="blue"> <ul class="col-2 col-3 col-4"> <h2 class="underline"> <h3 class="underline"> <h4 class="underline"> <h5 class="underline"> <h6 class="underline">'
+      allowed_html: '<p class="lede"> <a class="blue external"> <ul class="col-2 col-3 col-4"> <h2 class="underline"> <h3 class="underline"> <h4 class="underline"> <h5 class="underline"> <h6 class="underline">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_autop:
@@ -108,4 +109,10 @@ filters:
     provider: filter
     status: true
     weight: -46
+    settings: {  }
+  filter_custom_links:
+    id: filter_custom_links
+    provider: pai_utility
+    status: true
+    weight: 0
     settings: {  }

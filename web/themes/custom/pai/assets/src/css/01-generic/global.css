@@ -90,6 +90,12 @@ pre pre.xdebug-var-dump {
   margin: 0;
 }
 
+p code {
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  background-color: rgba(0, 0, 0, .06);
+  padding: 0.15em 0.5em;
+}
+
 table.xdebug-error {
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   font-size: 14px;

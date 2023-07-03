@@ -72,6 +72,26 @@ h6 { @include f-title--h6; }
     &.blue {
       color: var(--c-polynesian-blue);
     }
+
+    &.external {
+      position: relative;
+
+      svg {
+        width: 1em;
+        height: 1em;
+        transform: rotate(-45deg);
+        transition: transform 0.25s var(--cubic-basic) 0s;
+        path {
+          fill: var(--c-delft-blue);
+        }
+      }
+
+      &:hover {
+        svg {
+          transform: rotate(-45deg) translateX(2px);
+        }
+      }
+    }
   }
 
   h2 {
@@ -162,6 +182,8 @@ h6 { @include f-title--h6; }
 
   hr {
     margin: 2rem 0;
+    border-color: var(--c-delft-blue);
+    border-style: solid;
   }
 
   .u-float-left {
@@ -170,5 +192,9 @@ h6 { @include f-title--h6; }
 
   .u-float-right {
     float: right;
+  }
+
+  p code {
+    font-family: monospace;
   }
 }

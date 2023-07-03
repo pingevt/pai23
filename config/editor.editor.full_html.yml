@@ -121,6 +121,9 @@ settings:
           label: 'Blue Link'
           element: '<a class="blue">'
         -
+          label: External
+          element: '<a class="external">'
+        -
           label: '2 column list'
           element: '<ul class="col-2">'
         -

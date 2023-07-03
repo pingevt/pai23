@@ -577,6 +577,23 @@ h6{
       color:rgba(31,72,126,1);
       color:var(--c-polynesian-blue);
     }
+.paragraph--type--wysiwyg a.external{
+      position:relative;
+    }
+.paragraph--type--wysiwyg a.external svg{
+        width:1em;
+        height:1em;
+        transform:rotate(-45deg);
+        transition:transform 0.25s cubic-bezier(0.55, 0.085, 0, 0.99) 0s;
+        transition:transform 0.25s var(--cubic-basic) 0s;
+      }
+.paragraph--type--wysiwyg a.external svg path{
+          fill:rgba(29,52,97,1);
+          fill:var(--c-delft-blue);
+        }
+.paragraph--type--wysiwyg a.external:hover svg{
+          transform:rotate(-45deg) translateX(2px);
+        }
 .paragraph--type--wysiwyg h2.underline{
       border-bottom:5px solid rgba(244,201,93,1);
       border-bottom:5px solid var(--c-saffron);
@@ -657,12 +674,18 @@ h6{
     }
 .paragraph--type--wysiwyg hr{
     margin:2rem 0;
+    border-color:rgba(29,52,97,1);
+    border-color:var(--c-delft-blue);
+    border-style:solid;
   }
 .paragraph--type--wysiwyg .u-float-left{
     float:left;
   }
 .paragraph--type--wysiwyg .u-float-right{
     float:right;
+  }
+.paragraph--type--wysiwyg p code{
+    font-family:monospace;
   }
 *,
 *:before,
@@ -751,6 +774,11 @@ pre.xdebug-var-dump{
 pre pre.xdebug-var-dump{
   padding:0;
   margin:0;
+}
+p code{
+  font-family:ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  background-color:rgba(0, 0, 0, .06);
+  padding:0.15em 0.5em;
 }
 table.xdebug-error{
   font-family:ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -1529,13 +1557,13 @@ main .layout-content{
 .node.node--view-mode-full .c-tech-list{
       grid-column:2 / span 1;
       max-width:50em;
-      margin-top:20px;
+      margin-top:3.2rem;
     }
 .node.node--view-mode-full .c-tech-list h2{
         display:inline-block;
         padding-right:4.8rem;
-        border-bottom:2px solid rgba(36,123,160,1);
-        border-bottom:2px solid var(--c-cerulean);
+        border-bottom:4px solid rgba(36,123,160,1);
+        border-bottom:4px solid var(--c-cerulean);
       }
 .node.node--view-mode-full .c-tech-list li{
         display:inline-block;
@@ -1563,7 +1591,7 @@ main .layout-content{
             width:100%;
           }
 .node.node--view-mode-full .c-related-articles{
-      margin-top:30px;
+      margin-top:3.2rem;
       grid-column:1 / span 3;
     }
 .node.node--view-mode-full .c-related-articles h2{

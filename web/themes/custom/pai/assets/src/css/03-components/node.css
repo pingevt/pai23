@@ -118,12 +118,12 @@
     .c-tech-list {
       grid-column: 2 / span 1;
       max-width: 50em;
-      margin-top: 20px;
+      margin-top: $space-l;
 
       h2 {
         display: inline-block;
         padding-right: $space-xl;
-        border-bottom: 2px solid var(--c-cerulean);
+        border-bottom: 4px solid var(--c-cerulean);
       }
 
       li {
@@ -164,7 +164,7 @@
     }
 
     .c-related-articles {
-      margin-top: 30px;
+      margin-top: $space-l;
       grid-column: 1 / span 3;
 
       h2 {
