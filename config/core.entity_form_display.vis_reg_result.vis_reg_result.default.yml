@@ -1,0 +1,84 @@
+uuid: 78200083-0d86-442a-a8b4-db646a1eb2d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.vis_reg_result.vis_reg_result.field_branch
+    - field.field.vis_reg_result.vis_reg_result.field_directory
+    - field.field.vis_reg_result.vis_reg_result.field_project
+    - field.field.vis_reg_result.vis_reg_result.field_timestamp
+  module:
+    - datetime
+    - vis_reg_result
+  enforced:
+    module:
+      - vis_reg_result
+_core:
+  default_config_hash: I6xXYMTpQghCY5f566tuIuUtocMX5bdQXrGLl3GTeuo
+id: vis_reg_result.vis_reg_result.default
+targetEntityType: vis_reg_result
+bundle: vis_reg_result
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_branch:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_directory:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_project:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_timestamp:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

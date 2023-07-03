@@ -1,0 +1,26 @@
+uuid: 1a164e3e-9de4-4780-af00-3489199868bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - vis_reg_result
+  enforced:
+    module:
+      - vis_reg_result
+_core:
+  default_config_hash: AajT5MEXckJm39ygVp8uVk6exufRvsroRqqojFsFL1U
+id: vis_reg_result.field_project
+field_name: field_project
+entity_type: vis_reg_result
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

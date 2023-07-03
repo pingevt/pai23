@@ -1,0 +1,76 @@
+uuid: 5fdaca46-4403-4446-8a65-3a3a86963478
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.vis_reg_result.vis_reg_result.field_branch
+    - field.field.vis_reg_result.vis_reg_result.field_directory
+    - field.field.vis_reg_result.vis_reg_result.field_project
+    - field.field.vis_reg_result.vis_reg_result.field_timestamp
+  module:
+    - datetime
+    - vis_reg_result
+  enforced:
+    module:
+      - vis_reg_result
+_core:
+  default_config_hash: 3JiGdkrg-zsya52v-3XByi8Kv4v8PkH1aax4lMVi0JY
+id: vis_reg_result.vis_reg_result.default
+targetEntityType: vis_reg_result
+bundle: vis_reg_result
+mode: default
+content:
+  field_branch:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_directory:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_project:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_timestamp:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  status:
+    type: boolean
+    label: above
+    settings:
+      format: enabled-disabled
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,25 @@
+uuid: 3ec12111-3ebf-4e6f-a47e-dcaab8ff80c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.vis_reg_result.field_project
+  module:
+    - vis_reg_result
+  enforced:
+    module:
+      - vis_reg_result
+_core:
+  default_config_hash: 1l4rWZKhhSXM4vzTm3Vm4Q35Tk5b7LeHhJ3-h0LCsOs
+id: vis_reg_result.vis_reg_result.field_project
+field_name: field_project
+entity_type: vis_reg_result
+bundle: vis_reg_result
+label: Project
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: bfb51bba-6723-4ac4-98a7-50df5e781347
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.vis_reg_result.field_branch
+  module:
+    - vis_reg_result
+  enforced:
+    module:
+      - vis_reg_result
+_core:
+  default_config_hash: WG6Qg6Se7U1_vLaWmtGbyj5_uAOQIX3M6XY65n6c5-M
+id: vis_reg_result.vis_reg_result.field_branch
+field_name: field_branch
+entity_type: vis_reg_result
+bundle: vis_reg_result
+label: Branch
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+uuid: 5839c07c-1feb-4e1e-9abf-e8d1efc00a13
+langcode: en
+status: true
+dependencies:
+  module:
+    - vis_reg_result
+  enforced:
+    module:
+      - vis_reg_result
+_core:
+  default_config_hash: T7t4CYNv3Ikz2Ww0QG3e5766GpQXKDE4M6008JKYDWw
+id: vis_reg_result.field_directory
+field_name: field_directory
+entity_type: vis_reg_result
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

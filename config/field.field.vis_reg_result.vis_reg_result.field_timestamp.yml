@@ -1,0 +1,26 @@
+uuid: cd3584a1-f113-4107-bb72-0d8f77c1f121
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.vis_reg_result.field_timestamp
+  module:
+    - datetime
+    - vis_reg_result
+  enforced:
+    module:
+      - vis_reg_result
+_core:
+  default_config_hash: _lS6miJp0X4aTYaF2zDcqHfWLCiVFX62xZTNltfl8n8
+id: vis_reg_result.vis_reg_result.field_timestamp
+field_name: field_timestamp
+entity_type: vis_reg_result
+bundle: vis_reg_result
+label: Timestamp
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

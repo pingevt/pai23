@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e1843905b790802d50ee0fa3a07d176",
+    "content-hash": "092258236fa6ef555e3599b6c143078a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7402,6 +7402,45 @@
                 "source": "https://github.com/pingevt/timing_monitor/tree/1.0.0-alpha6"
             },
             "time": "2023-05-29T20:46:26+00:00"
+        },
+        {
+            "name": "pingevt/vis_reg_result",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pingevt/vis_reg_result.git",
+                "reference": "f3d1fac4a93cfdf5ee44441ecc35b4b253c90fb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pingevt/vis_reg_result/zipball/f3d1fac4a93cfdf5ee44441ecc35b4b253c90fb5",
+                "reference": "f3d1fac4a93cfdf5ee44441ecc35b4b253c90fb5",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.9||^2.0",
+                "melbahja/semver": "^1.0.0",
+                "oomphinc/composer-installers-extender": "^2.0",
+                "php": "^8.0"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pete Inge",
+                    "email": "pete.inge@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Drupal Module for receiveing result from BackstopJS tests.",
+            "support": {
+                "issues": "https://github.com/pingevt/vis_reg_result/issues",
+                "source": "https://github.com/pingevt/vis_reg_result/tree/1.0.0-alpha1"
+            },
+            "time": "2023-07-03T16:06:57+00:00"
         },
         {
             "name": "politsin/jquery-ui-touch-punch",

@@ -1,0 +1,25 @@
+uuid: 7b333773-fd2d-4be6-9557-3358c35c81b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - vis_reg_result
+  enforced:
+    module:
+      - vis_reg_result
+_core:
+  default_config_hash: P5_deYCMw8yc5D7d2PYv3RzwSrvcX3GKn9JCbaaDmuA
+id: vis_reg_result.field_timestamp
+field_name: field_timestamp
+entity_type: vis_reg_result
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

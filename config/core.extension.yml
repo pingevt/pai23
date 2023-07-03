@@ -94,6 +94,7 @@ module:
   views_ajax_history: 0
   views_ui: 0
   viewsreference: 0
+  vis_reg_result: 0
   workflows: 0
   pathauto: 1
   selective_better_exposed_filters: 1
