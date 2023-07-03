@@ -1,0 +1,21 @@
+
+video {
+  /* max-width: 98%; */
+}
+img {
+  /* max-width: 98%; */
+}
+
+
+.js-lpb-component-list > .paragraph.paragraph--type--media {
+  .field--name-field-media.field__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > .field__item {
+      width: 30%;
+      max-width: 30%;
+    }
+  }
+}
