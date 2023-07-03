@@ -964,11 +964,11 @@ div.field-title.inline + div{
         }
 
         .c-image-gallery.c-image-gallery--mini .c-image-gallery__list li.image-gallery-4-3{
-          width:23%;
+          width:30.7%;
         }
 
         .c-image-gallery.c-image-gallery--mini .c-image-gallery__list li.image-gallery-1-1{
-          width:30.7%;
+          width:23%;
         }
       }
 @media (min-width: 750px){
@@ -977,6 +977,7 @@ div.field-title.inline + div{
     flex-wrap:wrap;
     justify-content:space-evenly;
     row-gap:3.2rem
+
 }
 
     .c-image--no-crop .media{
