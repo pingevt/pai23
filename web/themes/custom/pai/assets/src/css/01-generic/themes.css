@@ -1,0 +1,28 @@
+
+/*
+  --c-dartmouth-green: #006A3E;
+  --c-iris: #5944AE;
+  --c-light-red: #FF7571;
+  --c-deep-sky-blue: #00BAFF;
+*/
+
+.u-tag-theme--dartmouth-green {
+  --c-tag-theme-primary: var(--c-dartmouth-green);
+  --c-tag-theme-bg-color: var(--c-dartmouth-green);
+  --c-tag-theme-fg-color: var(--c-white);
+}
+.u-tag-theme--iris {
+  --c-tag-theme-primary: var(--c-iris);
+  --c-tag-theme-bg-color: var(--c-iris);
+  --c-tag-theme-fg-color: var(--c-white);
+}
+.u-tag-theme--light-red {
+  --c-tag-theme-primary: var(--c-light-red);
+  --c-tag-theme-bg-color: var(--c-light-red);
+  --c-tag-theme-fg-color: var(--c-black);
+}
+.u-tag-theme--deep-sky-blue {
+  --c-tag-theme-primary: var(--c-deep-sky-blue);
+  --c-tag-theme-bg-color: var(--c-deep-sky-blue);
+  --c-tag-theme-fg-color: var(--c-black);
+}

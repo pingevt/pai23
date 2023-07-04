@@ -48,11 +48,18 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   field_client: true
   field_content: true
   field_display_title: true
   field_related_articles: true
-  field_tags: true
   field_tech: true
   links: true

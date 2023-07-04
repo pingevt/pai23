@@ -5,6 +5,7 @@
 @import "01-generic/mixins.css";
 @import "01-generic/typography.css";
 @import "01-generic/global.css";
+@import "01-generic/themes.css";
 
 // Objects
 @import "02-objects/field.css";

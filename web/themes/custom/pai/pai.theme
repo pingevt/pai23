@@ -90,6 +90,10 @@ function pai_preprocess_node(array &$variables) {
   switch ($bundle) {
     case 'article':
 
+      if (!$node->field_tags->isEmpty()) {
+        $variables['attributes']['class'][] = "u-tag-theme--" . $node->field_tags->entity->field_theme_slug->value;
+      }
+
       if ($variables['view_mode'] == "full") {
         $variables['meta_attributes'] = [
           'class' => [

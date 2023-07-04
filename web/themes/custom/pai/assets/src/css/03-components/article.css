@@ -14,7 +14,7 @@
 
       .c-node-article--media-block {
         grid-area: media;
-        border-bottom: 5px solid var(--c-polynesian-blue);
+        border-bottom: 5px solid var(--c-tag-theme-primary);
 
         .media--view-mode-teaser {
           overflow: hidden;
@@ -29,9 +29,22 @@
       .c-node-article--title-block {
         grid-area: title;
 
+        .c-node-article--eyebrow {
+          @include f-text--small-cta;
+          margin: 1rem 1rem 1rem;
+          /* color: var(--c-tag-theme-primary); */
+
+          span {
+            color: var(--c-tag-theme-fg-color);
+            background-color: var(--c-tag-theme-bg-color);
+            padding: 0.5em 1em;
+            border-radius: 1em;
+          }
+        }
+
         h2, h3, h4, h5, h6 {
           @include f-title--h4;
-          margin: 1rem 1rem 0;
+          margin: 0.25rem 1rem 0;
 
           transition: text-decoration-color 0.24s var(--cubic-basic);
           text-decoration: underline;
