@@ -1,3 +1,23 @@
+###
+### GitHub repository .gitignore section
+###
+
+# Add directories containing build assets below.
+# Keep all additions above the "cut" line.
+
+# Fractal Build
+web/fractal-build/*
+
+web/themes/custom/*/assets/dist/css
+web/themes/custom/*/assets/dist/js
+web/themes/custom/*/assets/dist/images
+
+web/modules/custom/*/assets/dist/css
+web/modules/custom/*/assets/dist/js
+web/modules/custom/*/assets/dist/images
+
+# :::::::::::::::::::::: cut ::::::::::::::::::::::
+
 # This file contains .gitignore rules that are often used with Drupal projects.
 # Because .gitignore is specific to your site and its deployment processes, you
 # may need to uncomment, add, or remove rules.
