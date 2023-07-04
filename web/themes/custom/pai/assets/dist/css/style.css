@@ -1819,6 +1819,7 @@ main .layout-content{
     }
 .media--type-video{
   width:100%;
+  max-width:800px;
   margin:0 auto;
 }
 .media--type-video video{
@@ -1966,3 +1967,5 @@ footer #block-copyright{
     white-space:normal;
     width:auto;
   }
+
+/*# sourceMappingURL=style.css.map */
