@@ -1,0 +1,162 @@
+name: Deploy to Pantheon
+on:
+  push:
+    branches:
+      - master
+      - "feature/**"
+      - "persist/**"
+  pull_request:
+    types: [opened, reopened]
+    branches:
+      - "develop"
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TERM: dumb
+  ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+  ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+  ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+  GITHUB_TOKEN: ${{ github.token }}
+  TERMINUS_TOKEN: ${{ secrets.TERMINUS_TOKEN }}
+  CI_BRANCH: ${{ github.head_ref || github.ref_name }}
+  COMMIT_SHA: ${{ github.sha }}
+  CI_BUILD_NUMBER: ${{ github.run_number }}
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+  GITHUB_OWNER: ${{ github.repository_owner }}
+  CI_PROJECT_NAME: ${{ github.repository }}
+  CI_PULL_REQUEST: ${{ github.event.pull_request._links.html.href }}
+  DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.PANTHEON_SSH_KEY }}
+          config: ${{ secrets.SSH_CONFIG }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+      # Initiate Env Variables.
+      - name: Setup Environment Vars
+        run: ./.ci/scripts/env/init-env-vars.sh
+
+      # Debugger
+      # - uses: hmarr/debug-action@v2
+
+      # Install Terminus.
+      - name: Install Terminus
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        uses: pantheon-systems/terminus-github-actions@main
+        with:
+          pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+
+      - name: PWD
+        run: pwd
+
+      # Install Terminus Build Tools.
+      - name: Install Terminus Build Tools
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        run: terminus self:plugin:install terminus-build-tools-plugin
+
+      # Pantheon Cleanup.
+      - name: Prepare and clean up Pantheon
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        run: ./.ci/scripts/env/prepare-for-pantheon.sh
+
+      - name: Update Ignore File.
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        run: terminus build:gitignore:cut
+
+      - name: Use Node.js with proper version.
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+
+      # Cache vendor folder
+      - name: Cache vendor folder
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-vendor
+        with:
+          path: ./vendor
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: node builder
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        run: |
+          npm install
+          npm run test --if-present
+          npm run build --if-present
+
+      - name: pre-deployer
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        env:
+          pantheon_repo: "${{ secrets.PANTHEON_REPO }}"
+        run: |
+          BASE_BRANCH=${GITHUB_REF##*/}
+          git remote add pantheon $pantheon_repo
+          git config --global user.mail "bc-bot@bluecadet.com"
+          git config --global user.name "Bluecadet Bot"
+          [ -f .gitignore-panth ] && git rm `cat .gitignore-panth | sed 's/^\///g'` || echo ".gitignore-panth does not exist."
+          [ -f .gitignore-panth ] && cat .gitignore-panth >> .gitignore || echo ".gitignore-panth does not exist."
+
+      - name: deployer
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        timeout-minutes: 20
+        run: |
+          git config --global user.mail "bc-bot@bluecadet.com"
+          git config --global user.name "Bluecadet Bot"
+          git config user.mail "bc-bot@bluecadet.com"
+          git config user.name "Bluecadet Bot"
+          ./.ci/scripts/env/deploy-to-pantheon.sh
+
+      # - name: Wait for Pantheon to fully sync code
+      #   run: terminus workflow:wait panth-github-actions.dev --max=6000
+
+      - name: Install Backstopjs and Puppeteer
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        run: npm install backstopjs puppeteer minimist
+
+      # If we need to login, set urls.
+      - name: Setup authorization urls
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        run: ./.ci/scripts/tests/backstopjs-auth-url.sh
+
+      - name: Visual regression test
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        timeout-minutes: 20
+        run: ./.ci/scripts/tests/backstopjs-test.sh
+
+      - name: Post Artifacts
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+        timeout-minutes: 15
+        env:
+          CONNECT_BC_API: "${{ secrets.CONNECT_BC_KEY }}"
+          PROJECT: "${{ env.TERMINUS_SITE }}"
+          BRANCH: "${{ env.GITHUB_REF_NAME }}"
+        run: ./.ci/scripts/env/copy-to-connect-bc.sh
+
+      # TODO This is taking up too much space on Github.
+      # - name: Upload artifacts
+      #   if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: vrt-report
+      #     path: ${{ env.ARTIFACTS_FULL_DIR }}
+
+      - name: Comment PR
+        if: ${{ env.SHOULD_BUILD_JOB == 'true' && env.PR_NUMBER != 0 }}
+        env:
+          msg: ${{ env.VR_PR_MESSAGE }}
+        run: gh pr comment ${{ env.PR_NUMBER }} --body-file message.md

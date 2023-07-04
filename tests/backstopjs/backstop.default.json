@@ -1,0 +1,54 @@
+{
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 475,
+      "height": 480
+    },
+    {
+      "name": "tablet",
+      "width": 950,
+      "height": 1024
+    },
+    {
+      "name": "desktop",
+      "width": 1300,
+      "height": 768
+    },
+    {
+      "name": "large_desktop",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Homepage",
+      "url": "",
+      "referenceUrl": "",
+      "hideSelectors": [],
+      "removeSelectors": [".c-random-banner"],
+      "selectors": [
+        "document"
+      ],
+      "readyEvent": null,
+      "delay": 1500,
+      "misMatchThreshold" : 0.1
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "tests/backstopjs/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser", "CI"],
+  "engine": "puppeteer",
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 20,
+  "debug": false,
+  "debugWindow": false
+}

@@ -1,0 +1,171 @@
+#!/bin/bash
+
+relBranchName() {
+
+  if [ $# -gt 1 ]; then
+    # If parameters no equal 1
+    echo -e "Incorrect parameters passed"
+  elif [[ $1 != release/* ]]; then
+    echo -e "This is not a release branch string. Must start with 'release/'."
+  else
+    NAME=$1
+    STUB1=${NAME:8}
+    # remove non alphanumeric and - _ chars
+    STUB1=${STUB1//\//-}
+    STUB1=${STUB1//[^A-Za-z0-9\-_]/}
+
+    STUB2=${STUB1:0:7}
+    RELEASE_BRANCH="rel-${STUB2}"
+    # all lowercase
+    RELEASE_BRANCH=`php -r "print strtolower('$RELEASE_BRANCH');"`
+    # replace '.'
+    RELEASE_BRANCH=${RELEASE_BRANCH//./-}
+    # remove final "-" if exists.
+    RELEASE_BRANCH=${RELEASE_BRANCH/%-/}
+
+
+    echo ${RELEASE_BRANCH}
+  fi
+
+}
+
+
+persistBranchName() {
+
+  if [ $# -gt 1 ]; then
+    # If parameters no equal 1
+    echo -e "Incorrect parameters passed"
+  elif [[ $1 != persist/* ]]; then
+    echo -e "This is not a persistent branch string. Must start with 'persist/'."
+  else
+    NAME=$1
+    STUB1=${NAME:8}
+    # remove non alphanumeric and - _ chars
+    STUB1=${STUB1//\//-}
+    STUB1=${STUB1//[^A-Za-z0-9\-_]/}
+
+    STUB2=${STUB1:0:10}
+    PERSIST_BRANCH="${STUB2}"
+    # all lowercase
+    PERSIST_BRANCH=`php -r "print strtolower('$PERSIST_BRANCH');"`
+    # replace '.'
+    PERSIST_BRANCH=${PERSIST_BRANCH//./-}
+    # remove final "-" if exists.
+    PERSIST_BRANCH=${PERSIST_BRANCH/%-/}
+
+    echo ${PERSIST_BRANCH}
+  fi
+
+}
+
+deleteReleaseEnvs() {
+
+  # Create folder to work in
+  GITDATA_FOLDER="${TEMP_DIR}/workspace/git_data"
+  mkdir -p -v "${GITDATA_FOLDER}"
+
+  GIT_PR_DATA_FILE="${GITDATA_FOLDER}/git_repo_pulls.json"
+  touch ${GIT_PR_DATA_FILE}
+
+  echo -e ${GIT_PR_DATA_FILE}
+
+  # grab github pr data and names
+  GITHUB_REPO_URL="https://api.github.com/repos/$CI_PROJECT_NAME/pulls"
+
+  curl -s -H "Authorization: token ${GITHUB_TOKEN}" ${GITHUB_REPO_URL} > ${GIT_PR_DATA_FILE}
+
+  ls -sla ${GITDATA_FOLDER}
+
+  GIT_PRS=$(cat $GIT_PR_DATA_FILE | jq -r '.[] | .head["ref"]')
+  PRS=(`echo ${GIT_PRS}`);
+
+  RELEASE_PRS_MOD=()
+  for i in "${PRS[@]}"
+  do
+    if [[ $i == release/* ]]; then
+
+      ENV=$(relBranchName $i)
+      echo -e "PR mod: $ENV"
+      RELEASE_PRS_MOD+=($ENV);
+    fi
+  done
+
+  # Grab Pantheon Env lists
+  PANTH_ENVS_LIST=$(terminus -n env:list $TERMINUS_SITE --format=list)
+  ENVS=(`echo ${PANTH_ENVS_LIST}`);
+
+  PANTH_RELEASE_ENVS=()
+  for i in "${ENVS[@]}"
+  do
+    if [[ $i == rel-* ]]; then
+      echo -e "Env: $i"
+      PANTH_RELEASE_ENVS+=($i)
+    fi
+  done
+
+  # Compare Lists
+  MULTI_DEV_TO_DELETE=()
+
+  for i in "${PANTH_RELEASE_ENVS[@]}"
+  do
+
+    if [[ ! " ${RELEASE_PRS_MOD[@]} " =~ " ${i} " ]]; then
+      MULTI_DEV_TO_DELETE+=($i)
+    fi
+  done
+
+  echo -e ""
+
+  # Remove unneeded environments
+  for i in "${MULTI_DEV_TO_DELETE[@]}"
+  do
+    echo -e "Deleteing $TERMINUS_SITE.$i"
+    terminus -n multidev:delete --delete-branch -y -- ${TERMINUS_SITE}.${i}
+
+  done
+
+  echo -e ""
+}
+
+mktouch() {
+  mkdir -p $(dirname $1) && touch $1;
+}
+
+resolve_relative_path() (
+    # If the path is a directory, we just need to 'cd' into it and print the new path.
+    if [ -d "$1" ]; then
+        cd "$1" || return 1
+        pwd
+    # If the path points to anything else, like a file or FIFO
+    elif [ -e "$1" ]; then
+        # Strip '/file' from '/dir/file'
+        # We only change the directory if the name doesn't match for the cases where
+        # we were passed something like 'file' without './'
+        if [ ! "${1%/*}" = "$1" ]; then
+            cd "${1%/*}" || return 1
+        fi
+        # Strip all leading slashes upto the filename
+        echo "$(pwd)/${1##*/}"
+    else
+        echo "Error wtih: $1"
+        return 1 # Failure, neither file nor directory exists.
+    fi
+)
+
+
+parse_yaml() {
+    local prefix=$2
+    local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')
+    sed -ne "s|^\($s\):|\1|" \
+          -e "s|^\($s\)\($w\)$s:$s[\"']\(.*\)[\"']$s\$|\1$fs\2$fs\3|p" \
+          -e "s|^\($s\)\($w\)$s:$s\(.*\)$s\$|\1$fs\2$fs\3|p"  $1 |
+    awk -F$fs '{
+        indent = length($1)/2;
+        vname[indent] = $2;
+        for (i in vname) {if (i > indent) {delete vname[i]}}
+        if (length($3) > 0) {
+          vn=""; for (i=0; i<indent; i++) {vn=(vn)(vname[i])("_")}
+          printf("%s%s%s=\"%s\"\n", "'$prefix'",vn, $2, $3);
+        }
+    }'
+}
