@@ -3,12 +3,12 @@
 set -eo pipefail
 
 PWD_VAR=$(pwd)
-UUID=4a1a251a-53ba-4793-a41f-862eb890934c
+UUID=66f9fa33-db8e-4591-9291-6f4619cb8801
 ENV=live
 
 echo $PWD_VAR
 
-curl -H "api-key: $CONNECT_BC_API" -d "project=$TERMINUS_SITE&branch=$GITHUB_REF_NAME" -X POST https://live-connect-bluecadet.pantheonsite.io/api/vis-reg-result >> connect-bc.js
+curl -H "api-key: $CONNECT_BC_API" -d "project=$TERMINUS_SITE&branch=$GITHUB_REF_NAME" -X POST https://live-pai23.pantheonsite.io/api/vis-reg-result >> connect-bc.js
 
 TIMESTAMP=$(cat connect-bc.js | jq -r '.data.timestamp')
 
@@ -24,8 +24,8 @@ echo $PWD_VAR
 
 cd "$PWD_VAR"
 
-VR_PR_LINK="[VR Report](https://live-connect-bluecadet.pantheonsite.io/sites/default/files/vis-reg-reports/$TIMESTAMP/artifacts/backstop_data/html_report/index.html)"
+VR_PR_LINK="[VR Report](https://live-pai23.pantheonsite.io/sites/default/files/vis-reg-reports/$TIMESTAMP/artifacts/backstop_data/html_report/index.html)"
 
 echo $VR_PR_LINK
 
-echo "[VR Report](https://live-connect-bluecadet.pantheonsite.io/sites/default/files/vis-reg-reports/$TIMESTAMP/artifacts/backstop_data/html_report/index.html)" >> message.md
+echo "[VR Report](https://live-pai23.pantheonsite.io/sites/default/files/vis-reg-reports/$TIMESTAMP/artifacts/backstop_data/html_report/index.html)" >> message.md

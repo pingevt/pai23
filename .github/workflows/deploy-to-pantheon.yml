@@ -106,8 +106,8 @@ jobs:
         run: |
           BASE_BRANCH=${GITHUB_REF##*/}
           git remote add pantheon $pantheon_repo
-          git config --global user.mail "bc-bot@bluecadet.com"
-          git config --global user.name "Bluecadet Bot"
+          git config --global user.mail "pete.inge@gmail.com"
+          git config --global user.name "Pete Inge"
           [ -f .gitignore-panth ] && git rm `cat .gitignore-panth | sed 's/^\///g'` || echo ".gitignore-panth does not exist."
           [ -f .gitignore-panth ] && cat .gitignore-panth >> .gitignore || echo ".gitignore-panth does not exist."
 
@@ -115,10 +115,10 @@ jobs:
         if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
         timeout-minutes: 20
         run: |
-          git config --global user.mail "bc-bot@bluecadet.com"
-          git config --global user.name "Bluecadet Bot"
-          git config user.mail "bc-bot@bluecadet.com"
-          git config user.name "Bluecadet Bot"
+          git config --global user.mail "pete.inge@gmail.com"
+          git config --global user.name "Pete Inge"
+          git config user.mail "pete.inge@gmail.com"
+          git config user.name "Pete Inge"
           ./.ci/scripts/env/deploy-to-pantheon.sh
 
       # - name: Wait for Pantheon to fully sync code

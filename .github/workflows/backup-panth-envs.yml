@@ -33,7 +33,7 @@ jobs:
       run: terminus backup:create $TERMINUS_SITE.dev --keep-for=15 -n -q &
 
     - name: Copy Live to dev
-      run: terminus env:clone-content --yes --updatedb --cc connect-bluecadet.live dev -n -q &
+      run: terminus env:clone-content --yes --updatedb --cc $TERMINUS_SITE.live dev -n -q &
 
     - name: Copy Live to test
-      run: terminus env:clone-content --yes --updatedb --cc connect-bluecadet.live test -n -q &
+      run: terminus env:clone-content --yes --updatedb --cc $TERMINUS_SITE.live test -n -q &
