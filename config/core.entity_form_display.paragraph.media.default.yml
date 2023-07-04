@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.media.field_caption
     - field.field.paragraph.media.field_credit
+    - field.field.paragraph.media.field_display
     - field.field.paragraph.media.field_make_mini
     - field.field.paragraph.media.field_media
     - field.field.paragraph.media.field_no_crop
@@ -19,7 +20,7 @@ mode: default
 content:
   field_caption:
     type: text_textarea
-    weight: 3
+    weight: 4
     region: content
     settings:
       rows: 3
@@ -27,11 +28,17 @@ content:
     third_party_settings: {  }
   field_credit:
     type: text_textarea
-    weight: 4
+    weight: 5
     region: content
     settings:
       rows: 3
       placeholder: ''
+    third_party_settings: {  }
+  field_display:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_make_mini:
     type: boolean_checkbox
@@ -42,7 +49,7 @@ content:
     third_party_settings: {  }
   field_media:
     type: media_library_widget
-    weight: 2
+    weight: 3
     region: content
     settings:
       media_types:
@@ -66,7 +73,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true

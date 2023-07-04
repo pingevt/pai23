@@ -10,7 +10,7 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 
-
+    <div class="paragraph--content">
       {% if data.image_data %}
         <ul class="c-image-gallery__list">
           {% for img in data.image_data %}
@@ -21,6 +21,8 @@
       {% else %}
         {{ content }}
       {% endif %}
+    </div>
+
     {% endblock %}
   </div>
 {% endblock paragraph %}

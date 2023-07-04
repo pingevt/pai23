@@ -53,3 +53,10 @@
     width: 100%;
   }
 }
+
+.paragraph--type--media.c-image--count--1 {
+  > .paragraph--content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

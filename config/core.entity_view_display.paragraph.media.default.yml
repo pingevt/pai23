@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.media.field_caption
     - field.field.paragraph.media.field_credit
+    - field.field.paragraph.media.field_display
     - field.field.paragraph.media.field_make_mini
     - field.field.paragraph.media.field_media
     - field.field.paragraph.media.field_no_crop
@@ -40,5 +41,6 @@ content:
     weight: 0
     region: content
 hidden:
+  field_display: true
   field_make_mini: true
   field_no_crop: true

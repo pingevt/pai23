@@ -125,19 +125,28 @@ function pai_preprocess_paragraph(array &$variables) {
 
   switch ($bundle) {
     case 'media':
+      $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
       $mini = ($paragraph->field_make_mini->value == 1);
       $no_crop = ($paragraph->field_no_crop->value == 1);
+
+      $forced_display = NULL;
+      if (!$paragraph->field_display->isEmpty()) {
+        $val = $paragraph->field_display->target_id;
+        $val = explode(".", $val);
+        if ($val[0] == "media") {
+          $forced_display = $val[1];
+        }
+      }
 
       if ($no_crop) {
         $variables['attributes']['class'][] = "c-image--no-crop";
       }
 
       $media_count = $paragraph->field_media->count();
+      $variables['attributes']['class'][] = "c-image--count--" . $media_count;
       if ($media_count > 1 && !$no_crop) {
         // Add component class.
         $variables['attributes']['class'][] = "c-image-gallery";
-
-        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
 
         if ($mini) {
           $variables['attributes']['class'][] = "c-image-gallery--mini";
@@ -178,12 +187,12 @@ function pai_preprocess_paragraph(array &$variables) {
           ];
         }
       }
+      else if ($forced_display !== NULL) {
+        foreach (Element::children($variables['content']['field_media']) as $ckey) {
+          $variables['content']['field_media'][$ckey] = $view_builder->view($variables['content']['field_media'][$ckey]['#media'], $forced_display);
+        }
+      }
 
-      // if ($media_count > 1 && $no_crop) {
-      //   $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
-      //   $referenced_entities = $paragraph->field_media->referencedEntities();
-      //   // $display_mode = "ful"
-      // }
       break;
   }
 }

@@ -1,0 +1,23 @@
+uuid: 5e210fab-e1bc-434b-b117-8b0fbbe402db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display
+    - paragraphs.paragraphs_type.media
+id: paragraph.media.field_display
+field_name: field_display
+entity_type: paragraph
+bundle: media
+label: Display
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:entity_view_mode'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference
