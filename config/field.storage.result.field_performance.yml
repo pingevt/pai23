@@ -1,0 +1,25 @@
+uuid: c6165e9d-536b-47b5-8ef0-73c9b7c61857
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_lighthouse
+_core:
+  default_config_hash: wab7Zhxp3Xx4Ru1eU8VGS1dT84JeLOnN3VHaeM1UECw
+id: result.field_performance
+field_name: field_performance
+entity_type: result
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

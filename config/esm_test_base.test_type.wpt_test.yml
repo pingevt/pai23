@@ -1,0 +1,12 @@
+uuid: ff6ae5af-07c5-49dc-b55c-c7e5ba0e71cc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: NljAhR2HHPpgl_PsqxqzVsI1EwKwsV7E0879BYopHDA
+id: wpt_test
+label: 'WPT Test'
+allow_manual: true

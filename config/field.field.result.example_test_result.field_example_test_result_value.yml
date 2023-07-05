@@ -1,0 +1,28 @@
+uuid: 0d37f0c8-8006-48a7-bea2-a8d5dab41fa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.example_test_result
+    - field.storage.result.field_example_test_result_value
+  enforced:
+    module:
+      - esm_test_result_base
+_core:
+  default_config_hash: hJq13SWHub5KooFldEOZ0AuEZwY8MzljIq86QVrTR4A
+id: result.example_test_result.field_example_test_result_value
+field_name: field_example_test_result_value
+entity_type: result
+bundle: example_test_result
+label: 'Example Test Result'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

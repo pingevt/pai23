@@ -1,0 +1,11 @@
+uuid: 9705b790-11b0-43b8-94b9-e07a19f051a1
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: 7y3LtLOtraxDEhvIXOOLSzKNoYqXYVZxVR8P-HqEWRg
+id: wpt_test_result
+label: 'WPT Test Result'

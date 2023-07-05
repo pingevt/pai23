@@ -1,0 +1,25 @@
+uuid: f87a2858-7e5c-4a8b-9947-dd9c8aad421c
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_lighthouse
+_core:
+  default_config_hash: W0Be7CsJJbHX7AFoMX1Scie2SvQnWQgLKCoqIyaYfC8
+id: result.field_seo
+field_name: field_seo
+entity_type: result
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

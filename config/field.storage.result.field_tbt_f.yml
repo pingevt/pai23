@@ -1,0 +1,23 @@
+uuid: 2a088d5f-7442-4fb1-86c4-31c1205f6491
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: HRE3mK-0HKMiU3UJ97nZ8puk96aVuBJJRm0PL6mdwKI
+id: result.field_tbt_f
+field_name: field_tbt_f
+entity_type: result
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,13 @@
+uuid: 2ace9a90-91c8-4f06-8180-15390c087739
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_site
+_core:
+  default_config_hash: vP1MKwNi8prFDkU9bNaPG8o6HqLJLDjxwp2umhfPpJc
+name: 'Site Type'
+vid: site_type
+description: ''
+weight: 99

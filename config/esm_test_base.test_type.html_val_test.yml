@@ -1,0 +1,12 @@
+uuid: 8734583f-daa4-405f-9190-79d69585c5de
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_html_val
+_core:
+  default_config_hash: cXU_unSUa3Agc3uGrzmyRSJBixVk-_XKw9Nci2ypP3g
+id: html_val_test
+label: 'HTML Validation Test'
+allow_manual: null

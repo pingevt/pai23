@@ -1,0 +1,28 @@
+uuid: e598e2c1-c6bc-4e5d-b32b-6c00c8cb98e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.html_val_test_result
+    - field.storage.result.field_info
+  enforced:
+    module:
+      - esm_test_html_val
+_core:
+  default_config_hash: Ryfls_MQnCh360iyrHkNq6BSU8TRQ7kfPRvBKK0CZas
+id: result.html_val_test_result.field_info
+field_name: field_info
+entity_type: result
+bundle: html_val_test_result
+label: 'Info Count'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

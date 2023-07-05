@@ -1,0 +1,11 @@
+uuid: bca7b3b2-5deb-491d-9914-16d0e6dce27c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_lighthouse
+_core:
+  default_config_hash: mPaxUa_b35bHpzPOya1YjKEyrKH4Cb_miJes9PuBg-w
+id: lighthouse_test_result
+label: 'Lighthouse Test Result'

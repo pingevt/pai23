@@ -1,0 +1,23 @@
+uuid: a8395761-f4ef-4026-951e-e0eaadf58193
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: prlREVIoZ_YMTov0MUijoYZq3A4HOxanbg-xqgVe8Xw
+id: result.field_cls_r
+field_name: field_cls_r
+entity_type: result
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

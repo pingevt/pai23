@@ -1,0 +1,28 @@
+uuid: c94f966b-defa-4816-b8d6-d872327e83c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_base.test_type.lighthouse_test
+    - field.storage.test.field_urls
+  module:
+    - link
+  enforced:
+    module:
+      - esm_test_lighthouse
+_core:
+  default_config_hash: ZE0abwM6GmL_RFopzoqTX-MS1RkudS_6_GjIKhUt-z8
+id: test.lighthouse_test.field_urls
+field_name: field_urls
+entity_type: test
+bundle: lighthouse_test
+label: Urls
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

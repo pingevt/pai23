@@ -1,0 +1,35 @@
+uuid: 41f83367-a53a-4b03-86ad-0a7a4784cc07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site.field_site_type
+    - taxonomy.vocabulary.site_type
+  module:
+    - esm_site
+  enforced:
+    module:
+      - esm_site
+_core:
+  default_config_hash: fD9F-DTOvjWcZFG5-VuhoyFLVxWYfW0NirWH7HFW4Dg
+id: site.site.field_site_type
+field_name: field_site_type
+entity_type: site
+bundle: site
+label: 'Site Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      site_type: site_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

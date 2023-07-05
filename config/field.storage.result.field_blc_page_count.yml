@@ -1,0 +1,25 @@
+uuid: f109927c-ee27-4ac4-9b29-8054a6243272
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_blc
+_core:
+  default_config_hash: C2nYiCr1_1rfAZM6nadMMNzZ2THQ76NypdxhfJ_Dk-A
+id: result.field_blc_page_count
+field_name: field_blc_page_count
+entity_type: result
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

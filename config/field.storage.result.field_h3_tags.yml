@@ -1,0 +1,25 @@
+uuid: d8405c16-0be5-4100-b045-d6af1da06db7
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_tag_checker
+_core:
+  default_config_hash: 4mtqS_9Nv4tcgTwBBDmPNDY7acPSmZ6Z_RqmaWyd2BY
+id: result.field_h3_tags
+field_name: field_h3_tags
+entity_type: result
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

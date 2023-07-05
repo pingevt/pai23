@@ -1,0 +1,23 @@
+uuid: 2e8f8606-4b6e-447a-86ca-f1899ba21c3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: iaLHaMiWKZUXJaqv-z5kM6sHhqu-BWFQelJ93dAlu7Y
+id: result.field_ttfb_r
+field_name: field_ttfb_r
+entity_type: result
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

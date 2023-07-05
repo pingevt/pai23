@@ -1,0 +1,11 @@
+uuid: 672e2d1d-97a3-4497-873c-83c0ab82be58
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_pchr
+_core:
+  default_config_hash: cLNEXShPyKVuowRdxmhQ0_d1geHKDJOPND1XuiuLG9k
+id: pchr_test_result
+label: 'PCHR test Result'

@@ -1,0 +1,28 @@
+uuid: 301a0ba5-3955-4368-bcd9-fcfba1b2e6f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.wpt_test_result
+    - field.storage.result.field_speed_index_r
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: 2M6v4E_-FyIYh0aZx_BAVo-9FLfxrVu_1PpGNxUA9oc
+id: result.wpt_test_result.field_speed_index_r
+field_name: field_speed_index_r
+entity_type: result
+bundle: wpt_test_result
+label: 'Speed Index (r)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

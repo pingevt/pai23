@@ -1,0 +1,25 @@
+uuid: 500006bb-5b52-47b3-a941-90aba7f17f89
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_result_base
+_core:
+  default_config_hash: AuF0t1ouEBFY4Km-8WoKKFBMaPCc4dnIvmind6KIXb4
+id: result.field_example_test_result_value
+field_name: field_example_test_result_value
+entity_type: result
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

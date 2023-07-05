@@ -1,0 +1,12 @@
+uuid: 5ebfcf3c-e02b-499f-b078-86f3c271355b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_blc
+_core:
+  default_config_hash: vlln9XltBxfHFsLFWg_fbSIkLTHUPDfHOZkZT8ay5E8
+id: blc_test
+label: 'Broken Link Checker'
+allow_manual: null

@@ -1,0 +1,23 @@
+uuid: b00cf198-8374-4e76-9fd1-aa912936262d
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: 3fQ22h3ymao_r2YiYmEGiyEDgHmaMcA9sG997kbxWMU
+id: result.field_fcp_f
+field_name: field_fcp_f
+entity_type: result
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

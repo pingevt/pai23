@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: FKC9yIxNNxQH9n1m-4wLaitYMNbhGg6Y9OpZdhmiG50
+dir: 'public://tests/tag-checker-reports'
+dependencies:
+  enforced:
+    module:
+      - esm_test_tag_checker

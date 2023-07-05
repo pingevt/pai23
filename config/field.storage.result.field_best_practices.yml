@@ -1,0 +1,25 @@
+uuid: a9dcd66d-e7ef-40c4-a1c7-205ee240bfa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_lighthouse
+_core:
+  default_config_hash: Q-0NcAMEr8Nle4mMsnpNzDYTKZtyEfCRbbwLj5bJGpM
+id: result.field_best_practices
+field_name: field_best_practices
+entity_type: result
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 7af4da49-8c46-49e1-b27e-d2b442b953eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: m1Jtku1sFIJSZ5t-_-FYDdc66mqE6YB47NZL-z-tDgU
+id: result.field_speed_index_f
+field_name: field_speed_index_f
+entity_type: result
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

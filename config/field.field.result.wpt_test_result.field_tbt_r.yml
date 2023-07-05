@@ -1,0 +1,28 @@
+uuid: 40abeb1a-c5a6-4405-ad12-fa055eba3469
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.wpt_test_result
+    - field.storage.result.field_tbt_r
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: 4pguSKM8DGVV921ZvIniRR39GQlHSN0jXWH9K1uTZiM
+id: result.wpt_test_result.field_tbt_r
+field_name: field_tbt_r
+entity_type: result
+bundle: wpt_test_result
+label: 'TBT (r)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

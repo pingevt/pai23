@@ -1,0 +1,23 @@
+uuid: 5c750261-cc50-43d7-be41-540aa7617d2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_pchr
+_core:
+  default_config_hash: Hh5rc4MqDe_XF0kPtucAYHnauH11h03prTj_9RD80Kk
+id: result.field_latest_ratio
+field_name: field_latest_ratio
+entity_type: result
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

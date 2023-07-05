@@ -1,0 +1,25 @@
+uuid: 84de1803-ea4e-472a-a600-07bcb1033481
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_blc
+_core:
+  default_config_hash: CTUs7I4fJDoj9CTi3zh9B7-9QJhpCouE64kyddnF-24
+id: result.field_blc_cron_runs
+field_name: field_blc_cron_runs
+entity_type: result
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,32 @@
+uuid: 9b944e9d-8d64-4efe-aa14-9a7f9af5abb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.html_val_test_result
+    - field.storage.result.field_html_val_json_report
+  module:
+    - file
+  enforced:
+    module:
+      - esm_test_html_val
+_core:
+  default_config_hash: UxXBx6JF2oz8W_pb9oSs8GabIkJZoXFWzUq8XjpRHDw
+id: result.html_val_test_result.field_html_val_json_report
+field_name: field_html_val_json_report
+entity_type: result
+bundle: html_val_test_result
+label: 'JSON Report'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt json'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,32 @@
+uuid: 410786c4-13c4-4828-9fc5-45774b5cda26
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.tag_checker_test_result
+    - field.storage.result.field_tc_json_report
+  module:
+    - file
+  enforced:
+    module:
+      - esm_test_tag_checker
+_core:
+  default_config_hash: 1Ptb_A4H529VND06U-yMWblw91dnloemf-LD2UXx6SI
+id: result.tag_checker_test_result.field_tc_json_report
+field_name: field_tc_json_report
+entity_type: result
+bundle: tag_checker_test_result
+label: report
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt json'
+  max_filesize: ''
+  description_field: false
+field_type: file

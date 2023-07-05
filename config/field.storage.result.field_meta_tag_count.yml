@@ -1,0 +1,25 @@
+uuid: e187fefd-65eb-4725-8126-028c5c19a9de
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_tag_checker
+_core:
+  default_config_hash: mYYpR23_QbUBfskza8rqkVcg5XqsvBiu6IDxpcAWGY4
+id: result.field_meta_tag_count
+field_name: field_meta_tag_count
+entity_type: result
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

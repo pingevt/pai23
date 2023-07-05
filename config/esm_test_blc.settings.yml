@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: qlXO2RkD06oE151hp9HUQ9D6wN-oP1SltE8BwefpROk
+dir: 'public://tests/blc-reports'
+dependencies:
+  enforced:
+    module:
+      - esm_test_blc

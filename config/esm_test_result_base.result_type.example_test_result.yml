@@ -1,0 +1,11 @@
+uuid: d6f5fd6b-cd99-477a-a5f7-792ba60db7f3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_result_base
+_core:
+  default_config_hash: 50odZ3SObmETWAU-anjiR7NYR9CfbKgoNLK1KRwudeE
+id: example_test_result
+label: 'Example Test Result'

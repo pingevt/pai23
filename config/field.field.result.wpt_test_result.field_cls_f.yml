@@ -1,0 +1,28 @@
+uuid: 833525bc-d08f-483e-998c-00ecb03baaeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.wpt_test_result
+    - field.storage.result.field_cls_f
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: Srgcw2l0WaumvYxI2Mj0CWpA3o6oA1ZQ-AIUuq6Gxsg
+id: result.wpt_test_result.field_cls_f
+field_name: field_cls_f
+entity_type: result
+bundle: wpt_test_result
+label: CLS
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

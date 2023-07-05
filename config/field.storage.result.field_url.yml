@@ -1,0 +1,24 @@
+uuid: 52b1b79e-5dc5-4b2c-a0e4-bb354ec2bbfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+    - link
+  enforced:
+    module:
+      - esm_test_result_base
+_core:
+  default_config_hash: jIZ-JJ62-hrHeEXtYy_GI_5vZPaIIX_KM2ZedpsdG0A
+id: result.field_url
+field_name: field_url
+entity_type: result
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

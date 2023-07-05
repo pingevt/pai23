@@ -1,0 +1,25 @@
+uuid: 19934fcc-e3e4-4af8-b55b-e0ff74366a47
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_lighthouse
+_core:
+  default_config_hash: JzsTxwTFMaqzdP6wgRv0_bnFKwEQRBFAAMTqnIrfBck
+id: result.field_accessibility
+field_name: field_accessibility
+entity_type: result
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

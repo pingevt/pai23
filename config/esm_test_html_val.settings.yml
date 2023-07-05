@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: dIUf1riD49yWyiheJ9cdiGWheE0yJbaRxJieBA41KqA
+dir: 'public://tests/html-val-reports'
+dependencies:
+  enforced:
+    module:
+      - esm_test_html_val

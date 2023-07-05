@@ -1,0 +1,23 @@
+uuid: 5230950d-d77d-4237-bc13-1199a550fb7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: EKeZK3f3h38ouYseHKBSU_Ydo1218qRaVMT1FQ0WBFE
+id: result.field_total_bytes_f
+field_name: field_total_bytes_f
+entity_type: result
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

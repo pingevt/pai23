@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: '-GW4U97dIbBUjrY1zi8Lk0YoNpO1yZvL-Ej3B06xer8'
+dir: 'public://tests/wpt-reports'
+dependencies:
+  enforced:
+    module:
+      - esm_test_wpt

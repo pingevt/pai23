@@ -1,0 +1,28 @@
+uuid: 0d0d2102-c2bf-46c3-b79a-7e9baff9e3a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.wpt_test_result
+    - field.storage.result.field_start_render_f
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: '-QjVHhpDZ6fZeLDibzcU_QfsqQalyeny_s6UVOWrJUk'
+id: result.wpt_test_result.field_start_render_f
+field_name: field_start_render_f
+entity_type: result
+bundle: wpt_test_result
+label: 'Start Render'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

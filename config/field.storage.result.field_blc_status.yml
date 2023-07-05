@@ -1,0 +1,26 @@
+uuid: a34d85dd-4bbf-4742-bde7-9c32cfe47d5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_blc
+_core:
+  default_config_hash: JWocEnhj986muDF7824El6mloOXtkVHwiON0YUK0w9o
+id: result.field_blc_status
+field_name: field_blc_status
+entity_type: result
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

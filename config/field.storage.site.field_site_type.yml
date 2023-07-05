@@ -1,0 +1,25 @@
+uuid: 6af0b9fb-249e-4a5b-b21c-5cff4c52957f
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_site
+    - taxonomy
+  enforced:
+    module:
+      - esm_site
+_core:
+  default_config_hash: QABe6AVBVuOSPMP88qWAZqXAu9WTUee2rQZpnwhxtnk
+id: site.field_site_type
+field_name: field_site_type
+entity_type: site
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

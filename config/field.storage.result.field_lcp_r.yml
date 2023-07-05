@@ -1,0 +1,23 @@
+uuid: 430ccf91-8758-45f9-a395-b1db1330f6bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: OOhBeEZgpo0ga_urG_jwxL_LxYGQ18Tt-xEQGyjx5uE
+id: result.field_lcp_r
+field_name: field_lcp_r
+entity_type: result
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

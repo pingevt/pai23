@@ -1,0 +1,17 @@
+uuid: 1a29a657-a538-48a8-8975-de67c199807b
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_base
+title: 'Default cron handler'
+id: esm_test_base_cron
+weight: 0
+module: esm_test_base
+callback: esm_test_base_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

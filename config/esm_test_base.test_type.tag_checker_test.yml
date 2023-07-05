@@ -1,0 +1,12 @@
+uuid: de8c3ebf-c39d-4dca-8400-edc32e47eda4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_tag_checker
+_core:
+  default_config_hash: _1HkEgVH8H0UHf2CHE_4LoV_nNqt_PsQL5Y3mPqsilY
+id: tag_checker_test
+label: 'Tag Checker Test'
+allow_manual: null

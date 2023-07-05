@@ -1,0 +1,11 @@
+uuid: 2fed7e7f-8b6e-4fd9-a980-dba3f7e7bf6c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_html_val
+_core:
+  default_config_hash: HKd0a7qz38g7f6nLFBB23wrn_CWy3oy-99s46ZxSLks
+id: html_val_test_result
+label: 'HTML Validation Test Result'

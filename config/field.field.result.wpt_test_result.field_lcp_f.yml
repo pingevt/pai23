@@ -1,0 +1,28 @@
+uuid: ad274de8-5ab2-46dd-8375-b37d08b0e0e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.wpt_test_result
+    - field.storage.result.field_lcp_f
+  enforced:
+    module:
+      - esm_test_wpt
+_core:
+  default_config_hash: weB4Y4kk3RHVG5RP_cz22nJXe8J2BfdRIunxZ1AxZNQ
+id: result.wpt_test_result.field_lcp_f
+field_name: field_lcp_f
+entity_type: result
+bundle: wpt_test_result
+label: LCP
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

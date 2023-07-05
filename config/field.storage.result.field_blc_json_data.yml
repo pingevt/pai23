@@ -1,0 +1,28 @@
+uuid: e660d6d4-c606-4daa-af89-d4ca015e0b40
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+    - file
+  enforced:
+    module:
+      - esm_test_blc
+_core:
+  default_config_hash: mrKrYvulC-xyWJCJGreMZyibt84agtOsR36KnXuUI54
+id: result.field_blc_json_data
+field_name: field_blc_json_data
+entity_type: result
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

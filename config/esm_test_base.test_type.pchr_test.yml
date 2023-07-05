@@ -1,0 +1,12 @@
+uuid: 6ec277f3-0732-4032-93be-df8b3db14cac
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_pchr
+_core:
+  default_config_hash: sA7_6iD4R_JVwKcs9U1ACC9XLBe-BhSCiVHuUAaNREc
+id: pchr_test
+label: 'Pantheon Cache Hit Ratio'
+allow_manual: false

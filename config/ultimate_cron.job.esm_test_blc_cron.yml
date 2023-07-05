@@ -1,0 +1,17 @@
+uuid: 12738914-5f85-4582-80d2-f357397ff72a
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_blc
+title: 'Default cron handler'
+id: esm_test_blc_cron
+weight: 0
+module: esm_test_blc
+callback: esm_test_blc_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database
