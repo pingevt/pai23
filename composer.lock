@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15297557474d5b119d74e8ce1a3eb9bd",
+    "content-hash": "a7a5eca95e5cb193ac287706182c7d1e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7405,16 +7405,16 @@
         },
         {
             "name": "pingevt/vis_reg_result",
-            "version": "1.0.0-alpha3",
+            "version": "1.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/vis_reg_result.git",
-                "reference": "39fee8606e12681ee41045528ae975b2cd43b724"
+                "reference": "edef25c5a972e66a264a5e0796b113319ccf2915"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/vis_reg_result/zipball/39fee8606e12681ee41045528ae975b2cd43b724",
-                "reference": "39fee8606e12681ee41045528ae975b2cd43b724",
+                "url": "https://api.github.com/repos/pingevt/vis_reg_result/zipball/edef25c5a972e66a264a5e0796b113319ccf2915",
+                "reference": "edef25c5a972e66a264a5e0796b113319ccf2915",
                 "shasum": ""
             },
             "require": {
@@ -7439,9 +7439,9 @@
             "description": "Drupal Module for receiveing result from BackstopJS tests.",
             "support": {
                 "issues": "https://github.com/pingevt/vis_reg_result/issues",
-                "source": "https://github.com/pingevt/vis_reg_result/tree/1.0.0-alpha3"
+                "source": "https://github.com/pingevt/vis_reg_result/tree/1.0.0-alpha5"
             },
-            "time": "2023-07-04T19:44:00+00:00"
+            "time": "2023-07-05T01:55:57+00:00"
         },
         {
             "name": "politsin/jquery-ui-touch-punch",

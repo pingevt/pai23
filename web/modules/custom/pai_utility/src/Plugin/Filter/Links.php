@@ -3,6 +3,7 @@
 namespace Drupal\pai_utility\Plugin\Filter;
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Extension\ThemeExtensionList;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\filter\FilterProcessResult;
 use Drupal\filter\Plugin\FilterBase;
@@ -18,12 +19,17 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class Links extends FilterBase implements ContainerFactoryPluginInterface {
 
-
+  /**
+   * The logger factory.
+   *
+   * @var \Drupal\Core\Extension\ThemeExtensionList
+   */
+  protected $extenstionThemeList;
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, $theme_ext_list) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, ThemeExtensionList $theme_ext_list) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
     $this->extenstionThemeList = $theme_ext_list;
