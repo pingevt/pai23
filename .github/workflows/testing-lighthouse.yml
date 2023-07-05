@@ -1,0 +1,109 @@
+name: Lighthouse Testing
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: URLs to test
+        required: true
+        type: string
+        default: "https://cartermuseum.org/,https://cartermuseum.org/about"
+      dir:
+        description: Directory for uploading artifacts.
+        required: false
+        type: string
+      result_ids:
+        description: Ids of report results. To be passed through
+        required: false
+        type: string
+      callback:
+        description: Callback url for reporting results.
+        required: false
+        type: string
+
+env:
+  DEFAULT_URLS: "https://cartermuseum.org/,https://cartermuseum.org/about"
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.PANTHEON_SSH_KEY }}
+          config: ${{ secrets.SSH_CONFIG }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+      # Debugger
+      # - uses: hmarr/debug-action@v2
+
+      - name: Inputs
+        run: |
+          echo ${{ inputs.urls }}
+
+      - name: Generate URLs
+        id: urls
+        uses: actions/github-script@v6
+        env:
+          inputUrls: '${{inputs.urls}}'
+          defaultUrls: '${{env.DEFAULT_URLS}}'
+        with:
+          script: |
+            let urls = "";
+            if (process.env.inputUrls) {
+              urls = process.env.inputUrls.split(",");
+            }
+            else {
+              urls = process.env.defaultUrls.split(",");
+            }
+            core.setOutput('urls', urls.join('\n'));
+
+      - name: Audit URLs using Lighthouse
+        id: lighthouse
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: |
+            ${{ steps.urls.outputs.urls }}
+          # budgetPath: ./budget.json # test performance budgets
+          uploadArtifacts: false # save results as an action artifacts
+          # temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+
+      # Debugger
+      - uses: hmarr/debug-action@v2
+
+      # - name: Outputs
+      #   run: |
+      #     echo ${{ steps.lighthouse.outputs.resultsPath }}
+      #     echo ${{ steps.lighthouse.outputs.links }}
+      #     echo ${{ steps.lighthouse.outputs.assertionResults }}
+      #     echo ${{ steps.lighthouse.outputs.manifest }}
+
+
+
+      - name: Generate Callback Message
+        id: callback_msg
+        uses: actions/github-script@v6
+        env:
+          result_ids: '${{ inputs.result_ids }}'
+          manifest: '${{ steps.lighthouse.outputs.manifest }}'
+        with:
+          script: |
+            let msg = {};
+            msg.id_string = process.env.result_ids;
+            msg.results = JSON.parse(process.env.manifest);
+            core.setOutput('callback_msg', msg);
+
+      - name: Post Artifacts
+        timeout-minutes: 15
+        env:
+          CONNECT_BC_API: "${{ secrets.CONNECT_BC_KEY }}"
+          # URLS: "${{ inputs.urls }}"
+          EXT_DIR: "${{ inputs.dir }}"
+          # RESULT_IDS: "${{ inputs.result_ids }}"
+          CALLBACK: "${{ inputs.callback }}"
+          RESULTS_PATH: ${{ steps.lighthouse.outputs.resultsPath }}
+          MANIFEST: ${{ steps.lighthouse.outputs.manifest }}
+          CALLBACK_MSG: ${{ steps.callback_msg.outputs.callback_msg }}
+        run: ./.github/scripts/lh-push-to-connect.sh
