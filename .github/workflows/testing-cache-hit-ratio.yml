@@ -1,6 +1,6 @@
 name: Pantheon Cache Hit Ratio
 on:
-  push:
+  # push:
   workflow_dispatch:
     inputs:
       panth-site:
