@@ -82,7 +82,8 @@
     "drupal/selective_better_exposed_filters": "^3.0@beta",
     "drupal/core-project-message": "10.1.0",
     "pingevt/vis_reg_result": "1.0.0-alpha5",
-    "pingevt/external_site_monitor": "^1.0@RC"
+    "pingevt/external_site_monitor": "^1.0@RC",
+    "drupal/gin_toolbar": "^1.0@RC"
   },
   "require-dev": {
     "drupal/core-dev": "^10"

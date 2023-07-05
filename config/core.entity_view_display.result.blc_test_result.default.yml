@@ -32,7 +32,7 @@ content:
       custom_date_format: ''
       timezone: ''
       tooltip:
-        date_format: long
+        date_format: ''
         custom_date_format: ''
       time_diff:
         enabled: false
