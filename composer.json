@@ -83,7 +83,8 @@
     "drupal/core-project-message": "10.1.0",
     "pingevt/vis_reg_result": "1.0.0-alpha5",
     "pingevt/external_site_monitor": "^1.0@RC",
-    "drupal/gin_toolbar": "^1.0@RC"
+    "drupal/gin_toolbar": "^1.0@RC",
+    "joachim-n/composer-manifest": "^1.1"
   },
   "require-dev": {
     "drupal/core-dev": "^10"
@@ -191,7 +192,8 @@
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "phpstan/extension-installer": true,
       "oomphinc/composer-installers-extender": true,
-      "drupal/core-project-message": true
+      "drupal/core-project-message": true,
+      "joachim-n/composer-manifest": true
     }
   }
 }
