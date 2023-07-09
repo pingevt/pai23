@@ -1,0 +1,26 @@
+uuid: cfc7a2a7-aebf-4cc7-ba70-a396b10868e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_base.test_type.html_val_test
+    - field.storage.test.field_url_group
+id: test.html_val_test.field_url_group
+field_name: field_url_group
+entity_type: test
+bundle: html_val_test
+label: 'Url Group'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:url_group'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

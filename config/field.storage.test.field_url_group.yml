@@ -1,0 +1,20 @@
+uuid: 6f53aad7-3c33-485e-8769-9eb283098ca9
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_base
+    - esm_url_group
+id: test.field_url_group
+field_name: field_url_group
+entity_type: test
+type: entity_reference
+settings:
+  target_type: url_group
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

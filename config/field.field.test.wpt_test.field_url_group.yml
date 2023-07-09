@@ -1,0 +1,26 @@
+uuid: 92bd587f-cbdc-44cb-b858-f3392727494f
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_base.test_type.wpt_test
+    - field.storage.test.field_url_group
+id: test.wpt_test.field_url_group
+field_name: field_url_group
+entity_type: test
+bundle: wpt_test
+label: 'Url Group'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:url_group'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

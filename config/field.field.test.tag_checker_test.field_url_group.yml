@@ -1,0 +1,26 @@
+uuid: 8ab5ead0-3502-4404-9b49-cfc2f53b1dcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_base.test_type.tag_checker_test
+    - field.storage.test.field_url_group
+id: test.tag_checker_test.field_url_group
+field_name: field_url_group
+entity_type: test
+bundle: tag_checker_test
+label: 'Url Group'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:url_group'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference
