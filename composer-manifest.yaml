@@ -148,7 +148,7 @@ packages:
     phpunit/php-text-template: 2.0.4
     phpunit/php-timer: 5.0.3
     phpunit/phpunit: 9.6.9
-    pingevt/external_site_monitor: '1.x-dev:9e252ec2b040b6c4890e3c026c3118b087b96c76'
+    pingevt/external_site_monitor: '1.x-dev:e5fd26f24c7a946845c1b808cac094f8b9d0848d'
     pingevt/timing_monitor: 1.0.0-alpha6
     pingevt/vis_reg_result: 1.0.0-alpha5
     politsin/jquery-ui-touch-punch: '1.0'

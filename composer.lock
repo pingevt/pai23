@@ -7639,12 +7639,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/external_site_monitor.git",
-                "reference": "9e252ec2b040b6c4890e3c026c3118b087b96c76"
+                "reference": "e5fd26f24c7a946845c1b808cac094f8b9d0848d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/9e252ec2b040b6c4890e3c026c3118b087b96c76",
-                "reference": "9e252ec2b040b6c4890e3c026c3118b087b96c76",
+                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/e5fd26f24c7a946845c1b808cac094f8b9d0848d",
+                "reference": "e5fd26f24c7a946845c1b808cac094f8b9d0848d",
                 "shasum": ""
             },
             "require": {
@@ -7675,7 +7675,7 @@
                 "issues": "https://github.com/pingevt/external_site_monitor/issues",
                 "source": "https://github.com/pingevt/external_site_monitor/tree/1.x"
             },
-            "time": "2023-07-09T19:48:52+00:00"
+            "time": "2023-07-09T20:48:12+00:00"
         },
         {
             "name": "pingevt/timing_monitor",
