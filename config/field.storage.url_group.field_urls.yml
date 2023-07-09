@@ -1,0 +1,22 @@
+uuid: 8ae5f90e-bf80-43d5-b90d-807e88e4a48d
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_url_group
+    - link
+  enforced:
+    module:
+      - esm_url_group
+id: url_group.field_urls
+field_name: field_urls
+entity_type: url_group
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
