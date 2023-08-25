@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * This is the module that processes image color data.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\img_processor\Event\MediaPresaveEvent;
+use Drupal\media\MediaInterface;
+
+/**
+ * Implements hook_entity_presave().
+ */
+function img_processor_entity_presave(EntityInterface $entity) {
+  if ($entity instanceof MediaInterface) {
+    // Instantiate our event.
+    $event = new MediaPresaveEvent($entity);
+
+    // Get the event_dispatcher service and dispatch the event.
+    $event_dispatcher = \Drupal::service('event_dispatcher');
+    $event_dispatcher->dispatch($event, MediaPresaveEvent::EVENT_NAME);
+  }
+}

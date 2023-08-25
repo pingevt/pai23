@@ -1,0 +1,7 @@
+img_processor.settings:
+  path: '/admin/config/system/img-processor-settings'
+  defaults:
+    _form: '\Drupal\img_processor\Form\Settings'
+    _title: 'Bluecadet Utilities Settings'
+  requirements:
+    _permission: 'administer site configuration'

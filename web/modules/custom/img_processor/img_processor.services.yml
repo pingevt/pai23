@@ -1,0 +1,9 @@
+services:
+  # Name of this service.
+  img_processor.media_presave:
+    # Event subscriber class that will listen for the events.
+    class: '\Drupal\img_processor\EventSubscriber\ImgProcessorSubscriber'
+    arguments: ['@state', '@config.factory', '@queue']
+    # Tagged as an event_subscriber to register this subscriber with the event_dispatch service.
+    tags:
+      - { name: 'event_subscriber' }

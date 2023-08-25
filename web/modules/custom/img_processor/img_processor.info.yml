@@ -1,0 +1,10 @@
+name: Image Processor
+description: Random funcs and methods to pull color inforation fro images.
+package: Media
+
+configure: img_processor.settings
+
+type: module
+core_version_requirement: ^10
+
+version: 1.0.0
