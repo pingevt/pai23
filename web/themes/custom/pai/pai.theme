@@ -8,6 +8,7 @@
 use Drupal\Core\Render\Element;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Template\Attribute;
+use Drupal\Core\Template\AttributeString;
 
 /**
  * Implements hook_preprocess_region().
@@ -217,6 +218,12 @@ function pai_preprocess_media(array &$variables) {
       $values['alt'] = "";
       $variables['content']['field_media_image'][$idx]['#item']->setValue($values);
     }
+
+    // Background-color for lazy loading.
+    if ($media->hasField('field_average_color') && !$media->field_average_color->isEmpty()) {
+      $variables['attributes']['style'] = "background-color: " . $media->field_average_color->color;
+      $variables['#attached']['library'][] =  'pai/lazy_load_images';
+    }
   }
 
   switch ( $media->bundle()) {
@@ -265,14 +272,31 @@ function pai_preprocess_responsive_image_formatter(array &$variables) {
  * Implements hook_preprocess_responsive_image().
  */
 function pai_preprocess_responsive_image(array &$variables) {
-  // ksm($variables);
+
+  switch ($variables['responsive_image_style_id']) {
+    case 'teaser':
+      $variables['img_element']['#attributes']['data-style-id'] = "to-lazy-load";
+
+      break;
+  }
+
 }
 
 /**
  * Implements hook_preprocess_image().
  */
 function pai_preprocess_image(array &$variables) {
-  // ksm($variables);
+  // Teaser images will be "lazy loaded".
+  if (isset($variables['attributes']['data-style-id']) && $variables['attributes']['data-style-id'] == "to-lazy-load") {
+    unset($variables['attributes']['data-style-id']);
+
+    $variables['attributes']['data-srcset'] = new AttributeString('data-srcset', $variables['attributes']['srcset']->value());
+    unset($variables['attributes']['srcset']);
+
+    $variables['attributes']['data-src'] = $variables['attributes']['src'];
+    $variables['attributes']['src'] = "";
+  }
+
 }
 
 /**

@@ -10,3 +10,9 @@ global-js:
   dependencies:
     - core/drupal
     - core/drupalSettings
+lazy_load_images:
+  version: 1.0
+  js:
+    assets/dist/js/lazy_load_images.js: {}
+  dependencies:
+    - pai/global-js
