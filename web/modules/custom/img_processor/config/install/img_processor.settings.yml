@@ -1,0 +1,8 @@
+bundle_options: []
+process_luminance: 0
+luminance_field:
+quad_luminance_field:
+process_avg_color: 0
+avg_color_field:
+process_color_palette: 0
+color_palette_field:
