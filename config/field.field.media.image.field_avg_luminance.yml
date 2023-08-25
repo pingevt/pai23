@@ -1,0 +1,23 @@
+uuid: 17b0604d-a9fe-48cf-8410-48bdc473a75b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_avg_luminance
+    - media.type.image
+id: media.image.field_avg_luminance
+field_name: field_avg_luminance
+entity_type: media
+bundle: image
+label: 'Avg Luminance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

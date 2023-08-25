@@ -3,16 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_average_color
+    - field.field.media.image.field_avg_luminance
     - field.field.media.image.field_filename
     - field.field.media.image.field_filesize
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_tags
     - field.field.media.image.field_mime_type
+    - field.field.media.image.field_palette
+    - field.field.media.image.field_quad_luminance
     - field.field.media.image.field_resource_height
     - field.field.media.image.field_resource_width
     - image.style.thumbnail
     - media.type.image
   module:
+    - color_field
     - focal_point
     - path
 _core:
@@ -27,6 +32,19 @@ content:
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_average_color:
+    type: color_field_widget_html5
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_avg_luminance:
+    type: number
+    weight: 29
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_filename:
     type: string_textfield
@@ -69,6 +87,19 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_palette:
+    type: color_field_widget_html5
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_quad_luminance:
+    type: number
+    weight: 30
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_resource_height:

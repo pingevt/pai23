@@ -1,0 +1,23 @@
+uuid: 0e2371a7-959a-4ed5-8e5f-953e64b645bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_quad_luminance
+    - media.type.image
+id: media.image.field_quad_luminance
+field_name: field_quad_luminance
+entity_type: media
+bundle: image
+label: 'Quad Luminance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

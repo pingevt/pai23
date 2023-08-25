@@ -1,0 +1,20 @@
+uuid: b123b8a6-89a5-434d-8cfc-5d92dde5cbd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - media
+id: media.field_palette
+field_name: field_palette
+entity_type: media
+type: color_field_type
+settings:
+  format: '#hexhex'
+module: color_field
+locked: false
+cardinality: 6
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

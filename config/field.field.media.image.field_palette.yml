@@ -1,0 +1,22 @@
+uuid: 92ecc564-6332-4995-9673-fe80c7af787b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_palette
+    - media.type.image
+  module:
+    - color_field
+id: media.image.field_palette
+field_name: field_palette
+entity_type: media
+bundle: image
+label: Palette
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

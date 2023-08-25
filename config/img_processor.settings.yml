@@ -1,0 +1,9 @@
+bundle_options:
+  image: image
+process_luminance: 1
+luminance_field: field_avg_luminance
+quad_luminance_field: field_quad_luminance
+process_avg_color: 1
+avg_color_field: field_average_color
+process_color_palette: 1
+color_palette_field: field_palette

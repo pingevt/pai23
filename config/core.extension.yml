@@ -13,6 +13,7 @@ module:
   charts_c3: 0
   charts_chartjs: 0
   ckeditor5: 0
+  color_field: 0
   config: 0
   contextual: 0
   crop: 0
@@ -56,6 +57,7 @@ module:
   highlightjs_input_filter: 0
   image: 0
   imagick: 0
+  img_processor: 0
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_draggable: 0
