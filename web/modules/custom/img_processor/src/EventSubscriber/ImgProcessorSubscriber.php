@@ -21,6 +21,13 @@ class ImgProcessorSubscriber implements EventSubscriberInterface {
   protected $state;
 
   /**
+   * Current Module State.
+   *
+   * @var array
+   */
+  protected $imgProcState;
+
+  /**
    * The configuration object factory.
    *
    * @var \Drupal\Core\Config\ConfigFactoryInterface
