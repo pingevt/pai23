@@ -3,6 +3,7 @@
 namespace Drupal\img_processor\Plugin\QueueWorker;
 
 use Drupal\file\Entity\File;
+use Drupal\img_processor\Event\MediaSourcePath;
 
 /**
  * Process Image media for Average color.
@@ -23,12 +24,19 @@ class ImgProcessorAvgColor extends ImgProcessorBase {
     $field = $this->config->get('avg_color_field');
     $media = $this->mediaStorage->load($item['mid']);
 
-    $source = $media->getSource();
-    $fid = $source->getSourceFieldValue($media);
-    $file = File::load($fid);
-    $file_uri = $file->getFileUri();
+    // $source = $media->getSource();
+    // $fid = $source->getSourceFieldValue($media);
+    // $file = File::load($fid);
+    // $file_uri = $file->getFileUri();
 
-    $absolute_path = \Drupal::service('file_system')->realpath($file_uri);
+    // $absolute_path = \Drupal::service('file_system')->realpath($file_uri);
+
+    // Instantiate our event.
+    $event = new MediaSourcePath($media);
+    // Dispatch the event.
+    $this->eventDispatcher->dispatch($event, MediaSourcePath::EVENT_NAME);
+    // Grab the path, internal or external.
+    $absolute_path = $event->getPath();
 
     // Grab image to process.
     $im_avg_color = new \Imagick();

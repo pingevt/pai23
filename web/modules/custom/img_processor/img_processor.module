@@ -22,3 +22,61 @@ function img_processor_entity_presave(EntityInterface $entity) {
     $event_dispatcher->dispatch($event, MediaPresaveEvent::EVENT_NAME);
   }
 }
+
+/**
+ * Implements hook_entity_insert().
+ */
+function img_processor_entity_insert(EntityInterface $entity) {
+  if ($entity instanceof MediaInterface) {
+    img_processor_media_update_processor_data($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function img_processor_entity_update(EntityInterface $entity) {
+  if ($entity instanceof MediaInterface) {
+    img_processor_media_update_processor_data($entity);
+  }
+}
+
+/**
+ * Process Media items when they are saved.
+ */
+function img_processor_media_update_processor_data(EntityInterface $entity) {
+  if ($entity instanceof MediaInterface && isset($entity->img_processor_data)) {
+    $connection = \Drupal::database();
+
+    // Delete old records.
+    $delete_num = $connection->delete('img_processor_data')
+      ->condition("mid", $entity->id())
+      ->execute();
+
+    // Add new records.
+    $insert = $connection->insert('img_processor_data')
+      // ->fields($entity->img_processor_data)
+      ->fields(['mid', 'bin_color', 'media_color', 'distance']);
+    foreach ($entity->img_processor_data as $row) {
+      $row['mid'] = $entity->id();
+      $insert->values($row);
+    }
+
+    $insert->execute();
+  }
+}
+
+/**
+ * Implements hook_entity_load().
+ */
+function img_processor_entity_load(array $entities, $entity_type_id) {
+  foreach($entities as $entity) {
+    if ($entity instanceof MediaInterface) {
+      $database = \Drupal::database();
+      $query = $database->query("SELECT * FROM {img_processor_data} WHERE mid = ". $entity->id());
+
+      $result = $query->fetchAll(PDO::FETCH_ASSOC);
+      $entity->img_processor_data = $result;
+    }
+  }
+}

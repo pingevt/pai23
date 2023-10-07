@@ -79,6 +79,7 @@ module:
   menu_ui: 0
   metatag: 0
   metatag_open_graph: 0
+  multivalue_form_element: 0
   mysql: 0
   node: 0
   node_revision_delete: 0

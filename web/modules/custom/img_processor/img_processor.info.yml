@@ -4,6 +4,9 @@ package: Media
 
 configure: img_processor.settings
 
+dependencies:
+  - multivalue_form_element:multivalue_form_element
+
 type: module
 core_version_requirement: ^10
 

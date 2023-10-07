@@ -1,0 +1,23 @@
+uuid: 9afd97be-1b36-45cd-a370-124ac33e5acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_standard_deviation
+    - media.type.image
+id: media.image.field_standard_deviation
+field_name: field_standard_deviation
+entity_type: media
+bundle: image
+label: 'Standard deviation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

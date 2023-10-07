@@ -1,0 +1,51 @@
+# Schema for the configuration files of the img_processor module.
+img_processor.settings:
+  type: config_object
+  label: 'Timing Monitor settings'
+  mapping:
+    bundle_options:
+      type: array
+      label: 'Which Media bundles this applies to'
+    process_luminance:
+      type: bool
+      label: 'To process luminance'
+    luminance_field:
+      type: string
+      label: 'The field to use for this value'
+    quad_luminance_field:
+      type: string
+      label: 'The field to use for this value'
+    process_std_deviation:
+      type: bool
+      label: 'To process Std Deviation oc the images color'
+    std_deviation_field:
+      type: string
+      label: 'The field to use for this value'
+    process_avg_color:
+      type: bool
+      label: 'To process Avg color'
+    avg_color_field:
+      type: string
+      label: 'The field to use for this value'
+    process_color_palette:
+      type: bool
+      label: 'To process color palette'
+    color_palette_count:
+      type: int
+      label: 'How many colors to pull for top colors of an image'
+    color_palette_field:
+      type: string
+      label: 'The field to use for this value'
+    process_histogram_string:
+      type: bool
+      label: 'To process Histogram String'
+    histogram_string_field:
+      type: string
+      label: 'The field to use for this value'
+    color_bins:
+      type: mapping
+      label: 'List of Colors we need to test against'
+      mappings:
+        color:
+          type: string
+          label: 'The hex value of the color'

@@ -2,6 +2,7 @@
 
 namespace Drupal\img_processor\Plugin\QueueWorker;
 
+use Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
@@ -86,6 +87,13 @@ class ImgProcessorBase extends QueueWorkerBase implements ContainerFactoryPlugin
   protected $config = [];
 
   /**
+   * The event dispatcher.
+   *
+   * @var \Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher
+   */
+  protected $config = [];
+
+  /**
    * {@inheritdoc}
    */
   public function __construct(
@@ -95,7 +103,8 @@ class ImgProcessorBase extends QueueWorkerBase implements ContainerFactoryPlugin
     EntityTypeManagerInterface $entity_type_manager,
     LoggerChannelFactoryInterface $factory,
     ConfigFactoryInterface $config_factory,
-    State $drupal_state
+    State $drupal_state,
+    ContainerAwareEventDispatcher $event_dispatcher
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
@@ -111,6 +120,7 @@ class ImgProcessorBase extends QueueWorkerBase implements ContainerFactoryPlugin
     $this->configFactory = $config_factory;
     $this->config = $this->configFactory->get('img_processor.settings');
 
+    $this->eventDispatcher = $event_dispatcher;
   }
 
   /**
@@ -124,7 +134,8 @@ class ImgProcessorBase extends QueueWorkerBase implements ContainerFactoryPlugin
       $container->get('entity_type.manager'),
       $container->get('logger.factory'),
       $container->get('config.factory'),
-      $container->get('state')
+      $container->get('state'),
+      $container->get('event_dispatcher')
     );
   }
 

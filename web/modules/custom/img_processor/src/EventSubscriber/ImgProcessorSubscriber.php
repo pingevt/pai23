@@ -5,7 +5,9 @@ namespace Drupal\img_processor\EventSubscriber;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Queue\QueueFactory;
 use Drupal\Core\State\State;
+use Drupal\file\Entity\File;
 use Drupal\img_processor\Event\MediaPresaveEvent;
+use Drupal\img_processor\Event\MediaSourcePath;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -59,8 +61,30 @@ class ImgProcessorSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents() {
     return [
+      MediaSourcePath::EVENT_NAME => 'mediaSourcePath',
       MediaPresaveEvent::EVENT_NAME => 'mediaPresave',
     ];
+  }
+
+  /**
+   * Function to run on Media Presave event.
+   */
+  public function mediaSourcePath(MediaSourcePath $event) {
+    $config = $this->configFactory->get('img_processor.settings');
+    $media = $event->entity;
+
+    $source = $media->getSource();
+
+    // Set path for media module's image source.
+    if ($source->getPluginId() == "image") {
+      $fid = $source->getSourceFieldValue($media);
+      $file = File::load($fid);
+      $file_uri = $file->getFileUri();
+
+      $absolute_path = \Drupal::service('file_system')->realpath($file_uri);
+
+      $event->setPath($absolute_path);
+    }
   }
 
   /**

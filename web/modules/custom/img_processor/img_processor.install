@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the img_processor module.
+ */
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_schema().
+ */
+function img_processor_schema() {
+  return img_processor_spec();
+}
+
+/**
+ * Soec for database tables needed for this module.
+ *
+ * @return void
+ */
+function img_processor_spec() {
+  $schema['img_processor_data'] = [
+    'description' => 'Table that contains logs of api events.',
+    'fields' => [
+      'mid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The {media}.mid of the media item.',
+      ],
+      'bin_color' => [
+        'type' => 'varchar_ascii',
+        'length' => 7,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The bin color',
+      ],
+      'media_color' => [
+        'type' => 'varchar_ascii',
+        'length' => 7,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The bin color',
+      ],
+      'color_distance' => [
+        'type' => 'float',
+        'unsigned' => TRUE,
+        'size' => 'medium',
+        'not null' => TRUE,
+        'description' => 'The color distance',
+      ],
+      'hue_distance' => [
+        'type' => 'float',
+        'unsigned' => TRUE,
+        'size' => 'medium',
+        'not null' => TRUE,
+        'description' => 'The hue distance',
+      ],
+    ],
+    'indexes' => [
+      'mid' => ['mid'],
+      'bin_color' => ['bin_color'],
+      'media_color' => ['media_color'],
+      'main' => [
+        'mid',
+        'bin_color',
+        'media_color',
+      ],
+    ],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Add database.
+ */
+function img_processor_update_10001() {
+  $spec = img_processor_spec();
+  $schema = Database::getConnection()->schema();
+  $schema->createTable('img_processor_data', $spec['img_processor_data']);
+}

@@ -23,27 +23,31 @@ class ImgProcessorColorPalette extends ImgProcessorBase {
   public function processItem($item) {
     // Get Media Entity.
     $field = $this->config->get('color_palette_field');
+    $count = $this->config->get('color_palette_count');
     $media = $this->mediaStorage->load($item['mid']);
 
-    $source = $media->getSource();
-    $fid = $source->getSourceFieldValue($media);
-    $file = File::load($fid);
-    $file_uri = $file->getFileUri();
+    // $source = $media->getSource();
+    // $fid = $source->getSourceFieldValue($media);
+    // $file = File::load($fid);
+    // $file_uri = $file->getFileUri();
 
-    $absolute_path = \Drupal::service('file_system')->realpath($file_uri);
+    // $absolute_path = \Drupal::service('file_system')->realpath($file_uri);
+
+    // Instantiate our event.
+    $event = new MediaSourcePath($media);
+    // Dispatch the event.
+    $this->eventDispatcher->dispatch($event, MediaSourcePath::EVENT_NAME);
+    // Grab the path, internal or external.
+    $absolute_path = $event->getPath();
 
     // Color Pallettes.
     $palette = Palette::fromFilename($absolute_path);
     $extractor = new ColorExtractor($palette);
-    $colors6 = $extractor->extract(6);
-    $p_value = [
-      Color::fromIntToHex($colors6[0]),
-      Color::fromIntToHex($colors6[1]),
-      Color::fromIntToHex($colors6[2]),
-      Color::fromIntToHex($colors6[3]),
-      Color::fromIntToHex($colors6[4]),
-      Color::fromIntToHex($colors6[5]),
-    ];
+    $colors = $extractor->extract($count);
+
+    foreach ($colors as $c) {
+      $p_value[] = Color::fromIntToHex($c);
+    }
 
     $media->set($field, $p_value);
     $media->fromImgProcessor = TRUE;

@@ -3,7 +3,23 @@ bundle_options:
 process_luminance: 1
 luminance_field: field_avg_luminance
 quad_luminance_field: field_quad_luminance
+process_std_deviation: 1
+std_deviation_field: field_standard_deviation
 process_avg_color: 1
 avg_color_field: field_average_color
 process_color_palette: 1
+color_palette_count: 6
 color_palette_field: field_palette
+process_histogram_string: 1
+histogram_string_field: field_histogram_color
+color_bins:
+  -
+    color: '#000000'
+  -
+    color: '#ffffff'
+  -
+    color: '#d11515'
+  -
+    color: '#1100ff'
+  -
+    color: '#fff700'

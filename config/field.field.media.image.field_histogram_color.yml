@@ -1,0 +1,19 @@
+uuid: 9031ea54-d4ac-466e-9af5-73fbbb395f99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_histogram_color
+    - media.type.image
+id: media.image.field_histogram_color
+field_name: field_histogram_color
+entity_type: media
+bundle: image
+label: 'Histogram Colors'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
