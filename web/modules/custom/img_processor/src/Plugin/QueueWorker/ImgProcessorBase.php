@@ -91,7 +91,7 @@ class ImgProcessorBase extends QueueWorkerBase implements ContainerFactoryPlugin
    *
    * @var \Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher
    */
-  protected $config = [];
+  protected $eventDispatcher = NULL;
 
   /**
    * {@inheritdoc}
@@ -144,6 +144,42 @@ class ImgProcessorBase extends QueueWorkerBase implements ContainerFactoryPlugin
    */
   public function processItem($item) {
 
+  }
+
+
+  /**
+   * Color distances.
+   *
+   * https://en.wikipedia.org/wiki/Color_difference
+   */
+  protected function getColorDistance($color1, $color2) {
+
+    $sum_of_squares = 0;
+    foreach (['r', 'g', 'b'] as $i) {
+      $sum_of_squares += pow((($color2[$i] / 255) - ($color1[$i] / 255)), 2);
+    }
+
+    return sqrt($sum_of_squares);
+  }
+
+  protected function getHueDistance($color1, $color2) {
+
+    $sum_of_squares = 0;
+    foreach (['hue'] as $i) {
+      $sum_of_squares += pow(($color2[$i] - $color1[$i]), 2);
+    }
+
+    return sqrt($sum_of_squares);
+  }
+
+  protected function iMagickColorToHEX($pixel) {
+    $color = $pixel->getColor();
+
+    return sprintf('%s%s%s',
+        str_pad(dechex($color['r']), 2, "0", STR_PAD_LEFT),
+        str_pad(dechex($color['g']), 2, "0", STR_PAD_LEFT),
+        str_pad(dechex($color['b']), 2, "0", STR_PAD_LEFT)
+    );
   }
 
 }

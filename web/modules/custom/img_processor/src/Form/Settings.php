@@ -95,9 +95,7 @@ class Settings extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config(static::SETTINGS);
-
-    ksm($config);
-    ksm($this->config('timing_monitor.settings'), \Drupal::configFactory()->getEditable('timing_monitor.settings'));
+    // ksm($config);
 
     $form['#tree'] = TRUE;
 

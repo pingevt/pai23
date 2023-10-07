@@ -56,7 +56,7 @@ function img_processor_media_update_processor_data(EntityInterface $entity) {
     // Add new records.
     $insert = $connection->insert('img_processor_data')
       // ->fields($entity->img_processor_data)
-      ->fields(['mid', 'bin_color', 'media_color', 'distance']);
+      ->fields(['mid', 'bin_color', 'media_color', 'color_distance', 'hue_distance']);
     foreach ($entity->img_processor_data as $row) {
       $row['mid'] = $entity->id();
       $insert->values($row);

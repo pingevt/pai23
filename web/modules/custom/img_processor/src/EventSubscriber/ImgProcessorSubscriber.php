@@ -113,6 +113,24 @@ class ImgProcessorSubscriber implements EventSubscriberInterface {
       $this->imgProcState[$media->id()]["luminance"] = TRUE;
     }
 
+    // Queue up Std Deviation.
+    if ($config->get('process_std_deviation') && $this->shouldPorcessMedia($media, "std_deviation")) {
+      // Queue it!
+      $queue = $this->queueFactory->get('img_processor.std_deviation');
+      $queue->createItem(['mid' => $media->id()]);
+
+      $this->imgProcState[$media->id()]["std_deviation"] = TRUE;
+    }
+
+    // Queue up histogram data.
+    if ($config->get('process_histogram_string') && $this->shouldPorcessMedia($media, "histogram")) {
+      // Queue it!
+      $queue = $this->queueFactory->get('img_processor.histogram');
+      $queue->createItem(['mid' => $media->id()]);
+
+      $this->imgProcState[$media->id()]["histogram"] = TRUE;
+    }
+
     // Queue up Avg Color.
     if ($config->get('process_avg_color') && $this->shouldPorcessMedia($media, "avg_color")) {
       // Queue it!

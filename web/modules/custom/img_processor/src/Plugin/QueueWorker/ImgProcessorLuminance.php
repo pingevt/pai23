@@ -3,6 +3,7 @@
 namespace Drupal\img_processor\Plugin\QueueWorker;
 
 use Drupal\file\Entity\File;
+use Drupal\img_processor\Event\MediaSourcePath;
 
 /**
  * Process Image media for luminance.

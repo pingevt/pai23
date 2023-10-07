@@ -22,6 +22,7 @@ class ImgProcessorAvgColor extends ImgProcessorBase {
 
     // Get Media Entity.
     $field = $this->config->get('avg_color_field');
+    $index_colors = $this->config->get('color_bins');
     $media = $this->mediaStorage->load($item['mid']);
 
     // $source = $media->getSource();
@@ -46,7 +47,27 @@ class ImgProcessorAvgColor extends ImgProcessorBase {
     $pixel = $im_avg_color->getImagePixelColor(0, 0);
     $pixel_color = $pixel->getColor();
 
-    $media->field_average_color = "#" . dechex($pixel_color['r']) . dechex($pixel_color['g']) . dechex($pixel_color['b']);
+    // Get Distances.
+    // $distances = $media->img_processor_data ?? [];
+    $distances = [];
+    foreach ($media->img_processor_data as $data) {
+      $distances[$data['bin_color'].$data['media_color']] = $data;
+    }
+
+    foreach ($index_colors as $bin_color) {
+      $bin_pixel = new \ImagickPixel($bin_color['color']);
+
+      $bin_color = $this->iMagickColorToHEX($bin_pixel);
+      $media_color = $this->iMagickColorToHEX($pixel);
+      $distances[$bin_color.$media_color] = [
+        'bin_color' => $bin_color,
+        'media_color' => $media_color,
+        'color_distance' => $this->getColorDistance($pixel->getColor(), $bin_pixel->getColor()),
+        'hue_distance' => $this->getHueDistance($pixel->getHSL(), $bin_pixel->getHSL()),
+      ];
+
+    }
+    $media->img_processor_data = array_values($distances);
 
     $media->set($field, "#" . dechex($pixel_color['r']) . dechex($pixel_color['g']) . dechex($pixel_color['b']));
     $media->fromImgProcessor = TRUE;
