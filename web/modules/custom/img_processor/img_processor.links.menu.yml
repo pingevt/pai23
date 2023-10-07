@@ -1,5 +1,5 @@
 img_processor.settings:
   title: 'Image Processor Settings'
   route_name: img_processor.settings
-  parent: system.admin_config_system
+  parent: system.admin_media
   description: 'Image Processor Settings'
