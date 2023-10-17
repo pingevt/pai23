@@ -100,7 +100,7 @@ packages:
     drupal/ultimate_cron: 2.0.0-alpha6
     drupal/views_ajax_history: 1.7.0
     drupal/views_bulk_operations: 4.2.5
-    drupal/viewsreference: 'dev-1.x:680a6ef3b99a5846f7ade3be1b352ecafaa8c89b'
+    drupal/viewsreference: '1.x-dev:680a6ef3b99a5846f7ade3be1b352ecafaa8c89b'
     drush/drush: 11.5.1
     egulias/email-validator: 4.0.2
     enlightn/security-checker: v1.10.0
