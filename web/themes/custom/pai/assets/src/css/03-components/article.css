@@ -55,7 +55,7 @@
 
         h2, h3, h4, h5, h6 {
           @include f-title--h4;
-          margin: 0.25rem 1rem 0;
+          margin: 1.25rem 1rem 0;
 
           transition: text-decoration-color 0.24s var(--cubic-basic);
           text-decoration: underline;

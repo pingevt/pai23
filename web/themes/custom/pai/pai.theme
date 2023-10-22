@@ -317,3 +317,19 @@ function pai_preprocess_layout(array &$variables) {
     }
   }
 }
+
+function pai_preprocess_bef_checkboxes(&$variables) {
+  // ksm($variables);
+}
+
+function pai_preprocess_checkboxes(&$variables) {
+  // ksm($variables);
+}
+
+function pai_preprocess_input(&$variables) {
+  // ksm($variables);
+}
+
+function pai_preprocess_form_element(&$variables) {
+  // ksm($variables);
+}

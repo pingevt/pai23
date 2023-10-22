@@ -21,11 +21,11 @@
     <div{{ content_attributes }}>
       <div class="c-node-article--title-block">
 
-        {% if not node.field_tags.isEmpty() and content.field_tags %}
+        {# {% if not node.field_tags.isEmpty() and content.field_tags %}
           <div class="c-node-article--eyebrow">
             <span> {{ content.field_tags }} </span>
           </div>
-        {% endif %}
+        {% endif %} #}
 
         <h{{main_heading_lvl}}{{ title_attributes }}>
           {{ label }}

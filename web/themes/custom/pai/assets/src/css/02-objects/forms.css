@@ -1,0 +1,184 @@
+/* <div class="checkbox-wrapper-21">
+  <label class="control control--checkbox">
+    Checkbox
+    <input type="checkbox" />
+    <div class="control__indicator"></div>
+  </label>
+</div>
+
+<style> */
+
+  .checkbox-wrapper-21 .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .checkbox-wrapper-21 .control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .checkbox-wrapper-21 .control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+  }
+  .checkbox-wrapper-21 .control:hover input ~ .control__indicator,
+  .checkbox-wrapper-21 .control input:focus ~ .control__indicator {
+    background: #ccc;
+  }
+  .checkbox-wrapper-21 .control input:checked ~ .control__indicator {
+    background: #2aa1c0;
+  }
+  .checkbox-wrapper-21 .control:hover input:not([disabled]):checked ~ .control__indicator,
+  .checkbox-wrapper-21 .control input:checked:focus ~ .control__indicator {
+    background: #0e647d;
+  }
+  .checkbox-wrapper-21 .control input:disabled ~ .control__indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .checkbox-wrapper-21 .control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  .checkbox-wrapper-21 .control input:checked ~ .control__indicator:after {
+    display: block;
+  }
+  .checkbox-wrapper-21 .control--checkbox .control__indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .checkbox-wrapper-21 .control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: #7b7b7b;
+  }
+/* </style> */
+
+
+
+.js-form-type-checkbox {
+  /*
+  --checkbox-bg: #e6e6e6;
+  --checkbox-bg-focus: #cccccc;
+  --checkbox-checked-bg: #2aa1c0;
+  --checkbox-checked-bg-focus: #0e647d;
+  */
+  --checkbox-bg: var(--c-red--bg);
+  --checkbox-bg-focus: var(--c-red--bg-focus);
+  --checkbox-checked-bg: var(--c-red);
+  --checkbox-checked-bg-focus: var(--c-red--focus);
+
+
+  &.u-tag-theme--iris {
+    --checkbox-bg: var(--c-iris--bg);
+    --checkbox-bg-focus: var(--c-iris--bg-focus);
+    --checkbox-checked-bg: var(--c-iris);
+    --checkbox-checked-bg-focus: var(--c-iris--focus);
+  }
+
+  &.u-tag-theme--light-red {
+    --checkbox-bg: var(--c-light-red--bg);
+    --checkbox-bg-focus: var(--c-light-red--bg-focus);
+    --checkbox-checked-bg: var(--c-light-red);
+    --checkbox-checked-bg-focus: var(--c-light-red--focus);
+  }
+
+  &.u-tag-theme--deep-sky-blue {
+    --checkbox-bg: var(--c-deep-sky-blue--bg);
+    --checkbox-bg-focus: var(--c-deep-sky-blue--bg-focus);
+    --checkbox-checked-bg: var(--c-deep-sky-blue);
+    --checkbox-checked-bg-focus: var(--c-deep-sky-blue--focus);
+  }
+
+  &.u-tag-theme--dartmouth-green {
+    --checkbox-bg: var(--c-dartmouth-green--bg);
+    --checkbox-bg-focus: var(--c-dartmouth-green--bg-focus);
+    --checkbox-checked-bg: var(--c-dartmouth-green);
+    --checkbox-checked-bg-focus: var(--c-dartmouth-green--focus);
+  }
+
+
+
+  position: relative;
+
+  label {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: var(--checkbox-bg);
+  }
+
+  &:hover .control__indicator,
+  input:focus ~ .control__indicator {
+    background: var(--checkbox-bg-focus);
+  }
+
+  input:checked ~ .control__indicator {
+    background: var(--checkbox-checked-bg);
+  }
+
+  &:hover input:not([disabled]):checked ~ .control__indicator,
+  input:checked:focus ~ .control__indicator {
+    background: var(--checkbox-checked-bg-focus);
+  }
+
+  input:disabled ~ .control__indicator {
+    background: var(--checkbox-bg);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  input:checked ~ .control__indicator:after {
+    display: block;
+  }
+
+  .control__indicator:after {
+    left: 8px;
+    top: 5px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  input:disabled ~ .control__indicator:after {
+    border-color: #7b7b7b;
+  }
+
+}
+

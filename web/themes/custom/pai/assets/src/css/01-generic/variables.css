@@ -36,6 +36,9 @@ $breakpoints: (
   --c-mortar: #6E6259; */
 
   --c-red: #993333;
+  --c-red--focus: #732626;
+  --c-red--bg: #ebe0e0;
+  --c-red--bg-focus: #c69f9f;
 
 
 
@@ -49,13 +52,28 @@ $breakpoints: (
   --c-saffron: #F4C95Dff;
 
   --c-dartmouth-green: #006A3E;
+  --c-dartmouth-green--focus: #003d24;
+  --c-dartmouth-green--bg: #d9f2e8;
+  --c-dartmouth-green--bg-focus: #80b39d;
+
   --c-iris: #5944AE;
+  --c-iris--focus: #4b3993;
+  --c-iris--bg: #e2dfec;
+  --c-iris--bg-focus: #b6afcf;
+
   --c-light-red: #FF7571;
+  --c-light-red--focus: #cc0700;
+  --c-light-red--bg: #f9ebeb;
+  --c-light-red--bg-focus: #e0b9b8;
+
   --c-deep-sky-blue: #00BAFF;
+  --c-deep-sky-blue--focus: #0083b3;
+  --c-deep-sky-blue--bg: #edf5f8;
+  --c-deep-sky-blue--bg-focus: #bad4de;
 
   /* Colors - secondary */
-  --c-black: #000;
-  --c-white: #fff;
+  --c-black: #000000;
+  --c-white: #ffffff;
   --c-gray: #eeeeee;
 
   /* Fonts */

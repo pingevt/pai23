@@ -14,6 +14,7 @@
 @import "02-objects/logo.css";
 @import "02-objects/pagination.css";
 @import "02-objects/work-project-grid.css";
+@import "02-objects/forms.css";
 
 // Components
 @import "03-components/header.css";
