@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04db52f2c8aeb895c3a6662fb775508e",
+    "content-hash": "46fef529c66b5bc918c5f6ad909833ea",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8008,16 +8008,16 @@
         },
         {
             "name": "pingevt/external_site_monitor",
-            "version": "1.x-dev",
+            "version": "1.0.0-rc8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/external_site_monitor.git",
-                "reference": "5353d05c5d0e73fbf2968e82afb8a5b05889d506"
+                "reference": "98b1ccd9ab74fca99322be6fc282b4f9dc993182"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/5353d05c5d0e73fbf2968e82afb8a5b05889d506",
-                "reference": "5353d05c5d0e73fbf2968e82afb8a5b05889d506",
+                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/98b1ccd9ab74fca99322be6fc282b4f9dc993182",
+                "reference": "98b1ccd9ab74fca99322be6fc282b4f9dc993182",
                 "shasum": ""
             },
             "require": {
@@ -8031,7 +8031,6 @@
                 "oomphinc/composer-installers-extender": "^2.0",
                 "php": "^8.0"
             },
-            "default-branch": true,
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8047,9 +8046,9 @@
             "description": "Drupal Module for running tests on external sites.",
             "support": {
                 "issues": "https://github.com/pingevt/external_site_monitor/issues",
-                "source": "https://github.com/pingevt/external_site_monitor/tree/1.x"
+                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.0-rc8"
             },
-            "time": "2023-07-09T21:07:37+00:00"
+            "time": "2023-10-14T18:33:32+00:00"
         },
         {
             "name": "pingevt/timing_monitor",
@@ -15678,7 +15677,7 @@
         "drupal/selective_better_exposed_filters": 10,
         "drupal/ultimate_cron": 15,
         "pantheon-upstreams/upstream-configuration": 20,
-        "pingevt/external_site_monitor": 20,
+        "pingevt/external_site_monitor": 5,
         "pingevt/timing_monitor": 15
     },
     "prefer-stable": true,
@@ -15688,5 +15687,5 @@
     "platform-overrides": {
         "php": "8.2.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

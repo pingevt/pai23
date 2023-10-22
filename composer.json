@@ -91,12 +91,13 @@
     "league/color-extractor": "^0.4.0",
     "pantheon-systems/drupal-integrations": "^10",
     "pantheon-upstreams/upstream-configuration": "dev-main",
-    "pingevt/external_site_monitor": "1.x-dev",
+    "pingevt/external_site_monitor": "^1.0@RC",
     "pingevt/timing_monitor": "^1.0@alpha",
     "pingevt/vis_reg_result": "1.0.0-alpha5"
   },
   "require-dev": {
-    "drupal/core-dev": "^10"
+    "drupal/core-dev": "^10",
+    "kint-php/kint": "^4.0"
   },
   "conflict": {
     "drupal/drupal": "*"
