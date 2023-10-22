@@ -89,3 +89,4 @@ hidden:
   field_h5_tags: true
   field_h6_tags: true
   field_meta_tag_count: true
+  search_api_excerpt: true

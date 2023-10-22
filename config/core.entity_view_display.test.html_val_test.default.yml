@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - esm_test_base.test_type.html_val_test
+    - field.field.test.html_val_test.field_url_group
     - field.field.test.html_val_test.field_urls
   module:
     - link
@@ -98,4 +99,7 @@ content:
     third_party_settings: {  }
     weight: 15
     region: content
-hidden: {  }
+hidden:
+  field_url_group: true
+  langcode: true
+  search_api_excerpt: true

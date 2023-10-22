@@ -1,0 +1,180 @@
+uuid: 76ffcebd-8417-4270-be8a-04271fbcbb24
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.media.field_average_color
+    - field.storage.media.field_avg_luminance
+    - field.storage.media.field_histogram_color
+    - field.storage.media.field_media_tags
+    - field.storage.media.field_quad_luminance
+    - search_api.server.pantheon_solr8
+  module:
+    - search_api_solr
+    - media
+    - search_api
+    - node
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+      use_universal_collation: false
+id: expansive
+name: Expansive
+description: ''
+read_only: false
+field_settings:
+  bundle:
+    label: 'Media type'
+    datasource_id: 'entity:media'
+    property_path: bundle
+    type: string
+    dependencies:
+      module:
+        - media
+  changed:
+    label: Changed
+    datasource_id: 'entity:media'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - media
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:media'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - media
+  field_average_color:
+    label: 'Average Color'
+    datasource_id: 'entity:media'
+    property_path: field_average_color
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_average_color
+  field_avg_luminance:
+    label: 'Avg Luminance'
+    datasource_id: 'entity:media'
+    property_path: field_avg_luminance
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.media.field_avg_luminance
+  field_histogram_color:
+    label: 'Histogram Colors'
+    datasource_id: 'entity:media'
+    property_path: field_histogram_color
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.media.field_histogram_color
+  field_media_tags:
+    label: 'Media Tags'
+    datasource_id: 'entity:media'
+    property_path: field_media_tags
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.media.field_media_tags
+  field_quad_luminance:
+    label: 'Quad Luminance'
+    datasource_id: 'entity:media'
+    property_path: field_quad_luminance
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.media.field_quad_luminance
+  mid:
+    label: ID
+    datasource_id: 'entity:media'
+    property_path: mid
+    type: integer
+    dependencies:
+      module:
+        - media
+  status:
+    label: Published
+    datasource_id: 'entity:media'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - media
+datasource_settings:
+  'entity:media':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: false
+  track_changes_in_references: false
+server: pantheon_solr8

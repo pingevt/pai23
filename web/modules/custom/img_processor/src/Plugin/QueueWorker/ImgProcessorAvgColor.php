@@ -48,7 +48,6 @@ class ImgProcessorAvgColor extends ImgProcessorBase {
     $pixel_color = $pixel->getColor();
 
     // Get Distances.
-    // $distances = $media->img_processor_data ?? [];
     $distances = [];
     foreach ($media->img_processor_data as $data) {
       $distances[$data['bin_color'].$data['media_color']] = $data;

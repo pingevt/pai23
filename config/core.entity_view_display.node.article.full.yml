@@ -78,4 +78,6 @@ hidden:
   field_featured_media: true
   field_short_description: true
   field_tags: true
+  langcode: true
   links: true
+  search_api_excerpt: true

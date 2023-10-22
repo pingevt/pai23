@@ -1,0 +1,17 @@
+uuid: 22fa974d-f00b-4f83-a7a2-939701044c79
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: test_database_server
+name: 'Test Database Server'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

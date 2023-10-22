@@ -44,13 +44,13 @@ content:
     weight: 21
     region: content
   test:
-    label: above
     type: entity_reference_label
-    weight: 15
-    region: content
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 15
+    region: content
   title:
     type: string
     label: hidden
@@ -59,4 +59,5 @@ content:
     third_party_settings: {  }
     weight: -5
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

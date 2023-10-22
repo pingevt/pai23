@@ -30,13 +30,13 @@ content:
     third_party_settings: {  }
   test:
     type: entity_reference_autocomplete
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
     weight: 15
     region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   title:
     type: string_textfield
