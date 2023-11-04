@@ -1,0 +1,48 @@
+uuid: 91d8deb6-f22b-4974-bceb-dcce86ccd8da
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.media.field_caption
+    - field.field.paragraph.media.field_credit
+    - field.field.paragraph.media.field_display
+    - field.field.paragraph.media.field_make_mini
+    - field.field.paragraph.media.field_media
+    - field.field.paragraph.media.field_no_crop
+    - paragraphs.paragraphs_type.media
+  module:
+    - text
+id: paragraph.media.preview
+targetEntityType: paragraph
+bundle: media
+mode: preview
+content:
+  field_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_credit:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: token
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_display: true
+  field_make_mini: true
+  field_no_crop: true
+  search_api_excerpt: true

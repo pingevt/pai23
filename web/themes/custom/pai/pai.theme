@@ -9,6 +9,7 @@ use Drupal\Core\Render\Element;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Template\AttributeString;
+use Drupal\timing_monitor\TimingMonitor;
 
 /**
  * Implements hook_preprocess_region().
@@ -69,8 +70,10 @@ function pai_preprocess_menu(array &$variables) {
  * Implements hook_preprocess_node().
  */
 function pai_preprocess_node(array &$variables) {
+  $tm = TimingMonitor::getInstance();
   $node = $variables['elements']['#node'];
   $bundle = $node->bundle();
+  $tm->logTiming("preprocess_node:$bundle:" . $variables['view_mode'], TimingMonitor::START, "Starting...");
 
   $variables['content_attributes']['class'][] = "node-content";
 
@@ -87,6 +90,8 @@ function pai_preprocess_node(array &$variables) {
   }
 
   // ksm($variables);
+
+  $tm->logTiming("preprocess_node:$bundle:" . $variables['view_mode'], TimingMonitor::MARK, "...Mark...");
 
   switch ($bundle) {
     case 'article':
@@ -107,6 +112,8 @@ function pai_preprocess_node(array &$variables) {
 
       break;
   }
+
+  $tm->logTiming("preprocess_node:$bundle:" . $variables['view_mode'], TimingMonitor::FINISH, "...Finishing");
 }
 
 
@@ -117,6 +124,7 @@ function pai_theme_suggestions_paragraph_alter(&$suggestions, $variables) {
   // $paragraph = $variables['elements']['#paragraph'];
   // $suggestions[] = "paragraph__" . $paragraph->parent_field_name->value . "__" . $paragraph->bundle();
 }
+
 /**
  * Implements hook_preprocess_paragraph().
  */

@@ -10,7 +10,7 @@ packages:
     composer/composer: 2.5.7
     composer/installers: v1.12.0
     composer/metadata-minifier: 1.0.0
-    composer/pcre: 3.1.0
+    composer/pcre: 3.1.1
     composer/semver: 3.3.2
     composer/spdx-licenses: 1.5.7
     composer/xdebug-handler: 3.0.3
@@ -18,7 +18,7 @@ packages:
     consolidation/config: 2.1.2
     consolidation/filter-via-dot-access-data: 2.0.2
     consolidation/log: 3.0.0
-    consolidation/output-formatters: 4.3.1
+    consolidation/output-formatters: 4.3.2
     consolidation/robo: 4.0.6
     consolidation/self-update: 2.1.0
     consolidation/site-alias: 4.0.1
@@ -55,14 +55,14 @@ packages:
     drupal/devel_php: 1.5.0
     drupal/diff: 1.1.0
     drupal/dropzonejs: 2.8.0
-    drupal/editoria11y: 2.1.2
+    drupal/editoria11y: 2.1.3
     drupal/entity_browser: 2.9.0
     drupal/entity_reference_revisions: 1.10.0
     drupal/entity_usage: 2.0.0-beta12
     drupal/focal_point: 2.0.2
-    drupal/gin: 3.0.0-rc6
-    drupal/gin_login: 2.0.2
-    drupal/gin_toolbar: 1.0.0-rc3
+    drupal/gin: 3.0.0-rc7
+    drupal/gin_login: 2.0.3
+    drupal/gin_toolbar: 1.0.0-rc4
     drupal/google_tag: 2.0.2
     drupal/highlightjs_input_filter: 1.1.0
     drupal/imagick: 1.6.0
@@ -88,15 +88,15 @@ packages:
     drupal/recreate_block_content: 3.0.0
     drupal/redirect: 1.9.0
     drupal/redis: 1.7.0
-    drupal/search_api: 1.29.0
-    drupal/search_api_autocomplete: 1.7.0
-    drupal/search_api_pantheon: 8.1.3
-    drupal/search_api_solr: 4.2.10
-    drupal/selective_better_exposed_filters: 3.0.0-beta1
+    drupal/search_api: 1.30.0
+    drupal/search_api_autocomplete: 1.8.0
+    drupal/search_api_pantheon: 8.1.4
+    drupal/search_api_solr: 4.3.0
+    drupal/selective_better_exposed_filters: 3.0.1
     drupal/simple_block: 1.4.0
-    drupal/simple_sitemap: 4.1.6
-    drupal/token: 1.12.0
-    drupal/token_filter: 2.0.0
+    drupal/simple_sitemap: 4.1.7
+    drupal/token: 1.13.0
+    drupal/token_filter: 2.1.0
     drupal/ultimate_cron: 2.0.0-alpha6
     drupal/views_ajax_history: 1.7.0
     drupal/views_bulk_operations: 4.2.5
@@ -110,6 +110,7 @@ packages:
     guzzlehttp/guzzle: 7.7.1
     guzzlehttp/promises: 2.0.1
     guzzlehttp/psr7: 2.5.1
+    halaxa/json-machine: 1.1.3
     http-interop/http-factory-guzzle: 1.2.0
     instaclick/php-webdriver: 1.4.16
     joachim-n/composer-manifest: 1.1.5
@@ -118,7 +119,7 @@ packages:
     laminas/laminas-stdlib: 3.18.0
     league/color-extractor: 0.4.0
     league/container: 4.2.0
-    maennchen/zipstream-php: v2.4.0
+    maennchen/zipstream-php: 3.1.0
     masterminds/html5: 2.8.1
     mck89/peast: v1.15.4
     melbahja/semver: v1.0.1
@@ -126,7 +127,6 @@ packages:
     mikey179/vfsstream: v1.6.11
     mkalkbrenner/php-htmldiff-advanced: 0.0.8
     myclabs/deep-copy: 1.11.1
-    myclabs/php-enum: 1.8.4
     nikic/php-parser: v4.17.1
     oomphinc/composer-installers-extender: 2.0.1
     pantheon-systems/drupal-integrations: 10.0.1
@@ -155,7 +155,7 @@ packages:
     phpunit/php-timer: 5.0.3
     phpunit/phpunit: 9.6.13
     pingevt/external_site_monitor: 1.0.0-rc8
-    pingevt/timing_monitor: 1.0.0-alpha6
+    pingevt/timing_monitor: 1.0.0-alpha9
     pingevt/vis_reg_result: 1.0.0-alpha5
     politsin/jquery-ui-touch-punch: '1.0'
     psr/cache: 3.0.0
@@ -163,7 +163,7 @@ packages:
     psr/event-dispatcher: 1.0.0
     psr/http-client: 1.0.3
     psr/http-factory: 1.0.2
-    psr/http-message: '1.1'
+    psr/http-message: '2.0'
     psr/log: 3.0.0
     psy/psysh: v0.11.18
     ralouphie/getallheaders: 3.0.3
@@ -189,7 +189,7 @@ packages:
     seld/signal-handler: 2.0.1
     sirbrillig/phpcs-variable-analysis: v2.11.16
     slevomat/coding-standard: 8.12.1
-    solarium/solarium: 6.2.8
+    solarium/solarium: 6.3.3
     squizlabs/php_codesniffer: 3.7.2
     symfony/browser-kit: v6.3.2
     symfony/console: v6.3.4
@@ -202,8 +202,8 @@ packages:
     symfony/event-dispatcher-contracts: v3.3.0
     symfony/filesystem: v6.3.0
     symfony/finder: v6.3.5
-    symfony/http-foundation: v6.3.5
-    symfony/http-kernel: v6.3.5
+    symfony/http-foundation: v6.3.7
+    symfony/http-kernel: v6.3.7
     symfony/lock: v6.3.0
     symfony/mime: v6.3.5
     symfony/phpunit-bridge: v6.3.0
@@ -221,14 +221,14 @@ packages:
     symfony/process: v6.3.4
     symfony/psr-http-message-bridge: v2.2.0
     symfony/routing: v6.3.5
-    symfony/serializer: v6.3.5
+    symfony/serializer: v6.3.7
     symfony/service-contracts: v3.3.0
     symfony/string: v6.3.5
     symfony/translation-contracts: v3.3.0
-    symfony/validator: v6.3.5
-    symfony/var-dumper: v6.3.5
-    symfony/var-exporter: v6.3.4
-    symfony/yaml: v6.3.3
+    symfony/validator: v6.3.7
+    symfony/var-dumper: v6.3.6
+    symfony/var-exporter: v6.3.6
+    symfony/yaml: v6.3.7
     theseer/tokenizer: 1.2.1
     twig/twig: v3.6.1
     webflo/drupal-finder: 1.2.2

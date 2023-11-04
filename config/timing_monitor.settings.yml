@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: oUkUcOGmtSldKwH3TadnayRk7_oMIec8KtqoYXd9QkI
+row_limit: 100000
+directory: tm_logs
+gzip: 0
+api: 1
+dependencies:
+  module:
+    - timing_monitor
