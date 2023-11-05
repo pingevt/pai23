@@ -2,7 +2,6 @@
 
 namespace Drupal\img_processor\Plugin\QueueWorker;
 
-use Drupal\file\Entity\File;
 use Drupal\img_processor\Event\MediaSourcePath;
 
 /**
@@ -40,6 +39,7 @@ class ImgProcessorStdDeviation extends ImgProcessorBase {
     $std_deviation = $mean['standardDeviation'] / $q_range['quantumRangeLong'];
 
     $media->set($field, $std_deviation);
+    $media->fromImgProcessor = TRUE;
 
     $media->save();
 

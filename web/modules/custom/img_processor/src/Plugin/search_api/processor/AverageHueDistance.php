@@ -22,7 +22,7 @@ use Drupal\search_api\Processor\ProcessorProperty;
  *   hidden = true,
  * )
  */
-class AverageHueDistance extends  ProcessorPluginBase {
+class AverageHueDistance extends ProcessorPluginBase {
 
   /**
    * {@inheritdoc}
@@ -62,8 +62,9 @@ class AverageHueDistance extends  ProcessorPluginBase {
       $fields = $item->getFields(FALSE);
       $fields = $this->getFieldsHelper()->filterForPropertyPath($fields, "entity:media", 'avg_hue_distance');
 
-      foreach ($fields as &$field) {
-        $index_hex = end(explode("_", $field_id));
+      foreach ($fields as $field_id => &$field) {
+        $exploded_ids = explode("_", $field_id);
+        $index_hex = end($exploded_ids);
         if (isset($color_data[$index_hex])) {
           foreach ($color_data[$index_hex] as $v) {
             $field->addValue((float) $v);

@@ -6,7 +6,7 @@ skip_cache: false
 sql_signature: false
 ui:
   show:
-    additional_queries: true
+    additional_queries: false
     advanced_column: true
     default_display: true
     performance_statistics: true

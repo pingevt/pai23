@@ -2,7 +2,6 @@
 
 namespace Drupal\img_processor\Plugin\QueueWorker;
 
-use Drupal\file\Entity\File;
 use Drupal\img_processor\Event\MediaSourcePath;
 
 /**
@@ -42,7 +41,7 @@ class ImgProcessorHistogram extends ImgProcessorBase {
     $remaped_im = clone $im;
     $remaped_im->quantizeImage(216, \Imagick::COLORSPACE_YIQ, 0, FALSE, FALSE);
 
-    $web_safe_image =  \Drupal::service('extension.list.module')->getPath('img_processor') . "/assets/dist/images/web_safe_pallette.png";
+    $web_safe_image = \Drupal::service('extension.list.module')->getPath('img_processor') . "/assets/dist/images/web_safe_pallette.png";
     $ws = new \Imagick();
     $ws->readImage($web_safe_image);
     $remaped_im->remapImage($ws, \Imagick::DITHERMETHOD_NO);
@@ -54,6 +53,7 @@ class ImgProcessorHistogram extends ImgProcessorBase {
     $index_str = $this->getHistogramColorStringIndex($histogram_elements);
 
     $media->set($field, $index_str);
+    $media->fromImgProcessor = TRUE;
 
     $media->save();
 
@@ -62,6 +62,9 @@ class ImgProcessorHistogram extends ImgProcessorBase {
     $this->state->set('img_processor.data', $this->imgProcState);
   }
 
+  /**
+   *
+   */
   protected function getHistogramColorStringIndex($histogram_elements):string {
     $colors = [];
 

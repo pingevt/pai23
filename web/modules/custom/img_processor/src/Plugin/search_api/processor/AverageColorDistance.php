@@ -22,7 +22,7 @@ use Drupal\search_api\Processor\ProcessorProperty;
  *   hidden = true,
  * )
  */
-class AverageColorDistance extends  ProcessorPluginBase {
+class AverageColorDistance extends ProcessorPluginBase {
 
   /**
    * {@inheritdoc}
@@ -53,17 +53,19 @@ class AverageColorDistance extends  ProcessorPluginBase {
 
     if ($media instanceof MediaInterface && isset($media->img_processor_data)) {
       $color_data = [];
+      // ksm($media->img_processor_data);
       // $average_color = $media->field_average_color->getValue();
       // $average_color_hex = str_replace("#", "", current($average_color)['color']);
-
       foreach ($media->img_processor_data as $data) {
         $color_data[$data['bin_color']][] = $data['color_distance'];
       }
 
+      // ksm($color_data);
+
       // Set Value.
       $fields = $item->getFields(FALSE);
       $fields = $this->getFieldsHelper()->filterForPropertyPath($fields, "entity:media", 'avg_color_distance');
-
+      // ksm($fields);
       foreach ($fields as $field_id => &$field) {
         // ksm($field_id);
         // if ($field_id == "avg_color_distance") {
@@ -74,14 +76,19 @@ class AverageColorDistance extends  ProcessorPluginBase {
         //     }
         //   }
         // }
-        // else {
-          $index_hex = end(explode("_", $field_id));
-          ksm($index_hex);
-          if (isset($color_data[$index_hex])) {
-            foreach ($color_data[$index_hex] as $v) {
-              $field->addValue((float) $v);
-            }
+        // else {.
+        $exploded_ids = explode("_", $field->getFieldIdentifier());
+        // ksm($exploded_ids);
+        $index_hex = end($exploded_ids);
+        // ksm($index_hex);
+        if (isset($color_data[$index_hex])) {
+          // ksm($color_data[$index_hex]);
+          foreach ($color_data[$index_hex] as $v) {
+            $field->addValue((float) $v);
           }
+        }
+
+        // ksm($field);
         // }
       }
     }
