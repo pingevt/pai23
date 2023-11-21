@@ -45,7 +45,7 @@ class ImgProcessorColorPalette extends ImgProcessorBase {
     // Get Distances.
     $distances = [];
     foreach ($media->img_processor_data as $data) {
-      $distances[$data['bin_color'].$data['media_color']] = $data;
+      $distances[$data['bin_color'] . $data['media_color']] = $data;
     }
 
     // Color Pallettes.
@@ -64,7 +64,7 @@ class ImgProcessorColorPalette extends ImgProcessorBase {
 
         $bin_color = $this->iMagickColorToHEX($bin_pixel);
         $media_color = $this->iMagickColorToHEX($pixel);
-        $distances[$bin_color.$media_color] = [
+        $distances[$bin_color . $media_color] = [
           'bin_color' => $bin_color,
           'media_color' => $media_color,
           'color_distance' => $this->getColorDistance($pixel->getColor(), $bin_pixel->getColor()),

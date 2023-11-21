@@ -3,9 +3,10 @@
 namespace Drupal\img_processor\EventSubscriber;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\File\FileSystem;
 use Drupal\Core\Queue\QueueFactory;
 use Drupal\Core\State\State;
-use Drupal\file\Entity\File;
 use Drupal\img_processor\Event\MediaPresaveEvent;
 use Drupal\img_processor\Event\MediaSourcePath;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -44,13 +45,29 @@ class ImgProcessorSubscriber implements EventSubscriberInterface {
   protected $queueFactory;
 
   /**
+   * The file system.
+   *
+   * @var \Drupal\Core\File\FileSystem
+   */
+  protected $fileSystem;
+
+  /**
+   * Entity Type Manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
    * Constructs a new instance.
    */
-  public function __construct(State $state, ConfigFactoryInterface $config_factory, QueueFactory $queue_factory) {
+  public function __construct(State $state, ConfigFactoryInterface $config_factory, QueueFactory $queue_factory, FileSystem $file_system, EntityTypeManagerInterface $entity_type_manager) {
     $this->state = $state;
     $this->imgProcState = $this->state->get('img_processor.data', []);
     $this->configFactory = $config_factory;
     $this->queueFactory = $queue_factory;
+    $this->fileSystem = $file_system;
+    $this->entityTypeManager = $entity_type_manager;
   }
 
   /**
@@ -70,7 +87,7 @@ class ImgProcessorSubscriber implements EventSubscriberInterface {
    * Function to run on Media Presave event.
    */
   public function mediaSourcePath(MediaSourcePath $event) {
-    $config = $this->configFactory->get('img_processor.settings');
+    // $config = $this->configFactory->get('img_processor.settings');
     $media = $event->entity;
 
     $source = $media->getSource();
@@ -78,10 +95,10 @@ class ImgProcessorSubscriber implements EventSubscriberInterface {
     // Set path for media module's image source.
     if ($source->getPluginId() == "image") {
       $fid = $source->getSourceFieldValue($media);
-      $file = File::load($fid);
+      $file = $this->entityTypeManager->getStorage('file')->load($fid);
       $file_uri = $file->getFileUri();
 
-      $absolute_path = \Drupal::service('file_system')->realpath($file_uri);
+      $absolute_path = $this->fileSystem->realpath($file_uri);
 
       $event->setPath($absolute_path);
     }
