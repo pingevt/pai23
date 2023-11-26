@@ -103,7 +103,7 @@
 
 .c-image--no-crop {
 
-  @media (--sm) {
+  /* @media (--sm) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -112,6 +112,6 @@
     .media {
       max-width: 30%;
     }
-  }
+  } */
 
 }

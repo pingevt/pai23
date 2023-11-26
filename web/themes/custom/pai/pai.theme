@@ -103,8 +103,8 @@ function pai_preprocess_node(array &$variables) {
       if ($variables['view_mode'] == "full") {
         $variables['meta_attributes'] = [
           'class' => [
-            'node-meta'
-          ]
+            'node-meta',
+          ],
         ];
 
         $variables['meta_attributes'] = new Attribute($variables['meta_attributes']);
@@ -115,7 +115,6 @@ function pai_preprocess_node(array &$variables) {
 
   $tm->logTiming("preprocess_node:$bundle:" . $variables['view_mode'], TimingMonitor::FINISH, "...Finishing");
 }
-
 
 /**
  * Implements hook_theme_suggestions_paragraph_alter().
@@ -156,14 +155,16 @@ function pai_preprocess_paragraph(array &$variables) {
       $media_count = $paragraph->field_media->count();
       $media_row_count = min($media_count, 3);
       $variables['attributes']['class'][] = "c-image--count--" . $media_count;
-      $variables['attributes']['class'][] = "c-image--row-count--" . $media_row_count;
 
       if ($forced_display !== NULL) {
+        $variables['attributes']['class'][] = "c-image--row-count--" . $media_row_count;
+
         foreach (Element::children($variables['content']['field_media']) as $ckey) {
           $variables['content']['field_media'][$ckey] = $view_builder->view($variables['content']['field_media'][$ckey]['#media'], $forced_display);
         }
       }
       elseif ($media_count > 1 && !$no_crop) {
+
         // Add component class.
         $variables['attributes']['class'][] = "c-image-gallery";
 
