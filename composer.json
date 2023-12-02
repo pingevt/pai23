@@ -35,6 +35,7 @@
     "drupal/config_devel": "^1.9",
     "drupal/config_direct_save": "^3.0",
     "drupal/config_filter": "^2.4",
+    "drupal/config_inspector": "^2.1",
     "drupal/core-composer-scaffold": "10.1.6",
     "drupal/core-project-message": "10.1.6",
     "drupal/core-recommended": "10.1.6",

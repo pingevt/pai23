@@ -1,0 +1,17 @@
+uuid: 5c406bca-a31c-49cd-a130-4fbbab1ea28d
+langcode: en
+status: true
+dependencies:
+  module:
+    - timing_monitor
+title: 'Default cron handler'
+id: timing_monitor_cron
+weight: 0
+module: timing_monitor
+callback: timing_monitor_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

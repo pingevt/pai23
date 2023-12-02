@@ -4,6 +4,3 @@ row_limit: 100000
 directory: tm_logs
 gzip: 0
 api: 1
-dependencies:
-  module:
-    - timing_monitor
