@@ -89,13 +89,13 @@ packages:
     drupal/recreate_block_content: 3.0.0
     drupal/redirect: 1.9.0
     drupal/redis: 1.7.0
-    drupal/search_api: 1.30.0
+    drupal/search_api: 1.31.0
     drupal/search_api_autocomplete: 1.8.0
     drupal/search_api_pantheon: 8.1.4
-    drupal/search_api_solr: 4.3.0
+    drupal/search_api_solr: 4.3.1
     drupal/selective_better_exposed_filters: 3.0.1
     drupal/simple_block: 1.4.0
-    drupal/simple_sitemap: 4.1.7
+    drupal/simple_sitemap: 4.1.8
     drupal/token: 1.13.0
     drupal/token_filter: 2.1.0
     drupal/ultimate_cron: 2.0.0-alpha6

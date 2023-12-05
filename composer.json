@@ -73,7 +73,7 @@
     "drupal/recreate_block_content": "^3.0",
     "drupal/redirect": "^1.9",
     "drupal/redis": "^1.7",
-    "drupal/search_api": "^1.30",
+    "drupal/search_api": "^1.31",
     "drupal/search_api_autocomplete": "^1.8",
     "drupal/search_api_pantheon": "^8.1",
     "drupal/search_api_solr": "^4.3",
