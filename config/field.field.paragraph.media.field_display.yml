@@ -10,7 +10,7 @@ field_name: field_display
 entity_type: paragraph
 bundle: media
 label: Display
-description: ''
+description: 'Choose the display mode for all media in this para.'
 required: false
 translatable: false
 default_value: {  }

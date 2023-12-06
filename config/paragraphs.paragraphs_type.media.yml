@@ -11,5 +11,5 @@ id: media
 label: Media
 icon_uuid: null
 icon_default: null
-description: ''
+description: "Max to a row is 3.\r\n\r\n<b>Display</b>: Choose the display mode for all media in this para.\r\n<b>Make Mini</b>: Will force all the media into a \"Gallery\" view.\r\n<b>No crop</b>: Will force no cropping to take place.\r\n"
 behavior_plugins: {  }

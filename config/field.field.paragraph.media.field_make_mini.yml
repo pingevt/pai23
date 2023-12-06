@@ -9,8 +9,8 @@ id: paragraph.media.field_make_mini
 field_name: field_make_mini
 entity_type: paragraph
 bundle: media
-label: 'Make Mini'
-description: ''
+label: 'Make Mini Gallery'
+description: 'Will force all the media into a "Gallery" view.'
 required: false
 translatable: false
 default_value: {  }

@@ -27,13 +27,6 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
-  field_histogram_color:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_media_image:
     type: image
     label: visually_hidden
@@ -45,29 +38,20 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_standard_deviation:
-    type: number_decimal
-    label: above
-    settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
 hidden:
   created: true
   field_average_color: true
   field_avg_luminance: true
   field_filename: true
   field_filesize: true
+  field_histogram_color: true
   field_media_tags: true
   field_mime_type: true
   field_palette: true
   field_quad_luminance: true
   field_resource_height: true
   field_resource_width: true
+  field_standard_deviation: true
   langcode: true
   name: true
   search_api_excerpt: true
