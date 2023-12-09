@@ -73,6 +73,7 @@
     "drupal/recreate_block_content": "^3.0",
     "drupal/redirect": "^1.9",
     "drupal/redis": "^1.7",
+    "drupal/save_edit": "^1.7",
     "drupal/search_api": "^1.31",
     "drupal/search_api_autocomplete": "^1.8",
     "drupal/search_api_pantheon": "^8.1",
@@ -163,9 +164,6 @@
     },
     "enable-patching": true,
     "patches": {
-      "drupal/save_edit": {
-        "D10 compatability https://www.drupal.org/project/save_edit/issues/3289467": "https://www.drupal.org/files/issues/2022-06-16/save_edit.1.x-dev.rector.patch"
-      },
       "drupal/core": {
         "CKEditor5 modal thingy https://www.drupal.org/project/drupal/issues/3328425": "https://www.drupal.org/files/issues/2022-12-27/3328425.patch",
         "AJAX with exposed filters https://www.drupal.org/project/drupal/issues/3121172": "https://www.drupal.org/files/issues/2023-06-22/drupal-3121172-23.patch"
