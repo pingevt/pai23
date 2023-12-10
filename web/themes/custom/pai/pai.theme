@@ -154,7 +154,7 @@ function pai_preprocess_paragraph(array &$variables) {
       }
 
       $media_count = $paragraph->field_media->count();
-      $media_row_count = ($media_count % 3);
+      $media_row_count = min($media_count, 3);
       $variables['attributes']['class'][] = "c-image--count--" . $media_count;
       $variables['attributes']['class'][] = "c-image--row-count--" . $media_row_count;
 
@@ -235,8 +235,12 @@ function pai_preprocess_media(array &$variables) {
     // Background-color for lazy loading.
     if ($media->hasField('field_average_color') && !$media->field_average_color->isEmpty()) {
       $variables['attributes']['style'] = "background-color: " . $media->field_average_color->color;
-      $variables['#attached']['library'][] =  'pai/lazy_load_images';
+      $variables['#attached']['library'][] = 'pai/lazy_load_images';
     }
+  }
+// ksm($variables['view_mode']);
+  if ($variables['view_mode'] == "vertical_pan") {
+    $variables['#attached']['library'][] = 'pai/vertical_pan_images';
   }
 
   switch ( $media->bundle()) {

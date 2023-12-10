@@ -16,3 +16,9 @@ lazy_load_images:
     assets/dist/js/lazy_load_images.js: {}
   dependencies:
     - pai/global-js
+vertical_pan_images:
+  version: 1.0
+  js:
+    assets/dist/js/vertical_pan_images.js: {}
+  dependencies:
+    - pai/global-js

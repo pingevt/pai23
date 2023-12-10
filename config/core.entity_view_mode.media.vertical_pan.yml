@@ -1,0 +1,10 @@
+uuid: 1f3a0eda-b822-4ccc-94c5-67cd69ddd9d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.vertical_pan
+label: 'Vertical Pan'
+targetEntityType: media
+cache: true

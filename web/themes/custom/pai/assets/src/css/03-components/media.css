@@ -20,8 +20,27 @@
       }
     }
   }
-}
 
+  &.media--view-mode-vertical-pan {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    aspect-ratio: 16/9;
+
+    padding: 5px;
+    background-color: var(--c-delft-blue);
+
+    img {
+      width: 100%;
+      transition: transform 100s ease-in-out 2s;
+
+      &.vp-resetting {
+        transition-duration: 0s !important;
+        transition-delay: 0s!important;
+      }
+    }
+  }
+}
 
 .media--type-remote-video {
   max-width: 800px;
@@ -60,7 +79,6 @@
     margin: 0 auto;
   }
 }
-
 
 .paragraph--type--media.c-image--row-count--1 {
   > .paragraph--content {

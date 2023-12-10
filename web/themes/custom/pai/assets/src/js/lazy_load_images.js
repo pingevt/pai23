@@ -29,7 +29,7 @@
 
   let imgLazyLoadObserver = new IntersectionObserver(ajaxContentObserverCallback, contentObserverOptions);
 
-  Drupal.behaviors.ac_utilities_content_ajaxing = {
+  Drupal.behaviors.lazy_load_images = {
     attach: function (context, settings) {
       const imgEls = context.querySelectorAll(".media.media--view-mode-teaser img:not(.observing)");
 
@@ -39,21 +39,6 @@
       });
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // eslint-disable-next-line no-undef
 })(jQuery, Drupal, drupalSettings);
