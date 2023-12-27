@@ -52,12 +52,68 @@ p {
   }
 }
 
-h1 { @include f-title--h1; }
-h2 { @include f-title--h2; }
-h3 { @include f-title--h3; }
-h4 { @include f-title--h4; }
-h5 { @include f-title--h5; }
-h6 { @include f-title--h6; }
+h1 {
+  @include f-title--h1;
+}
+h2 {
+  @include f-title--h2;
+
+  &.h3 {
+    @include f-title--h3;
+  }
+
+  &.h4 {
+    @include f-title--h4;
+  }
+
+  &.h5 {
+    @include f-title--h5;
+  }
+
+  &.h6 {
+    @include f-title--h6;
+  }
+}
+
+h3 {
+  @include f-title--h3;
+
+  &.h4 {
+    @include f-title--h4;
+  }
+
+  &.h5 {
+    @include f-title--h5;
+  }
+
+  &.h6 {
+    @include f-title--h6;
+  }
+}
+
+h4 {
+  @include f-title--h4;
+
+  &.h5 {
+    @include f-title--h5;
+  }
+
+  &.h6 {
+    @include f-title--h6;
+  }
+}
+
+h5 {
+  @include f-title--h5;
+
+  &.h6 {
+    @include f-title--h6;
+  }
+}
+
+h6 {
+  @include f-title--h6;
+}
 
 .paragraph--type--wysiwyg {
 

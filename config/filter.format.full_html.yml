@@ -47,7 +47,7 @@ filters:
     status: false
     weight: -44
     settings:
-      allowed_html: '<p class="lede"> <a class="blue external"> <ul class="col-2 col-3 col-4"> <h2 class="underline"> <h3 class="underline"> <h4 class="underline"> <h5 class="underline"> <h6 class="underline">'
+      allowed_html: '<p class="lede"> <a class="blue external"> <ul class="col-2 col-3 col-4"> <h2 class="underline h3 h4 h5 h6"> <h3 class="underline h4 h5 h6"> <h4 class="underline h5 h6"> <h5 class="underline h6"> <h6 class="underline">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_autop:
