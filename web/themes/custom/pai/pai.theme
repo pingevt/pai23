@@ -196,7 +196,7 @@ function pai_preprocess_paragraph(array &$variables) {
           ];
         }
       }
-      else if ($forced_display !== NULL) {
+      elseif ($forced_display !== NULL) {
         foreach (Element::children($variables['content']['field_media']) as $ckey) {
           $variables['content']['field_media'][$ckey] = $view_builder->view($variables['content']['field_media'][$ckey]['#media'], $forced_display);
         }
