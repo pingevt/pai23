@@ -56,6 +56,7 @@ packages:
     drupal/devel_php: 1.5.0
     drupal/diff: 1.1.0
     drupal/dropzonejs: 2.8.0
+    drupal/editor_advanced_link: 2.2.4
     drupal/editoria11y: 2.1.6
     drupal/entity_browser: 2.10.0
     drupal/entity_reference_revisions: 1.10.0

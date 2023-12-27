@@ -104,7 +104,6 @@ settings:
       enabled_headings:
         - heading2
         - heading3
-        - heading4
         - heading5
         - heading6
     ckeditor5_list:
@@ -147,6 +146,14 @@ settings:
         -
           label: 'h6 Underline'
           element: '<h6 class="underline">'
+    editor_advanced_link_link:
+      enabled_attributes:
+        - aria-label
+        - class
+        - id
+        - rel
+        - target
+        - title
     media_media:
       allow_view_mode_override: true
 image_upload:
