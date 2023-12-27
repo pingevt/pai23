@@ -170,6 +170,9 @@
       },
       "drupal/views_ajax_history": {
         "AJAX issues with filters https://www.drupal.org/project/views_ajax_history/issues/3364206": "https://www.drupal.org/files/issues/2023-09-08/views_ajax_history-alter_ajax_url_query-params-3364206-6.patch"
+      },
+      "drupal/ultimate_cron": {
+        "php 8.2 deprecation notice https://www.drupal.org/project/ultimate_cron/issues/3331284": "https://www.drupal.org/files/issues/2023-10-24/ultimate_cron-3331284-m27.diff"
       }
     }
   },
