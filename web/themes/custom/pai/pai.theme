@@ -135,9 +135,11 @@ function pai_preprocess_paragraph(array &$variables) {
   switch ($bundle) {
     case 'media':
       $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
+      // Mini Gallery.
       $mini = ($paragraph->field_make_mini->value == 1);
       $no_crop = ($paragraph->field_no_crop->value == 1);
 
+      // Forces display Mode.
       $forced_display = NULL;
       if (!$paragraph->field_display->isEmpty()) {
         $val = $paragraph->field_display->target_id;
@@ -153,7 +155,13 @@ function pai_preprocess_paragraph(array &$variables) {
 
       $media_count = $paragraph->field_media->count();
       $variables['attributes']['class'][] = "c-image--count--" . $media_count;
-      if ($media_count > 1 && !$no_crop) {
+
+      if ($forced_display !== NULL) {
+        foreach (Element::children($variables['content']['field_media']) as $ckey) {
+          $variables['content']['field_media'][$ckey] = $view_builder->view($variables['content']['field_media'][$ckey]['#media'], $forced_display);
+        }
+      }
+      elseif ($media_count > 1 && !$no_crop) {
         // Add component class.
         $variables['attributes']['class'][] = "c-image-gallery";
 
@@ -194,11 +202,6 @@ function pai_preprocess_paragraph(array &$variables) {
             'entity' => $view_builder->view($img, $display_mode),
             'class' => str_replace(["_", "x"], "-", $display_mode),
           ];
-        }
-      }
-      elseif ($forced_display !== NULL) {
-        foreach (Element::children($variables['content']['field_media']) as $ckey) {
-          $variables['content']['field_media'][$ckey] = $view_builder->view($variables['content']['field_media'][$ckey]['#media'], $forced_display);
         }
       }
 
