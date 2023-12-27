@@ -13,6 +13,11 @@ module.exports = {
       "path": "",
     },
     {
+      "label": "Test Page",
+      "path": "node/38",
+      "auth": true,
+    },
+    {
       "label": "Work",
       "path": "node/2",
     },
