@@ -154,7 +154,9 @@ function pai_preprocess_paragraph(array &$variables) {
       }
 
       $media_count = $paragraph->field_media->count();
+      $media_row_count = ($media_count % 3);
       $variables['attributes']['class'][] = "c-image--count--" . $media_count;
+      $variables['attributes']['class'][] = "c-image--row-count--" . $media_row_count;
 
       if ($forced_display !== NULL) {
         foreach (Element::children($variables['content']['field_media']) as $ckey) {
@@ -195,7 +197,7 @@ function pai_preprocess_paragraph(array &$variables) {
           ];
         }
 
-        $ffx = $mini? 6 : 4;
+        $ffx = $mini ? 6 : 4;
         foreach ($referenced_entities as $k => $img) {
           $display_mode = $flip_flop[$k % $ffx];
           $variables['data']['image_data'][] = [

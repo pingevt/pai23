@@ -90,6 +90,10 @@
       &:first-child {
         /* margin-top: 0; */
       }
+
+      & + .paragraph.paragraph--type--media {
+        margin-top: 0;
+      }
     }
 
     .paragraph.paragraph--type--section-layout {

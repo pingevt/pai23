@@ -60,3 +60,40 @@
     margin: 0 auto;
   }
 }
+
+
+.paragraph--type--media.c-image--row-count--1 {
+  > .paragraph--content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .media {
+      width: 100%;
+    }
+  }
+}
+
+.paragraph--type--media.c-image--row-count--2 {
+  > .paragraph--content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .media {
+      width: 49%;
+    }
+  }
+}
+
+.paragraph--type--media.c-image--row-count--3 {
+  > .paragraph--content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .media {
+      width: 31%;
+    }
+  }
+}
