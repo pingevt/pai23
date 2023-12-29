@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Functions to support adminimal admin toolbar.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+// function pai_admin_mod_theme($existing, $type, $theme, $path) {
+//   return [
+//     'page__admin__dashboard' => [
+//       'base hook' => 'page',
+//       'template' => 'page--admin--dashboard',
+//     ],
+//   ];
+// }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function pai_admin_mod_preprocess_html(&$variables) {
+  // Add admin-toolbar class to the body.
+  if (_pai_admin_mod_is_access()) {
+    $variables['attributes']['class'][] = 'admin-toolbar';
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function pai_admin_mod_page_attachments_alter(array &$page) {
+  // Attaches css assets globally.
+  if (_pai_admin_mod_is_access()) {
+    $page['#attached']['library'][] = 'pai_admin_mod/admin-toolbar';
+  }
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function pai_admin_mod_toolbar_alter(&$items) {
+  // Add class to the user tab so it can be moved to the right.
+  if (_pai_admin_mod_is_access()) {
+    $items['user']['#wrapper_attributes']['class'] = ['user-toolbar-tab'];
+  }
+}
+
+/**
+ * Helper function for checking user permission.
+ *
+ * We reallly only want to add styling and changes to toolbar when the user has
+ * access.
+ *
+ * Returns TRUE or FALSE.
+ */
+function _pai_admin_mod_is_access() {
+  $user = \Drupal::currentUser();
+  return $user->hasPermission('access toolbar');
+}

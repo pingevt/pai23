@@ -1,0 +1,22 @@
+uuid: aaf3e27e-faf1-43f9-bfa8-7c082dce4ea2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pai_admin
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: pai_admin_content
+theme: pai_admin
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,43 @@
+
+  <header class="content-header clearfix">
+    <div class="layout-container">
+      {{ page.header }}
+    </div>
+  </header>
+
+  <div class="layout-container">
+    {{ page.pre_content }}
+    {{ page.breadcrumb }}
+    <main class="page-content clearfix" role="main">
+      <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+      {{ page.highlighted }}
+      {% if page.help %}
+        <div class="help">
+          {{ page.help }}
+        </div>
+      {% endif %}
+      {{ page.content }}
+
+      <div id="dashboard-wrapper" class="o-container-fluid">
+        <div class="o-row u-mar-vert-s">
+          <div class="o-col o-col-12">
+            {{ page.dash_top }}
+          </div>
+        </div>
+        <div class="o-row u-mar-vert-s">
+          <div id="dashboard-left" class="o-col o-col-12 o-col-md-4">
+            {{ page.dash_content_left }}
+          </div>
+          <div id="dashboard-right" class="o-col o-col-12 o-col-md-8">
+            {{ page.dash_content_right }}
+          </div>
+        </div>
+        <div class="o-row u-mar-vert-s">
+          <div class="o-col o-col-12">
+            {{ page.dash_bottom }}
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>

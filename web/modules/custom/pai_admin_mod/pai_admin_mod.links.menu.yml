@@ -1,0 +1,6 @@
+pai_admin_mod.dashboard:
+  title: 'Dashboard'
+  parent: system.admin
+  description: 'Dashboard'
+  route_name: pai_admin_mod.dashboard
+  weight: -95

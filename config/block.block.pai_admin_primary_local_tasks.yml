@@ -1,0 +1,22 @@
+uuid: a8ec6265-44cf-4908-a79f-7796a5684611
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pai_admin
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: pai_admin_primary_local_tasks
+theme: pai_admin
+region: header
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

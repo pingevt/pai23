@@ -1,0 +1,20 @@
+uuid: 76c6f3c7-56e7-4c83-9978-a0e14141962f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pai_admin
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: pai_admin_primary_admin_actions
+theme: pai_admin
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

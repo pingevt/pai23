@@ -17,9 +17,6 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@bluecadet/drops": "^1.0.0-alpha.5"
-  },
   "devDependencies": {
     "concurrently": "^7.6.0",
     "postcss-pxtorem": "^6.0.0"
@@ -28,5 +25,9 @@
     "last 2 years",
     "> 1%",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "@babel/preset-env": "^7.23.6",
+    "@bluecadet/drops": "^1.0.0-alpha.5"
+  }
 }

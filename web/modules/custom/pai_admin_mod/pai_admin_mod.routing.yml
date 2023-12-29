@@ -1,0 +1,7 @@
+pai_admin_mod.dashboard:
+  path: '/admin/dashboard'
+  defaults:
+    _controller: '\Drupal\pai_admin_mod\Controller\DashboardController::build'
+    _title: 'Dashboard'
+  requirements:
+    _permission: 'use dashboard'

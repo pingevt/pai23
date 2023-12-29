@@ -75,4 +75,81 @@ const paiThemeConfig = {
   }
 };
 
-module.exports = paiThemeConfig;
+// console.log(paiThemeConfig);
+
+// module.exports = paiThemeConfig;
+
+
+
+let drupal_modules = [
+  "./web/themes/custom/pai/",
+  "./web/themes/custom/pai_admin/",
+  "./web/modules/custom/img_processor/",
+  "./web/modules/custom/pai_admin_mod/",
+  "./web/modules/custom/pai_utility/",
+];
+
+let css_config = [];
+let sass_config = [];
+let js_config = [];
+let images_config = [];
+
+drupal_modules.forEach((val, i) => {
+  css_config.push({
+    src: val + 'assets/src/css/*.css',
+    dest: val + 'assets/dist/css',
+    watch: [val + 'assets/src/css/**/*.css'],
+  });
+
+  sass_config.push({
+    src: val + 'assets/src/scss/*.scss',
+    dest: val + 'assets/dist/css',
+    watch: [val + 'assets/src/scss/**/*.scss'],
+  });
+
+  js_config.push({
+    src: val + 'assets/src/js/*.js',
+    dest: val + 'assets/dist/js',
+    watch: [val + 'assets/src/js/**/*.js'],
+  });
+
+  images_config.push({
+    src: val + 'assets/src/images/**.{jpg,JPG,jpeg,JPEG,gif,png,svg}',
+    dest: val + 'assets/dist/images',
+    watch: [val + 'assets/src/images/**/*'],
+  });
+});
+
+let config = {
+  css: css_config,
+  // sass: sass_config,
+  js: js_config,
+  images: images_config,
+  // --------------------- END BASIC CONFIG --------------------- //
+  processSettings: {
+    eslint: {
+      forceBuildIfError: true
+    },
+    rollup: {
+      outputOptions: {
+        format: 'iife',
+        sourcemap: true
+      }
+    }
+  },
+  eslint: {
+    forceBuildIfError: true
+  },
+  rollup: {
+    outputOptions: {
+      format: 'iife',
+      sourcemap: true
+    }
+  }
+}
+
+// console.log(config);
+
+
+// module.exports = paiThemeConfig;
+module.exports = config;

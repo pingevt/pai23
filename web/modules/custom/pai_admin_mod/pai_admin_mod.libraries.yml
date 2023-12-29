@@ -1,0 +1,6 @@
+admin-toolbar:
+  version: VERSION
+  css:
+    theme:
+      assets/dist/css/admin_toolbar.css: { weight: 50 }
+      assets/dist/css/toolbar.override.css: { weight: 50 }

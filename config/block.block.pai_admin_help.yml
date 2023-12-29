@@ -1,0 +1,22 @@
+uuid: 4580aa5c-ba5e-4a76-ba5d-5b420d3d5226
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - pai_admin
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: pai_admin_help
+theme: pai_admin
+region: help
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
