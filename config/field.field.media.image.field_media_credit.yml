@@ -1,0 +1,24 @@
+uuid: 976ad472-467b-472d-92dd-3d3dec141eef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_credit
+    - filter.format.full_html
+    - media.type.image
+  module:
+    - text
+id: media.image.field_media_credit
+field_name: field_media_credit
+entity_type: media
+bundle: image
+label: Credits
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

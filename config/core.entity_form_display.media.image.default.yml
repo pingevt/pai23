@@ -8,6 +8,8 @@ dependencies:
     - field.field.media.image.field_filename
     - field.field.media.image.field_filesize
     - field.field.media.image.field_histogram_color
+    - field.field.media.image.field_media_caption
+    - field.field.media.image.field_media_credit
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_tags
     - field.field.media.image.field_mime_type
@@ -20,8 +22,51 @@ dependencies:
     - media.type.image
   module:
     - color_field
+    - field_group
     - focal_point
     - path
+    - text
+third_party_settings:
+  field_group:
+    group_color_data:
+      children:
+        - field_avg_luminance
+        - field_quad_luminance
+        - field_average_color
+        - field_palette
+        - field_histogram_color
+        - field_standard_deviation
+      label: 'Color Data'
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_derived_data:
+      children:
+        - field_filename
+        - field_mime_type
+        - field_resource_height
+        - field_resource_width
+        - field_filesize
+      label: 'Derived Data'
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 _core:
   default_config_hash: JSY4-JPyNZBiYYo6imdRYF6_SdtWQexPndrLvn3-vw4
 id: media.image.default
@@ -31,26 +76,26 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   field_average_color:
     type: color_field_widget_html5
-    weight: 27
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   field_avg_luminance:
     type: number
-    weight: 29
+    weight: 15
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_filename:
     type: string_textfield
-    weight: 7
+    weight: 11
     region: content
     settings:
       size: 60
@@ -58,14 +103,30 @@ content:
     third_party_settings: {  }
   field_filesize:
     type: number
-    weight: 9
+    weight: 15
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_histogram_color:
     type: string_textarea
-    weight: 31
+    weight: 19
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_caption:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_credit:
+    type: text_textarea
+    weight: 2
     region: content
     settings:
       rows: 5
@@ -83,7 +144,7 @@ content:
     third_party_settings: {  }
   field_media_tags:
     type: entity_reference_autocomplete_tags
-    weight: 2
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -93,7 +154,7 @@ content:
     third_party_settings: {  }
   field_mime_type:
     type: string_textfield
-    weight: 8
+    weight: 12
     region: content
     settings:
       size: 60
@@ -101,41 +162,41 @@ content:
     third_party_settings: {  }
   field_palette:
     type: color_field_widget_html5
-    weight: 28
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_quad_luminance:
     type: number
-    weight: 30
+    weight: 16
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_resource_height:
     type: number
-    weight: 11
+    weight: 13
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_resource_width:
     type: number
-    weight: 10
+    weight: 14
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_standard_deviation:
     type: number
-    weight: 32
+    weight: 20
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 4
     region: content
     settings:
       include_locked: true
@@ -150,20 +211,20 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS
