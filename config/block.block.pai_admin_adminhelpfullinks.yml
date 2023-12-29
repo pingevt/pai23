@@ -1,0 +1,37 @@
+uuid: 37056916-c06e-4c03-a55c-c8b1c64300c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.admin-helpful-links
+  module:
+    - system
+    - user
+  theme:
+    - pai_admin
+id: pai_admin_adminhelpfullinks
+theme: pai_admin
+region: dash_content_left
+weight: 0
+provider: null
+plugin: 'system_menu_block:admin-helpful-links'
+settings:
+  id: 'system_menu_block:admin-helpful-links'
+  label: 'Helpful Links'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/dashboard

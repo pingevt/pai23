@@ -43,63 +43,77 @@
 {% set local_actions_block = active_admin_theme ~ '_local_actions' %}
 
 <div class="gin-secondary-toolbar layout-container">
-	<div class="gin-breadcrumb-wrapper">
-		{% if route_name == 'entity.node.canonical' %}
-			<div class="region region-breadcrumb gin-region-breadcrumb">
-				<nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
-					<h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
-					<ol class="breadcrumb__list">
-						<li class="breadcrumb__item">
-							{% if entity_edit_url and entity_title %}
-								<a class="breadcrumb__link gin-back-to-admin" href="{{ entity_edit_url }}">{{ 'Edit %title'|t({ '%title': entity_title }) }}</a>
-							{% else %}
-								<a class="breadcrumb__link gin-back-to-admin" href="{{ path('system.admin_content') }}">{{ 'Back to Administration'|t }}</a>
-							{% endif %}
-						</li>
-					</ol>
-				</nav>
-			</div>
-		{% else %}
-			{{ page.breadcrumb }}
-		{% endif %}
-	</div>
-	{{ page.gin_secondary_toolbar }}
+  <div class="gin-breadcrumb-wrapper">
+    {% if route_name == 'entity.node.canonical' %}
+      <div class="region region-breadcrumb gin-region-breadcrumb">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+          <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              {% if entity_edit_url and entity_title %}
+                <a class="breadcrumb__link gin-back-to-admin" href="{{ entity_edit_url }}">{{ 'Edit %title'|t({ '%title': entity_title }) }}</a>
+              {% else %}
+                <a class="breadcrumb__link gin-back-to-admin" href="{{ path('system.admin_content') }}">{{ 'Back to Administration'|t }}</a>
+              {% endif %}
+            </li>
+          </ol>
+        </nav>
+      </div>
+    {% else %}
+      {{ page.breadcrumb }}
+    {% endif %}
+  </div>
+  {{ page.gin_secondary_toolbar }}
 </div>
 
 <div class="region-sticky-watcher"></div>
 
 <header class="region region-sticky">
-	<div class="layout-container region-sticky__items">
-		<div class="region-sticky__items__inner">
-			{{ page.header[page_title_block] }}
-			{{ page.content[local_actions_block] }}
-		</div>
-	</div>
+  <div class="layout-container region-sticky__items">
+    <div class="region-sticky__items__inner">
+      {{ page.header[page_title_block] }}
+      {{ page.content[local_actions_block] }}
+    </div>
+  </div>
 </header>
-{{ kint(page) }}
+
 <div class="sticky-shadow"></div>
 
 {% if page.header|without(page_title_block)|render|striptags|trim is not empty %}
-	<div class="content-header clearfix">
-		<div class="layout-container">
-			{{ page.header|without(page_title_block) }}
-		</div>
-	</div>
+  <div class="content-header clearfix">
+    <div class="layout-container">
+      {{ page.header|without(page_title_block) }}
+    </div>
+  </div>
 {% endif %}
 
 <div class="layout-container">
-	{{ page.pre_content }}
-	<main class="page-content clearfix" role="main">
-		<div class="visually-hidden">
-			<a id="main-content" tabindex="-1"></a>
-		</div>
-		{{ page.highlighted }}
-		{% if page.help %}
-			<div class="help">
-				{{ page.help }}
-			</div>
-		{% endif %}
-		{{ page.content|without(local_actions_block) }}
-	</main>
-</div>
+  {{ page.pre_content }}
+  <main class="page-content clearfix" role="main">
+    <div class="visually-hidden">
+      <a id="main-content" tabindex="-1"></a>
+    </div>
+    {{ page.highlighted }}
+    {% if page.help %}
+      <div class="help">
+        {{ page.help }}
+      </div>
+    {% endif %}
+    {{ page.content|without(local_actions_block) }}
 
+    <div id="dashboard-wrapper">
+      <div id="dashboard-top" >
+        {{ page.dash_top }}
+      </div>
+      <div id="dashboard-left">
+        {{ page.dash_content_left }}
+      </div>
+      <div id="dashboard-right">
+        {{ page.dash_content_right }}
+      </div>
+      <div id="dashboard-bottom" >
+        {{ page.dash_bottom }}
+      </div>
+    </div>
+  </main>
+</div>

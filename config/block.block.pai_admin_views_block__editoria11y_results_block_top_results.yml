@@ -1,0 +1,37 @@
+uuid: ec550a49-bbbd-47cf-b3fa-31f92975c467
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.editoria11y_results
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - pai_admin
+id: pai_admin_views_block__editoria11y_results_block_top_results
+theme: pai_admin
+region: dash_content_right
+weight: -5
+provider: null
+plugin: 'views_block:editoria11y_results-block_top_results'
+settings:
+  id: 'views_block:editoria11y_results-block_top_results'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/dashboard
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

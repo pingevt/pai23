@@ -1,0 +1,37 @@
+uuid: 34495edc-ddae-4d6f-b8a7-004f21f109e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.redirect_404
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - pai_admin
+id: pai_admin_views_block__redirect_404_block_1
+theme: pai_admin
+region: dash_content_right
+weight: -3
+provider: null
+plugin: 'views_block:redirect_404-block_1'
+settings:
+  id: 'views_block:redirect_404-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/dashboard
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

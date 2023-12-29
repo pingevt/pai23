@@ -1,0 +1,34 @@
+#dashboard-wrapper {
+  display: grid;
+  grid-template-areas:
+      "top top"
+      "left right"
+      "bottom bottom";
+  grid-template-columns: 1fr 2fr;
+
+  @media (max-width: 950px) {
+
+    grid-template-areas:
+        "top"
+        "left"
+        "right"
+        "bottom";
+      grid-template-columns: 1fr;
+  }
+}
+
+#ashboard-top {
+  grid-area: top;
+}
+
+#dashboard-left {
+  grid-area: left;
+}
+
+#dashboard-right {
+  grid-area: right;
+}
+
+#dashboard-bottom {
+  grid-area: bottom;
+}
