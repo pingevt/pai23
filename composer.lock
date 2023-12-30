@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9eb9bee9b17754df4b997b67eacfb8c9",
+    "content-hash": "a8c8ae49b772d1d81992ab813c3b39d7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8250,16 +8250,16 @@
         },
         {
             "name": "pingevt/external_site_monitor",
-            "version": "1.0.0-rc8",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/external_site_monitor.git",
-                "reference": "98b1ccd9ab74fca99322be6fc282b4f9dc993182"
+                "reference": "0122ccf9c640c983aa046f9ca13d2a76ed7a1bdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/98b1ccd9ab74fca99322be6fc282b4f9dc993182",
-                "reference": "98b1ccd9ab74fca99322be6fc282b4f9dc993182",
+                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/0122ccf9c640c983aa046f9ca13d2a76ed7a1bdc",
+                "reference": "0122ccf9c640c983aa046f9ca13d2a76ed7a1bdc",
                 "shasum": ""
             },
             "require": {
@@ -8288,9 +8288,9 @@
             "description": "Drupal Module for running tests on external sites.",
             "support": {
                 "issues": "https://github.com/pingevt/external_site_monitor/issues",
-                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.0-rc8"
+                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.0"
             },
-            "time": "2023-10-14T18:33:32+00:00"
+            "time": "2023-12-28T19:38:34+00:00"
         },
         {
             "name": "pingevt/timing_monitor",
@@ -15918,8 +15918,7 @@
         "drupal/multivalue_form_element": 10,
         "drupal/node_revision_delete": 15,
         "drupal/ultimate_cron": 15,
-        "pantheon-upstreams/upstream-configuration": 20,
-        "pingevt/external_site_monitor": 5
+        "pantheon-upstreams/upstream-configuration": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
