@@ -1,4 +1,4 @@
-uuid: ec550a49-bbbd-47cf-b3fa-31f92975c467
+uuid: 576a62c7-895e-460f-b4fe-4aabd9f74615
 langcode: en
 status: true
 dependencies:
@@ -10,14 +10,14 @@ dependencies:
     - views
   theme:
     - pai_admin
-id: pai_admin_views_block__editoria11y_results_block_top_results
+id: pai_admin_views_block__editoria11y_results_block_1
 theme: pai_admin
 region: dash_content_right
 weight: -5
 provider: null
-plugin: 'views_block:editoria11y_results-block_top_results'
+plugin: 'views_block:editoria11y_results-block_1'
 settings:
-  id: 'views_block:editoria11y_results-block_top_results'
+  id: 'views_block:editoria11y_results-block_1'
   label: ''
   label_display: visible
   provider: views
