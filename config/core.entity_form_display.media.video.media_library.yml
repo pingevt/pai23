@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.video.field_is_muted
     - field.field.media.video.field_media_tags
     - field.field.media.video.field_media_video_file
     - field.field.media.video.field_resource_height
@@ -18,9 +19,16 @@ targetEntityType: media
 bundle: video
 mode: media_library
 content:
+  field_is_muted:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_media_tags:
     type: entity_reference_autocomplete_tags
-    weight: 3
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
@@ -35,29 +43,11 @@ content:
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-  field_resource_height:
-    type: number
-    weight: 2
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_resource_width:
-    type: number
-    weight: 1
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
 hidden:
   created: true
+  field_resource_height: true
+  field_resource_width: true
+  langcode: true
   name: true
   path: true
   status: true

@@ -216,7 +216,17 @@ function pai_preprocess_paragraph(array &$variables) {
  * Implements hook_preprocess_field().
  */
 function pai_preprocess_field(array &$variables) {
-  // if ($variables['field_name'] == "field_client") ksm($variables);
+  // if ($variables['field_name'] == "field_media_video_file") {
+  //   ksm($variables);
+  // }
+
+  $parent = $variables['element']['#object'] ?? NULL;
+  if ($parent && $parent->hasField('field_is_muted') && $parent->field_is_muted->value) {
+    foreach ($variables['items'] as &$item) {
+      $item['content']['#attributes']->setAttribute("muted", TRUE);
+      $item['attributes']->setAttribute("muted", TRUE);
+    }
+  }
 }
 
 /**
@@ -239,7 +249,7 @@ function pai_preprocess_media(array &$variables) {
       $variables['#attached']['library'][] = 'pai/lazy_load_images';
     }
   }
-// ksm($variables['view_mode']);
+
   if ($variables['view_mode'] == "vertical_pan") {
     $variables['#attached']['library'][] = 'pai/vertical_pan_images';
   }

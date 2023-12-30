@@ -1,0 +1,21 @@
+uuid: 79addca8-749c-4b68-acf8-2b4f2c859291
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_is_muted
+    - media.type.video
+id: media.video.field_is_muted
+field_name: field_is_muted
+entity_type: media
+bundle: video
+label: 'Is Muted'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
