@@ -16,7 +16,7 @@ preset_focus_color: gin
 focus_color: ''
 high_contrast_mode: 0
 classic_toolbar: horizontal
-secondary_toolbar_frontend: 0
-layout_density: ''
+secondary_toolbar_frontend: 1
+layout_density: small
 show_description_toggle: 0
 show_user_theme_settings: 0
