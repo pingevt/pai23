@@ -1,0 +1,22 @@
+diff --git a/core/lib/Drupal/Core/Render/Element/HtmlTag.php b/core/lib/Drupal/Core/Render/Element/HtmlTag.php
+index 1da060bd0d..81998caa59 100644
+--- a/core/lib/Drupal/Core/Render/Element/HtmlTag.php
++++ b/core/lib/Drupal/Core/Render/Element/HtmlTag.php
+@@ -84,16 +84,14 @@ public static function preRenderHtmlTag($element) {
+     // An HTML tag should not contain any special characters. Escape them to
+     // ensure this cannot be abused.
+     $escaped_tag = HtmlUtility::escape($element['#tag']);
+-    $open_tag = '<' . $escaped_tag . $attributes;
++    $open_tag = '<' . $escaped_tag . $attributes . ' >';
+     $close_tag = '</' . $escaped_tag . ">\n";
+     // Construct a void element.
+     if (in_array($element['#tag'], self::$voidElements)) {
+-      $open_tag .= ' />';
+       $close_tag = "\n";
+     }
+     // Construct all other elements.
+     else {
+-      $open_tag .= '>';
+       if ($element['#value'] === NULL) {
+         $element['#markup'] = '';
+       }

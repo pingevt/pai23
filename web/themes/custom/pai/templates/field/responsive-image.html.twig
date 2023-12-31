@@ -19,7 +19,7 @@
   <picture>
     {% if sources %}
       {% for source_attributes in sources %}
-        <source{{ source_attributes }}/>
+        <source{{ source_attributes }} >
       {% endfor %}
     {% endif %}
     {# The controlling image, with the fallback image in srcset. #}

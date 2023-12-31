@@ -169,7 +169,8 @@
     "patches": {
       "drupal/core": {
         "CKEditor5 modal thingy https://www.drupal.org/project/drupal/issues/3328425": "https://www.drupal.org/files/issues/2022-12-27/3328425.patch",
-        "AJAX with exposed filters https://www.drupal.org/project/drupal/issues/3121172": "https://www.drupal.org/files/issues/2023-06-22/drupal-3121172-23.patch"
+        "AJAX with exposed filters https://www.drupal.org/project/drupal/issues/3121172": "https://www.drupal.org/files/issues/2023-06-22/drupal-3121172-23.patch",
+        "Remove trailing slashes from void elements https://www.drupal.org/project/drupal/issues/1388926": "./patches/trailing_slashes.patch"
       },
       "drupal/views_ajax_history": {
         "AJAX issues with filters https://www.drupal.org/project/views_ajax_history/issues/3364206": "https://www.drupal.org/files/issues/2023-09-08/views_ajax_history-alter_ajax_url_query-params-3364206-6.patch"
