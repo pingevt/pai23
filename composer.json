@@ -177,6 +177,9 @@
       },
       "drupal/ultimate_cron": {
         "php 8.2 deprecation notice https://www.drupal.org/project/ultimate_cron/issues/3331284": "https://www.drupal.org/files/issues/2023-10-24/ultimate_cron-3331284-m27.diff"
+      },
+      "drupal/layout_paragraphs": {
+        "ief_submit_trigger error https://www.drupal.org/project/layout_paragraphs/issues/3274988": "https://www.drupal.org/files/issues/2023-02-03/layout_paragraphs-fixes-undefined-array-key-3274988-0.patch"
       }
     }
   },
