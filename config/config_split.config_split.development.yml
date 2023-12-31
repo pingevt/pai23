@@ -1,0 +1,20 @@
+uuid: ccdad48b-5179-4de5-85d4-b1b41bd71040
+langcode: en
+status: false
+dependencies: {  }
+id: development
+label: Development
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config-dev
+module:
+  devel: 0
+  devel_generate: 0
+  devel_kint_extras: 0
+  devel_php: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }
