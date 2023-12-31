@@ -262,7 +262,7 @@ display:
     display_plugin: attachment
     position: 2
     display_options:
-      title: 'Other Works'
+      title: 'Other Work'
       pager:
         type: some
         options:
@@ -330,7 +330,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          inherit_contextual_filters: 0
+          inherit_contextual_filters: false
       filter_groups:
         operator: AND
         groups:
@@ -360,7 +360,8 @@ display:
             value: '<h2>Other Works</h2>'
             format: full_html
           tokenize: false
-      display_extenders: {  }
+      display_extenders:
+        ajax_history: {  }
       displays:
         featured_projects: featured_projects
       attachment_position: after
