@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.field_client
     - field.field.node.article.field_content
     - field.field.node.article.field_display_title
+    - field.field.node.article.field_editor_notes
     - field.field.node.article.field_featured_media
     - field.field.node.article.field_related_articles
     - field.field.node.article.field_short_description
@@ -23,14 +24,6 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
-  field_client:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 6
-    region: content
   field_content:
     type: layout_paragraphs
     label: hidden
@@ -81,6 +74,8 @@ content:
     weight: 4
     region: content
 hidden:
+  field_client: true
+  field_editor_notes: true
   field_featured_media: true
   field_short_description: true
   langcode: true

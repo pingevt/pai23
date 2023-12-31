@@ -48,6 +48,7 @@
     "drupal/diff": "^1.1",
     "drupal/dropzonejs": "^2.8",
     "drupal/editor_advanced_link": "^2.2",
+    "drupal/editor_note": "^1.0",
     "drupal/editoria11y": "^2.1",
     "drupal/entity_browser": "^2.10",
     "drupal/entity_usage": "^2.0@beta",

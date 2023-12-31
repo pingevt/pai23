@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.field_client
     - field.field.node.article.field_content
     - field.field.node.article.field_display_title
+    - field.field.node.article.field_editor_notes
     - field.field.node.article.field_featured_media
     - field.field.node.article.field_related_articles
     - field.field.node.article.field_short_description
@@ -60,6 +61,7 @@ hidden:
   field_client: true
   field_content: true
   field_display_title: true
+  field_editor_notes: true
   field_related_articles: true
   field_tech: true
   langcode: true

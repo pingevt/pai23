@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3893193a2b80958fa8f35c38db3bf76b",
+    "content-hash": "9b4d43c76552a2939e7d53039e9e6eb7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3127,6 +3127,90 @@
             "homepage": "https://www.drupal.org/project/editor_advanced_link",
             "support": {
                 "source": "https://git.drupalcode.org/project/editor_advanced_link"
+            }
+        },
+        {
+            "name": "drupal/editor_note",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/editor_note.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/editor_note-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "11501e2d3efc059ccda89a7af329e380f6860a5a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1664546400",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "AbramOmovich",
+                    "homepage": "https://www.drupal.org/user/3563909"
+                },
+                {
+                    "name": "Andrei Haurukovich",
+                    "homepage": "https://www.drupal.org/user/2630891"
+                },
+                {
+                    "name": "andreylugovtsov",
+                    "homepage": "https://www.drupal.org/user/3073135"
+                },
+                {
+                    "name": "dima.iluschenko",
+                    "homepage": "https://www.drupal.org/user/3181949"
+                },
+                {
+                    "name": "dmitry.korhov",
+                    "homepage": "https://www.drupal.org/user/3415227"
+                },
+                {
+                    "name": "driverok",
+                    "homepage": "https://www.drupal.org/user/3551610"
+                },
+                {
+                    "name": "konst_8",
+                    "homepage": "https://www.drupal.org/user/816270"
+                },
+                {
+                    "name": "nikolas.tatianenko",
+                    "homepage": "https://www.drupal.org/user/1579942"
+                },
+                {
+                    "name": "Norfolk",
+                    "homepage": "https://www.drupal.org/user/3465009"
+                },
+                {
+                    "name": "Rostislav Sergeenkov",
+                    "homepage": "https://www.drupal.org/user/971150"
+                },
+                {
+                    "name": "veranika_biblis",
+                    "homepage": "https://www.drupal.org/user/3621611"
+                }
+            ],
+            "description": "Editor Notes provides editors an option of taking notes while working on the material.",
+            "homepage": "https://www.drupal.org/project/editor_note",
+            "support": {
+                "source": "https://git.drupalcode.org/project/editor_note"
             }
         },
         {

@@ -1,0 +1,21 @@
+uuid: b79b82a0-9f7a-4ce6-8a4f-92587e48beda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editor_notes
+    - node.type.article
+  module:
+    - editor_note
+id: node.article.field_editor_notes
+field_name: field_editor_notes
+entity_type: node
+bundle: article
+label: 'Editor Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: editor_note_item
