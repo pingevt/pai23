@@ -89,8 +89,6 @@ function pai_preprocess_node(array &$variables) {
     }
   }
 
-  // ksm($variables);
-
   $tm->logTiming("preprocess_node:$bundle:" . $variables['view_mode'], TimingMonitor::MARK, "...Mark...");
 
   switch ($bundle) {
@@ -120,8 +118,10 @@ function pai_preprocess_node(array &$variables) {
  * Implements hook_theme_suggestions_paragraph_alter().
  */
 function pai_theme_suggestions_paragraph_alter(&$suggestions, $variables) {
+  // phpcs:disable
   // $paragraph = $variables['elements']['#paragraph'];
   // $suggestions[] = "paragraph__" . $paragraph->parent_field_name->value . "__" . $paragraph->bundle();
+  // phpcs:enable
 }
 
 /**
@@ -216,10 +216,11 @@ function pai_preprocess_paragraph(array &$variables) {
  * Implements hook_preprocess_field().
  */
 function pai_preprocess_field(array &$variables) {
+  // phpcs:disable
   // if ($variables['field_name'] == "field_media_video_file") {
   //   ksm($variables);
   // }
-
+  // phpcs:enable
   $parent = $variables['element']['#object'] ?? NULL;
   if ($parent && $parent->hasField('field_is_muted') && $parent->field_is_muted->value) {
     foreach ($variables['items'] as &$item) {
@@ -235,7 +236,8 @@ function pai_preprocess_field(array &$variables) {
 function pai_preprocess_media(array &$variables) {
   $media = $variables['media'];
 
-  // For teaser images, which will be links, we need to set alt to an empty string.
+  // For teaser images, which will be links, we need to set alt to an empty
+  // string.
   if ($variables['view_mode'] == "teaser") {
     foreach (Element::children($variables['content']['field_media_image']) as $idx) {
       $values = $variables['content']['field_media_image'][$idx]['#item']->getValue();
@@ -254,7 +256,7 @@ function pai_preprocess_media(array &$variables) {
     $variables['#attached']['library'][] = 'pai/vertical_pan_images';
   }
 
-  switch ( $media->bundle()) {
+  switch ($media->bundle()) {
     case 'remote_video':
       // Grab aspect ratio, if we can.
       // Default to 16x9.
@@ -346,18 +348,30 @@ function pai_preprocess_layout(array &$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_bef_checkboxes().
+ */
 function pai_preprocess_bef_checkboxes(&$variables) {
   // ksm($variables);
 }
 
+/**
+ * Implements hook_preprocess_checkboxes().
+ */
 function pai_preprocess_checkboxes(&$variables) {
   // ksm($variables);
 }
 
+/**
+ * Implements hook_preprocess_input().
+ */
 function pai_preprocess_input(&$variables) {
   // ksm($variables);
 }
 
+/**
+ * Implements hook_preprocess_form_element().
+ */
 function pai_preprocess_form_element(&$variables) {
   // ksm($variables);
 }

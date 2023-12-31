@@ -49,6 +49,7 @@ function img_processor_media_update_processor_data(EntityInterface $entity) {
     $connection = \Drupal::database();
 
     // Delete old records.
+    // phpcs:ignore
     $delete_num = $connection->delete('img_processor_data')
       ->condition("mid", $entity->id())
       ->execute();
@@ -56,7 +57,13 @@ function img_processor_media_update_processor_data(EntityInterface $entity) {
     // Add new records.
     $insert = $connection->insert('img_processor_data')
       // ->fields($entity->img_processor_data)
-      ->fields(['mid', 'bin_color', 'media_color', 'color_distance', 'hue_distance']);
+      ->fields([
+        'mid',
+        'bin_color',
+        'media_color',
+        'color_distance',
+        'hue_distance',
+      ]);
     foreach ($entity->img_processor_data as $row) {
       $row['mid'] = $entity->id();
       $insert->values($row);
@@ -70,10 +77,10 @@ function img_processor_media_update_processor_data(EntityInterface $entity) {
  * Implements hook_entity_load().
  */
 function img_processor_entity_load(array $entities, $entity_type_id) {
-  foreach($entities as $entity) {
+  foreach ($entities as $entity) {
     if ($entity instanceof MediaInterface) {
       $database = \Drupal::database();
-      $query = $database->query("SELECT * FROM {img_processor_data} WHERE mid = ". $entity->id());
+      $query = $database->query("SELECT * FROM {img_processor_data} WHERE mid = " . $entity->id());
 
       $result = $query->fetchAll(PDO::FETCH_ASSOC);
       $entity->img_processor_data = $result;

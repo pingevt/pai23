@@ -5,7 +5,7 @@ namespace Drupal\pai_admin_mod\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Class DashboardController.
+ * Class DashboardController. Simple controller for the dashboard page.
  */
 class DashboardController extends ControllerBase {
 

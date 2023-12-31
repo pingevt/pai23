@@ -96,7 +96,6 @@ class Settings extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config(static::SETTINGS);
     // ksm($config);
-
     $form['#tree'] = TRUE;
 
     // Set up fields.
@@ -153,8 +152,6 @@ class Settings extends ConfigFormBase {
       ],
     ];
 
-
-
     $form['process_std_deviation'] = [
       '#type' => 'checkbox',
       '#title' => $this->t("Process Color Standard Deviation"),
@@ -174,8 +171,6 @@ class Settings extends ConfigFormBase {
         ],
       ],
     ];
-
-
 
     $form['process_avg_color'] = [
       '#type' => 'checkbox',
@@ -208,7 +203,7 @@ class Settings extends ConfigFormBase {
       '#type' => 'number',
       '#title' => $this->t("Color Palette Count"),
       '#description' => $this->t('Targeted count for the color palette'),
-      '#default_value' => $config->get('color_palette_count')?? 6,
+      '#default_value' => $config->get('color_palette_count') ?? 6,
       '#min' => 1,
       '#step' => 1,
       '#states' => [
@@ -263,6 +258,8 @@ class Settings extends ConfigFormBase {
         '#title' => $this->t('Color'),
         '#width' => 4,
       ],
+
+      // phpcs:disable
       // 'color_dist_field' => [
       //   '#type' => 'select',
       //   '#title' => $this->t("Color distance field"),
@@ -275,6 +272,8 @@ class Settings extends ConfigFormBase {
       //   '#description' => $this->t("Should be a multi-value number float field."),
       //   '#options' => $options,
       // ],
+
+      // phpcs:enable
     ];
 
     return parent::buildForm($form, $form_state);
@@ -295,8 +294,6 @@ class Settings extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-
-    // ksm($form_state->getValues());
 
     // Check last color bin. Since there is no "empty" for a color field, this
     // will always add a new item on save. So we remove it here.

@@ -1,11 +1,10 @@
-
 video {
   max-width: 98%;
 }
+
 img {
   /* max-width: 98%; */
 }
-
 
 .js-lpb-component-list > .paragraph.paragraph--type--media {
   .field--name-field-media.field__items {

@@ -15,9 +15,7 @@ function img_processor_schema() {
 }
 
 /**
- * Soec for database tables needed for this module.
- *
- * @return void
+ * Spec for database tables needed for this module.
  */
 function img_processor_spec() {
   $schema['img_processor_data'] = [

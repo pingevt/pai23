@@ -34,10 +34,16 @@ class MediaSourcePath extends Event {
     $this->entity = $entity;
   }
 
+  /**
+   * Setter for path.
+   */
   public function setPath($path) {
     $this->path = $path;
   }
 
+  /**
+   * Getter for path.
+   */
   public function getPath() {
     return $this->path;
   }

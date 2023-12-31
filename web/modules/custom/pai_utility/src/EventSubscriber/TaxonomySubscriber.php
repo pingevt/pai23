@@ -2,28 +2,15 @@
 
 namespace Drupal\pai_utility\EventSubscriber;
 
-use Drupal\Component\Plugin\Exception\PluginException;
 use Drupal\Core\Entity\ContentEntityInterface;
-use Drupal\Core\Routing\RouteMatch;
-use Drupal\views\Views;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\KernelEvent;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-
 
 /**
  * Class EventSubscriber.
  */
 class TaxonomySubscriber implements EventSubscriberInterface {
-
-  /**
-   * Constructor.
-   */
-  // public function __construct(BehaviorInvoker $rabbit_hole_behavior_invoker) {
-    // $this->rabbitHoleBehaviorInvoker = $rabbit_hole_behavior_invoker;
-  // }
 
   /**
    * {@inheritdoc}
