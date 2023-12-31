@@ -51,6 +51,7 @@
     "drupal/editor_note": "^1.0",
     "drupal/editoria11y": "^2.1",
     "drupal/entity_browser": "^2.10",
+    "drupal/entity_clone": "^2.0@beta",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/field_group": "^3.4",
     "drupal/focal_point": "^2.0",

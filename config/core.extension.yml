@@ -32,6 +32,7 @@ module:
   editor_note: 0
   editoria11y: 0
   entity_browser: 0
+  entity_clone: 0
   entity_reference_revisions: 0
   entity_usage: 0
   esm_site: 0
