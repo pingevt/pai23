@@ -7,6 +7,17 @@ _core:
 id: node
 label: Content
 tags:
-  title: '[node:title] | [site:name]'
-  description: '[node:summary]'
   canonical_url: '[node:url]'
+  description: '[node:field_short_description]'
+  image_src: '[node:field_featured_media:entity:field_media_image:social_share_cropped]'
+  og_description: '[node:field_short_description]'
+  og_image: '[node:field_featured_media:entity:field_media_image:social_share_cropped]'
+  og_image_alt: '[node:field_featured_media:entity:field_media_image:alt]'
+  og_title: '[node:title]'
+  title: '[node:title] | [site:name]'
+  twitter_cards_creator: '@peteinge'
+  twitter_cards_description: '[node:field_short_description]'
+  twitter_cards_image: '[node:field_featured_media:entity:field_media_image:social_share_cropped]'
+  twitter_cards_image_alt: '[node:field_featured_media:entity:field_media_image:alt]'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_type: summary_large_image
