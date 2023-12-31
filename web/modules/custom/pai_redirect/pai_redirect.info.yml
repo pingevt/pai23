@@ -1,0 +1,9 @@
+name: PAI - Redirect
+description: Redirect links from old site.
+package: PAI
+
+type: module
+core_version_requirement: ^10
+
+version: 1.0.0
+

@@ -88,6 +88,7 @@ module:
   other_view_filter: 0
   page_cache: 0
   pai_admin_mod: 0
+  pai_redirect: 0
   pai_utility: 0
   pantheon_advanced_page_cache: 0
   paragraphs_library: 0

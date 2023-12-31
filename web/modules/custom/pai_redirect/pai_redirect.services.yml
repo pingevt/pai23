@@ -1,0 +1,5 @@
+services:
+  pai_redirect.redirect_subscriber:
+    class: Drupal\pai_redirect\EventSubscriber\RedirectSubscriber
+    tags:
+      - { name: event_subscriber }
