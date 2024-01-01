@@ -25,6 +25,47 @@ include __DIR__ . "/settings.pantheon.php";
  */
 $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
 
+
+// Redirect to https.
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+  // Redirect to https://$primary_domain in the Live environment.
+  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
+    // Replace www.example.com with your registered domain name.
+    $primary_domain = "peteinge.com";
+  }
+  else {
+    // Redirect to HTTPS on every Pantheon environment.
+    $primary_domain = $_SERVER['HTTP_HOST'];
+  }
+
+  // Force www.
+  if ($primary_domain == "www.peteinge.com") {
+    $primary_domain = "peteinge.com";
+  }
+
+  // Check for redirected domains...
+  $doms = [];
+
+  if (in_array($primary_domain, $doms)) {
+    $primary_domain = "peteinge.com";
+  }
+
+  if ($_SERVER['HTTP_HOST'] != $primary_domain
+      || !isset($_SERVER['HTTP_X_SSL'])
+      || $_SERVER['HTTP_X_SSL'] != 'ON') {
+
+    // Name transaction "redirect" in New Relic for
+    // improved reporting (optional).
+    if (extension_loaded('newrelic')) {
+      newrelic_name_transaction("redirect");
+    }
+
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://' . $primary_domain . $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
+
 /**
  * Skipping permissions hardening will make scaffolding
  * work better, but will also raise a warning when you
