@@ -59,7 +59,7 @@ packages:
     drupal/dropzonejs: 2.8.0
     drupal/editor_advanced_link: 2.2.4
     drupal/editor_note: 1.0.0
-    drupal/editoria11y: 2.1.6
+    drupal/editoria11y: 2.1.7
     drupal/entity_browser: 2.10.0
     drupal/entity_clone: 2.0.0-beta4
     drupal/entity_reference_revisions: 1.10.0
