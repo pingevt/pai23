@@ -1,23 +1,23 @@
-uuid: 576a62c7-895e-460f-b4fe-4aabd9f74615
+uuid: 0ff3c32f-2d73-4dd0-9fcb-5885174090a5
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.editoria11y_results
+    - views.view.articles_needing_editing
   module:
     - system
     - user
     - views
   theme:
     - pai_admin
-id: pai_admin_views_block__editoria11y_results_block_1
+id: pai_admin_views_block__articles_needing_editing_block_1
 theme: pai_admin
 region: dash_content_right
-weight: -6
+weight: -5
 provider: null
-plugin: 'views_block:editoria11y_results-block_1'
+plugin: 'views_block:articles_needing_editing-block_1'
 settings:
-  id: 'views_block:editoria11y_results-block_1'
+  id: 'views_block:articles_needing_editing-block_1'
   label: ''
   label_display: visible
   provider: views
