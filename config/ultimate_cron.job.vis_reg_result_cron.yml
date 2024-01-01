@@ -1,0 +1,17 @@
+uuid: 7dcf54ef-ca56-4fcf-93cc-58fc34841382
+langcode: en
+status: true
+dependencies:
+  module:
+    - vis_reg_result
+title: 'Default cron handler'
+id: vis_reg_result_cron
+weight: 0
+module: vis_reg_result
+callback: vis_reg_result_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database
