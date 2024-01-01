@@ -98,7 +98,7 @@
     "league/color-extractor": "^0.4.0",
     "pantheon-systems/drupal-integrations": "^10",
     "pantheon-upstreams/upstream-configuration": "dev-main",
-    "pingevt/external_site_monitor": "^1.0",
+    "pingevt/external_site_monitor": "^1.x-dev",
     "pingevt/timing_monitor": "^1.0.0-alpha9",
     "pingevt/vis_reg_result": "1.0.0-alpha5"
   },

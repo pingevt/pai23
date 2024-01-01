@@ -3,6 +3,7 @@ packages:
     behat/mink: v1.10.0
     behat/mink-browserkit-driver: v2.1.0
     behat/mink-selenium2-driver: v1.6.0
+    bluecadet/bc_drupal_package_manager: 1.0.0-alpha2
     caxy/php-htmldiff: v0.1.14
     chi-teck/drupal-code-generator: 2.6.2
     composer/ca-bundle: 1.3.5
@@ -161,7 +162,7 @@ packages:
     phpunit/php-text-template: 2.0.4
     phpunit/php-timer: 5.0.3
     phpunit/phpunit: 9.6.13
-    pingevt/external_site_monitor: 1.0.0
+    pingevt/external_site_monitor: '1.x-dev:f0633214167e157a0150a02ae55668a81b387992'
     pingevt/timing_monitor: 1.0.0-alpha9
     pingevt/vis_reg_result: 1.0.0-alpha5
     politsin/jquery-ui-touch-punch: '1.0'
@@ -240,3 +241,4 @@ packages:
     twig/twig: v3.6.1
     webflo/drupal-finder: 1.2.2
     webmozart/assert: 1.11.0
+    z4kn4fein/php-semver: v2.0.2

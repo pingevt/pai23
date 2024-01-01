@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf86f54925e93b7deec87aa148a1335b",
+    "content-hash": "898b9634b192983237a58ba03ac212f8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,48 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.1.1"
             },
             "time": "2022-01-18T09:12:03+00:00"
+        },
+        {
+            "name": "bluecadet/bc_drupal_package_manager",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bluecadet/bc_drupal_package_manager.git",
+                "reference": "5417ad5fb8e1776c2f9d934207532b04e5b2614a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bluecadet/bc_drupal_package_manager/zipball/5417ad5fb8e1776c2f9d934207532b04e5b2614a",
+                "reference": "5417ad5fb8e1776c2f9d934207532b04e5b2614a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4||^8.0",
+                "z4kn4fein/php-semver": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bluecadet\\DrupalPackageManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pete Inge",
+                    "email": "pete.inge@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Adds functionality to check for updates for custom Drupal modules built by Bluecadet.",
+            "support": {
+                "issues": "https://github.com/bluecadet/bc_drupal_package_manager/issues",
+                "source": "https://github.com/bluecadet/bc_drupal_package_manager/tree/1.0.0-alpha2"
+            },
+            "time": "2023-09-29T13:20:09+00:00"
         },
         {
             "name": "caxy/php-htmldiff",
@@ -8482,19 +8524,20 @@
         },
         {
             "name": "pingevt/external_site_monitor",
-            "version": "1.0.0",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/external_site_monitor.git",
-                "reference": "0122ccf9c640c983aa046f9ca13d2a76ed7a1bdc"
+                "reference": "f0633214167e157a0150a02ae55668a81b387992"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/0122ccf9c640c983aa046f9ca13d2a76ed7a1bdc",
-                "reference": "0122ccf9c640c983aa046f9ca13d2a76ed7a1bdc",
+                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/f0633214167e157a0150a02ae55668a81b387992",
+                "reference": "f0633214167e157a0150a02ae55668a81b387992",
                 "shasum": ""
             },
             "require": {
+                "bluecadet/bc_drupal_package_manager": "^1.0",
                 "composer/installers": "^1.9||^2.0",
                 "dragonmantank/cron-expression": "^3.3",
                 "drupal/charts": "^5",
@@ -8505,6 +8548,7 @@
                 "oomphinc/composer-installers-extender": "^2.0",
                 "php": "^8.0"
             },
+            "default-branch": true,
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8520,9 +8564,9 @@
             "description": "Drupal Module for running tests on external sites.",
             "support": {
                 "issues": "https://github.com/pingevt/external_site_monitor/issues",
-                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.0"
+                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.1-alpha2"
             },
-            "time": "2023-12-28T19:38:34+00:00"
+            "time": "2024-01-01T19:04:17+00:00"
         },
         {
             "name": "pingevt/timing_monitor",
@@ -12067,6 +12111,60 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "z4kn4fein/php-semver",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/z4kn4fein/php-semver.git",
+                "reference": "ac804a2b4b9664bb83e3009870ac7a97b3df5f32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/z4kn4fein/php-semver/zipball/ac804a2b4b9664bb83e3009870ac7a97b3df5f32",
+                "reference": "ac804a2b4b9664bb83e3009870ac7a97b3df5f32",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7|^8",
+                "squizlabs/php_codesniffer": "^3",
+                "vimeo/psalm": "^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "z4kn4fein\\SemVer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Csajtai",
+                    "email": "peter.csajtai@outlook.com"
+                }
+            ],
+            "description": "Semantic Versioning library for PHP. It implements the full semantic version 2.0.0 specification and provides ability to parse, compare, and increment semantic versions along with validation against constraints.",
+            "homepage": "https://github.com/z4kn4fein/php-semver",
+            "keywords": [
+                "comparison",
+                "semantic",
+                "semver",
+                "validation",
+                "version",
+                "versioning"
+            ],
+            "support": {
+                "issues": "https://github.com/z4kn4fein/php-semver/issues",
+                "source": "https://github.com/z4kn4fein/php-semver/tree/v2.0.2"
+            },
+            "time": "2023-03-23T09:52:07+00:00"
         }
     ],
     "packages-dev": [
@@ -16151,7 +16249,8 @@
         "drupal/multivalue_form_element": 10,
         "drupal/node_revision_delete": 15,
         "drupal/ultimate_cron": 15,
-        "pantheon-upstreams/upstream-configuration": 20
+        "pantheon-upstreams/upstream-configuration": 20,
+        "pingevt/external_site_monitor": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
