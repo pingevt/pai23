@@ -15,6 +15,7 @@
 
         elem.src = elem.dataset.src;
         elem.srcset = elem.dataset.srcset;
+        elem.sizes = elem.dataset.sizes;
         elem.classList.add("loaded");
 
         parent = elem.parentNode;

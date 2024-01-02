@@ -324,7 +324,10 @@ function pai_preprocess_image(array &$variables) {
     unset($variables['attributes']['srcset']);
 
     $variables['attributes']['data-src'] = $variables['attributes']['src'];
-    $variables['attributes']['src'] = "";
+    unset($variables['attributes']['src']);
+
+    $variables['attributes']['data-sizes'] = $variables['attributes']['sizes'];
+    unset($variables['attributes']['sizes']);
   }
 
 }
