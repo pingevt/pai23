@@ -16,20 +16,20 @@ workflows:
         type: webphp
         description: Import configuration from .yml files
         script: private/drush_config_import.php
-      # -
-      #   type: webphp
-      #   description: Log to New Relic
-      #   script: private/new_relic_deploy.php
+      -
+        type: webphp
+        description: Log to New Relic
+        script: private/new_relic_deploy.php
   deploy:                 #push code to TEST/LIVE
     after:
       -
         type: webphp
         description: Import configuration from .yml files
         script: private/drush_config_import.php
-      # -
-      #   type: webphp
-      #   description: Log to New Relic
-      #   script: private/new_relic_deploy.php
+      -
+        type: webphp
+        description: Log to New Relic
+        script: private/new_relic_deploy.php
   clone_database:
     after:                 #clone DB from one env to another
       -
