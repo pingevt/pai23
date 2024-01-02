@@ -1,12 +1,20 @@
 <?php
-// No need to log this script operation in New Relic's stats.
+
+/**
+ * @file
+ * No need to log this script operation in New Relic's stats.
+ */
+
 // PROTIP: you might also want to use this snippet if you have PHP code handling
 // very fast things like redirects or the like.
 if (extension_loaded('newrelic')) {
   newrelic_ignore_transaction();
 }
 
-$app_info = get_app_info( PANTHEON_ENVIRONMENT );
+
+print "trying script";
+
+$app_info = get_app_info(PANTHEON_ENVIRONMENT);
 
 // Fail fast if we're not going to be able to call New Relic.
 if ($app_info == FALSE) {
@@ -14,12 +22,15 @@ if ($app_info == FALSE) {
   exit();
 }
 
+print "POST";
+print_r($_POST);
+
 // This is one example that handles code pushes, dashboard
 // commits, and deploys between environments. To make sure we
 // have good deploy markers, we gather data differently depending
 // on the context.
-if ($_POST['wf_type'] == 'sync_code') {
-  // commit 'subject'
+if ($_POST['wf_type'] == 'sync_code' || $_POST['wf_type'] == 'sync_code_with_build') {
+  // Commit 'subject'.
   $description = trim(`git log --pretty=format:"%s" -1`);
   $revision = trim(`git log --pretty=format:"%h" -1`);
   if ($_POST['user_role'] == 'super') {
@@ -48,10 +59,11 @@ elseif ($_POST['wf_type'] == 'deploy') {
 $structure = [
   "deployment" => [
     "revision" => $revision,
-    "changelog" => '', // $changelog,
+// $changelog,
+    "changelog" => '',
     "description" => $description,
-    "user" => $user
-  ]
+    "user" => $user,
+  ],
 ];
 
 $curl = "curl -X POST https://api.newrelic.com/v2/applications/" . $app_info['id'] . "/deployments.json ";
@@ -67,26 +79,23 @@ echo "Logging deployment in New Relic...\n";
 passthru($curl);
 echo "Done!";
 
-
-
-
 /**
  * Gets the New Relic API Key so that further requests can be made.
  *
  * Also gets New Relic's name for the given environment.
  */
-function get_nr_connection_info( $env = 'dev' ) {
-  $output = array();
-  $req    = pantheon_curl( 'https://api.live.getpantheon.com/sites/self/bindings?type=newrelic', null, 8443 );
-  $meta   = json_decode( $req['body'], true );
-  foreach ( $meta as $data ) {
-    if ( $data['environment'] === $env ) {
-      if ( empty( $data['api_key'] ) ) {
+function get_nr_connection_info($env = 'dev') {
+  $output = [];
+  $req    = pantheon_curl('https://api.live.getpantheon.com/sites/self/bindings?type=newrelic', NULL, 8443);
+  $meta   = json_decode($req['body'], TRUE);
+  foreach ($meta as $data) {
+    if ($data['environment'] === $env) {
+      if (empty($data['api_key'])) {
         echo "Failed to get API Key\n";
         return;
       }
       $output['api_key'] = $data['api_key'];
-      if ( empty( $data['app_name'] ) ) {
+      if (empty($data['app_name'])) {
         echo "Failed to get app name\n";
         return;
       }
@@ -99,55 +108,61 @@ function get_nr_connection_info( $env = 'dev' ) {
 /**
  * Get the id of the current multidev environment.
  */
-function get_app_id( $api_key, $app_name ) {
+function get_app_id($api_key, $app_name) {
   $return = '';
   $s      = curl_init();
-  curl_setopt( $s, CURLOPT_URL, 'https://api.newrelic.com/v2/applications.json?filter[name]=' . curl_escape($s, $app_name) );
-  curl_setopt( $s, CURLOPT_HTTPHEADER, array( 'X-API-KEY:' . $api_key ) );
-  curl_setopt( $s, CURLOPT_RETURNTRANSFER, 1 );
-  $result = curl_exec( $s );
-  curl_close( $s );
-  $result = json_decode( $result, true );
+  curl_setopt($s, CURLOPT_URL, 'https://api.newrelic.com/v2/applications.json?filter[name]=' . curl_escape($s, $app_name));
+  curl_setopt($s, CURLOPT_HTTPHEADER, ['X-API-KEY:' . $api_key]);
+  curl_setopt($s, CURLOPT_RETURNTRANSFER, 1);
+  $result = curl_exec($s);
+  curl_close($s);
+  $result = json_decode($result, TRUE);
 
   print_r($result);
 
-  foreach ( $result['applications'] as $application ) {
-    if ( $application['name'] === $app_name ) {
+  foreach ($result['applications'] as $application) {
+    if ($application['name'] === $app_name) {
       $return = $application['id'];
       break;
     }
   }
   return $return;
 }
+
 /**
  * Get New Relic information about a given environment.
  */
-function get_app_info( $env = 'dev' ) {
+function get_app_info($env = 'dev') {
   $nr_connection_info = get_nr_connection_info($env);
-  if ( empty( $nr_connection_info ) ) {
+  if (empty($nr_connection_info)) {
     echo "Unable to get New Relic connection info\n";
     return;
   }
 
+  print "nr_connection_info";
   print_r($nr_connection_info);
 
   $api_key  = $nr_connection_info['api_key'];
   $app_name = $nr_connection_info['app_name'];
-  $app_id = get_app_id( $api_key, $app_name );
+  $app_id = get_app_id($api_key, $app_name);
   $url = "https://api.newrelic.com/v2/applications/$app_id.json";
   $ch = curl_init();
-  curl_setopt( $ch, CURLOPT_URL, $url );
-  curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   $headers = [
-      'X-API-KEY:' . $api_key
+    'X-API-KEY:' . $api_key,
   ];
-  curl_setopt( $ch, CURLOPT_HTTPHEADER, $headers );
-  $response = curl_exec( $ch );
-  if ( curl_errno( $ch ) ) {
-    echo 'Error:' . curl_error( $ch );
+  curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+  $response = curl_exec($ch);
+  if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
   }
-  curl_close( $ch );
-  $output = json_decode( $response, true );
+  curl_close($ch);
+  $output = json_decode($response, TRUE);
+
+  print "output";
+  print_r($output);
+
   $output['application']['api_key'] = $api_key;
   return $output['application'];
 }
