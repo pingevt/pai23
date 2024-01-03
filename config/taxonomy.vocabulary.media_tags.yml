@@ -5,4 +5,4 @@ dependencies: {  }
 name: 'Media Tags'
 vid: media_tags
 description: ''
-weight: 0
+weight: -8

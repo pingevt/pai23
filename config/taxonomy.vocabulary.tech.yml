@@ -5,4 +5,4 @@ dependencies: {  }
 name: Tech
 vid: tech
 description: ''
-weight: 0
+weight: -6

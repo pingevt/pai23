@@ -1,0 +1,35 @@
+uuid: 2c41161b-5e55-43fe-83ba-270aec39c5b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.mechanics.field_cost
+    - taxonomy.vocabulary.mechanics
+  module:
+    - text
+id: taxonomy_term.mechanics.default
+targetEntityType: taxonomy_term
+bundle: mechanics
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cost:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

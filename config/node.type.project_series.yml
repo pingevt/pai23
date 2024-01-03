@@ -1,0 +1,31 @@
+uuid: 3054fa3c-f707-4f5f-9f2c-03be21f98935
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_revision_delete
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  node_revision_delete:
+    amount:
+      status: true
+      settings:
+        amount: 5
+    created:
+      status: true
+      settings:
+        age: 6
+    drafts:
+      status: false
+      settings:
+        age: 1
+name: 'Project Series'
+type: project_series
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

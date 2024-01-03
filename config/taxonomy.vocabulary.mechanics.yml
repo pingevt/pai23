@@ -1,0 +1,8 @@
+uuid: ad3130fd-a4d8-41d3-9adc-66ba8e13661d
+langcode: en
+status: true
+dependencies: {  }
+name: Mechanics
+vid: mechanics
+description: ''
+weight: -3

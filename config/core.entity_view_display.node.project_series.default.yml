@@ -1,0 +1,39 @@
+uuid: 0d7961de-a2f4-470f-8bec-25b909475a1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project_series.field_display_title
+    - field.field.node.project_series.field_projects
+    - node.type.project_series
+  module:
+    - user
+id: node.project_series.default
+targetEntityType: node
+bundle: project_series
+mode: default
+content:
+  field_display_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_projects:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

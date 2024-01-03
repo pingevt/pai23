@@ -1,0 +1,29 @@
+uuid: 21b71580-45fc-4934-9ba5-1074bb9dd247
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finish
+    - node.type.project
+    - taxonomy.vocabulary.finish
+id: node.project.field_finish
+field_name: field_finish
+entity_type: node
+bundle: project
+label: Finish
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      finish: finish
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

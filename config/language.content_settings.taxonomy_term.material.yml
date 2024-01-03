@@ -1,0 +1,11 @@
+uuid: 5cf8415d-bac9-44a3-93ff-e66fae38e205
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.material
+id: taxonomy_term.material
+target_entity_type_id: taxonomy_term
+target_bundle: material
+default_langcode: site_default
+language_alterable: false

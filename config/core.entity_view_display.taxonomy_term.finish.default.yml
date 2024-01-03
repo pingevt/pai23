@@ -1,0 +1,35 @@
+uuid: 70cde887-c4e6-40d5-b945-4abea180d2a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.finish.field_cost
+    - taxonomy.vocabulary.finish
+  module:
+    - text
+id: taxonomy_term.finish.default
+targetEntityType: taxonomy_term
+bundle: finish
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cost:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

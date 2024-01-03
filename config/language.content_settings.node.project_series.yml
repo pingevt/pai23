@@ -1,0 +1,11 @@
+uuid: 004c154a-2582-441b-8ed6-16c3e4c0af95
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.project_series
+id: node.project_series
+target_entity_type_id: node
+target_bundle: project_series
+default_langcode: site_default
+language_alterable: false

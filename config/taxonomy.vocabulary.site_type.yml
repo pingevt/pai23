@@ -10,4 +10,4 @@ _core:
 name: 'Site Type'
 vid: site_type
 description: ''
-weight: 99
+weight: -5

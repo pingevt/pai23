@@ -1,0 +1,23 @@
+uuid: 3da8c0d2-4e01-4748-be3a-89267814b989
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cost
+    - taxonomy.vocabulary.material
+id: taxonomy_term.material.field_cost
+field_name: field_cost
+entity_type: taxonomy_term
+bundle: material
+label: Cost
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

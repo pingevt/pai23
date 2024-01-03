@@ -1,0 +1,29 @@
+uuid: 2559d6b3-9268-42ce-bdf9-d7c8ec8e9512
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mechanics
+    - node.type.project
+    - taxonomy.vocabulary.mechanics
+id: node.project.field_mechanics
+field_name: field_mechanics
+entity_type: node
+bundle: project
+label: Mechanics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      mechanics: mechanics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

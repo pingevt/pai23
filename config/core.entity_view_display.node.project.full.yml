@@ -1,0 +1,50 @@
+uuid: 86a7564a-af42-4b82-b0ac-26479f716d22
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.project.field_content
+    - field.field.node.project.field_display_title
+    - field.field.node.project.field_finish
+    - field.field.node.project.field_material
+    - field.field.node.project.field_mechanics
+    - field.field.node.project.field_project_date
+    - node.type.project
+  module:
+    - layout_paragraphs
+    - user
+id: node.project.full
+targetEntityType: node
+bundle: project
+mode: full
+content:
+  field_content:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_display_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_finish: true
+  field_material: true
+  field_mechanics: true
+  field_project_date: true
+  langcode: true
+  search_api_excerpt: true
