@@ -109,6 +109,20 @@ function pai_preprocess_node(array &$variables) {
       }
 
       break;
+
+    case 'project':
+
+      if ($variables['view_mode'] == "full") {
+        $variables['meta_attributes'] = [
+          'class' => [
+            'node-meta',
+          ],
+        ];
+
+        $variables['meta_attributes'] = new Attribute($variables['meta_attributes']);
+      }
+
+      break;
   }
 
   $tm->logTiming("preprocess_node:$bundle:" . $variables['view_mode'], TimingMonitor::FINISH, "...Finishing");

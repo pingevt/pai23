@@ -1,0 +1,37 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div {{ meta_attributes }}>
+    <div class="node-meta__wrapper">
+      <div class="node-meta__item">
+        <div class="field--title">Date</div>
+        <div class="field--item">{{ node.getCreatedTime()|format_date('html_date') }}</div>
+      </div>
+
+      {{ content.field_material }}
+      {{ content.field_mechanics }}
+      {{ content.field_finish }}
+
+    </div>
+  </div>
+
+  <div{{ content_attributes }}>
+    {{ content.field_content }}
+    {# {{ content.field_tech }}
+    {{ content.field_related_articles }} #}
+  </div>
+
+</article>
