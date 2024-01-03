@@ -5,15 +5,19 @@ dependencies:
   config:
     - field.field.node.project.field_content
     - field.field.node.project.field_display_title
+    - field.field.node.project.field_featured_media
     - field.field.node.project.field_finish
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
     - field.field.node.project.field_project_date
+    - field.field.node.project.field_short_description
     - node.type.project
   module:
     - datetime
     - layout_paragraphs
+    - media_library
     - path
+    - text
 id: node.project.default
 targetEntityType: node
 bundle: project
@@ -21,13 +25,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_content:
     type: layout_paragraphs
-    weight: 6
+    weight: 8
     region: content
     settings:
       preview_view_mode: preview
@@ -43,65 +47,80 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_featured_media:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_finish:
     type: options_select
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_material:
     type: options_select
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_mechanics:
     type: options_select
-    weight: 4
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_project_date:
     type: datetime_default
-    weight: 2
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_short_description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 7
+    weight: 9
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 11
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 15
+    weight: 17
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 12
+    weight: 14
     region: content
     settings:
       display_label: true
@@ -116,7 +135,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -125,7 +144,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 14
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }

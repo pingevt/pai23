@@ -6,18 +6,37 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.project.field_content
     - field.field.node.project.field_display_title
+    - field.field.node.project.field_featured_media
     - field.field.node.project.field_finish
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
     - field.field.node.project.field_project_date
+    - field.field.node.project.field_short_description
     - node.type.project
   module:
+    - text
     - user
 id: node.project.teaser
 targetEntityType: node
 bundle: project
 mode: teaser
 content:
+  field_featured_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_short_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

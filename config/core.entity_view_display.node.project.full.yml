@@ -6,12 +6,15 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.project.field_content
     - field.field.node.project.field_display_title
+    - field.field.node.project.field_featured_media
     - field.field.node.project.field_finish
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
     - field.field.node.project.field_project_date
+    - field.field.node.project.field_short_description
     - node.type.project
   module:
+    - datetime
     - layout_paragraphs
     - user
 id: node.project.full
@@ -26,7 +29,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 6
     region: content
   field_display_title:
     type: string
@@ -36,15 +39,49 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
-    settings: {  }
+  field_featured_media:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 100
+    weight: 1
+    region: content
+  field_finish:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_material:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_mechanics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_project_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
-  field_finish: true
-  field_material: true
-  field_mechanics: true
-  field_project_date: true
+  field_short_description: true
   langcode: true
+  links: true
   search_api_excerpt: true

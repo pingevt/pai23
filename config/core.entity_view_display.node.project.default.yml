@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.project.field_content
     - field.field.node.project.field_display_title
+    - field.field.node.project.field_featured_media
     - field.field.node.project.field_finish
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
     - field.field.node.project.field_project_date
+    - field.field.node.project.field_short_description
     - node.type.project
   module:
     - datetime
@@ -48,7 +50,7 @@ content:
     type: entity_reference_label
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 102
     region: content
@@ -75,5 +77,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_featured_media: true
+  field_short_description: true
   langcode: true
   search_api_excerpt: true
