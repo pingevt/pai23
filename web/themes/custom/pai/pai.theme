@@ -324,7 +324,7 @@ function pai_preprocess_image(array &$variables) {
     unset($variables['attributes']['srcset']);
 
     $variables['attributes']['data-src'] = $variables['attributes']['src'];
-    unset($variables['attributes']['src']);
+    $variables['attributes']['src'] = new AttributeString("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
 
     $variables['attributes']['data-sizes'] = $variables['attributes']['sizes'];
     unset($variables['attributes']['sizes']);
