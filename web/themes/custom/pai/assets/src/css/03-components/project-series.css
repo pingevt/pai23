@@ -2,4 +2,43 @@
   &.node--view-mode-full {
 
   }
+
+  &.node--view-mode-teaser {
+    h3 {
+      margin: 0.25em 0 0.1em;
+    }
+
+    a {
+      color: var(--c-red);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.blue {
+        color: var(--c-polynesian-blue);
+      }
+
+      &.external {
+        position: relative;
+
+        svg {
+          width: 1em;
+          height: 1em;
+          transform: rotate(-45deg);
+          transition: transform 0.25s var(--cubic-basic) 0s;
+          path {
+            fill: var(--c-delft-blue);
+          }
+        }
+
+        &:hover {
+          svg {
+            transform: rotate(-45deg) translateX(2px);
+          }
+        }
+      }
+    }
+  }
 }

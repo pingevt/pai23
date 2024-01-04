@@ -2,5 +2,16 @@
   &.node--view-mode-full {
 
 
+    .project-series {
+      grid-column: 2 / span 1;
+      width: fit-content;
+
+      h2 {
+        /* font-size: 0.8rem;
+        text-transform: uppercase;
+        text-decoration: underline; */
+        border-bottom: 4px solid var(--c-cerulean);
+      }
+    }
   }
 }

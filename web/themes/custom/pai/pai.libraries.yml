@@ -22,3 +22,10 @@ vertical_pan_images:
     assets/dist/js/vertical_pan_images.js: {}
   dependencies:
     - pai/global-js
+
+slideshow:
+  version: 1.0
+  js:
+    assets/dist/js/slideshow.js: {}
+  dependencies:
+    - pai/global-js

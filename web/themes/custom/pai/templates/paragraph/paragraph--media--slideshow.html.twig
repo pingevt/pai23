@@ -1,0 +1,51 @@
+{% set id = random() %}
+
+{% block paragraph %}
+  <div{{attributes.addClass(classes)}}>
+    {% block content %}
+
+
+      <div class="paragraph--content">
+      <div id="inline-gallery-slide-announce" class="u-sr-only" aria-live="assertive" aria-atomic="true"></div>
+
+
+        <div class="c-inline-gallery" tabindex="-1">
+          <div class="c-inline-gallery__frame">
+            <div class="c-inline-gallery__content">
+
+
+
+              <h3 class="u-sr-only" id="inline-gallery-controls-title-{{ id }}">Slide Controls</h3>
+              <ul class="c-inline-gallery__controls" aria-labelledby="inline-gallery-controls-title-{{ id }}">
+                <li>
+                  <button class="c-inline-gallery__button c-inline-gallery__button--prev js-inline-gallery-prev" aria-label="Previous slides">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" viewBox="0 0 16 11" aria-hidden="true">
+                      <polygon points="13.293 4.735 9.265 .707 9.972 0 15.21 5.238 9.966 10.395 9.265 9.682 13.278 5.735 0 5.735 0 4.735"></polygon>
+                    </svg>
+                  </button>
+                </li>
+                <li>
+                  <button class="c-inline-gallery__button c-inline-gallery__button--next js-inline-gallery-next" aria-label="Next slides">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" viewBox="0 0 16 11" aria-hidden="true">
+                      <polygon points="13.293 4.735 9.265 .707 9.972 0 15.21 5.238 9.966 10.395 9.265 9.682 13.278 5.735 0 5.735 0 4.735"></polygon>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <h3 class="u-sr-only" id="inline-gallery-slides-title-{{ id }}">Slides</h3>
+              <div class="c-inline-gallery__slider" aria-labelledby="inline-gallery-slides-title-{{ id }}">
+
+                {{ content }}
+
+{# <div class="c-inline-gallery-card__item {{ put_description_first ? 'c-inline-gallery-card__item--column-reverse'}}"> #}
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

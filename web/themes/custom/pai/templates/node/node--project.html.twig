@@ -34,7 +34,13 @@
 
   <div{{ content_attributes }}>
     {{ content.field_content }}
-    {{ content.series }}
+
+    {% if content.series %}
+    <div class="project-series">
+      <h2 class="f-title--h5">Series</h2>
+      {{ content.series }}
+    </div>
+    {% endif %}
   </div>
 
 </article>

@@ -1,0 +1,376 @@
+.c-inline-gallery {
+  margin: $space-l 0 0;
+  position: relative;
+
+  &.is-last-element {
+    overflow: hidden;
+    margin-bottom: 0 !important;
+  }
+
+  .c-angle-divider {
+    max-width: 100%;
+  }
+
+  .c-angle-divider--has_edges:before {
+    top: -10rem;
+  }
+
+  .c-angle-divider--has_edges:after {
+    bottom: -10rem;
+  }
+}
+
+.c-inline-gallery__frame {
+  overflow: hidden;
+}
+
+.c-inline-gallery__content {
+  z-index: 99;
+  position: relative;
+}
+
+.c-inline-gallery__slider {
+  position: relative;
+  z-index: 2;
+
+  .flickity-slider {
+    display: flex;
+    align-items: center;
+  }
+
+  .c-inline-gallery-card {
+
+    img,
+    .media--blazy {
+      height: auto;
+      max-height: 30rem;
+
+      @media (--sm-md) {
+        max-height: 40rem;
+      }
+    }
+
+    &__front {
+      height: 30rem;
+      display: flex;
+      align-items: end;
+      margin-bottom: 2rem;
+
+      @media (--sm-md) {
+        height: 40rem;
+      }
+    }
+  }
+}
+
+.c-inline-gallery__controls {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.c-inline-gallery__button {
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  fill: var(--c-black);
+  background-color: var(--c-white);
+  box-shadow: 0 -0.2rem 0.4rem 0 rgba(49, 49, 43, 0.1);
+  border-radius: 0.2rem;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  svg {
+    opacity: 0.5;
+    transition: opacity 0.24s var(--cubic-basic);
+  }
+
+  &:focus {
+    outline-offset: 0;
+    background-color: var(--c-white);
+    fill: var(--c-white);
+    outline-color: var(--c-white);
+  }
+
+  &.is-active {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &--prev {
+    left: 0;
+
+    svg {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &--next {
+    right: 0;
+  }
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-1.64%);
+}
+
+.flickity-viewport {
+  overflow: visible;
+
+  .c-inline-gallery-card {
+    top: 0;
+  }
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: grabbing;
+}
+
+
+
+.c-inline-gallery-card {
+  margin-right: 30px;
+  width: auto;
+
+  &__item--column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &.c-inline-gallery-card--collection {
+    width: 100%;
+
+    .c-inline-gallery-card__front {
+      object-fit: unset;
+    }
+
+    img,
+    .media--blazy {
+      height: auto;
+      object-fit: unset;
+      display: block;
+      width: 100%;
+    }
+
+    .c-inline-gallery-card__link {
+      &:hover {
+        .c-inline-gallery-card__front {
+          box-shadow: 0 0.2rem 0.4rem 0 rgba(var(--c-black), 0.4);
+        }
+
+        .c-inline-gallery-card__text {
+          color: #707062;
+        }
+      }
+    }
+  }
+
+  .c-inline-gallery-card__link {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  img,
+  .media--blazy {
+    height: 30rem;
+    object-fit: contain;
+    object-position: left bottom;
+    margin-bottom: 2rem;
+    width: auto;
+    max-width: none;
+
+    @media (--sm-md) {
+      height: 40rem;
+    }
+  }
+
+  &__content {
+    display: block;
+    position: relative;
+
+    &:focus {
+      outline-offset: 0;
+    }
+  }
+
+  &__front {
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: none;
+    transition: all 0.45s cubic-bezier(0.55, 0.085, 0, 0.99);
+  }
+
+  &__caption {
+    display: none;
+
+    @media (--sm) {
+      display: block;
+      font-size: 1.6rem;
+      opacity: 0;
+      color: var(--c-white);
+      line-height: 1.375;
+      padding: $space-m;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 88%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+}
+
+.c-inline-gallery-card__button,
+.c-artwork-modal-btn {
+  display: block;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  width: 4rem;
+  height: 4rem;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-radius: 50%;
+  transform: translateY(0.5rem);
+
+  .c-inline-gallery-card:hover &,
+  .c-styled-header__image:hover &,
+  .c-styled-header--window:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 1);
+  }
+
+  &:focus {
+    opacity: 1;
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 1);
+  }
+
+  .c-inline-gallery-card__button__icon {
+    position: absolute;
+    left: 1.2rem;
+    top: 1.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    svg,
+    path {
+      fill: var(--c-white);
+    }
+  }
+}
+
+.c-artwork-modal-btn {
+  left: auto;
+  right: 1rem;
+}
+
+.c-styled-header--window {
+  .c-artwork-modal-btn {
+    right: 1rem;
+    bottom: calc(100% + 1rem);
+
+    @media (--sm) {
+      right: 4.5rem;
+      bottom: 9rem;
+    }
+
+    @media (--md) {
+      right: 9.5rem;
+    }
+
+    @media (--xl) {
+      right: 11rem;
+    }
+  }
+}
+
+.c-inline-gallery-card__text {
+  transition: all 0.45s cubic-bezier(0.55, 0.085, 0, 0.99);
+
+  strong,
+  h2,
+  h5 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+    display: inline-block;
+
+    @media (--md) {
+      font-size: 1.8rem;
+    }
+  }
+
+  h2,
+  h5 {
+    font-weight: 500;
+  }
+
+  // fix odd issue where type on mobile renders bigger
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+.c-inline-gallery-card__text-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    order: 1;
+  }
+
+  h5 {
+    order: 2;
+  }
+}
+
+.c-inline-gallery-card__text-supertitle {
+  margin-bottom: 0.5rem;
+}
+
+
+.media {
+  .credit {
+    font-style: italic;
+    font-size: 0.9em;
+  }
+
+  .caption {
+
+  }
+}

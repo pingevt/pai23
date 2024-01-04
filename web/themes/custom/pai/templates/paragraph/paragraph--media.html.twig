@@ -6,23 +6,27 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
+{% if slideshow %}
+  {% include directory ~ '/templates/paragraph/paragraph--media--slideshow.html.twig' %}
+{% else %}
+  {% block paragraph %}
+    <div{{attributes.addClass(classes)}}>
+      {% block content %}
 
-    <div class="paragraph--content">
-      {% if data.image_data %}
-        <ul class="c-image-gallery__list">
-          {% for img in data.image_data %}
-            <li class="{{ img.class }}">{{ img.entity }}</li>
-          {% endfor %}
-        </ul>
-        {{ content|without('field_media') }}
-      {% else %}
-        {{ content }}
-      {% endif %}
+        <div class="paragraph--content">
+          {% if data.image_data %}
+            <ul class="c-image-gallery__list">
+              {% for img in data.image_data %}
+                <li class="{{ img.class }}">{{ img.entity }}</li>
+              {% endfor %}
+            </ul>
+            {{ content|without('field_media') }}
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </div>
+
+      {% endblock %}
     </div>
-
-    {% endblock %}
-  </div>
-{% endblock paragraph %}
+  {% endblock paragraph %}
+{% endif %}

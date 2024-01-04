@@ -1,0 +1,21 @@
+uuid: c9bbeac7-b3bf-46d2-ad99-b9d3f14623c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow
+    - paragraphs.paragraphs_type.media
+id: paragraph.media.field_slideshow
+field_name: field_slideshow
+entity_type: paragraph
+bundle: media
+label: 'Make Slideshow'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

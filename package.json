@@ -28,6 +28,10 @@
   ],
   "dependencies": {
     "@babel/preset-env": "^7.23.6",
-    "@bluecadet/drops": "^1.0.0-alpha.5"
+    "@bluecadet/drops": "^1.0.0-alpha.5",
+    "flickity": "^2.2.1",
+    "flickity-as-nav-for": "^2.0.1",
+    "flickity-fade": "^1.0.0",
+    "flickity-imagesloaded": "^2.0.0"
   }
 }
