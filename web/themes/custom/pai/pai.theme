@@ -120,6 +120,8 @@ function pai_preprocess_node(array &$variables) {
 
     case 'project':
 
+      $variables['#cache']['context'][] = "user.roles";
+
       if ($variables['view_mode'] == "full") {
 
         $variables['header_attributes'] = new Attribute([
@@ -151,6 +153,17 @@ function pai_preprocess_node(array &$variables) {
           $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
 
           $variables['content']['series'] = $view_builder->view($series, 'teaser');
+        }
+
+        // If user is admin.
+        $current_user = \Drupal::currentUser();
+        ksm($variables);
+        $variables['content']['admin'] = [];
+
+        if ($current_user->id() == 1) {
+          // Print costs!
+
+          $variables['content']['admin'] = [];
         }
       }
 
