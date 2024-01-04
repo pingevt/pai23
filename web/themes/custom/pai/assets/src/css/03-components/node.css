@@ -1,6 +1,20 @@
 .node {
   &.node--view-mode-full {
 
+    > .node-header {
+      display: grid;
+      grid-template-columns: 5% 1fr 5%;
+
+      @media (--lg) {
+        grid-template-columns: 1fr $text-container 1fr;
+      }
+
+      .media {
+        grid-column: 2 / span 1;
+        width: fit-content;
+      }
+    }
+
     > .node-meta {
       display: grid;
       grid-template-columns: 5% 1fr 5%;

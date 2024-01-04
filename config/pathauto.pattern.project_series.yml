@@ -1,0 +1,22 @@
+uuid: ec5d7665-5e0d-4131-b21c-1d376e3370b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: project_series
+label: 'Project Series'
+type: 'canonical_entities:node'
+pattern: 'project-series/[node:field_display_title]'
+selection_criteria:
+  ec2d478e-9190-4242-88a8-b9fcecba02ae:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ec2d478e-9190-4242-88a8-b9fcecba02ae
+    context_mapping:
+      node: node
+    bundles:
+      project_series: project_series
+selection_logic: and
+weight: -8
+relationships: {  }

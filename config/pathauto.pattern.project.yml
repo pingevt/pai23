@@ -1,22 +1,22 @@
-uuid: 4e0eecfd-a828-4600-adeb-d20532dafd3c
+uuid: b3872752-4c4a-4e00-a226-cebc2f3b8940
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: articles
-label: Articles
+id: project
+label: Project
 type: 'canonical_entities:node'
-pattern: '[node:field_tags:0:entity:name]/[node:title]'
+pattern: 'project/[node:field_project_number]'
 selection_criteria:
-  c83e1cba-91b9-4fdc-95b4-603a48920bf9:
+  dbdfa3d3-e99c-4ad5-9461-43c07a3953ae:
     id: 'entity_bundle:node'
     negate: false
-    uuid: c83e1cba-91b9-4fdc-95b4-603a48920bf9
+    uuid: dbdfa3d3-e99c-4ad5-9461-43c07a3953ae
     context_mapping:
       node: node
     bundles:
-      article: article
+      project: project
 selection_logic: and
-weight: -10
+weight: -9
 relationships: {  }

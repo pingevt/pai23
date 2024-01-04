@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
     - field.field.node.project.field_project_date
+    - field.field.node.project.field_project_number
     - field.field.node.project.field_short_description
     - node.type.project
   module:
@@ -29,7 +30,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_display_title:
     type: string
@@ -37,15 +38,16 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_featured_media:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: full
+      link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_finish:
     type: entity_reference_label
@@ -53,7 +55,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_material:
     type: entity_reference_label
@@ -61,7 +63,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_mechanics:
     type: entity_reference_label
@@ -69,7 +71,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_project_date:
     type: datetime_default
@@ -78,7 +80,15 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 2
+    weight: 3
+    region: content
+  field_project_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   field_short_description: true

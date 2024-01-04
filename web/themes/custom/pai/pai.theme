@@ -47,6 +47,13 @@ function pai_preprocess_page_title(&$variables) {
       $variables['subtitle'] = $node->field_subtitle->view('full');
     }
   }
+
+  // Set Subtitle for project.
+  if ($node && $node->bundle() == "project") {
+    if (!$node->field_project_number->isEmpty()) {
+      $variables['subtitle'] = $node->field_project_number->view('full');
+    }
+  }
 }
 
 /**
@@ -113,6 +120,13 @@ function pai_preprocess_node(array &$variables) {
     case 'project':
 
       if ($variables['view_mode'] == "full") {
+
+        $variables['header_attributes'] = new Attribute([
+          'class' => [
+            'node-header',
+          ],
+        ]);
+
         $variables['meta_attributes'] = [
           'class' => [
             'node-meta',

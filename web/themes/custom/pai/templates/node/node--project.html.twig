@@ -14,6 +14,10 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
+  <div {{ header_attributes }}>
+    {{ content.field_featured_media }}
+  </div>
+
   <div {{ meta_attributes }}>
     <div class="node-meta__wrapper">
       <div class="node-meta__item">
@@ -30,8 +34,7 @@
 
   <div{{ content_attributes }}>
     {{ content.field_content }}
-    {# {{ content.field_tech }}
-    {{ content.field_related_articles }} #}
+    {{ content.series }}
   </div>
 
 </article>

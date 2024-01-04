@@ -11,3 +11,5 @@ hide_default_delete: false
 node_types:
   article: article
   page: page
+  project: project
+  project_series: project_series
