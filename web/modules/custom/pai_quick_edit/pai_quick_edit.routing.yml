@@ -1,0 +1,15 @@
+pai_quick_edit.media_qe:
+  path: '/admin/content/media/quick-edit'
+  defaults:
+    _controller: '\Drupal\pai_quick_edit\Controller\MediaQuickEdit::quickEditMedia'
+    _title: 'Quick Edit: Media'
+  requirements:
+    _permission: 'use quickedit api'
+
+pai_quick_edit.media_qe_api:
+  path: '/api/quick-edit/media'
+  defaults:
+    _controller: '\Drupal\pai_quick_edit\Controller\MediaQuickEdit::quickEditMediaApi'
+    _title: ''
+  requirements:
+    _permission: 'use quickedit api'

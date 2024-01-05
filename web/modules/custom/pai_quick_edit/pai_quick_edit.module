@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * This is the module file for pai_quick_edit.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+
+/**
+ * Impliments hook_form_alter()
+ */
+function pai_quick_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // if ($form_id == "views_exposed_form") {
+
+  //   // $view = $form_state->get('view');
+  //   if (isset($form['tid'])) {
+  //     $form['tid']['#process'][] = "pai_quick_edit_process_term_checkboxes";
+  //   }
+  // }
+}
+
+/**
+ * Processes checkboxes for filtering.
+ */
+function pai_quick_edit_process_term_checkboxes(&$element, FormStateInterface $form_state, &$complete_form) {
+
+  // foreach (Element::children($element) as $key) {
+  //   $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($key);
+
+  //   if ($term->hasField('field_theme_slug')) {
+  //     $element[$key]['#wrapper_attributes']['class'][] = "u-tag-theme--" . $term->field_theme_slug->value;
+  //   }
+  // }
+
+  // return $element;
+}
