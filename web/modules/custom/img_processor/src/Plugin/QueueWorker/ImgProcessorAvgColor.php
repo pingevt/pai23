@@ -26,12 +26,10 @@ class ImgProcessorAvgColor extends ImgProcessorBase {
     $index_colors = $this->config->get('color_bins');
     $media = $this->mediaStorage->load($item['mid']);
 
-    // $source = $media->getSource();
-    // $fid = $source->getSourceFieldValue($media);
-    // $file = File::load($fid);
-    // $file_uri = $file->getFileUri();
-
-    // $absolute_path = \Drupal::service('file_system')->realpath($file_uri);
+    // Bail if entity doesn't exist.
+    if (!$media) {
+      return;
+    }
 
     // Instantiate our event.
     $event = new MediaSourcePath($media);

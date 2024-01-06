@@ -24,6 +24,11 @@ class ImgProcessorHistogram extends ImgProcessorBase {
     $field = $this->config->get('histogram_string_field');
     $media = $this->mediaStorage->load($item['mid']);
 
+    // Bail if entity doesn't exist.
+    if (!$media) {
+      return;
+    }
+
     // Instantiate our event.
     $event = new MediaSourcePath($media);
     // Dispatch the event.
