@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 (($, Drupal, drupalSettings) => {
 
-  const apiUrl = "/api/quick-edit/media";
+  const apiUrl = "/api/quick-edit";
 
   Drupal.behaviors.quick_edit = {
     attach: function (context, settings) {
@@ -15,14 +15,17 @@
           let data = {};
 
           let el = evt.target;
+
+          let urlSlug = el.closest('[data-api-slug]').dataset.apiSlug;
+
           el.classList.add('qe-working');
           el.disabled = true;
 
-          data.mid = el.dataset.mediaMid;
+          data.id = el.dataset.entityId;
           data.field = el.dataset.field;
           data.value = el.value;
 
-          fetch(apiUrl, {
+          fetch(apiUrl + "/" + urlSlug, {
             method: "POST",
             headers: {
               'Accept': 'application/json',
@@ -44,15 +47,11 @@
             setTimeout(() => { el.classList.remove('qe-success'); }, 1000);
           })
           .catch(function (res) {
-            console.error(response);
+            console.error(res);
             el.classList.add('qe-error');
             el.classList.remove('qe-working');
             el.disabled = false;
           });
-
-
-
-
         });
 
         el.classList.add('qe-init');

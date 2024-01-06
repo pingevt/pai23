@@ -80,7 +80,10 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
         '#rows' => [],
         '#footer' => [],
         '#sticky' => TRUE,
-        '#empty' => "There are no media etities to edit.",
+        '#empty' => "There are no media entities to edit.",
+        '#attributes' => [
+          'data-api-slug' => 'project',
+        ],
         '#attached' => [
           'library' => ['pai_quick_edit/quick-edit'],
         ],
@@ -144,7 +147,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
           '#value' => $media->name->value,
           '#attributes' => [
             'class' => ['qe-element'],
-            'data-media-mid' => $media->id(),
+            'data-entity-id' => $media->id(),
             'data-field' => 'name',
           ],
         ],
@@ -161,7 +164,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
           '#value' => $alt,
           '#attributes' => [
             'class' => ['qe-element'],
-            'data-media-mid' => $media->id(),
+            'data-entity-id' => $media->id(),
             'data-field' => 'alt',
           ],
         ],
@@ -177,7 +180,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
             '#value' => $credit_value['value'] ?? "",
             '#attributes' => [
               'class' => ['qe-element'],
-              'data-media-mid' => $media->id(),
+              'data-entity-id' => $media->id(),
               'data-field' => 'field_media_credit',
             ],
           ],
@@ -197,7 +200,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
             '#value' => $caption_value['value'] ?? "",
             '#attributes' => [
               'class' => ['qe-element'],
-              'data-media-mid' => $media->id(),
+              'data-entity-id' => $media->id(),
               'data-field' => 'field_media_caption',
             ],
           ],
@@ -222,7 +225,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
    */
   public function quickEditMediaApi(Request $request) {
     $postData = json_decode($request->getContent());
-    $media = $this->mediaStorage->load($postData->mid);
+    $media = $this->mediaStorage->load($postData->id);
 
     if ($postData->field == "alt") {
       $source = $media->getSource();

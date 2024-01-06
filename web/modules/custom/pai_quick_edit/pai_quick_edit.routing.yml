@@ -14,3 +14,20 @@ pai_quick_edit.media_qe_api:
   methods: ['POST']
   requirements:
     _permission: 'use quickedit api'
+
+pai_quick_edit.project_qe:
+  path: '/admin/content/project/quick-edit'
+  defaults:
+    _controller: '\Drupal\pai_quick_edit\Controller\ProjectQuickEdit::quickEditProject'
+    _title: 'Quick Edit: Project'
+  requirements:
+    _permission: 'use quickedit api'
+
+pai_quick_edit.project_qe_api:
+  path: '/api/quick-edit/project'
+  defaults:
+    _controller: '\Drupal\pai_quick_edit\Controller\ProjectQuickEdit::quickEditProjectApi'
+    _title: ''
+  methods: ['POST']
+  requirements:
+    _permission: 'use quickedit api'
