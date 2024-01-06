@@ -14,8 +14,6 @@ class TaxonomyTerm extends Term {
    */
   public function publicLabel() {
 
-    ksm($this);
-
     if ($this->hasField('field_display_name') && !$this->field_display_name->isEmpty()) {
       return $this->field_display_name->value;
     }
