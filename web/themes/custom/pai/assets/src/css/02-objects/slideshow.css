@@ -194,7 +194,7 @@
     height: 30rem;
     object-fit: contain;
     object-position: left bottom;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     width: auto;
     max-width: none;
 

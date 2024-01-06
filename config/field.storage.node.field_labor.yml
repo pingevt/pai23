@@ -1,17 +1,17 @@
-uuid: fe5ec76b-b2d2-4151-8bb3-1feeeec62037
+uuid: dce6cb72-2998-4f9e-ba15-6f9c257b8fe3
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_project_date
-field_name: field_project_date
+id: node.field_labor
+field_name: field_labor
 entity_type: node
-type: datetime
+type: decimal
 settings:
-  datetime_type: date
-module: datetime
+  precision: 10
+  scale: 2
+module: core
 locked: false
 cardinality: 1
 translatable: true

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.project.field_display_title
     - field.field.node.project.field_featured_media
     - field.field.node.project.field_finish
+    - field.field.node.project.field_labor
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
     - field.field.node.project.field_owner
@@ -49,6 +50,7 @@ hidden:
   field_content: true
   field_display_title: true
   field_finish: true
+  field_labor: true
   field_material: true
   field_mechanics: true
   field_owner: true

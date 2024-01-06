@@ -1,7 +1,6 @@
 .node.node--type-project {
   &.node--view-mode-full {
 
-
     .project-series {
       grid-column: 2 / span 1;
       width: fit-content;
@@ -13,5 +12,60 @@
         border-bottom: 4px solid var(--c-cerulean);
       }
     }
+
+    .node-admin {
+      display: grid;
+      grid-template-columns: 5% 1fr 5%;
+
+      border-top: 8px solid var(--c-saffron);
+      margin: 2em 0 0;
+      padding-top: 1.8em;
+
+      @media (--lg) {
+        grid-template-columns: 1fr $text-container 1fr;
+      }
+
+      h2 {
+        grid-column: 2 / span 1;
+        width: fit-content;
+        border-bottom: 4px solid var(--c-cerulean);
+        min-width: 50%;
+      }
+
+      .admin--attrs {
+        grid-column: 1 / span 1;
+        width: fit-content;
+      }
+
+      .admin--sale-price {
+        /* grid-column: 1 / span 1;
+        width: fit-content; */
+        margin-bottom: 1em;
+      }
+
+      .admin--owner {
+        /* grid-column: 1 / span 1;
+        width: fit-content; */
+      }
+
+      .admin--cost-table {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 2;
+        width: fit-content;
+        min-width: 50%
+      }
+    }
+  }
+}
+
+.price-costs-table {
+  width: 100%;
+
+  .markup-row {
+    background: var(--c-gray);
+  }
+
+  .markup-rows {
+    border-top: 2px solid var(--c-black);
   }
 }

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.project.field_display_title
     - field.field.node.project.field_featured_media
     - field.field.node.project.field_finish
+    - field.field.node.project.field_labor
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
     - field.field.node.project.field_owner
@@ -48,6 +49,17 @@ content:
       link: true
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_labor:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_material:
     type: entity_reference_label

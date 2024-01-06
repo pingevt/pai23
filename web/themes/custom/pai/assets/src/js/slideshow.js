@@ -10,7 +10,7 @@ import 'flickity-imagesloaded';
         document.querySelectorAll('.c-inline-gallery')
       );
 
-      console.log(slideShowEls);
+      // console.log(slideShowEls);
 
       slideShowEls.forEach(el => {
         const sliderElement = el.querySelector('.c-inline-gallery__slider');
@@ -20,7 +20,7 @@ import 'flickity-imagesloaded';
           const prevBtn = el.querySelector('.js-inline-gallery-prev');
           const nextBtn = el.querySelector('.js-inline-gallery-next');
 
-          console.log(prevBtn, nextBtn);
+          // console.log(prevBtn, nextBtn);
 
           const slider = new Flickity(sliderElement, {
             draggable: true,
@@ -57,7 +57,7 @@ import 'flickity-imagesloaded';
 
                 setTimeout(() => {
                   const visibleCards = el.querySelectorAll('.c-inline-gallery-card.is-selected');
-                  console.log(visibleCards.length, cards.length);
+                  // console.log(visibleCards.length, cards.length);
                   if (visibleCards.length < cards.length) {
                     controlGroup.classList.add('is-active');
                     nextBtn.classList.add('is-active');

@@ -1,0 +1,23 @@
+uuid: 5bafabb1-7a35-4a07-81e5-41af30b89252
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_labor
+    - node.type.project
+id: node.project.field_labor
+field_name: field_labor
+entity_type: node
+bundle: project
+label: 'Labor Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

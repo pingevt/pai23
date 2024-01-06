@@ -157,13 +157,148 @@ function pai_preprocess_node(array &$variables) {
 
         // If user is admin.
         $current_user = \Drupal::currentUser();
-        ksm($variables);
         $variables['content']['admin'] = [];
 
         if ($current_user->id() == 1) {
           // Print costs!
+          $variables['content']['admin'] = [
+            'sale_price' => $node->field_sale_price->view('default'),
+            'owner' => $node->field_owner->view('default'),
+            'table' => [
+              '#theme' => 'table',
+              '#header' => ['Type', 'Component', 'Price'],
+              '#rows' => [],
+              '#sticky' => TRUE,
+              '#attributes' => [
+                'class' => ['price-costs-table'],
+              ],
+            ],
+          ];
 
-          $variables['content']['admin'] = [];
+          $table = &$variables['content']['admin']['table'];
+
+          $total_cost = 0;
+          $rows = &$table['#rows'];
+
+          foreach ($node->field_material->referencedEntities() as $term) {
+            $row = [
+              ['data' => "Material"],
+              ['data' => $term->label()],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($term->field_cost->value, 2),
+              ],
+            ];
+            $total_cost += $term->field_cost->value;
+
+            $rows[] = $row;
+          }
+
+          foreach ($node->field_mechanics->referencedEntities() as $term) {
+            $row = [
+              ['data' => "Mechanics"],
+              ['data' => $term->label()],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($term->field_cost->value, 2),
+              ],
+            ];
+            $total_cost += $term->field_cost->value;
+
+            $rows[] = $row;
+          }
+
+          foreach ($node->field_finish->referencedEntities() as $term) {
+            $row = [
+              ['data' => "Finish"],
+              ['data' => $term->label()],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($term->field_cost->value, 2),
+              ],
+            ];
+            $total_cost += $term->field_cost->value;
+
+            $rows[] = $row;
+          }
+
+          if (!$node->field_labor->isEmpty()) {
+            $row = [
+              [],
+              ['data' => "Labor Cost"],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($node->field_labor->value, 2),
+              ],
+            ];
+            $total_cost += $node->field_labor->value;
+            $rows[] = $row;
+          }
+
+          // Add in total costs.
+          $rows[] = [
+            [],
+            ['data' => "Base cost"],
+            [
+              'class' => 'text-align-right',
+              'data' => "$" . number_format($total_cost, 2),
+            ],
+          ];
+          $rows[] = [
+            'class' => 'markup-row markup-rows',
+            'data' => [
+              ['data' => "Markups"],
+              ['data' => "10% Markup"],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($total_cost * 1.1, 2),
+              ],
+            ]
+          ];
+          $rows[] = [
+            'class' => 'markup-row',
+            'data' => [
+              [],
+              ['data' => "25% Markup"],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($total_cost * 1.25, 2),
+              ],
+            ],
+          ];
+          $rows[] = [
+            'class' => 'markup-row',
+            'data' => [
+              [],
+              ['data' => "50% Markup"],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($total_cost * 1.5, 2),
+              ],
+            ],
+          ];
+          $rows[] = [
+            'class' => 'markup-row',
+            'data' => [
+              [],
+              ['data' => "100% Markup"],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($total_cost * 2, 2),
+              ],
+            ],
+          ];
+          $rows[] = [
+            'class' => 'markup-row',
+            'data' => [
+              [],
+              ['data' => "150% Markup"],
+              [
+                'class' => 'text-align-right',
+                'data' => "$" . number_format($total_cost * 2.5, 2),
+              ],
+            ],
+          ];
         }
       }
 

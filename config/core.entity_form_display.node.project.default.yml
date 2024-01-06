@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.project.field_display_title
     - field.field.node.project.field_featured_media
     - field.field.node.project.field_finish
+    - field.field.node.project.field_labor
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
     - field.field.node.project.field_owner
@@ -62,6 +63,13 @@ content:
     weight: 8
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_labor:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_material:
     type: options_select
