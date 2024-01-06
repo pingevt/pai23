@@ -19,6 +19,7 @@ dependencies:
   module:
     - datetime
     - layout_paragraphs
+    - pai_utility
     - user
 id: node.project.default
 targetEntityType: node
@@ -43,10 +44,10 @@ content:
     weight: 1
     region: content
   field_finish:
-    type: entity_reference_label
+    type: entity_reference_public_label
     label: above
     settings:
-      link: true
+      link: 0
     third_party_settings: {  }
     weight: 6
     region: content
@@ -62,18 +63,18 @@ content:
     weight: 9
     region: content
   field_material:
-    type: entity_reference_label
+    type: entity_reference_public_label
     label: above
     settings:
-      link: false
+      link: 0
     third_party_settings: {  }
     weight: 4
     region: content
   field_mechanics:
-    type: entity_reference_label
+    type: entity_reference_public_label
     label: above
     settings:
-      link: true
+      link: 0
     third_party_settings: {  }
     weight: 5
     region: content

@@ -37,3 +37,11 @@ function pai_utility_process_term_checkboxes(&$element, FormStateInterface $form
 
   return $element;
 }
+
+/**
+ * Impliments hook_entity_type_alter()
+ */
+function pai_utility_entity_type_alter(&$entity_types) {
+  // Override class to change label.
+  $entity_types['taxonomy_term']->setClass(\Drupal\pai_utility\Entity\TaxonomyTerm::class);
+}
