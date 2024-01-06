@@ -1,19 +1,20 @@
-uuid: 6d4db3f9-8a3a-4e60-8858-5eff6a1c946d
+uuid: 67b316b5-b28c-4276-be8f-8e2b59b0a111
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_material
-field_name: field_material
+id: node.field_owner
+field_name: field_owner
 entity_type: node
-type: entity_reference
+type: string
 settings:
-  target_type: taxonomy_term
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

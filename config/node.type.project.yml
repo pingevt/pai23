@@ -22,7 +22,7 @@ third_party_settings:
       status: false
       settings:
         age: 1
-name: Project
+name: 'Wood Project'
 type: project
 description: ''
 help: ''

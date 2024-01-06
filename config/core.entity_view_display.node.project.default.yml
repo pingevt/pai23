@@ -9,8 +9,10 @@ dependencies:
     - field.field.node.project.field_finish
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
+    - field.field.node.project.field_owner
     - field.field.node.project.field_project_date
     - field.field.node.project.field_project_number
+    - field.field.node.project.field_sale_price
     - field.field.node.project.field_short_description
     - node.type.project
   module:
@@ -45,7 +47,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: content
   field_material:
     type: entity_reference_label
@@ -53,7 +55,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_mechanics:
     type: entity_reference_label
@@ -61,7 +63,15 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 6
+    weight: 5
+    region: content
+  field_owner:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_project_date:
     type: datetime_default
@@ -70,7 +80,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_project_number:
     type: string
@@ -80,13 +90,20 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
-    settings: {  }
+  field_sale_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
     third_party_settings: {  }
-    weight: 3
+    weight: 8
     region: content
 hidden:
   field_featured_media: true
   field_short_description: true
   langcode: true
+  links: true
   search_api_excerpt: true

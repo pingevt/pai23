@@ -1,19 +1,19 @@
-uuid: 6d4db3f9-8a3a-4e60-8858-5eff6a1c946d
+uuid: 86f9707f-307d-4ce1-97f2-179f3d6fc10e
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_material
-field_name: field_material
+id: node.field_sale_price
+field_name: field_sale_price
 entity_type: node
-type: entity_reference
+type: decimal
 settings:
-  target_type: taxonomy_term
+  precision: 10
+  scale: 2
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

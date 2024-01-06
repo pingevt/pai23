@@ -1,0 +1,23 @@
+uuid: 45270c24-2441-4c6f-b5cd-0db620bca764
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sale_price
+    - node.type.project
+id: node.project.field_sale_price
+field_name: field_sale_price
+entity_type: node
+bundle: project
+label: 'Sale Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

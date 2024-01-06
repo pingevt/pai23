@@ -10,8 +10,10 @@ dependencies:
     - field.field.node.project.field_finish
     - field.field.node.project.field_material
     - field.field.node.project.field_mechanics
+    - field.field.node.project.field_owner
     - field.field.node.project.field_project_date
     - field.field.node.project.field_project_number
+    - field.field.node.project.field_sale_price
     - field.field.node.project.field_short_description
     - node.type.project
   module:
@@ -91,6 +93,8 @@ content:
     weight: 0
     region: content
 hidden:
+  field_owner: true
+  field_sale_price: true
   field_short_description: true
   langcode: true
   links: true
