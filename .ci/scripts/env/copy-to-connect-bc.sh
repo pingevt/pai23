@@ -12,8 +12,8 @@ curl -H "api-key: $CONNECT_BC_API" -d "project=$TERMINUS_SITE&branch=$GITHUB_REF
 
 TIMESTAMP=$(cat connect-bc.js | jq -r '.data.timestamp')
 
-mkdir ../to-be-copied
-mkdir ../to-be-copied/$TIMESTAMP
+# mkdir ../to-be-copied
+mkdir -p ../to-be-copied/$TIMESTAMP
 cp -R ../artifacts ../to-be-copied/$TIMESTAMP
 
 cd ../to-be-copied
