@@ -7,6 +7,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -53,8 +54,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
    *
    */
   public function quickEditMedia(Request $request) {
-    ksm($request->query);
-
+    // ksm($request->query);.
     $params = $request->query->all();
 
     $build = [
@@ -66,6 +66,9 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
         '#footer' => [],
         '#sticky' => TRUE,
         '#empty' => "There are no media etities to edit.",
+        '#attached' => [
+          'library' => ['pai_quick_edit/quick-edit'],
+        ],
       ],
     ];
 
@@ -76,11 +79,14 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
     if (isset($params['title'])) {
       $q->condition('name', '%%' . $params['title'] . '%%', 'LIKE');
     }
-    // if (isset($params['alt']) && $params['alt']) {
+    // If (isset($params['alt']) && $params['alt']) {
     //   $q->condition('alt', '');
-    // }
+    // }.
     if (isset($params['bundle'])) {
       $q->condition('bundle', $params['bundle']);
+    }
+    else {
+      $q->condition('bundle', 'image');
     }
 
     $q->sort('mid', 'ASC');
@@ -130,7 +136,18 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
       ];
 
       // Name.
-      $row[] = ['data' => $media->name->value];
+      $row[] = [
+        'data' => [
+          '#type' => "textfield",
+          '#id' => $media->id() . '-alt',
+          '#value' => $media->name->value,
+          '#attributes' => [
+            'class' => ['qe-element'],
+            'data-media-mid' => $media->id(),
+            'data-field' => 'name',
+          ],
+        ],
+      ];
 
       // Alt.
       $alt = "";
@@ -142,6 +159,11 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
           '#type' => "textfield",
           '#id' => $media->id() . '-alt',
           '#value' => $alt,
+          '#attributes' => [
+            'class' => ['qe-element'],
+            'data-media-mid' => $media->id(),
+            'data-field' => 'alt',
+          ],
         ],
       ];
 
@@ -150,9 +172,14 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
         $credit_value = current($media->field_media_credit->getValue());
         $row[] = [
           'data' => [
-            '#type' => "textfield",
+            '#type' => "textarea",
             '#id' => $media->id() . '-alt',
             '#value' => $credit_value['value'] ?? "",
+            '#attributes' => [
+              'class' => ['qe-element'],
+              'data-media-mid' => $media->id(),
+              'data-field' => 'field_media_credit',
+            ],
           ],
         ];
       }
@@ -165,9 +192,14 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
         $caption_value = current($media->field_media_caption->getValue());
         $row[] = [
           'data' => [
-            '#type' => "textfield",
+            '#type' => "textarea",
             '#id' => $media->id() . '-alt',
             '#value' => $caption_value['value'] ?? "",
+            '#attributes' => [
+              'class' => ['qe-element'],
+              'data-media-mid' => $media->id(),
+              'data-field' => 'field_media_caption',
+            ],
           ],
         ];
       }
@@ -182,15 +214,35 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
       '#type' => 'pager',
     ];
 
-    ksm($build);
     return $build;
   }
 
   /**
    *
    */
-  public function quickEditMediaApi() {
+  public function quickEditMediaApi(Request $request) {
+    $postData = json_decode($request->getContent());
+    $media = $this->mediaStorage->load($postData->mid);
 
+    if ($postData->field == "alt") {
+      $source = $media->getSource();
+      $source_field = $source->getSourceFieldDefinition($media->bundle->entity);
+      $source_field_name = $source_field->getName();
+
+      $source_field_value = $media->{$source_field_name}->getValue();
+
+      $source_field_value[0]['alt'] = $postData->value;
+      $media->set($source_field_name, $source_field_value);
+    }
+    else {
+      $field_value = $media->{$postData->field}->getValue();
+      $field_value[0]['value'] = $postData->value;
+      $media->set($postData->field, $field_value);
+    }
+
+    $media->save();
+
+    return new JsonResponse($postData);
   }
 
 }

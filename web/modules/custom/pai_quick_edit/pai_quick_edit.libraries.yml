@@ -1,0 +1,7 @@
+quick-edit:
+  version: VERSION
+  css:
+    theme:
+      assets/dist/css/quick-edit.css: {}
+  js:
+      assets/dist/js/quick-edit.js: {}

@@ -9,6 +9,7 @@ dependencies:
     - file
     - filter
     - media
+    - pai_quick_edit
     - shortcut
     - system
 _core:
@@ -21,6 +22,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'delete own files'
+  - 'use quickedit api'
   - 'use text format basic_html'
   - 'use text format full_html'
   - 'view media'

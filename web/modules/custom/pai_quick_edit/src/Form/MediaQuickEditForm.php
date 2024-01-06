@@ -85,7 +85,7 @@ class MediaQuickEditForm extends FormBase {
       '#title' => $this->t('Types'),
       '#multiple' => TRUE,
       '#options' => $media_bundles,
-      '#default_value' => $values['bundle'] ?? [],
+      '#default_value' => $values['bundle'] ?? ['image'],
     ];
 
     $form['submit'] = [

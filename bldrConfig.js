@@ -87,6 +87,7 @@ let drupal_modules = [
   "./web/modules/custom/img_processor/",
   "./web/modules/custom/pai_admin_mod/",
   "./web/modules/custom/pai_utility/",
+  "./web/modules/custom/pai_quick_edit/",
 ];
 
 let css_config = [];

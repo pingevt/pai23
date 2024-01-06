@@ -11,5 +11,6 @@ pai_quick_edit.media_qe_api:
   defaults:
     _controller: '\Drupal\pai_quick_edit\Controller\MediaQuickEdit::quickEditMediaApi'
     _title: ''
+  methods: ['POST']
   requirements:
     _permission: 'use quickedit api'
