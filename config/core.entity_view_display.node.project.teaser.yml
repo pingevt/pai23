@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.project.field_short_description
     - node.type.project
   module:
+    - datetime
     - text
     - user
 id: node.project.teaser
@@ -25,6 +26,14 @@ targetEntityType: node
 bundle: project
 mode: teaser
 content:
+  field_display_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_featured_media:
     type: entity_reference_entity_view
     label: hidden
@@ -34,28 +43,38 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_project_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: olivero_medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_project_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_short_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
 hidden:
   field_content: true
-  field_display_title: true
   field_finish: true
   field_labor: true
   field_material: true
   field_mechanics: true
   field_owner: true
-  field_project_date: true
-  field_project_number: true
   field_sale_price: true
   langcode: true
+  links: true
   search_api_excerpt: true
