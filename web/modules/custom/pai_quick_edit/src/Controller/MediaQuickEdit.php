@@ -4,6 +4,7 @@ namespace Drupal\pai_quick_edit\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Form\FormBuilder;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -24,16 +25,31 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
    */
   protected $entityTypeManager;
 
+  /**
+   * The entity type manager.
+   *
+   * @var \Drupal\media\MediaStorage
+   */
   protected $mediaStorage;
 
+  /**
+   * The entity type manager.
+   *
+   * @var \Drupal\file\FileStorage
+   */
   protected $fileStorage;
 
+  /**
+   * Form Builder.
+   *
+   * @var \Drupal\Core\Form\FormBuilder
+   */
   protected $formBuilder;
 
   /**
-   *
+   * Constructor.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager, $form_builder) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager, FormBuilder $form_builder) {
     $this->entityTypeManager = $entity_type_manager;
     $this->mediaStorage = $this->entityTypeManager->getStorage('media');
     $this->fileStorage = $this->entityTypeManager->getStorage('file');
@@ -51,10 +67,9 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
   }
 
   /**
-   *
+   * Callback for quick edit media page.
    */
   public function quickEditMedia(Request $request) {
-    // ksm($request->query);.
     $params = $request->query->all();
 
     $build = [
@@ -79,9 +94,13 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
     if (isset($params['title'])) {
       $q->condition('name', '%%' . $params['title'] . '%%', 'LIKE');
     }
+
+    // phpcs:disable
     // If (isset($params['alt']) && $params['alt']) {
     //   $q->condition('alt', '');
-    // }.
+    // }
+    // phpcs:enable
+
     if (isset($params['bundle'])) {
       $q->condition('bundle', $params['bundle']);
     }
@@ -90,33 +109,16 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
     }
 
     $q->sort('mid', 'ASC');
-    // $q->range(0, 5);
     $q->pager(25);
 
     $r = $q->execute();
 
     $medias = $this->mediaStorage->loadMultiple($r);
 
-    // If ($source->getPluginId() == "image") {
-    //   $fid = $source->getSourceFieldValue($media);
-    //   $file = $this->entityTypeManager->getStorage('file')->load($fid);
-    //   $file_uri = $file->getFileUri();
-    // $absolute_path = $this->fileSystem->realpath($file_uri);
-    // $event->setPath($absolute_path);
-    // }
-    // ksm(current($medias), current($medias)->getSource(), current($medias)->getSource()->getSourceFieldValue(current($medias)), current($medias)->name, current($medias)->field_media_caption, current($medias)->field_media_image->getValue());
     foreach ($medias as $media) {
       $source = $media->getSource();
-      // ksm($media->getEntityType());
-      // ksm($media->bundle);
       $source_field = $source->getSourceFieldDefinition($media->bundle->entity);
       $source_field_name = $source_field->getName();
-      // ksm($source_field, $source_field->getName());
-      // If ($source->getPluginId() == "image") {
-      //   $fid = $source->getSourceFieldValue($media);
-      //   $file = $this->fileStorage->load($fid);
-      //   // ksm($file);
-      // }
       $row = [];
 
       // Mid.
@@ -131,7 +133,6 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
             'loading' => 'lazy',
           ],
           '#image_style' => 'thumbnail',
-          // '#url' => $this->getMediaThumbnailUrl($media, $items->getEntity()),
         ],
       ];
 
@@ -152,7 +153,6 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
       // Alt.
       $alt = "";
       $source_field_value = $media->{$source_field_name}->getValue();
-      // ksm($source_field_value);
       $alt = current($source_field_value)['alt'] ?? "";
       $row[] = [
         'data' => [
@@ -218,7 +218,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
   }
 
   /**
-   *
+   * Callback for quick edit media api to edit the media entity.
    */
   public function quickEditMediaApi(Request $request) {
     $postData = json_decode($request->getContent());

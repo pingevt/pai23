@@ -9,11 +9,22 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
- * Implements an example form.
+ * Implements a form for filtering media items.
  */
 class MediaQuickEditForm extends FormBase {
 
+  /**
+   * Entity Type Bundle Info.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeBundleInfoInterface
+   */
   protected $entityTypeBundleInfo;
+
+  /**
+   * Request stack.
+   *
+   * @var \Symfony\Component\HttpFoundation\RequestStack
+   */
   protected $requestStack;
 
   /**
@@ -36,14 +47,14 @@ class MediaQuickEditForm extends FormBase {
   }
 
   /**
-   * {@inheritdoc}.
+   * {@inheritdoc}
    */
   public function getFormId() {
     return 'quick_edit_media';
   }
 
   /**
-   * {@inheritdoc}.
+   * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     // Set the method.
@@ -74,11 +85,13 @@ class MediaQuickEditForm extends FormBase {
       '#default_value' => $values['title'] ?? "",
     ];
 
+    // phpcs:disable
     // $form['alt'] = [
     //   '#type' => 'checkbox',
     //   '#title' => $this->t('Empty Alt'),
     //   '#default_value' => $values['alt'] ?? FALSE,
     // ];
+    // phpcs:enable
 
     $form['bundle'] = [
       '#type' => 'select',
@@ -97,7 +110,7 @@ class MediaQuickEditForm extends FormBase {
   }
 
   /**
-   * Custom after build to remove elements from being submitted as GET variables.
+   * Custom after build to remove elements from being submitted as variables.
    */
   public function afterBuild(array $element, FormStateInterface $form_state) {
     // Remove the form_token, form_build_id and form_id from the GET parameters.
