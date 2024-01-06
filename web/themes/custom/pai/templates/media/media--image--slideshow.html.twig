@@ -13,14 +13,18 @@
     <div{{ attributes.addClass(classes) }}>
       {{ title_suffix.contextual_links }}
 
-      {{ content.field_media_image }}
+      <div class="c-inline-gallery-card__img">
+        {{ content.field_media_image }}
+      </div>
 
-      {% if not media.field_media_credit.isEmpty() and content.field_media_credit %}
-        <div class="credit">{{ content.field_media_credit }}</div>
-      {% endif %}
-      {% if not media.field_media_caption.isEmpty() and content.field_media_caption %}
-        <div class="caption">{{ content.field_media_caption }}</div>
-      {% endif %}
+      <div class="c-inline-gallery-card__text">
+        {% if not media.field_media_credit.isEmpty() and content.field_media_credit %}
+          <div class="credit">{{ content.field_media_credit }}</div>
+        {% endif %}
+        {% if not media.field_media_caption.isEmpty() and content.field_media_caption %}
+          <div class="caption">{{ content.field_media_caption }}</div>
+        {% endif %}
+      </div>
 
     </div>
   </div>
