@@ -164,7 +164,7 @@ packages:
     phpunit/php-text-template: 2.0.4
     phpunit/php-timer: 5.0.3
     phpunit/phpunit: 9.6.13
-    pingevt/external_site_monitor: '1.x-dev:0ddbbb74434ddca0d0d834aee274357b0dc827c9'
+    pingevt/external_site_monitor: '1.x-dev:70741d9a641cff22ae86a626d476e1b29fb9347b'
     pingevt/timing_monitor: 1.0.0-rc1
     pingevt/vis_reg_result: 1.0.0-rc1
     politsin/jquery-ui-touch-punch: '1.0'
