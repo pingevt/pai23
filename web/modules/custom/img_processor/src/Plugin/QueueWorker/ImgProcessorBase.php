@@ -145,6 +145,10 @@ class ImgProcessorBase extends QueueWorkerBase implements ContainerFactoryPlugin
    */
   public function processItem($item) {
 
+    // Bail if media id isn't present.
+    if (!$item['mid'] || $item['mid'] == NULL) {
+      return;
+    }
   }
 
 

@@ -1,0 +1,29 @@
+uuid: 7d1ae7de-eb00-4e01-9a23-d194bd881f82
+langcode: en
+status: true
+dependencies:
+  module:
+    - img_processor
+title: 'ImgProc: Std Deviation'
+id: img_processor_process_std_deviation_queue
+weight: 0
+module: img_processor
+callback: img_processor_process_std_deviation_queue
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '*/15+@ * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

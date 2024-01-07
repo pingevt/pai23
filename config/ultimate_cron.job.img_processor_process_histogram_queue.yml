@@ -1,0 +1,29 @@
+uuid: 0fae6f24-c3be-496f-b2cd-8e3a83640d8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - img_processor
+title: 'ImgProc: Color Histogram'
+id: img_processor_process_histogram_queue
+weight: 0
+module: img_processor
+callback: img_processor_process_histogram_queue
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '*/15+@ * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

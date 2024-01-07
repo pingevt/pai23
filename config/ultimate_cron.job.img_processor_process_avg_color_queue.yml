@@ -1,0 +1,29 @@
+uuid: cd0dadcc-eed2-4edb-9c0f-3825e5965e63
+langcode: en
+status: true
+dependencies:
+  module:
+    - img_processor
+title: 'ImgProc: Avg Color'
+id: img_processor_process_avg_color_queue
+weight: 0
+module: img_processor
+callback: img_processor_process_avg_color_queue
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '*/15+@ * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

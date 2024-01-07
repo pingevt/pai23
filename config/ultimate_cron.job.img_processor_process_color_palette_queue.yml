@@ -1,0 +1,29 @@
+uuid: ff253614-0e12-4d15-9084-91da1f4931bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - img_processor
+title: 'ImgProc: Color Palette'
+id: img_processor_process_color_palette_queue
+weight: 0
+module: img_processor
+callback: img_processor_process_color_palette_queue
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '*/15+@ * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

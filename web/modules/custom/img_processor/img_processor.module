@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Logger\RfcLogLevel;
 use Drupal\img_processor\Event\MediaPresaveEvent;
 use Drupal\media\MediaInterface;
 
@@ -86,4 +87,93 @@ function img_processor_entity_load(array $entities, $entity_type_id) {
       $entity->img_processor_data = $result;
     }
   }
+}
+
+/**
+ * Cron callback.
+ */
+function img_processor_process_avg_color_queue($cron_job, $total = 10000) {
+  img_processor_process_queue('img_processor.avg_color', $total);
+}
+
+/**
+ * Cron callback.
+ */
+function img_processor_process_color_palette_queue($cron_job, $total = 10000) {
+  img_processor_process_queue('img_processor.color_palette', $total);
+}
+
+/**
+ * Cron callback.
+ */
+function img_processor_process_histogram_queue($cron_job, $total = 10000) {
+  img_processor_process_queue('img_processor.histogram', $total);
+}
+
+/**
+ * Cron callback.
+ */
+function img_processor_process_luminance_queue($cron_job, $total = 10000) {
+  img_processor_process_queue('img_processor.luminance', $total);
+}
+
+/**
+ * Cron callback.
+ */
+function img_processor_process_std_deviation_queue($cron_job, $total = 10000) {
+  img_processor_process_queue('img_processor.std_deviation', $total);
+}
+
+/**
+ * Process ...
+ */
+function img_processor_process_queue($queue_id, $total = 10000) {
+
+  $queue_factory = \Drupal::service('queue');
+  $queue = $queue_factory->get($queue_id);
+
+  $queue_manager = \Drupal::service('plugin.manager.queue_worker');
+  $queue_worker = $queue_manager->createInstance($queue_id);
+
+  $start = time();
+
+  // Run for 25 seconds or 10000 items.
+  $count = 1;
+  while ((time() - $start) < 25 && $count <= $total) {
+    $item = $queue->claimItem();
+    if ($item) {
+      try {
+        $queue_worker->processItem($item->data);
+        $queue->deleteItem($item);
+      }
+      catch (SuspendQueueException $e) {
+        $queue->releaseItem($item);
+        $variables = Error::decodeException($e);
+
+        \Drupal::logger('img_processor')->log(RfcLogLevel::ERROR, t('[@queue] error processing item from queue (@queue | @q_item_id): SuspendQueueException', [
+          '@q_item_id' => $item->item_id,
+          '@queue' => $queue_id,
+        ]), $variables);
+        break;
+      }
+      catch (\Exception $e) {
+        $variables = Error::decodeException($e);
+        \Drupal::logger('img_processor')->log(RfcLogLevel::ERROR, t('[@queue] error processing item from queue (@queue | @q_item_id): @error_message', [
+          '@q_item_id' => $item->item_id,
+          '@queue' => $queue_id,
+          '@error_message' => $e->getMessage(),
+        ]), $variables);
+      }
+    }
+    else {
+      break;
+    }
+
+    $count++;
+  }
+
+  \Drupal::logger('img_processor:cron')->log(RfcLogLevel::DEBUG, t('[@queue] Processed @count items.', [
+    '@count' => ($count - 1),
+    '@queue' => $queue_id,
+  ]));
 }
