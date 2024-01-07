@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b3831b410ff3606fe6c309b46473c36",
+    "content-hash": "b41e510319dadfc311ab2a6cb5e2c08e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8670,16 +8670,16 @@
         },
         {
             "name": "pingevt/timing_monitor",
-            "version": "1.0.0-alpha9",
+            "version": "1.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/timing_monitor.git",
-                "reference": "ea722b83d6c86d2533cfc889fa8c27f05506193f"
+                "reference": "c38ce0583fb740ca6a4d2f82f4ac892dd574b14d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/timing_monitor/zipball/ea722b83d6c86d2533cfc889fa8c27f05506193f",
-                "reference": "ea722b83d6c86d2533cfc889fa8c27f05506193f",
+                "url": "https://api.github.com/repos/pingevt/timing_monitor/zipball/c38ce0583fb740ca6a4d2f82f4ac892dd574b14d",
+                "reference": "c38ce0583fb740ca6a4d2f82f4ac892dd574b14d",
                 "shasum": ""
             },
             "require": {
@@ -8703,9 +8703,9 @@
             "description": "Drupal Module for running tests on external sites.",
             "support": {
                 "issues": "https://github.com/pingevt/timing_monitor/issues",
-                "source": "https://github.com/pingevt/timing_monitor/tree/1.0.0-alpha9"
+                "source": "https://github.com/pingevt/timing_monitor/tree/1.0.0-rc1"
             },
-            "time": "2023-08-30T05:38:32+00:00"
+            "time": "2023-11-04T16:45:12+00:00"
         },
         {
             "name": "pingevt/vis_reg_result",
