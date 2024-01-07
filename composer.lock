@@ -8628,12 +8628,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/external_site_monitor.git",
-                "reference": "f0633214167e157a0150a02ae55668a81b387992"
+                "reference": "0ddbbb74434ddca0d0d834aee274357b0dc827c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/f0633214167e157a0150a02ae55668a81b387992",
-                "reference": "f0633214167e157a0150a02ae55668a81b387992",
+                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/0ddbbb74434ddca0d0d834aee274357b0dc827c9",
+                "reference": "0ddbbb74434ddca0d0d834aee274357b0dc827c9",
                 "shasum": ""
             },
             "require": {
@@ -8664,9 +8664,9 @@
             "description": "Drupal Module for running tests on external sites.",
             "support": {
                 "issues": "https://github.com/pingevt/external_site_monitor/issues",
-                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.1-alpha2"
+                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.1-beta1"
             },
-            "time": "2024-01-01T19:04:17+00:00"
+            "time": "2024-01-07T00:55:40+00:00"
         },
         {
             "name": "pingevt/timing_monitor",
