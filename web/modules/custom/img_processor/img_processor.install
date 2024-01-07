@@ -21,6 +21,12 @@ function img_processor_spec() {
   $schema['img_processor_data'] = [
     'description' => 'Table that contains logs of api events.',
     'fields' => [
+      'id' => [
+        'description' => 'The unique ID',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
       'mid' => [
         'type' => 'int',
         'unsigned' => TRUE,
@@ -57,6 +63,7 @@ function img_processor_spec() {
         'description' => 'The hue distance',
       ],
     ],
+    'primary key' => ['id'],
     'indexes' => [
       'mid' => ['mid'],
       'bin_color' => ['bin_color'],
@@ -79,4 +86,46 @@ function img_processor_update_10001() {
   $spec = img_processor_spec();
   $schema = Database::getConnection()->schema();
   $schema->createTable('img_processor_data', $spec['img_processor_data']);
+}
+
+/**
+ * Add primary key to img_processor_data table.
+ */
+function img_processor_update_10002() {
+  $my_schemas = img_processor_spec();
+  $database = \Drupal::service('database');
+  $schema = Database::getConnection()->schema();
+
+  $schema->renameTable('img_processor_data', 'img_processor_data__tmp');
+
+  $schema->createTable('img_processor_data', $my_schemas['img_processor_data']);
+
+  // Get old values.
+  $selectQ = $database->select('img_processor_data__tmp', 't');
+  $selectQ->fields('t', []);
+  $results = $selectQ->execute()->fetchAll();
+
+  // Insert old values into new table.
+  $insertQuery = $database->insert('img_processor_data')->fields([
+    'mid',
+    'bin_color',
+    'media_color',
+    'color_distance',
+    'hue_distance',
+  ]);
+
+  foreach ($results as $result) {
+    $insertQuery->values([
+      'mid' => $result->mid,
+      'bin_color' => $result->bin_color,
+      'media_color' => $result->media_color,
+      'color_distance' => $result->color_distance,
+      'hue_distance' => $result->hue_distance,
+    ]);
+  }
+
+  $insertQuery->execute();
+
+  // Drop tmp table.
+  $schema->dropTable('img_processor_data__tmp');
 }
