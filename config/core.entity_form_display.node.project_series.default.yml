@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.node.project_series.field_display_title
     - field.field.node.project_series.field_featured_media
+    - field.field.node.project_series.field_meta_tags
     - field.field.node.project_series.field_projects
     - field.field.node.project_series.field_short_description
     - node.type.project_series
   module:
     - media_library
+    - metatag
     - path
     - text
 id: node.project_series.default
@@ -37,6 +39,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 27
+    region: content
+    settings:
+      sidebar: false
+      use_details: true
     third_party_settings: {  }
   field_projects:
     type: entity_reference_autocomplete

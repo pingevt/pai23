@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.project_series.field_display_title
     - field.field.node.project_series.field_featured_media
+    - field.field.node.project_series.field_meta_tags
     - field.field.node.project_series.field_projects
     - field.field.node.project_series.field_short_description
     - node.type.project_series
   module:
+    - metatag
     - user
 id: node.project_series.default
 targetEntityType: node
@@ -22,6 +24,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_projects:
     type: entity_reference_label
