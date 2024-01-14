@@ -82,7 +82,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
         '#sticky' => TRUE,
         '#empty' => "There are no media entities to edit.",
         '#attributes' => [
-          'data-api-slug' => 'project',
+          'data-api-slug' => 'media',
         ],
         '#attached' => [
           'library' => ['pai_quick_edit/quick-edit'],
