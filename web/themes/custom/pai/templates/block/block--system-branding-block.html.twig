@@ -22,19 +22,19 @@
       <div class="branding-wrapper">
         <div class="branding">
 
+          {% if site_logo %}
+            <a href="{{ path('<front>') }}" rel="home"  class="site-logo">
+              {# <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" /> #}
+              {% include directory ~ "/templates/svgs/logo.svg" %}
+              <span class="u-sr-only">{{ site_name }}</span>
+            </a>
+          {% endif %}
 
-
-        {% if site_logo %}
-          <a href="{{ path('<front>') }}" rel="home"  class="site-logo">
-            {# <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" /> #}
-            {% include directory ~ "/templates/svgs/logo.svg" %}
-          </a>
-        {% endif %}
-        {% if site_name %}
-          <div class="site-name">
-            <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
-          </div>
-        {% endif %}
+          {% if site_name %}
+            <div class="site-name">
+              <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+            </div>
+          {% endif %}
 
         </div>
       </div>
