@@ -101,6 +101,26 @@ class ProjectQuickEditForm extends FormBase {
       '#default_value' => $values['type'] ?? ['project', 'project_series'],
     ];
 
+    $form['sort'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Sort'),
+      // '#multiple' => TRUE,
+      '#options' => [
+        'nid' => 'id',
+        'changed' => 'Last updated',
+        'created' => 'Created',
+      ],
+      '#default_value' => $values['sort'] ?? 'mid',
+    ];
+
+    $form['sort_order'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Types'),
+      // '#multiple' => TRUE,
+      '#options' => ['asc' => 'ASC', 'desc' => 'DESC'],
+      '#default_value' => $values['sort_order'] ?? 'asc',
+    ];
+
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Submit'),

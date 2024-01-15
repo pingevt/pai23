@@ -40,7 +40,6 @@ class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface
    */
   protected $entityFieldManager;
 
-
   /**
    * Form Builder.
    *
@@ -127,7 +126,11 @@ class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface
       $q->condition('type', ['project', 'project_series'], "IN");
     }
 
-    $q->sort('nid', 'ASC');
+    $sort = $params['sort'] ?? 'mid';
+    $sort_order = $params['sort_order'] ?? 'ASC';
+
+    $q->sort($sort, $sort_order);
+
     $q->pager(25);
 
     $r = $q->execute();
@@ -168,17 +171,27 @@ class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface
           $form_field_type = $this->getFormFieldType($field_def->getType());
 
           $field_value = current($node->{$f}->getValue());
-          $row[] = [
+          $cell = [
             'data' => [
-              '#type' => $form_field_type,
-              '#value' => $field_value['value'] ?? "",
-              '#attributes' => [
-                'class' => ['qe-element'],
-                'data-entity-id' => $node->id(),
-                'data-field' => $f,
+              [
+                '#type' => $form_field_type,
+                '#value' => $field_value['value'] ?? "",
+                '#attributes' => [
+                  'class' => ['qe-element'],
+                  'data-entity-id' => $node->id(),
+                  'data-field' => $f,
+                  'data-property' => 'value',
+                ],
               ],
             ],
           ];
+
+          // Add secondary fields like "format".
+          if ($adds = $this->getSecondaryFormFields($f, $field_def, $node)) {
+            $cell['data'][] = $adds;
+          }
+
+          $row[] = $cell;
         }
         else {
           $row[] = [];
@@ -203,7 +216,7 @@ class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface
     $node = $this->nodeStorage->load($postData->id);
 
     $field_value = $node->{$postData->field}->getValue();
-    $field_value[0]['value'] = $postData->value;
+    $field_value[0][($postData->property ?? "value")] = $postData->value;
     $node->set($postData->field, $field_value);
 
     $node->save();
@@ -225,6 +238,50 @@ class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface
     }
 
     return $form_field_type;
+  }
+
+  private function getSecondaryFormFields($f, $field_def, $node) {
+    $adds = [];
+    switch ($field_def->getType()) {
+      // Need to add format here.
+      case 'text':
+      case 'text_long':
+
+        $field_value = current($node->{$f}->getValue());
+        $field_settings = $field_def->getSettings();
+
+        // Text Format options.
+        $formats = filter_formats();
+        $format_options = [];
+
+        foreach ($formats as $f_id => $format_obj) {
+          $format_options[$f_id] = $format_obj->label();
+        }
+
+        if (!empty($field_settings['allowed_formats'])) {
+          $format_options = array_intersect_key($format_options, array_flip($field_settings['allowed_formats']));
+        }
+
+        $format_options = ['' => '-- Select --'] + $format_options;
+
+        $item = [
+          '#type' => 'select',
+          // '#title' => 'Format',
+          '#value' => $field_value['format'] ?? "",
+          '#options' => $format_options,
+          '#attributes' => [
+            'class' => ['qe-element'],
+            'data-entity-id' => $node->id(),
+            'data-field' => $f,
+            'data-property' => 'format',
+          ],
+        ];
+
+        $adds = $item;
+        break;
+    }
+
+    return $adds;
   }
 
 }

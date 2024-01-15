@@ -24,6 +24,7 @@
           data.id = el.dataset.entityId;
           data.field = el.dataset.field;
           data.value = el.value;
+          data.property = el.dataset.property;
 
           fetch(apiUrl + "/" + urlSlug, {
             method: "POST",
