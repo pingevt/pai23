@@ -1,0 +1,8 @@
+uuid: 7a0f2212-4e9f-437a-ba27-9f469865088c
+langcode: en
+status: true
+dependencies: {  }
+id: node__article
+label: 'Content: Article'
+tags:
+  article_published_time: '[node:created:custom:c]'
