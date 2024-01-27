@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd6bf3e49795839497b9e13db0c7f5ea",
+    "content-hash": "b0200c6612a338a03ec4df663038bd6b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4094,17 +4094,17 @@
         },
         {
             "name": "drupal/highlightjs_input_filter",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/highlightjs_input_filter.git",
-                "reference": "1.1.0"
+                "reference": "1.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/highlightjs_input_filter-1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": "f751c9b7b35ceb0ea400a064a8d9457afa96f0ed"
+                "url": "https://ftp.drupal.org/files/projects/highlightjs_input_filter-1.1.1.zip",
+                "reference": "1.1.1",
+                "shasum": "884913e368ea4b7e2a0598a3cedaab3176cc5920"
             },
             "require": {
                 "drupal/core": "^9.0 || ^10"
@@ -4112,11 +4112,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.1.0",
-                    "datestamp": "1695069335",
+                    "version": "1.1.1",
+                    "datestamp": "1706189294",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -4142,17 +4142,17 @@
         },
         {
             "name": "drupal/imagick",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/imagick.git",
-                "reference": "8.x-1.8"
+                "reference": "8.x-1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imagick-8.x-1.8.zip",
-                "reference": "8.x-1.8",
-                "shasum": "5d5ab40aca397556ae98ac74296d967c1c499b0e"
+                "url": "https://ftp.drupal.org/files/projects/imagick-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "1f326fe1c490146e49d32ae17ec876dc07f1bbb0"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10"
@@ -4160,8 +4160,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.8",
-                    "datestamp": "1704872511",
+                    "version": "8.x-1.9",
+                    "datestamp": "1706185850",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6109,26 +6109,26 @@
         },
         {
             "name": "drupal/simple_block",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_block.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_block-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "f3e76e2589fb5434f1bad36b6da663f6773bea44"
+                "url": "https://ftp.drupal.org/files/projects/simple_block-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "ca6283687e42879ae2411baf8465572dc5d51bb2"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1668874168",
+                    "version": "8.x-1.5",
+                    "datestamp": "1706173589",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6143,6 +6143,10 @@
                 {
                     "name": "Claudiu Cristea",
                     "homepage": "https://www.drupal.org/u/claudiucristea"
+                },
+                {
+                    "name": "claudiu.cristea",
+                    "homepage": "https://www.drupal.org/user/56348"
                 },
                 {
                     "name": "Neslee Canil Pinto",
@@ -8637,12 +8641,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/external_site_monitor.git",
-                "reference": "9deb82923ce64c0359920ef1f18e7fc3359b035c"
+                "reference": "9e535cc7123ba08963189355cb134e89c6d11cac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/9deb82923ce64c0359920ef1f18e7fc3359b035c",
-                "reference": "9deb82923ce64c0359920ef1f18e7fc3359b035c",
+                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/9e535cc7123ba08963189355cb134e89c6d11cac",
+                "reference": "9e535cc7123ba08963189355cb134e89c6d11cac",
                 "shasum": ""
             },
             "require": {
@@ -8673,9 +8677,9 @@
             "description": "Drupal Module for running tests on external sites.",
             "support": {
                 "issues": "https://github.com/pingevt/external_site_monitor/issues",
-                "source": "https://github.com/pingevt/external_site_monitor/tree/1.x"
+                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.1-beta3"
             },
-            "time": "2024-01-21T04:54:48+00:00"
+            "time": "2024-01-27T15:41:10+00:00"
         },
         {
             "name": "pingevt/timing_monitor",

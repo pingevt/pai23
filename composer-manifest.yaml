@@ -73,8 +73,8 @@ packages:
     drupal/gin_login: 2.0.3
     drupal/gin_toolbar: 1.0.0-rc5
     drupal/google_tag: 2.0.2
-    drupal/highlightjs_input_filter: 1.1.0
-    drupal/imagick: 1.8.0
+    drupal/highlightjs_input_filter: 1.1.1
+    drupal/imagick: 1.9.0
     drupal/jquery_ui: 1.6.0
     drupal/jquery_ui_datepicker: 2.0.0
     drupal/jquery_ui_draggable: 2.0.0
@@ -103,7 +103,7 @@ packages:
     drupal/search_api_pantheon: 8.1.4
     drupal/search_api_solr: 4.3.1
     drupal/selective_better_exposed_filters: 3.0.2
-    drupal/simple_block: 1.4.0
+    drupal/simple_block: 1.5.0
     drupal/simple_sitemap: 4.1.8
     drupal/token: 1.13.0
     drupal/token_filter: 2.1.0
@@ -164,7 +164,7 @@ packages:
     phpunit/php-text-template: 2.0.4
     phpunit/php-timer: 5.0.3
     phpunit/phpunit: 9.6.16
-    pingevt/external_site_monitor: '1.x-dev:9deb82923ce64c0359920ef1f18e7fc3359b035c'
+    pingevt/external_site_monitor: '1.x-dev:9e535cc7123ba08963189355cb134e89c6d11cac'
     pingevt/timing_monitor: 1.0.0-rc1
     pingevt/vis_reg_result: 1.0.0-rc1
     politsin/jquery-ui-touch-punch: '1.0'
