@@ -32,7 +32,7 @@
         "document"
       ],
       "readyEvent": null,
-      "delay": 1500,
+      "delay": 2000,
       "misMatchThreshold" : 0.1
     }
   ],
