@@ -8,9 +8,13 @@ ENV=live
 
 echo $PWD_VAR
 
-curl -H "api-key: $CONNECT_BC_API" -d "project=$TERMINUS_SITE&branch=$GITHUB_REF_NAME" -X POST https://live-pai23.pantheonsite.io/api/vis-reg-result >> connect-bc.js
+curl -H "api-key: $CONNECT_BC_API" -d "project=$TERMINUS_SITE&branch=$GITHUB_REF_NAME" -X POST https://peteinge.com/api/vis-reg-result >> connect-bc.js
+
+cat connect-bc.js
 
 TIMESTAMP=$(cat connect-bc.js | jq -r '.data.timestamp')
+
+echo $TIMESTAMP
 
 # mkdir ../to-be-copied
 mkdir -p ../to-be-copied/$TIMESTAMP
@@ -24,8 +28,8 @@ echo $PWD_VAR
 
 cd "$PWD_VAR"
 
-VR_PR_LINK="[VR Report](https://live-pai23.pantheonsite.io/sites/default/files/vis-reg-reports/$TIMESTAMP/artifacts/backstop_data/html_report/index.html)"
+VR_PR_LINK="[VR Report](https://peteinge.com/sites/default/files/vis-reg-reports/$TIMESTAMP/artifacts/backstop_data/html_report/index.html)"
 
 echo $VR_PR_LINK
 
-echo "[VR Report](https://live-pai23.pantheonsite.io/sites/default/files/vis-reg-reports/$TIMESTAMP/artifacts/backstop_data/html_report/index.html)" >> message.md
+echo "[VR Report](https://peteinge.com/sites/default/files/vis-reg-reports/$TIMESTAMP/artifacts/backstop_data/html_report/index.html)" >> message.md
