@@ -108,6 +108,10 @@ module.exports = {
     {
       "label": "Writings: Google Drive, Node.js, and a custom Electron app",
       "path": "node/10",
+    },
+    {
+      "label": "Wood Project: Brotherhood",
+      "path": "node/41",
     }
   ]
 }

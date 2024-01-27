@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.tags.field_remove_from_hp
     - field.field.taxonomy_term.tags.field_theme_slug
     - taxonomy.vocabulary.tags
   module:
@@ -15,11 +16,18 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 2
+    weight: 3
     region: content
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_remove_from_hp:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_theme_slug:
     type: string_textfield
@@ -31,7 +39,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 6
     region: content
     settings:
       include_locked: true
@@ -46,18 +54,18 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 5
+    weight: 7
     region: content
     settings:
       display_label: true

@@ -1,0 +1,21 @@
+uuid: 676847b7-7a7a-4a4b-9ca6-d00be6759c7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_remove_from_hp
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.tags.field_remove_from_hp
+field_name: field_remove_from_hp
+entity_type: taxonomy_term
+bundle: tags
+label: 'Remove from HP'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
