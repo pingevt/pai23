@@ -1,0 +1,20 @@
+uuid: c7ff3f1b-0ebd-41f0-b415-23f5dd6e46f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_result_base
+id: result.field_duplicate_ids
+field_name: field_duplicate_ids
+entity_type: result
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
