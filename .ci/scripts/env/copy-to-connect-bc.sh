@@ -8,13 +8,9 @@ ENV=live
 
 echo $PWD_VAR
 
-curl -H "api-key: $CONNECT_BC_API" -d "project=$TERMINUS_SITE&branch=$GITHUB_REF_NAME" -X POST https://peteinge.com/api/vis-reg-result >> connect-bc.js
-
-cat connect-bc.js
+curl -L -H "api-key: $CONNECT_BC_API" -d "project=$TERMINUS_SITE&branch=$GITHUB_REF_NAME" -X POST https://peteinge.com/api/vis-reg-result >> connect-bc.js
 
 TIMESTAMP=$(cat connect-bc.js | jq -r '.data.timestamp')
-
-echo $TIMESTAMP
 
 # mkdir ../to-be-copied
 mkdir -p ../to-be-copied/$TIMESTAMP
