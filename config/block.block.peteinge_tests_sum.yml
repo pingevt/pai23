@@ -1,0 +1,21 @@
+uuid: 087de77e-fe49-4fc6-8694-50740b489a78
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_base
+  theme:
+    - pai_admin
+id: peteinge_tests_sum
+theme: pai_admin
+region: dash_content_left
+weight: 0
+provider: null
+plugin: site_tests_summary_block
+settings:
+  id: site_tests_summary_block
+  label: 'Site Tests Summary Block'
+  label_display: visible
+  provider: esm_test_base
+  site: '1'
+visibility: {  }
