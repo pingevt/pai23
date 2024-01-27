@@ -166,7 +166,20 @@ function pai_preprocess_node(array &$variables) {
             'owner' => $node->field_owner->view('default'),
             'table' => [
               '#theme' => 'table',
-              '#header' => ['Type', 'Component', 'Price'],
+              '#header' => [
+                [
+                  'class' => 'text-align-left',
+                  'data'=> 'Type'
+                ],
+                [
+                  'class' => 'text-align-left',
+                  'data'=> 'Component',
+                ],
+                [
+                  'class' => 'text-align-right',
+                  'data'=> 'Price',
+                ],
+              ],
               '#rows' => [],
               '#sticky' => TRUE,
               '#attributes' => [

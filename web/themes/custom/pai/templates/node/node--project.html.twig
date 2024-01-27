@@ -43,14 +43,17 @@
     {% endif %}
   </div>
 
-  <div class="node-admin">
-    <h2 class="f-title--h5">Admin</h2>
+  {% if content.admin %}
+    <div class="node-admin">
+      <h2 class="f-title--h5">Admin</h2>
 
-    <div class="admin--attrs">
-      <div class="admin--sale-price">{{ content.admin.sale_price }}</div>
-      <div class="admin--owner">{{ content.admin.owner }}</div>
+      <div class="admin--attrs">
+        <div class="admin--sale-price">{{ content.admin.sale_price }}</div>
+        <div class="admin--owner">{{ content.admin.owner }}</div>
+      </div>
+
+      <div class="admin--cost-table">{{ content.admin.table }} </div>
     </div>
-    <div class="admin--cost-table">{{ content.admin.table }} </div>
-  </div>
+  {% endif %}
 
 </article>

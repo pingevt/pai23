@@ -4,16 +4,13 @@
   <div{{attributes.addClass(classes)}}>
     {% block content %}
 
-
       <div class="paragraph--content">
+      <h2 class="u-sr-only">Gallery</h2>
       <div id="inline-gallery-slide-announce" class="u-sr-only" aria-live="assertive" aria-atomic="true"></div>
-
 
         <div class="c-inline-gallery" tabindex="-1">
           <div class="c-inline-gallery__frame">
             <div class="c-inline-gallery__content">
-
-
 
               <h3 class="u-sr-only" id="inline-gallery-controls-title-{{ id }}">Slide Controls</h3>
               <ul class="c-inline-gallery__controls" aria-labelledby="inline-gallery-controls-title-{{ id }}">
@@ -37,15 +34,11 @@
 
                 {{ content }}
 
-{# <div class="c-inline-gallery-card__item {{ put_description_first ? 'c-inline-gallery-card__item--column-reverse'}}"> #}
-
-
               </div>
             </div>
           </div>
         </div>
       </div>
-
     {% endblock %}
   </div>
 {% endblock paragraph %}

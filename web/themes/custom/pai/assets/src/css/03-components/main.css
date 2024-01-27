@@ -49,8 +49,23 @@ main {
 }
 
 .node {
-  &.node--unpublished {
-    background: pink;
+  &.node--unpublished,
+  .paragraph--unpublished {
+    /* background: pink; */
+    /* border-left: 10px solid ; */
+    /* padding-left: 10px; */
+    background-color: transparent;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      bottom: -20px;
+      left: -25px;
+      width: 50px;
+      z-index: -1;
+      background: linear-gradient(to left, #ff000033, transparent);
+    }
   }
 
   img {
