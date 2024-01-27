@@ -109,6 +109,7 @@ class ProjectQuickEditForm extends FormBase {
         'nid' => 'id',
         'changed' => 'Last updated',
         'created' => 'Created',
+        'field_project_number' => 'Project Number',
       ],
       '#default_value' => $values['sort'] ?? 'mid',
     ];

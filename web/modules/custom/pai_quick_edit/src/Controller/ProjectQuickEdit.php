@@ -126,7 +126,7 @@ class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface
       $q->condition('type', ['project', 'project_series'], "IN");
     }
 
-    $sort = $params['sort'] ?? 'mid';
+    $sort = $params['sort'] ?? 'nid';
     $sort_order = $params['sort_order'] ?? 'ASC';
 
     $q->sort($sort, $sort_order);
