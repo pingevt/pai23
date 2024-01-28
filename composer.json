@@ -102,7 +102,7 @@
     "pantheon-systems/drupal-integrations": "^10",
     "pantheon-upstreams/upstream-configuration": "dev-main",
     "pingevt/external_site_monitor": "^1.x-dev",
-    "pingevt/timing_monitor": "1.0.0-rc1",
+    "pingevt/timing_monitor": "1.0.0-rc2",
     "pingevt/vis_reg_result": "1.0.0-rc1"
   },
   "require-dev": {
