@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "277564494ebea91933204d76ab5090c6",
+    "content-hash": "fe1b01f9e6e2ed4c4f14756029ef4849",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8683,24 +8683,26 @@
         },
         {
             "name": "pingevt/timing_monitor",
-            "version": "1.0.0-rc2",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/timing_monitor.git",
-                "reference": "a45ff93a327edf1f99444a7063217bd1eb92e57c"
+                "reference": "fe05d229916a591b72cf3645c9f75124f6541b06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/timing_monitor/zipball/a45ff93a327edf1f99444a7063217bd1eb92e57c",
-                "reference": "a45ff93a327edf1f99444a7063217bd1eb92e57c",
+                "url": "https://api.github.com/repos/pingevt/timing_monitor/zipball/fe05d229916a591b72cf3645c9f75124f6541b06",
+                "reference": "fe05d229916a591b72cf3645c9f75124f6541b06",
                 "shasum": ""
             },
             "require": {
+                "bluecadet/bc_drupal_package_manager": "^1.0",
                 "composer/installers": "^1.9||^2.0",
                 "melbahja/semver": "^1.0.0",
                 "oomphinc/composer-installers-extender": "^2.0",
                 "php": "^8.0"
             },
+            "default-branch": true,
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8716,9 +8718,9 @@
             "description": "Drupal Module for running tests on external sites.",
             "support": {
                 "issues": "https://github.com/pingevt/timing_monitor/issues",
-                "source": "https://github.com/pingevt/timing_monitor/tree/1.0.0-rc2"
+                "source": "https://github.com/pingevt/timing_monitor/tree/1.x"
             },
-            "time": "2024-01-28T04:23:39+00:00"
+            "time": "2024-01-28T17:42:47+00:00"
         },
         {
             "name": "pingevt/vis_reg_result",
@@ -16370,7 +16372,8 @@
         "drupal/node_revision_delete": 15,
         "drupal/ultimate_cron": 15,
         "pantheon-upstreams/upstream-configuration": 20,
-        "pingevt/external_site_monitor": 20
+        "pingevt/external_site_monitor": 20,
+        "pingevt/timing_monitor": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
