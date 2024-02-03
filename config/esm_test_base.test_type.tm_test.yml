@@ -1,0 +1,12 @@
+uuid: cdc0145a-364b-4a77-8bde-28048db7c9cc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - esm_test_timing_monitor
+_core:
+  default_config_hash: '-fseJCsO9SendainEro9VkXKt6A5gTJLtwHW9tmFAyg'
+id: tm_test
+label: 'Timing Monitor Daily Test'
+allow_manual: false

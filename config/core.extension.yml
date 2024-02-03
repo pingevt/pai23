@@ -42,6 +42,7 @@ module:
   esm_test_pchr: 0
   esm_test_result_base: 0
   esm_test_tag_checker: 0
+  esm_test_timing_monitor: 0
   esm_test_wpt: 0
   esm_url_group: 0
   external_site_monitor: 0

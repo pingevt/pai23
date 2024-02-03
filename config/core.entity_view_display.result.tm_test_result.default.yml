@@ -1,0 +1,85 @@
+uuid: e14fcd9e-62a4-4c77-9128-7e055c7c772e
+langcode: en
+status: true
+dependencies:
+  config:
+    - esm_test_result_base.result_type.tm_test_result
+    - field.field.result.tm_test_result.field_30_day
+    - field.field.result.tm_test_result.field_7_day
+    - field.field.result.tm_test_result.field_latest_avg
+_core:
+  default_config_hash: guE_r_jGma2F7b5K06GZt-tMJDYBoNIlT4vPNvlhAZA
+id: result.tm_test_result.default
+targetEntityType: result
+bundle: tm_test_result
+mode: default
+content:
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_30_day:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 6
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_7_day:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 6
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_latest_avg:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 6
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  test:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

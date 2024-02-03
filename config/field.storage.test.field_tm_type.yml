@@ -1,0 +1,23 @@
+uuid: 65e1886c-1928-4e46-83e8-ec6bc6fcb3b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - esm_test_base
+_core:
+  default_config_hash: '--6VTnnfr6ZofXZFZRDB0Cdib-phfwvxm5oPM4hrX5g'
+id: test.field_tm_type
+field_name: field_tm_type
+entity_type: test
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
