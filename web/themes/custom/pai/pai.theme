@@ -543,12 +543,28 @@ function pai_preprocess_media(array &$variables) {
  */
 function pai_preprocess_responsive_image_formatter(array &$variables) {
   // ksm($variables);
+
+  if ($variables['url']) {
+    // Add ajax links to images if url is available.
+    $variables['link_attributes'] = new Attribute([
+      'class' => ["use-ajax"],
+      'data-dialog-options' => json_encode([]),
+      'data-dialog-type' => "modal",
+      // 'data-dialog-renderer' => "off_canvas",
+    ]);
+    $variables['responsive_image']['#attached']['library'][] = "core/drupal.dialog.ajax";
+
+  }
 }
 
 /**
  * Implements hook_preprocess_responsive_image().
  */
 function pai_preprocess_responsive_image(array &$variables) {
+
+  // ksm($variables);
+
+
 
   switch ($variables['responsive_image_style_id']) {
     case 'teaser':

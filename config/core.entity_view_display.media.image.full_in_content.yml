@@ -1,9 +1,9 @@
-uuid: a4047a76-743b-47df-9945-b22ff91c90e0
+uuid: c2caad40-13d9-4aa5-9469-92119c185cbd
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.image_gallery_16x9
+    - core.entity_view_mode.media.full_in_content
     - field.field.media.image.field_average_color
     - field.field.media.image.field_avg_luminance
     - field.field.media.image.field_filename
@@ -20,22 +20,36 @@ dependencies:
     - field.field.media.image.field_resource_width
     - field.field.media.image.field_standard_deviation
     - media.type.image
-    - responsive_image.styles.image_gallery_16x9
   module:
-    - responsive_image
+    - image
+    - text
 _core:
   default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
-id: media.image.image_gallery_16x9
+id: media.image.full_in_content
 targetEntityType: media
 bundle: image
-mode: image_gallery_16x9
+mode: full_in_content
 content:
+  field_media_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_credit:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_media_image:
-    type: responsive_image
+    type: image
     label: visually_hidden
     settings:
-      responsive_image_style: image_gallery_16x9
-      image_link: content
+      image_link: ''
+      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -48,8 +62,6 @@ hidden:
   field_filename: true
   field_filesize: true
   field_histogram_color: true
-  field_media_caption: true
-  field_media_credit: true
   field_media_tags: true
   field_mime_type: true
   field_palette: true

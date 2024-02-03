@@ -34,7 +34,7 @@ content:
     type: image
     label: visually_hidden
     settings:
-      image_link: ''
+      image_link: content
       image_style: large
       image_loading:
         attribute: lazy

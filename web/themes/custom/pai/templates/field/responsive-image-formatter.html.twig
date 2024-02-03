@@ -10,8 +10,9 @@
  * @see template_preprocess_responsive_image_formatter()
  */
 #}
+{# {{ dump(_context) }} #}
 {% if url %}
-  <a href="{{ url }}">{{ responsive_image }}</a>
+  <a href="{{ url }}" {{ link_attributes }}>{{ responsive_image }}</a>
 {% else %}
   {{ responsive_image }}
 {% endif %}

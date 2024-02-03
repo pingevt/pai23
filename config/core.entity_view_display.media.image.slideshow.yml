@@ -50,7 +50,7 @@ content:
     label: visually_hidden
     settings:
       responsive_image_style: slideshow
-      image_link: ''
+      image_link: content
       image_loading:
         attribute: lazy
     third_party_settings: {  }

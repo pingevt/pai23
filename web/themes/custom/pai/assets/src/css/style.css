@@ -29,6 +29,10 @@
 @import "03-components/project-series.css";
 @import "03-components/media.css";
 @import "03-components/footer.css";
+/* @import "../../../../../contrib/gin/dist/css/components/ajax.css"; */
+/* @import "../../../../../contrib/gin/dist/css/base/gin.css"; */
+@import "../../../../../contrib/gin/dist/css/theme/variables.css";
+@import "../../../../../contrib/gin/dist/css/components/dialog.css";
 
 // Overrides
 @import "05-overrides/drupal-overrides.css";

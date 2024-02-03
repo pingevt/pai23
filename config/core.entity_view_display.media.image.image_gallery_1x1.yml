@@ -35,7 +35,7 @@ content:
     label: visually_hidden
     settings:
       responsive_image_style: image_gallery_1x1
-      image_link: ''
+      image_link: content
       image_loading:
         attribute: lazy
     third_party_settings: {  }
