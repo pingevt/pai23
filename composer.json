@@ -197,7 +197,9 @@
   "scripts": {
     "post-install-cmd": [
       "rm -f web/.eslintrc.json",
-      "rm -f web/core/.eslintrc.json"
+      "rm -f web/core/.eslintrc.json",
+      "cp web/themes/contrib/gin/dist/css/theme/variables.css   web/themes/custom/pai/assets/src/css/from_gin/theme/",
+      "cp web/themes/contrib/gin/dist/css/components/dialog.css web/themes/custom/pai/assets/src/css/from_gin/components/"
     ],
     "pre-update-cmd": [
       "DrupalComposerManaged\\ComposerScripts::preUpdate"
@@ -205,7 +207,9 @@
     "post-update-cmd": [
       "DrupalComposerManaged\\ComposerScripts::postUpdate",
       "rm -f web/.eslintrc.json",
-      "rm -f web/core/.eslintrc.json"
+      "rm -f web/core/.eslintrc.json",
+      "cp web/themes/contrib/gin/dist/css/theme/variables.css   web/themes/custom/pai/assets/src/css/from_gin/theme/",
+      "cp web/themes/contrib/gin/dist/css/components/dialog.css web/themes/custom/pai/assets/src/css/from_gin/components/"
     ],
     "code-sniff": [
       "./vendor/bin/phpcs -s --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,info,txt --ignore=node_modules,bower_components,vendor,dist --exclude=Drupal.InfoFiles.AutoAddedKeys --colors ./web/modules/custom",

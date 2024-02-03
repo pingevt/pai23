@@ -31,8 +31,8 @@
 @import "03-components/footer.css";
 /* @import "../../../../../contrib/gin/dist/css/components/ajax.css"; */
 /* @import "../../../../../contrib/gin/dist/css/base/gin.css"; */
-@import "../../../../../contrib/gin/dist/css/theme/variables.css";
-@import "../../../../../contrib/gin/dist/css/components/dialog.css";
+@import "from_gin/theme/variables.css";
+@import "from_gin/components/dialog.css";
 
 // Overrides
 @import "05-overrides/drupal-overrides.css";
