@@ -8,4 +8,14 @@ id: global
 label: Global
 tags:
   canonical_url: '[current-page:url]'
+  schema_person_alternate_name: Pete
+  schema_person_birth_date: '1982-02-10'
+  schema_person_family_name: Inge
+  schema_person_gender: Male
+  schema_person_given_name: Peter
+  schema_person_id: 'https://peteinge.com/pete-inge'
+  schema_person_job_title: 'Senior Systems Engineer'
+  schema_person_name: 'Peter Inge'
+  schema_person_type: Person
+  schema_person_url: 'https://peteinge.com'
   title: '[current-page:title-with-override] | [site:name]'

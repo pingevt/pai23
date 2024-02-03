@@ -1,7 +1,33 @@
 _core:
   default_config_hash: 3mgYDspyj5REgG6ooA1izlcMzEs34kHPFUOMIXeDOco
-entity_type_groups: {  }
+entity_type_groups:
+  node:
+    article:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+      twitter_cards: twitter_cards
+      schema_article: schema_article
+      schema_person: schema_person
+    page:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+      twitter_cards: twitter_cards
+      schema_article: schema_article
+      schema_person: schema_person
+      schema_web_page: schema_web_page
+      schema_web_site: schema_web_site
+separator: ','
 tag_trim_method: beforeValue
-tag_trim_maxlength: {  }
-tag_scroll_max_height: ''
 use_maxlength: true
+tag_trim_maxlength:
+  metatag_maxlength_title: null
+  metatag_maxlength_description: null
+  metatag_maxlength_abstract: null
+  metatag_maxlength_og_site_name: null
+  metatag_maxlength_og_title: null
+  metatag_maxlength_og_description: null
+  metatag_maxlength_twitter_cards_description: null
+  metatag_maxlength_twitter_cards_title: null
+tag_scroll_max_height: ''

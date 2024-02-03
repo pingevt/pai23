@@ -82,6 +82,7 @@
     "drupal/redirect": "^1.9",
     "drupal/redis": "^1.7",
     "drupal/save_edit": "^1.7",
+    "drupal/schema_metatag": "^3.0",
     "drupal/search_api": "^1.31",
     "drupal/search_api_autocomplete": "^1.8",
     "drupal/search_api_pantheon": "^8.1",

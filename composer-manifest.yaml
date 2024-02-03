@@ -98,6 +98,7 @@ packages:
     drupal/redirect: 1.9.0
     drupal/redis: 1.7.0
     drupal/save_edit: 1.7.0
+    drupal/schema_metatag: 3.0.1
     drupal/search_api: 1.31.0
     drupal/search_api_autocomplete: 1.8.0
     drupal/search_api_pantheon: 8.1.4

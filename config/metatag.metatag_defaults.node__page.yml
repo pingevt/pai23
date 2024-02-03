@@ -1,0 +1,11 @@
+uuid: 353bf77c-0159-4f73-91fc-354ab37de3d7
+langcode: en
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Basic page'
+tags:
+  schema_web_page_author: 'a:2:{s:5:"@type";s:6:"Person";s:3:"@id";s:30:"https://peteinge.com/pete-inge";}'
+  schema_web_page_description: '[node:field_short_description]'
+  schema_web_page_id: '[current-page:url]'
+  schema_web_page_type: WebPage
