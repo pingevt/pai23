@@ -71,6 +71,11 @@ $breakpoints: (
   --c-deep-sky-blue--bg: #edf5f8;
   --c-deep-sky-blue--bg-focus: #bad4de;
 
+  --c-burnt-orange: #CF4420;
+  --c-burnt-orange--focus: #0083b3;
+  --c-burnt-orange--bg: #edf5f8;
+  --c-burnt-orange--bg-focus: #bad4de;
+
   /* Colors - secondary */
   --c-black: #000000;
   --c-white: #ffffff;

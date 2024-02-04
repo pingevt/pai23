@@ -26,3 +26,9 @@
   --c-tag-theme-bg-color: var(--c-deep-sky-blue);
   --c-tag-theme-fg-color: var(--c-black);
 }
+
+.u-tag-theme--burnt-orange {
+  --c-tag-theme-primary: var(--c-burnt-orange);
+  --c-tag-theme-bg-color: var(--c-burnt-orange);
+  --c-tag-theme-fg-color: var(--c-black);
+}
