@@ -7,6 +7,11 @@ dependencies:
     - node.type.article
     - taxonomy.vocabulary.tags
     - taxonomy.vocabulary.tech
+  content:
+    - 'taxonomy_term:tags:30a2d5b3-7c68-4802-acc3-9bfbd607b3de'
+    - 'taxonomy_term:tags:9c0038af-c7e3-4423-b689-49c220a38a5b'
+    - 'taxonomy_term:tags:b85f0204-53c4-40a1-9042-e3009fcaf2d7'
+    - 'taxonomy_term:tags:fac5f9f3-7383-4bdd-9360-7f0c9c64333b'
   module:
     - better_exposed_filters
     - node
@@ -198,7 +203,11 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: {  }
+          value:
+            1: 1
+            4: 4
+            3: 3
+            2: 2
           group: 1
           exposed: true
           expose:
