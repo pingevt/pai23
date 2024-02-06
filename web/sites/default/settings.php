@@ -164,3 +164,6 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     $config['config_split.config_split.development']['status'] = FALSE;
   }
 }
+
+$config['image.settings']['suppress_itok_output'] = TRUE;
+$config['image.settings']['allow_insecure_derivatives'] = TRUE;
