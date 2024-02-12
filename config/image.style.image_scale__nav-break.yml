@@ -1,0 +1,15 @@
+uuid: 92d60684-5f10-4cfd-9b13-91d5fb50a231
+langcode: en
+status: true
+dependencies: {  }
+name: image_scale__nav-break
+label: image_scale__nav-break
+effects:
+  031f20fa-1d78-48e6-8a64-22006cb03440:
+    uuid: 031f20fa-1d78-48e6-8a64-22006cb03440
+    id: image_scale
+    weight: 1
+    data:
+      width: 1000
+      height: null
+      upscale: false

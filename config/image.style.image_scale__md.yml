@@ -1,0 +1,15 @@
+uuid: bfbec191-beee-403d-9d54-c8ef4a0893b2
+langcode: en
+status: true
+dependencies: {  }
+name: image_scale__md
+label: image_scale__md
+effects:
+  77882766-1206-4c9c-9156-44b11e660ee8:
+    uuid: 77882766-1206-4c9c-9156-44b11e660ee8
+    id: image_scale
+    weight: 1
+    data:
+      width: 1100
+      height: null
+      upscale: false

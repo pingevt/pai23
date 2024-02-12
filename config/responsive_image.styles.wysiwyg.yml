@@ -1,0 +1,35 @@
+uuid: 2f74a6c1-2f11-48fc-9eda-e6024bde98d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.image_scale__lg
+    - image.style.image_scale__md
+    - image.style.image_scale__nav-break
+    - image.style.image_scale__sm
+    - image.style.image_scale__sm-md
+    - image.style.image_scale__xl
+    - image.style.image_scale__xs
+    - image.style.image_scale__xs-sm
+  theme:
+    - pai
+id: wysiwyg
+label: WYSIWYG
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 40vw
+      sizes_image_styles:
+        - image_scale__lg
+        - image_scale__md
+        - image_scale__nav-break
+        - image_scale__sm
+        - image_scale__sm-md
+        - image_scale__xl
+        - image_scale__xs
+        - image_scale__xs-sm
+    breakpoint_id: pai.viewport_sizing
+    multiplier: 1x
+breakpoint_group: pai
+fallback_image_style: image_scale__md

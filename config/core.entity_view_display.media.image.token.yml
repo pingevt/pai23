@@ -1,9 +1,9 @@
-uuid: e83d4f42-a3a9-46f4-9f96-b9091343e6f9
+uuid: 39a485f5-b528-424c-80de-348474ea3b19
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.slideshow
+    - core.entity_view_mode.media.token
     - field.field.media.image.field_average_color
     - field.field.media.image.field_avg_luminance
     - field.field.media.image.field_filename
@@ -19,42 +19,35 @@ dependencies:
     - field.field.media.image.field_resource_height
     - field.field.media.image.field_resource_width
     - field.field.media.image.field_standard_deviation
+    - image.style.thumbnail
     - media.type.image
-    - responsive_image.styles.slideshow
   module:
-    - responsive_image
-    - text
+    - image
 _core:
   default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
-id: media.image.slideshow
+id: media.image.token
 targetEntityType: media
 bundle: image
-mode: slideshow
+mode: token
 content:
-  field_media_caption:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_media_credit:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_media_image:
-    type: responsive_image
+    type: image
     label: visually_hidden
     settings:
-      responsive_image_style: slideshow
       image_link: ''
+      image_style: thumbnail
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   created: true
@@ -63,6 +56,8 @@ hidden:
   field_filename: true
   field_filesize: true
   field_histogram_color: true
+  field_media_caption: true
+  field_media_credit: true
   field_media_tags: true
   field_mime_type: true
   field_palette: true
@@ -71,7 +66,6 @@ hidden:
   field_resource_width: true
   field_standard_deviation: true
   langcode: true
-  name: true
   search_api_excerpt: true
   thumbnail: true
   uid: true

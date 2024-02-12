@@ -4,6 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.download
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.full_in_content
+    - core.entity_view_mode.media.image_gallery_16x9
+    - core.entity_view_mode.media.image_gallery_1x1
+    - core.entity_view_mode.media.image_gallery_4x3
+    - core.entity_view_mode.media.media_library
+    - core.entity_view_mode.media.slideshow
+    - core.entity_view_mode.media.teaser
+    - core.entity_view_mode.media.token
+    - core.entity_view_mode.media.vertical_pan
     - core.entity_view_mode.media.wysiwyg
   module:
     - editor
@@ -90,11 +100,21 @@ filters:
       default_view_mode: wysiwyg
       allowed_view_modes:
         download: download
+        full: full
+        full_in_content: full_in_content
+        image_gallery_16x9: image_gallery_16x9
+        image_gallery_1x1: image_gallery_1x1
+        image_gallery_4x3: image_gallery_4x3
+        media_library: media_library
+        slideshow: slideshow
+        teaser: teaser
+        token: token
+        vertical_pan: vertical_pan
         wysiwyg: wysiwyg
       allowed_media_types:
+        image: image
         audio: audio
         document: document
-        image: image
         remote_video: remote_video
         video: video
   token_filter:

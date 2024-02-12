@@ -117,4 +117,47 @@
   h6 {
     border-bottom: 1px solid var(--c-dim-gray);
   } */
+  .media--view-mode-wysiwyg,
+  .media--view-mode-image-gallery-1x1,
+  .media--view-mode-image-gallery-4x3,
+  .media--view-mode-image-gallery-16x9 {
+    margin: 1em 0;
+    img {
+      width: auto;
+      max-height: 450px;
+    }
+  }
+
+  .media--view-mode-wysiwyg {
+    display: flex;
+
+    .media--content {
+      display: inline-block;
+      background: var(--esm-c-gray-10);
+
+      img {
+        display: block;
+        min-width: 10%;
+        padding: 2px;
+      }
+
+      .credits,
+      .caption {
+        display: inline-block;
+        width: 0;
+        min-width: 100%;
+        padding: 0 0.5em;
+      }
+
+      .credits {
+        text-align: right;
+        font-style: italic;
+      }
+
+      .caption {
+        padding-top: 0.5em;
+      }
+    }
+  }
+
 }

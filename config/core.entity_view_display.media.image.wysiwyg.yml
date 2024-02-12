@@ -19,10 +19,11 @@ dependencies:
     - field.field.media.image.field_resource_height
     - field.field.media.image.field_resource_width
     - field.field.media.image.field_standard_deviation
-    - image.style.large
     - media.type.image
+    - responsive_image.styles.wysiwyg
   module:
-    - image
+    - responsive_image
+    - text
 _core:
   default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
 id: media.image.wysiwyg
@@ -30,12 +31,26 @@ targetEntityType: media
 bundle: image
 mode: wysiwyg
 content:
+  field_media_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_media_credit:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_media_image:
-    type: image
+    type: responsive_image
     label: visually_hidden
     settings:
-      image_link: content
-      image_style: large
+      responsive_image_style: wysiwyg
+      image_link: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -48,8 +63,6 @@ hidden:
   field_filename: true
   field_filesize: true
   field_histogram_color: true
-  field_media_caption: true
-  field_media_credit: true
   field_media_tags: true
   field_mime_type: true
   field_palette: true
