@@ -8,6 +8,7 @@ dependencies:
     - taxonomy.vocabulary.tags
   content:
     - 'taxonomy_term:tags:b85f0204-53c4-40a1-9042-e3009fcaf2d7'
+    - 'taxonomy_term:tags:b862e634-2806-44f9-928f-cf6e21952733'
   module:
     - node
     - other_view_filter
@@ -248,6 +249,171 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  attachment_1:
+    id: attachment_1
+    display_title: 'AI Attachment'
+    display_plugin: attachment
+    position: 3
+    display_options:
+      title: 'Generative AI'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            article: article
+        other_view_filter:
+          id: other_view_filter
+          table: node_field_data
+          field: other_view_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: other_views_filter
+          operator: 'not in'
+          value:
+            'homepage_grid:featured_projects': 'homepage_grid:featured_projects'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          inherit_contextual_filters: false
+        field_tags_target_id:
+          id: field_tags_target_id
+          table: node__field_tags
+          field: field_tags_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            155: 155
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: tags
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        title: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        filters: false
+        filter_groups: false
+        header: false
+      display_description: ''
+      use_more: false
+      use_more_always: true
+      use_more_text: 'View all'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>Other Works</h2>'
+            format: full_html
+          tokenize: false
+      display_extenders:
+        ajax_history: {  }
+      displays:
+        featured_projects: featured_projects
+      attachment_position: after
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   featured_projects:
     id: featured_projects
     display_title: 'Featured Projects'
@@ -267,7 +433,7 @@ display:
       tags: {  }
   other_works:
     id: other_works
-    display_title: Attachment
+    display_title: 'Other Works Attachment'
     display_plugin: attachment
     position: 2
     display_options:
@@ -390,6 +556,7 @@ display:
         filters: false
         filter_groups: false
         header: false
+      display_description: ''
       use_more: false
       use_more_always: true
       use_more_text: 'View all'
