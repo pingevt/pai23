@@ -3,22 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.16x9__focal_point_scale_and_crop__lg
-    - image.style.16x9__focal_point_scale_and_crop__md
-    - image.style.16x9__focal_point_scale_and_crop__nav_break
-    - image.style.16x9__focal_point_scale_and_crop__sm
-    - image.style.16x9__focal_point_scale_and_crop__sm_md
-    - image.style.16x9__focal_point_scale_and_crop__xl
-    - image.style.16x9__focal_point_scale_and_crop__xs
-    - image.style.16x9__focal_point_scale_and_crop__xs_sm
-    - image.style.4x3__focal_point_scale_and_crop__lg
-    - image.style.4x3__focal_point_scale_and_crop__md
-    - image.style.4x3__focal_point_scale_and_crop__nav_break
-    - image.style.4x3__focal_point_scale_and_crop__sm
-    - image.style.4x3__focal_point_scale_and_crop__sm_md
-    - image.style.4x3__focal_point_scale_and_crop__xl
-    - image.style.4x3__focal_point_scale_and_crop__xs
-    - image.style.4x3__focal_point_scale_and_crop__xs_sm
+    - image.style.16x9__focal_point_scale_and_crop__lg_now
+    - image.style.16x9__focal_point_scale_and_crop__md_now
+    - image.style.16x9__focal_point_scale_and_crop__nav_break_now
+    - image.style.16x9__focal_point_scale_and_crop__sm_now
+    - image.style.16x9__focal_point_scale_and_crop__sm_md_now
+    - image.style.16x9__focal_point_scale_and_crop__xl_now
+    - image.style.16x9__focal_point_scale_and_crop__xs_now
+    - image.style.16x9__focal_point_scale_and_crop__xs_sm_now
+    - image.style.4x3__focal_point_scale_and_crop__lg_now
+    - image.style.4x3__focal_point_scale_and_crop__md_now
+    - image.style.4x3__focal_point_scale_and_crop__nav_break_now
+    - image.style.4x3__focal_point_scale_and_crop__sm_now
+    - image.style.4x3__focal_point_scale_and_crop__sm_md_now
+    - image.style.4x3__focal_point_scale_and_crop__xl_now
+    - image.style.4x3__focal_point_scale_and_crop__xs_now
+    - image.style.4x3__focal_point_scale_and_crop__xs_sm_now
   theme:
     - pai
 id: image_gallery_4x3
@@ -29,14 +29,14 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - 4x3__focal_point_scale_and_crop__lg
-        - 4x3__focal_point_scale_and_crop__md
-        - 4x3__focal_point_scale_and_crop__nav_break
-        - 4x3__focal_point_scale_and_crop__sm
-        - 4x3__focal_point_scale_and_crop__sm_md
-        - 4x3__focal_point_scale_and_crop__xl
-        - 4x3__focal_point_scale_and_crop__xs
-        - 4x3__focal_point_scale_and_crop__xs_sm
+        - 4x3__focal_point_scale_and_crop__lg_now
+        - 4x3__focal_point_scale_and_crop__md_now
+        - 4x3__focal_point_scale_and_crop__nav_break_now
+        - 4x3__focal_point_scale_and_crop__sm_now
+        - 4x3__focal_point_scale_and_crop__sm_md_now
+        - 4x3__focal_point_scale_and_crop__xl_now
+        - 4x3__focal_point_scale_and_crop__xs_now
+        - 4x3__focal_point_scale_and_crop__xs_sm_now
     breakpoint_id: pai.sm
     multiplier: 1x
   -
@@ -44,15 +44,15 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - 16x9__focal_point_scale_and_crop__lg
-        - 16x9__focal_point_scale_and_crop__md
-        - 16x9__focal_point_scale_and_crop__nav_break
-        - 16x9__focal_point_scale_and_crop__sm
-        - 16x9__focal_point_scale_and_crop__sm_md
-        - 16x9__focal_point_scale_and_crop__xl
-        - 16x9__focal_point_scale_and_crop__xs
-        - 16x9__focal_point_scale_and_crop__xs_sm
+        - 16x9__focal_point_scale_and_crop__lg_now
+        - 16x9__focal_point_scale_and_crop__md_now
+        - 16x9__focal_point_scale_and_crop__nav_break_now
+        - 16x9__focal_point_scale_and_crop__sm_now
+        - 16x9__focal_point_scale_and_crop__sm_md_now
+        - 16x9__focal_point_scale_and_crop__xl_now
+        - 16x9__focal_point_scale_and_crop__xs_now
+        - 16x9__focal_point_scale_and_crop__xs_sm_now
     breakpoint_id: pai.viewport_sizing
     multiplier: 1x
 breakpoint_group: pai
-fallback_image_style: 4x3__focal_point_scale_and_crop__md
+fallback_image_style: 4x3__focal_point_scale_and_crop__md_now

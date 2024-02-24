@@ -1,0 +1,18 @@
+uuid: 3338f71d-28f2-48cd-ba42-538c73a22b15
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+    - imagick
+name: 16x9__focal_point_scale_and_crop__nav_break_now
+label: 16x9__focal_point_scale_and_crop__nav_break_now
+effects:
+  a8751b2f-505a-417a-93cc-6ab994964fd7:
+    uuid: a8751b2f-505a-417a-93cc-6ab994964fd7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 563
+      crop_type: focal_point

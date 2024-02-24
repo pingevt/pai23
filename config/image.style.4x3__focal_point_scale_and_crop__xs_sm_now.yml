@@ -1,0 +1,18 @@
+uuid: bd569905-a2b0-460a-a7ee-b0e131ba02a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+    - imagick
+name: 4x3__focal_point_scale_and_crop__xs_sm_now
+label: 4x3__focal_point_scale_and_crop__xs_sm_now
+effects:
+  11c11c99-b4ec-4bea-903e-359b4ea431fe:
+    uuid: 11c11c99-b4ec-4bea-903e-359b4ea431fe
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 620
+      height: 465
+      crop_type: focal_point
