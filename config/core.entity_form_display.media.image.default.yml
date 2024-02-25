@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.image.field_filename
     - field.field.media.image.field_filesize
     - field.field.media.image.field_histogram_color
+    - field.field.media.image.field_magespace_id
     - field.field.media.image.field_media_caption
     - field.field.media.image.field_media_credit
     - field.field.media.image.field_media_image
@@ -18,12 +19,14 @@ dependencies:
     - field.field.media.image.field_resource_height
     - field.field.media.image.field_resource_width
     - field.field.media.image.field_standard_deviation
+    - field.field.media.image.field_sync_data
     - image.style.thumbnail
     - media.type.image
   module:
     - color_field
     - field_group
     - focal_point
+    - json_field
     - path
     - text
 third_party_settings:
@@ -116,6 +119,14 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_magespace_id:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_media_caption:
     type: text_textarea
     weight: 3
@@ -192,6 +203,14 @@ content:
     weight: 20
     region: content
     settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_sync_data:
+    type: json_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   langcode:

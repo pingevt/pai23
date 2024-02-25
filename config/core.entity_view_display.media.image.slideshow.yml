@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.image.field_filename
     - field.field.media.image.field_filesize
     - field.field.media.image.field_histogram_color
+    - field.field.media.image.field_magespace_id
     - field.field.media.image.field_media_caption
     - field.field.media.image.field_media_credit
     - field.field.media.image.field_media_image
@@ -19,6 +20,7 @@ dependencies:
     - field.field.media.image.field_resource_height
     - field.field.media.image.field_resource_width
     - field.field.media.image.field_standard_deviation
+    - field.field.media.image.field_sync_data
     - media.type.image
     - responsive_image.styles.slideshow
   module:
@@ -63,6 +65,7 @@ hidden:
   field_filename: true
   field_filesize: true
   field_histogram_color: true
+  field_magespace_id: true
   field_media_tags: true
   field_mime_type: true
   field_palette: true
@@ -70,6 +73,7 @@ hidden:
   field_resource_height: true
   field_resource_width: true
   field_standard_deviation: true
+  field_sync_data: true
   langcode: true
   name: true
   search_api_excerpt: true

@@ -5,3 +5,14 @@ pai_admin_mod.dashboard:
     _title: 'Dashboard'
   requirements:
     _permission: 'use dashboard'
+
+pai_admin_mod.mageimport:
+  path: '/api/mage/import'
+  defaults:
+    _controller: '\Drupal\pai_admin_mod\Controller\Api::queueImagesFromMageSpace'
+    _title: 'QueueImagesFromMageSpace'
+  methods: [POST]
+  requirements:
+    _permission: "use api"
+  options:
+    _auth: [ 'key_auth' ]

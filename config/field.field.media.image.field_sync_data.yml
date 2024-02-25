@@ -1,0 +1,21 @@
+uuid: e7569f76-505e-4504-b2de-e93975e4890b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_sync_data
+    - media.type.image
+  module:
+    - json_field
+id: media.image.field_sync_data
+field_name: field_sync_data
+entity_type: media
+bundle: image
+label: 'Sync data'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: json_native
