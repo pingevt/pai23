@@ -80,6 +80,7 @@ packages:
     drupal/jquery_ui_draggable: 2.0.0
     drupal/jquery_ui_slider: 2.0.0
     drupal/jquery_ui_touch_punch: 1.1.0
+    drupal/json_field: 1.3.0
     drupal/key: 1.17.0
     drupal/key_auth: 2.1.0
     drupal/key_value_field: 1.3.0
