@@ -379,13 +379,17 @@ display:
         use_more: false
         use_more_always: false
         use_more_text: false
+        link_display: false
+        link_url: false
         filters: false
         filter_groups: false
         header: false
       display_description: ''
-      use_more: false
+      use_more: true
       use_more_always: true
       use_more_text: 'View all'
+      link_display: custom_url
+      link_url: work/ai
       header:
         area:
           id: area
@@ -397,7 +401,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<h2>Other Works</h2>'
+            value: '<h2>Generative AI</h2>'
             format: full_html
           tokenize: false
       display_extenders:
