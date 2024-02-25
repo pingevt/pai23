@@ -130,7 +130,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
     }
 
     $sort = $params['sort'] ?? 'mid';
-    $sort_order = $params['sort_order'] ?? 'ASC';
+    $sort_order = $params['sort_order'] ?? 'DESC';
 
     $q->sort($sort, $sort_order);
     $q->pager(25);

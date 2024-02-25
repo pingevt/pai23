@@ -118,7 +118,7 @@ class MediaQuickEditForm extends FormBase {
       '#title' => $this->t('Types'),
       // '#multiple' => TRUE,
       '#options' => ['asc' => 'ASC', 'desc' => 'DESC'],
-      '#default_value' => $values['sort_order'] ?? 'asc',
+      '#default_value' => $values['sort_order'] ?? 'desc',
     ];
 
     $form['submit'] = [
