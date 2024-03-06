@@ -78,14 +78,14 @@ jobs:
 
       - name: Use Node.js with proper version.
         if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
 
       # Cache vendor folder
       - name: Cache vendor folder
         if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-vendor
         with:
