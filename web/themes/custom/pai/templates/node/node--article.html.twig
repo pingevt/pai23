@@ -18,7 +18,8 @@
     <div class="node-meta__wrapper">
       <div class="node-meta__item">
         <div class="field--title">Date</div>
-        <div class="field--item">{{ node.getCreatedTime()|format_date('html_date') }}</div>
+        {# <div class="field--item">{{ node.getCreatedTime()|format_date('html_date') }}</div> #}
+        <div class="field--item">{{ content.field_pub_date }}</div>
       </div>
       {{ content.field_client }}
     </div>

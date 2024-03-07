@@ -11,7 +11,7 @@ _core:
 id: pai_breadcrumbs
 theme: pai
 region: header
-weight: -3
+weight: -2
 provider: null
 plugin: system_breadcrumb_block
 settings:

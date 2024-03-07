@@ -1,4 +1,4 @@
-uuid: 447031bd-b806-40ef-8b3e-b24127909ba6
+uuid: a572db62-a105-4653-8527-6795328b4f38
 langcode: en
 status: true
 dependencies:
@@ -10,18 +10,18 @@ dependencies:
     - pai
 _core:
   default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
-id: pai_main_menu
+id: subnav
 theme: pai
 region: header
-weight: -5
+weight: -4
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Main navigation'
+  label: 'Main Sub navigation'
   label_display: '0'
   provider: system
-  level: 1
+  level: 2
   depth: 1
   expand_all_items: true
 visibility: {  }

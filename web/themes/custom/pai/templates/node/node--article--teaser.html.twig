@@ -52,6 +52,12 @@
         </div>
       {% endif %}
 
+      {% if not node.field_pub_date.isEmpty() and content.field_pub_date %}
+        <div class="c-node-article--pub-date-block">
+          {{ content.field_pub_date }}
+        </div>
+      {% endif %}
+
     </div>
   </a>
 

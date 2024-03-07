@@ -49,7 +49,9 @@ $breakpoints: (
   --c-cerulean: #247ba0ff;
   --c-powder-blue: #8da9c4ff;
   --c-ivory: #F9F9EDff;
-  --c-saffron: #F4C95Dff;
+  --c-saffron: #f4c95d;
+  /* --c-saffron--bg: #fff0ca; */
+  --c-saffron--bg: #fff6de;
 
   --c-dartmouth-green: #006A3E;
   --c-dartmouth-green--focus: #003d24;

@@ -206,4 +206,47 @@ header.c-global-header {
       }
     }
   }
+
+  #block-subnav {
+
+    margin-top: 0.25em;
+
+    @media (--sm) {
+      width: 100%;
+      /* margin-left: 58%; */
+      margin-top: 12px;
+    }
+
+    ul li {
+      a {
+        padding: 0.2rem 1rem;
+        border: 2px solid var(--c-polynesian-blue);
+        background-color: transparent;
+        color: var(--c-polynesian-blue);
+        font-weight: 600;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        /* margin-right: 1rem; */
+        font-size: 1rem;
+        transition: background-color 0.6s var(--cubic-basic), color 0.35s var(--cubic-basic);
+
+        &.is-active {
+          background-color: var(--c-saffron--bg);
+          /* color: var(--c-saffron); */
+        }
+      }
+
+      &:hover a {
+        background-color: var(--c-polynesian-blue);
+        color: var(--c-ivory);
+        text-decoration-color: transparent;
+
+        &.is-active {
+          /* background-color: var(--c-saffron--bg); */
+          /* color: var(--c-saffron); */
+        }
+      }
+    }
+  }
+
 }

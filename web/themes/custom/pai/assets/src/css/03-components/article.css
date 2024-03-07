@@ -9,8 +9,11 @@
       grid-template-columns: 1fr;
       grid-template-areas:
         "media"
+        "date"
         "title"
         "desc";
+      grid-template-rows: auto auto auto 1fr;
+      height: 100%;
 
       .c-node-article--media-block {
         grid-area: media;
@@ -56,7 +59,7 @@
 
         h2, h3, h4, h5, h6 {
           @include f-title--h4;
-          margin: 1.25rem 1rem 0;
+          margin: 0.15rem 1rem 0;
 
           transition: text-decoration-color 0.24s var(--cubic-basic);
           text-decoration: underline;
@@ -78,13 +81,23 @@
         margin: 1rem 1rem;
       }
 
+      .c-node-article--pub-date-block {
+        grid-area: date;
+        margin: 0 1rem;
+        text-align: right;
+        font-size: 0.85rem;
+        align-self: end;
+        font-style: italic;
+        color: var(--c-dim-gray);
+        font-weight: 600;
+      }
+
       &:hover {
         .media--view-mode-teaser {
           img {
             scale: 1.08;
           }
         }
-
 
         .c-node-article--title-block {
           h2, h3, h4, h5, h6, .c-node-article--subtitle {
