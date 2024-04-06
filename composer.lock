@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9fa9b3077fc34f866d350a021ec4155",
+    "content-hash": "a1f6be60c680a63f7ebebc31eb8bc253",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3036,17 +3036,17 @@
         },
         {
             "name": "drupal/dropzonejs",
-            "version": "2.8.0",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dropzonejs.git",
-                "reference": "8.x-2.8"
+                "reference": "8.x-2.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dropzonejs-8.x-2.8.zip",
-                "reference": "8.x-2.8",
-                "shasum": "d330143503eef258e0b87a384d2d9ad8dcf03380"
+                "url": "https://ftp.drupal.org/files/projects/dropzonejs-8.x-2.10.zip",
+                "reference": "8.x-2.10",
+                "shasum": "72bee3bce2d29eace381edba1a7e0237db6ecd48"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10"
@@ -3060,8 +3060,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.8",
-                    "datestamp": "1676965468",
+                    "version": "8.x-2.10",
+                    "datestamp": "1709584348",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7151,10 +7151,10 @@
         },
         {
             "name": "enyo/dropzone",
-            "version": "5.7.2",
+            "version": "6.0.0-beta.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/enyo/dropzone/archive/v5.7.2.zip"
+                "url": "https://github.com/dropzone/dropzone/releases/download/v6.0.0-beta.2/dist.zip"
             },
             "type": "drupal-library"
         },

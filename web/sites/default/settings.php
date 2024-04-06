@@ -167,3 +167,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 $config['image.settings']['suppress_itok_output'] = TRUE;
 $config['image.settings']['allow_insecure_derivatives'] = TRUE;
+
+// Dropzone settings for moving temp directory:
+// https://www.drupal.org/project/dropzonejs/issues/2916330
+$config['dropzonejs.settings']['tmp_upload_scheme'] = 'private';

@@ -57,7 +57,7 @@ packages:
     drupal/devel_kint_extras: 1.1.0
     drupal/devel_php: 1.5.0
     drupal/diff: 1.1.0
-    drupal/dropzonejs: 2.8.0
+    drupal/dropzonejs: 2.10.0
     drupal/editor_advanced_link: 2.2.4
     drupal/editor_note: 1.0.0
     drupal/editoria11y: 2.1.7
@@ -118,7 +118,7 @@ packages:
     drush/drush: 11.5.1
     egulias/email-validator: 4.0.2
     enlightn/security-checker: v1.10.0
-    enyo/dropzone: 5.7.2
+    enyo/dropzone: 6.0.0-beta.2
     ezyang/htmlpurifier: v4.16.0
     grasmash/expander: 3.0.0
     guzzlehttp/guzzle: 7.7.1
