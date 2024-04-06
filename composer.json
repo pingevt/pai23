@@ -54,6 +54,7 @@
     "drupal/entity_clone": "^2.0@beta",
     "drupal/entity_reference_revisions": "^1.11",
     "drupal/entity_usage": "^2.0@beta",
+    "drupal/exif_orientation": "^1.4",
     "drupal/field_group": "^3.4",
     "drupal/file_rename": "^1.0",
     "drupal/file_replace": "^1.3",
