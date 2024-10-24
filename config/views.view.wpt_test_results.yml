@@ -1163,7 +1163,6 @@ display:
                   enabled: false
                   color: '#ed56b4'
                   weight: 11
-              color_changer: 0
             display:
               title: ''
               title_position: out
@@ -1188,6 +1187,7 @@ display:
                 yellow_to: '85'
                 red_from: '0'
                 red_to: '50'
+              color_changer: false
             xaxis:
               title: ''
               labels_rotation: '0'

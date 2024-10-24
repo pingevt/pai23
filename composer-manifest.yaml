@@ -35,11 +35,11 @@ packages:
     doctrine/lexer: 2.1.0
     doctrine/persistence: 3.2.0
     dragonmantank/cron-expression: v3.3.2
-    drupal/admin_toolbar: 3.4.2
-    drupal/better_exposed_filters: 6.0.3
-    drupal/charts: 5.0.10
+    drupal/admin_toolbar: 3.5.0
+    drupal/better_exposed_filters: 6.0.6
+    drupal/charts: 5.0.14
     drupal/coder: 8.3.18
-    drupal/color_field: 3.0.0
+    drupal/color_field: 3.0.1
     drupal/config_devel: 1.9.0
     drupal/config_direct_save: 3.0.1
     drupal/config_filter: 2.4.0
@@ -56,7 +56,7 @@ packages:
     drupal/devel: 5.1.2
     drupal/devel_kint_extras: 1.1.0
     drupal/devel_php: 1.5.0
-    drupal/diff: 1.1.0
+    drupal/diff: 1.8.0
     drupal/dropzonejs: 2.10.0
     drupal/editor_advanced_link: 2.2.4
     drupal/editor_note: 1.0.0

@@ -14,6 +14,7 @@ dependencies:
     - field.storage.result.field_url
   module:
     - charts
+    - charts_c3
     - esm_test_result_base
     - link
   enforced:
@@ -1639,7 +1640,6 @@ display:
                   enabled: true
                   color: '#c157c7'
                   weight: 9
-              color_changer: 0
             display:
               title: ''
               title_position: out
@@ -1664,6 +1664,7 @@ display:
                 yellow_to: '85'
                 red_from: '0'
                 red_to: '50'
+              color_changer: false
             xaxis:
               title: ''
               labels_rotation: '0'

@@ -827,7 +827,6 @@ display:
                   enabled: true
                   color: '#7643b6'
                   weight: 7
-              color_changer: 0
             display:
               title: ''
               title_position: out
@@ -852,6 +851,7 @@ display:
                 yellow_to: '85'
                 red_from: '0'
                 red_to: '50'
+              color_changer: false
             xaxis:
               title: ''
               labels_rotation: '0'
