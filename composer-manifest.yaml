@@ -109,7 +109,7 @@ packages:
     drupal/search_api_solr: 4.3.1
     drupal/selective_better_exposed_filters: 3.0.2
     drupal/simple_block: 1.5.0
-    drupal/simple_sitemap: 4.1.9
+    drupal/simple_sitemap: 4.2.1
     drupal/token: 1.13.0
     drupal/token_filter: 2.1.0
     drupal/ultimate_cron: 2.0.0-alpha6
