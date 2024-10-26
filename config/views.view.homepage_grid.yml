@@ -298,6 +298,7 @@ display:
     display_plugin: attachment
     position: 3
     display_options:
+      enabled: false
       title: 'Generative AI'
       pager:
         type: some
