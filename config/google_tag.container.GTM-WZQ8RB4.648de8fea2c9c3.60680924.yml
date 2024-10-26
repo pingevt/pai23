@@ -9,13 +9,14 @@ tag_container_ids:
   - GTM-WZQ8RB4
 advanced_settings:
   gtm:
-    data_layer: dataLayer
-    include_classes: false
-    allowlist_classes: ''
-    blocklist_classes: ''
-    include_environment: false
-    environment_id: ''
-    environment_token: ''
+    GTM-WZQ8RB4:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
 dimensions_metrics: {  }
 conditions: {  }
 events:
