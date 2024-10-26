@@ -11,3 +11,4 @@ defaults:
     status: false
     settings:
       age: 1
+disable_automatic_queueing: false
