@@ -16,6 +16,7 @@ module:
   devel_generate: 0
   devel_kint_extras: 0
   devel_php: 0
+  upgrade_status: 0
 theme: {  }
 complete_list: {  }
 partial_list: {  }
