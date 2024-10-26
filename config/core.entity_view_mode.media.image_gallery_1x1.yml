@@ -6,5 +6,6 @@ dependencies:
     - media
 id: media.image_gallery_1x1
 label: 'Image Gallery 1x1'
+description: ''
 targetEntityType: media
 cache: true

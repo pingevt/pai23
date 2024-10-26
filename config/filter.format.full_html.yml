@@ -27,11 +27,23 @@ name: 'Full HTML'
 format: full_html
 weight: -10
 filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: -47
+    settings: {  }
   filter_align:
     id: filter_align
     provider: filter
     status: true
     weight: -50
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -38
     settings: {  }
   filter_caption:
     id: filter_caption
@@ -39,17 +51,17 @@ filters:
     status: true
     weight: -49
     settings: {  }
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
+  filter_custom_links:
+    id: filter_custom_links
+    provider: pai_utility
     status: true
-    weight: -44
+    weight: -41
     settings: {  }
-  editor_file_reference:
-    id: editor_file_reference
-    provider: editor
+  filter_highlightjs:
+    id: filter_highlightjs
+    provider: highlightjs_input_filter
     status: true
-    weight: -47
+    weight: -45
     settings: {  }
   filter_html:
     id: filter_html
@@ -60,12 +72,6 @@ filters:
       allowed_html: '<p class="lede"> <a class="blue external"> <ul class="col-2 col-3 col-4"> <h2 class="underline h3 h4 h5 h6"> <h3 class="underline h4 h5 h6"> <h4 class="underline h5 h6"> <h5 class="underline h6"> <h6 class="underline">'
       filter_html_help: true
       filter_html_nofollow: false
-  filter_autop:
-    id: filter_autop
-    provider: filter
-    status: false
-    weight: -38
-    settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
@@ -78,6 +84,24 @@ filters:
     status: false
     weight: -36
     settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: -44
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -46
+    settings: {  }
+  filter_trailing_slash_fixer:
+    id: filter_trailing_slash_fixer
+    provider: pai_utility
+    status: true
+    weight: 0
+    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -85,12 +109,6 @@ filters:
     weight: -37
     settings:
       filter_url_length: 72
-  filter_highlightjs:
-    id: filter_highlightjs
-    provider: highlightjs_input_filter
-    status: true
-    weight: -45
-    settings: {  }
   media_embed:
     id: media_embed
     provider: media
@@ -124,21 +142,3 @@ filters:
     weight: -48
     settings:
       replace_empty: '1'
-  filter_image_lazy_load:
-    id: filter_image_lazy_load
-    provider: filter
-    status: true
-    weight: -46
-    settings: {  }
-  filter_custom_links:
-    id: filter_custom_links
-    provider: pai_utility
-    status: true
-    weight: -41
-    settings: {  }
-  filter_trailing_slash_fixer:
-    id: filter_trailing_slash_fixer
-    provider: pai_utility
-    status: true
-    weight: 0
-    settings: {  }

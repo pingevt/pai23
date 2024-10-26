@@ -6,5 +6,6 @@ dependencies:
     - media
 id: media.vertical_pan
 label: 'Vertical Pan'
+description: ''
 targetEntityType: media
 cache: true

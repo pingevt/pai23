@@ -1,39 +1,39 @@
 packages:
-    asm89/stack-cors: v2.1.1
+    asm89/stack-cors: v2.2.0
     behat/mink: v1.11.0
     behat/mink-browserkit-driver: v2.2.0
     behat/mink-selenium2-driver: v1.6.0
     bluecadet/bc_drupal_package_manager: 1.0.0-alpha2
     caxy/php-htmldiff: v0.1.14
-    chi-teck/drupal-code-generator: 2.6.2
+    chi-teck/drupal-code-generator: 3.6.1
     composer/ca-bundle: 1.3.5
     composer/class-map-generator: 1.0.0
     composer/composer: 2.5.7
     composer/installers: v1.12.0
     composer/metadata-minifier: 1.0.0
     composer/pcre: 3.1.1
-    composer/semver: 3.3.2
+    composer/semver: 3.4.3
     composer/spdx-licenses: 1.5.7
     composer/xdebug-handler: 3.0.3
-    consolidation/annotated-command: 4.9.1
+    consolidation/annotated-command: 4.10.0
     consolidation/config: 2.1.2
     consolidation/filter-via-dot-access-data: 2.0.2
-    consolidation/log: 3.0.0
-    consolidation/output-formatters: 4.3.2
+    consolidation/log: 3.1.0
+    consolidation/output-formatters: 4.6.0
     consolidation/robo: 4.0.6
-    consolidation/self-update: 2.1.0
-    consolidation/site-alias: 4.0.1
-    consolidation/site-process: 5.2.0
+    consolidation/self-update: 2.2.0
+    consolidation/site-alias: 4.1.0
+    consolidation/site-process: 5.4.0
     cweagans/composer-patches: 1.7.3
     dealerdirect/phpcodesniffer-composer-installer: v1.0.0
-    dflydev/dot-access-data: v3.0.2
-    doctrine/annotations: 1.14.3
-    doctrine/common: 3.4.3
-    doctrine/deprecations: 1.1.2
-    doctrine/event-manager: 2.0.0
+    dflydev/dot-access-data: v3.0.3
+    doctrine/annotations: 1.14.4
+    doctrine/common: 3.4.5
+    doctrine/deprecations: 1.1.3
+    doctrine/event-manager: 2.0.1
     doctrine/instantiator: 2.0.0
-    doctrine/lexer: 2.1.0
-    doctrine/persistence: 3.2.0
+    doctrine/lexer: 2.1.1
+    doctrine/persistence: 3.3.3
     dragonmantank/cron-expression: v3.3.2
     drupal/admin_toolbar: 3.5.0
     drupal/better_exposed_filters: 6.0.6
@@ -45,11 +45,11 @@ packages:
     drupal/config_filter: 2.4.0
     drupal/config_inspector: 2.1.8
     drupal/config_split: 2.0.0
-    drupal/core: 10.1.8
-    drupal/core-composer-scaffold: 10.1.8
+    drupal/core: 10.2.3
+    drupal/core-composer-scaffold: 10.2.3
     drupal/core-dev: 10.0.9
-    drupal/core-project-message: 10.1.8
-    drupal/core-recommended: 10.1.8
+    drupal/core-project-message: 10.2.3
+    drupal/core-recommended: 10.2.3
     drupal/crop: 2.3.0
     drupal/ctools: 4.0.4
     drupal/datalayer: 2.0.1
@@ -115,15 +115,15 @@ packages:
     drupal/views_ajax_history: 1.7.0
     drupal/views_bulk_operations: 4.2.6
     drupal/viewsreference: 'dev-1.x:680a6ef3b99a5846f7ade3be1b352ecafaa8c89b'
-    drush/drush: 11.5.1
+    drush/drush: 12.5.3
     egulias/email-validator: 4.0.2
-    enlightn/security-checker: v1.10.0
     enyo/dropzone: 6.0.0-beta.2
     ezyang/htmlpurifier: v4.16.0
     grasmash/expander: 3.0.0
-    guzzlehttp/guzzle: 7.7.1
-    guzzlehttp/promises: 2.0.2
-    guzzlehttp/psr7: 2.5.1
+    grasmash/yaml-cli: 3.2.1
+    guzzlehttp/guzzle: 7.8.2
+    guzzlehttp/promises: 2.0.4
+    guzzlehttp/psr7: 2.6.3
     halaxa/json-machine: 1.1.3
     http-interop/http-factory-guzzle: 1.2.0
     instaclick/php-webdriver: 1.4.16
@@ -132,42 +132,42 @@ packages:
     kint-php/kint: 4.2.3
     laminas/laminas-stdlib: 3.19.0
     league/color-extractor: 0.4.0
-    league/container: 4.2.0
+    league/container: 4.2.3
     maennchen/zipstream-php: 3.1.0
     masterminds/html5: 2.8.1
     mck89/peast: v1.15.4
     melbahja/semver: v1.0.1
     mglaman/phpstan-drupal: 1.1.34
-    mikey179/vfsstream: v1.6.11
+    mikey179/vfsstream: v1.6.12
     mkalkbrenner/php-htmldiff-advanced: 0.0.8
-    myclabs/deep-copy: 1.11.1
-    nikic/php-parser: v4.18.0
+    myclabs/deep-copy: 1.12.0
+    nikic/php-parser: v5.3.1
     oomphinc/composer-installers-extender: 2.0.1
     pantheon-systems/drupal-integrations: 10.0.1
     pantheon-upstreams/upstream-configuration: dev-main
     pear/archive_tar: 1.4.14
     pear/console_getopt: v1.4.3
-    pear/pear-core-minimal: v1.10.14
+    pear/pear-core-minimal: v1.10.15
     pear/pear_exception: v1.0.2
-    phar-io/manifest: 2.0.3
+    phar-io/manifest: 2.0.4
     phar-io/version: 3.2.1
-    phootwork/collection: v3.2.2
-    phootwork/lang: v3.2.2
+    phootwork/collection: v3.2.3
+    phootwork/lang: v3.2.3
     phpdocumentor/reflection-common: 2.2.0
-    phpdocumentor/reflection-docblock: 5.3.0
-    phpdocumentor/type-resolver: 1.8.0
+    phpdocumentor/reflection-docblock: 5.4.1
+    phpdocumentor/type-resolver: 1.8.2
     phpowermove/docblock: v4.0
-    phpspec/prophecy: v1.18.0
+    phpspec/prophecy: v1.19.0
     phpspec/prophecy-phpunit: v2.0.2
     phpstan/extension-installer: 1.3.1
     phpstan/phpdoc-parser: 1.20.4
     phpstan/phpstan: 1.10.15
-    phpunit/php-code-coverage: 9.2.30
+    phpunit/php-code-coverage: 9.2.32
     phpunit/php-file-iterator: 3.0.6
     phpunit/php-invoker: 3.1.1
     phpunit/php-text-template: 2.0.4
     phpunit/php-timer: 5.0.3
-    phpunit/phpunit: 9.6.16
+    phpunit/phpunit: 9.6.21
     pingevt/external_site_monitor: '1.x-dev:256133e2620ccfe361b20bdf8db7c587eb217292'
     pingevt/timing_monitor: '1.x-dev:fe13bcbf6a0729dce11e3e515b88392c871d7f7b'
     pingevt/vis_reg_result: 1.0.0-rc1
@@ -178,24 +178,24 @@ packages:
     psr/http-client: 1.0.3
     psr/http-factory: 1.0.2
     psr/http-message: '2.0'
-    psr/log: 3.0.0
-    psy/psysh: v0.11.18
+    psr/log: 3.0.2
+    psy/psysh: v0.12.4
     ralouphie/getallheaders: 3.0.3
     react/promise: v2.11.0
-    sebastian/cli-parser: 1.0.1
+    sebastian/cli-parser: 1.0.2
     sebastian/code-unit: 1.0.8
     sebastian/code-unit-reverse-lookup: 2.0.3
     sebastian/comparator: 4.0.8
     sebastian/complexity: 2.0.3
-    sebastian/diff: 4.0.5
+    sebastian/diff: 4.0.6
     sebastian/environment: 5.1.5
-    sebastian/exporter: 4.0.5
-    sebastian/global-state: 5.0.6
+    sebastian/exporter: 4.0.6
+    sebastian/global-state: 5.0.7
     sebastian/lines-of-code: 1.0.4
     sebastian/object-enumerator: 4.0.4
     sebastian/object-reflector: 2.0.4
     sebastian/recursion-context: 4.0.5
-    sebastian/resource-operations: 3.0.3
+    sebastian/resource-operations: 3.0.4
     sebastian/type: 3.2.1
     sebastian/version: 3.0.2
     seld/jsonlint: 1.10.0
@@ -204,47 +204,48 @@ packages:
     sirbrillig/phpcs-variable-analysis: v2.11.16
     slevomat/coding-standard: 8.12.1
     solarium/solarium: 6.3.3
-    squizlabs/php_codesniffer: 3.7.2
-    symfony/browser-kit: v6.4.0
-    symfony/console: v6.3.11
-    symfony/css-selector: v6.4.0
-    symfony/dependency-injection: v6.3.11
-    symfony/deprecation-contracts: v3.3.0
-    symfony/dom-crawler: v6.4.0
-    symfony/error-handler: v6.3.5
-    symfony/event-dispatcher: v6.3.11
-    symfony/event-dispatcher-contracts: v3.3.0
-    symfony/filesystem: v6.4.0
-    symfony/finder: v6.4.0
-    symfony/http-foundation: v6.3.11
-    symfony/http-kernel: v6.3.11
+    squizlabs/php_codesniffer: 3.10.3
+    symfony/browser-kit: v6.4.8
+    symfony/console: v6.4.12
+    symfony/css-selector: v6.4.8
+    symfony/dependency-injection: v6.4.12
+    symfony/deprecation-contracts: v3.4.0
+    symfony/dom-crawler: v6.4.12
+    symfony/error-handler: v6.4.10
+    symfony/event-dispatcher: v6.4.8
+    symfony/event-dispatcher-contracts: v3.4.2
+    symfony/filesystem: v6.4.12
+    symfony/finder: v6.4.11
+    symfony/http-foundation: v6.4.12
+    symfony/http-kernel: v6.4.12
     symfony/lock: v6.3.0
-    symfony/mime: v6.3.5
+    symfony/mailer: v6.4.12
+    symfony/mime: v6.4.12
     symfony/phpunit-bridge: v6.3.0
-    symfony/polyfill-ctype: v1.27.0
-    symfony/polyfill-iconv: v1.27.0
-    symfony/polyfill-intl-grapheme: v1.27.0
-    symfony/polyfill-intl-idn: v1.27.0
-    symfony/polyfill-intl-normalizer: v1.27.0
-    symfony/polyfill-mbstring: v1.27.0
-    symfony/polyfill-php72: v1.28.0
-    symfony/polyfill-php73: v1.28.0
-    symfony/polyfill-php80: v1.28.0
-    symfony/polyfill-php81: v1.28.0
-    symfony/polyfill-php83: v1.27.0
-    symfony/process: v6.3.11
-    symfony/psr-http-message-bridge: v2.2.0
-    symfony/routing: v6.3.11
-    symfony/serializer: v6.3.11
-    symfony/service-contracts: v3.3.0
-    symfony/string: v6.3.11
-    symfony/translation-contracts: v3.3.0
-    symfony/validator: v6.3.11
-    symfony/var-dumper: v6.3.11
-    symfony/var-exporter: v6.3.11
-    symfony/yaml: v6.3.8
-    theseer/tokenizer: 1.2.2
-    twig/twig: v3.6.1
-    webflo/drupal-finder: 1.2.2
+    symfony/polyfill-ctype: v1.28.0
+    symfony/polyfill-iconv: v1.28.0
+    symfony/polyfill-intl-grapheme: v1.28.0
+    symfony/polyfill-intl-idn: v1.28.0
+    symfony/polyfill-intl-normalizer: v1.28.0
+    symfony/polyfill-mbstring: v1.28.0
+    symfony/polyfill-php72: v1.31.0
+    symfony/polyfill-php73: v1.31.0
+    symfony/polyfill-php80: v1.31.0
+    symfony/polyfill-php81: v1.31.0
+    symfony/polyfill-php83: v1.28.0
+    symfony/process: v6.4.12
+    symfony/psr-http-message-bridge: v6.4.11
+    symfony/routing: v6.4.12
+    symfony/serializer: v6.4.12
+    symfony/service-contracts: v3.4.2
+    symfony/string: v6.4.12
+    symfony/translation-contracts: v3.4.2
+    symfony/validator: v6.4.12
+    symfony/var-dumper: v6.4.11
+    symfony/var-exporter: v6.4.9
+    symfony/yaml: v6.4.12
+    theseer/tokenizer: 1.2.3
+    twig/twig: v3.8.0
+    webflo/drupal-finder: 1.3.1
     webmozart/assert: 1.11.0
     z4kn4fein/php-semver: v2.0.2
