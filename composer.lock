@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a8c5580f32887b0d3f182222abfc1aa",
+    "content-hash": "31423c6391dbed665e943299281bb4bd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5368,20 +5368,20 @@
         },
         {
             "name": "drupal/pantheon_advanced_page_cache",
-            "version": "2.1.2",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/pantheon_advanced_page_cache.git",
-                "reference": "2.1.2"
+                "reference": "2.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pantheon_advanced_page_cache-2.1.2.zip",
-                "reference": "2.1.2",
-                "shasum": "954aa3442824fb88da3fd3518400cf008e12a8d1"
+                "url": "https://ftp.drupal.org/files/projects/pantheon_advanced_page_cache-2.3.1.zip",
+                "reference": "2.3.1",
+                "shasum": "1df3a05810ed0f83f11bd57312c67d7dae06b6e0"
             },
             "require": {
-                "drupal/core": "^9.4 || ^10"
+                "drupal/core": "^9.4 || ^10 || ^11"
             },
             "require-dev": {
                 "drupal/coder": "^8.2",
@@ -5391,8 +5391,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.2",
-                    "datestamp": "1683747792",
+                    "version": "2.3.1",
+                    "datestamp": "1727889724",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5425,7 +5425,7 @@
             ],
             "authors": [
                 {
-                    "name": "David Strauss",
+                    "name": "david strauss",
                     "homepage": "https://www.drupal.org/user/93254"
                 },
                 {
@@ -6444,17 +6444,17 @@
         },
         {
             "name": "drupal/simple_sitemap",
-            "version": "4.1.8",
+            "version": "4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_sitemap.git",
-                "reference": "4.1.8"
+                "reference": "4.1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-4.1.8.zip",
-                "reference": "4.1.8",
-                "shasum": "391f64048ccd5ee3ba6a4cffa9ad523ce9bd8a57"
+                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-4.1.9.zip",
+                "reference": "4.1.9",
+                "shasum": "d86d90408b334cd7470ea631e3be5acca2103377"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -6463,8 +6463,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.8",
-                    "datestamp": "1702898385",
+                    "version": "4.1.9",
+                    "datestamp": "1712441608",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6488,7 +6488,7 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "WalkingDexter",
+                    "name": "walkingdexter",
                     "homepage": "https://www.drupal.org/user/3251330"
                 }
             ],
@@ -8969,12 +8969,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/timing_monitor.git",
-                "reference": "fe05d229916a591b72cf3645c9f75124f6541b06"
+                "reference": "fe13bcbf6a0729dce11e3e515b88392c871d7f7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/timing_monitor/zipball/fe05d229916a591b72cf3645c9f75124f6541b06",
-                "reference": "fe05d229916a591b72cf3645c9f75124f6541b06",
+                "url": "https://api.github.com/repos/pingevt/timing_monitor/zipball/fe13bcbf6a0729dce11e3e515b88392c871d7f7b",
+                "reference": "fe13bcbf6a0729dce11e3e515b88392c871d7f7b",
                 "shasum": ""
             },
             "require": {
@@ -9002,7 +9002,7 @@
                 "issues": "https://github.com/pingevt/timing_monitor/issues",
                 "source": "https://github.com/pingevt/timing_monitor/tree/1.x"
             },
-            "time": "2024-01-28T17:42:47+00:00"
+            "time": "2024-06-09T14:30:34+00:00"
         },
         {
             "name": "pingevt/vis_reg_result",

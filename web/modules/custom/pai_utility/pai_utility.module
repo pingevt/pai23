@@ -40,7 +40,7 @@ function pai_utility_process_term_checkboxes(&$element, FormStateInterface $form
 }
 
 /**
- * Impliments hook_entity_type_alter()
+ * Implements hook_entity_type_alter()
  */
 function pai_utility_entity_type_alter(&$entity_types) {
   // Override class to change label.
