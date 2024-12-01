@@ -171,3 +171,9 @@ $config['image.settings']['allow_insecure_derivatives'] = TRUE;
 // Dropzone settings for moving temp directory:
 // https://www.drupal.org/project/dropzonejs/issues/2916330
 $config['dropzonejs.settings']['tmp_upload_scheme'] = 'private';
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = __DIR__ . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}
