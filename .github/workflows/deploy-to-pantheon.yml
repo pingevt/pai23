@@ -35,8 +35,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           ref: ${{ github.head_ref || github.ref_name }}
 
       - uses: shimataro/ssh-key-action@v2
@@ -168,12 +169,13 @@ jobs:
     container:
       # See https://github.com/tuutti/docker-images/tree/main/drupal/ci
       # to see how this image is built.
-      image: ghcr.io/tuutti/drupal-php-docker:8.2
+      image: ghcr.io/tuutti/drupal-php-docker:8.3
 
     steps:
 
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           ref: ${{ github.head_ref || github.ref_name }}
 
       - name: Install PHPCS

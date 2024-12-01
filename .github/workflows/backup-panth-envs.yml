@@ -9,31 +9,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@v1
-      with:
-        ref: ${{ github.head_ref || github.ref_name }}
+      - uses: actions/checkout@v4
+        with:
+          fectch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
 
-    # Initiate Env Variables.
-    - name: Setup Environment Vars
-      run: ./.ci/scripts/env/init-env-vars.sh
+      # Initiate Env Variables.
+      - name: Setup Environment Vars
+        run: ./.ci/scripts/env/init-env-vars.sh
 
-    # Install Terminus.
-    - name: Install Terminus
-      uses: pantheon-systems/terminus-github-actions@main
-      with:
-        pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+      # Install Terminus.
+      - name: Install Terminus
+        uses: pantheon-systems/terminus-github-actions@main
+        with:
+          pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
 
-    - name: Backup Live
-      run: terminus backup:create $TERMINUS_SITE.live --keep-for=15 -n -q &
+      - name: Backup Live
+        run: terminus backup:create $TERMINUS_SITE.live --keep-for=15 -n -q &
 
-    - name: Backup Test
-      run: terminus backup:create $TERMINUS_SITE.test --keep-for=15 -n -q &
+      - name: Backup Test
+        run: terminus backup:create $TERMINUS_SITE.test --keep-for=15 -n -q &
 
-    - name: Backup Dev
-      run: terminus backup:create $TERMINUS_SITE.dev --keep-for=15 -n -q &
+      - name: Backup Dev
+        run: terminus backup:create $TERMINUS_SITE.dev --keep-for=15 -n -q &
 
-    - name: Copy Live to dev
-      run: terminus env:clone-content --yes --updatedb --cc $TERMINUS_SITE.live dev -n -q &
+      - name: Copy Live to dev
+        run: terminus env:clone-content --yes --updatedb --cc $TERMINUS_SITE.live dev -n -q &
 
-    - name: Copy Live to test
-      run: terminus env:clone-content --yes --updatedb --cc $TERMINUS_SITE.live test -n -q &
+      - name: Copy Live to test
+        run: terminus env:clone-content --yes --updatedb --cc $TERMINUS_SITE.live test -n -q &
