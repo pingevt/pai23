@@ -8,7 +8,7 @@ title: 'Default cron handler'
 id: esm_test_blc_cron
 weight: 0
 module: esm_test_blc
-callback: esm_test_blc_cron
+callback: 'esm_test_blc#cron'
 scheduler:
   id: simple
 launcher:

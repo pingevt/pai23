@@ -8,7 +8,7 @@ title: 'Default cron handler'
 id: vis_reg_result_cron
 weight: 0
 module: vis_reg_result
-callback: vis_reg_result_cron
+callback: 'vis_reg_result#cron'
 scheduler:
   id: simple
 launcher:

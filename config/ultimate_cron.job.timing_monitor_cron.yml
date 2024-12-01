@@ -8,7 +8,7 @@ title: 'Default cron handler'
 id: timing_monitor_cron
 weight: 0
 module: timing_monitor
-callback: timing_monitor_cron
+callback: 'timing_monitor#cron'
 scheduler:
   id: simple
 launcher:
