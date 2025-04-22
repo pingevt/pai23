@@ -726,6 +726,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -754,7 +755,7 @@ display:
           admin_label: ''
           entity_type: result
           entity_field: test
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: 'not found'
           exception:
             value: all
@@ -786,6 +787,7 @@ display:
             multiple: 0
           break_phrase: false
           not: false
+          target_entity_type_id: test
         field_url_uri:
           id: field_url_uri
           table: result__field_url

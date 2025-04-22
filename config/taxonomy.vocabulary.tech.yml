@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: Tech
 vid: tech
-description: ''
+description: null
 weight: -6
+new_revision: false

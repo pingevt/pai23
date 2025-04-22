@@ -1,5 +1,6 @@
 _core:
   default_config_hash: FV7bDBks9icr7Dn6HTVZQwQ66sAp2CulQgj4tm4Azrw
+langcode: en
 charts_default_settings:
   library: ''
   type: line

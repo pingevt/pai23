@@ -9,5 +9,6 @@ _core:
   default_config_hash: vP1MKwNi8prFDkU9bNaPG8o6HqLJLDjxwp2umhfPpJc
 name: 'Site Type'
 vid: site_type
-description: ''
+description: null
 weight: -5
+new_revision: false
