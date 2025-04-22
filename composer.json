@@ -59,7 +59,7 @@
     "drupal/file_rename": "^1.0",
     "drupal/file_replace": "^1.4@RC",
     "drupal/focal_point": "^2.1",
-    "drupal/gin": "^3.0@RC",
+    "drupal/gin": "^3.0",
     "drupal/gin_login": "^2.1",
     "drupal/gin_toolbar": "^1.0@RC",
     "drupal/google_tag": "^2.0",
