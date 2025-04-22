@@ -8,6 +8,6 @@ dependencies:
   - multivalue_form_element:multivalue_form_element
 
 type: module
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 
 version: 1.0.0

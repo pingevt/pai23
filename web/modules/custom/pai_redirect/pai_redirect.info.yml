@@ -3,7 +3,7 @@ description: Redirect links from old site.
 package: PAI
 
 type: module
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 
 version: 1.0.0
 

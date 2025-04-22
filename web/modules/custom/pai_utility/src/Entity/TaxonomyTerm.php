@@ -5,7 +5,7 @@ namespace Drupal\pai_utility\Entity;
 use Drupal\taxonomy\Entity\Term;
 
 /**
- *
+ * Provides a custom entity class for taxonomy terms.
  */
 class TaxonomyTerm extends Term {
 
