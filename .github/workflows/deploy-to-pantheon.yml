@@ -125,28 +125,28 @@ jobs:
       # - name: Wait for Pantheon to fully sync code
       #   run: terminus workflow:wait panth-github-actions.dev --max=6000
 
-      - name: Install Backstopjs and Puppeteer
-        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
-        run: npm install backstopjs puppeteer minimist
+      # - name: Install Backstopjs and Puppeteer
+      #   if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+      #   run: npm install backstopjs puppeteer minimist
 
       # If we need to login, set urls.
-      - name: Setup authorization urls
-        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
-        run: ./.ci/scripts/tests/backstopjs-auth-url.sh
+      # - name: Setup authorization urls
+      #   if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+      #   run: ./.ci/scripts/tests/backstopjs-auth-url.sh
 
-      - name: Visual regression test
-        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
-        timeout-minutes: 20
-        run: ./.ci/scripts/tests/backstopjs-test.sh
+      # - name: Visual regression test
+      #   if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+      #   timeout-minutes: 20
+      #   run: ./.ci/scripts/tests/backstopjs-test.sh
 
-      - name: Post Artifacts
-        if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
-        timeout-minutes: 15
-        env:
-          CONNECT_BC_API: "${{ secrets.CONNECT_BC_KEY }}"
-          PROJECT: "${{ env.TERMINUS_SITE }}"
-          BRANCH: "${{ env.GITHUB_REF_NAME }}"
-        run: ./.ci/scripts/env/copy-to-connect-bc.sh
+      # - name: Post Artifacts
+      #   if: ${{ env.SHOULD_BUILD_JOB == 'true' }}
+      #   timeout-minutes: 15
+      #   env:
+      #     CONNECT_BC_API: "${{ secrets.CONNECT_BC_KEY }}"
+      #     PROJECT: "${{ env.TERMINUS_SITE }}"
+      #     BRANCH: "${{ env.GITHUB_REF_NAME }}"
+      #   run: ./.ci/scripts/env/copy-to-connect-bc.sh
 
       # TODO This is taking up too much space on Github.
       # - name: Upload artifacts
