@@ -1,4 +1,5 @@
-
+@import "../01-generic/mixins.css";
+@import "../01-generic/variables.css";
 /* 33-34-33 */
 
 .layout.layout--threecol-33-34-33 {

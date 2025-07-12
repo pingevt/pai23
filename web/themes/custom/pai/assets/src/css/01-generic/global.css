@@ -1,3 +1,5 @@
+@import "../01-generic/mixins.css";
+
 *,
 *:before,
 *:after {

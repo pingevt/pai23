@@ -1,3 +1,6 @@
+@import "../01-generic/mixins.css";
+@import "../01-generic/variables.css";
+
 .node.node--type-project {
   &.node--view-mode-full {
 

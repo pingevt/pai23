@@ -1,13 +1,13 @@
-// Global
+/* // Global */
 @import "01-generic/reset.css";
+@import "01-generic/mixins.css";
 @import "01-generic/variables.css";
 @import "01-generic/spacing.css";
-@import "01-generic/mixins.css";
 @import "01-generic/typography.css";
 @import "01-generic/global.css";
 @import "01-generic/themes.css";
 
-// Objects
+/* // Objects */
 @import "02-objects/field.css";
 @import "02-objects/homepage-project-grid.css";
 @import "02-objects/image-gallery.css";
@@ -18,7 +18,7 @@
 @import "02-objects/tables.css";
 @import "02-objects/forms.css";
 
-// Components
+/* // Components */
 @import "03-components/header.css";
 @import "03-components/main.css";
 @import "03-components/layout.css";
@@ -34,10 +34,10 @@
 @import "from_gin/theme/variables.css";
 @import "from_gin/components/dialog.css";
 
-// Overrides
+/* // Overrides */
 @import "05-overrides/drupal-overrides.css";
 
-// Utilities
+/* // Utilities */
 @import "06-utilities/accessibility.css";
 /* @import "06-utilities/colors.css"; */
 /* @import "06-utilities/hover.css"; */

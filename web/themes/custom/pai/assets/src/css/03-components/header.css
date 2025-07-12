@@ -1,3 +1,6 @@
+@import "../01-generic/mixins.css";
+@import "../01-generic/variables.css";
+
 header.c-global-header {
 
   border-bottom: 6px solid var(--c-red);
