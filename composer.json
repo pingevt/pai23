@@ -28,18 +28,18 @@
   "require": {
     "composer/installers": "^1.9",
     "cweagans/composer-patches": "^1.7",
-    "drupal/admin_toolbar": "^3.5",
+    "drupal/admin_toolbar": "^3.6",
     "drupal/better_exposed_filters": "^6.0",
     "drupal/charts": "^5.0",
     "drupal/color_field": "^3.0",
-    "drupal/config_devel": "^1.9",
+    "drupal/config_devel": "^1.10",
     "drupal/config_direct_save": "^3.0",
     "drupal/config_filter": "^2.4",
     "drupal/config_inspector": "^2.1",
     "drupal/config_split": "^2.0",
-    "drupal/core-composer-scaffold": "10.4.5",
-    "drupal/core-project-message": "10.4.5",
-    "drupal/core-recommended": "10.4.5",
+    "drupal/core-composer-scaffold": "10.4.6",
+    "drupal/core-project-message": "10.4.6",
+    "drupal/core-recommended": "10.4.6",
     "drupal/crop": "^2.4",
     "drupal/datalayer": "^2.1",
     "drupal/devel": "^5.2",
@@ -59,9 +59,9 @@
     "drupal/file_rename": "^1.0",
     "drupal/file_replace": "^1.4@RC",
     "drupal/focal_point": "^2.1",
-    "drupal/gin": "^3.0",
+    "drupal/gin": "^3.1",
     "drupal/gin_login": "^2.1",
-    "drupal/gin_toolbar": "^1.0@RC",
+    "drupal/gin_toolbar": "^1.1",
     "drupal/google_tag": "^2.0",
     "drupal/highlightjs_input_filter": "^1.1",
     "drupal/imagick": "^1.12",
@@ -91,10 +91,6 @@
     "drupal/redis": "^1.7",
     "drupal/save_edit": "^1.8",
     "drupal/schema_metatag": "^3.0",
-    "drupal/search_api": "^1.31",
-    "drupal/search_api_autocomplete": "^1.8",
-    "drupal/search_api_pantheon": "^8.1",
-    "drupal/search_api_solr": "^4.3",
     "drupal/selective_better_exposed_filters": "^3.0",
     "drupal/simple_block": "^1.7",
     "drupal/simple_sitemap": "^4.2",
@@ -116,8 +112,18 @@
     "pingevt/vis_reg_result": "1.0.0-rc1"
   },
   "require-dev": {
+    "drupal/coder": "^8.3",
     "drupal/core-dev": "^10",
-    "kint-php/kint": "^4.0"
+    "drupal/security_review": "^3.1",
+    "kint-php/kint": "^4.0",
+    "mglaman/phpstan-drupal": "^1.3",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^1.12",
+    "phpstan/phpstan-deprecation-rules": "^1.2",
+    "phpunit/php-code-coverage": "^9.2",
+    "phpunit/phpunit": "^9.6",
+    "squizlabs/php_codesniffer": "^3.12",
+    "weitzman/drupal-test-traits": "^2.5"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -243,7 +249,8 @@
       "phpstan/extension-installer": true,
       "oomphinc/composer-installers-extender": true,
       "drupal/core-project-message": true,
-      "joachim-n/composer-manifest": true
+      "joachim-n/composer-manifest": true,
+      "pantheon-systems/upstream-management": true
     }
   }
 }

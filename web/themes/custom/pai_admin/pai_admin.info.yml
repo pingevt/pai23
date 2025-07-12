@@ -31,6 +31,6 @@ ckeditor5-stylesheets:
   - assets/dist/css/editor5.css
 
 version: '1.0.0'
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 
 dependencies:
