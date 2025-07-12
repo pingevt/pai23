@@ -120,6 +120,8 @@ web/modules/custom/*/assets/dist/images
 # Ignore .env files as they are personal
 #/.env
 
+/web/modules/contrib/**/.git
+
 # BC Cadet
 .cadet
 /node_modules
