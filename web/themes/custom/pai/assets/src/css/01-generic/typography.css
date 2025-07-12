@@ -1,3 +1,5 @@
+@import "../01-generic/mixins.css";
+
 .f-title--h1 { @include f-title--h1; }
 .f-title--h2 { @include f-title--h2; }
 .f-title--h3 { @include f-title--h3; }

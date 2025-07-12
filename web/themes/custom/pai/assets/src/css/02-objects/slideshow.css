@@ -1,3 +1,6 @@
+@import "../01-generic/mixins.css";
+@import "../01-generic/spacing.css";
+
 .c-inline-gallery {
   margin: $space-l 0 0;
   position: relative;

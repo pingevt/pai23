@@ -27,28 +27,28 @@ node ./.ci/scripts/env/init-env-vars.js
 
 
 # TZ: "/usr/share/zoneinfo/America/New_York"
-TZ=$(cat .projectconfig.json | jq -r '.TZ')
+TZ=$(cat .projectconfig.cjson | jq -r '.TZ')
 if [ "$TZ" == "null" ]
 then
   TZ="/usr/share/zoneinfo/America/New_York"
 fi
 
 # TEMP_DIR: "../"
-TEMP_DIR=$(cat .projectconfig.json | jq -r '.TEMP_DIR')
+TEMP_DIR=$(cat .projectconfig.cjson | jq -r '.TEMP_DIR')
 if [ "$TEMP_DIR" == "null" ]
 then
   TEMP_DIR="../"
 fi
 
 # CMS_PLATFORM: D9
-CMS_PLATFORM=$(cat .projectconfig.json | jq -r '.CMS_PLATFORM')
+CMS_PLATFORM=$(cat .projectconfig.cjson | jq -r '.CMS_PLATFORM')
 if [ "$CMS_PLATFORM" == "null" ]
 then
   CMS_PLATFORM="D9"
 fi
 
 # DEFAULT_SITE: ""
-DEFAULT_SITE=$(cat .projectconfig.json | jq -r '.DEFAULT_SITE')
+DEFAULT_SITE=$(cat .projectconfig.cjson | jq -r '.DEFAULT_SITE')
 if [ "$DEFAULT_SITE" == "null" ]
 then
   DEFAULT_SITE=""
@@ -169,7 +169,7 @@ fi
 
 # BackstopJS Vars
 # Reference Defaults to LIVE.
-BACKSTOP_REF_ENV=$(cat .projectconfig.json | jq -r '.backstopjsReferenceEnv')
+BACKSTOP_REF_ENV=$(cat .projectconfig.cjson | jq -r '.backstopjsReferenceEnv')
 if [ "$BACKSTOP_REF_ENV" == "null" ]
 then
   BACKSTOP_REF_ENV="live"

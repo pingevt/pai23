@@ -1,5 +1,5 @@
 
-const CONFIG = require('../../.projectconfig.js');
+const CONFIG = require('../../.projectconfig.cjs');
 const TEST_URLS_DATA = CONFIG.testingPaths;
 
 const args = require('minimist')(process.argv.slice(2));
