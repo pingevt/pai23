@@ -8,6 +8,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\File\Exception\FileException;
+use Drupal\Core\File\FileExists;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
@@ -277,7 +278,8 @@ class ImgFromMageSpace extends QueueWorkerBase implements ContainerFactoryPlugin
 
       if ($response->getStatusCode() === 200) {
         $local_thumbnail_uri = $directory . DIRECTORY_SEPARATOR . $path_info['basename'];
-        $this->fileSystem->saveData((string) $response->getBody(), $local_thumbnail_uri, FileSystemInterface::EXISTS_REPLACE);
+
+        $this->fileSystem->saveData((string) $response->getBody(), $local_thumbnail_uri, FileExists::Replace);
 
         $file = File::create([
           'filename' => basename($local_thumbnail_uri),

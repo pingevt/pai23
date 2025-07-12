@@ -6,7 +6,7 @@ set -eo pipefail
 
 # printenv
 
-node ./.ci/scripts/env/init-env-vars.js
+node ./.ci/scripts/env/init-env-vars.cjs
 
 #
 # Before calling this script, set the following environent variables:
