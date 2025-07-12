@@ -57,7 +57,7 @@ packages:
     drupal/devel: 5.4.0
     drupal/devel_kint_extras: 1.1.4
     drupal/devel_php: 1.7.0
-    drupal/diff: 1.8.0
+    drupal/diff: 1.9.0
     drupal/dropzonejs: 2.11.0
     drupal/editor_advanced_link: 2.2.6
     drupal/editor_note: 1.0.0
@@ -68,8 +68,8 @@ packages:
     drupal/entity_usage: 2.0.0-beta15
     drupal/exif_orientation: 1.5.0
     drupal/field_group: 3.6.0
-    drupal/file_rename: 1.0.2
-    drupal/file_replace: 1.4.0-rc1
+    drupal/file_rename: 1.0.3
+    drupal/file_replace: 1.5.0
     drupal/focal_point: 2.1.2
     drupal/gin: 3.1.0
     drupal/gin_login: 2.1.3
@@ -79,7 +79,7 @@ packages:
     drupal/imagick: 1.12.0
     drupal/jquery_ui: 1.7.0
     drupal/jquery_ui_datepicker: 2.1.1
-    drupal/jquery_ui_draggable: 'dev-2.x:323520ac52a53f29c8f7ef9563278d772ff2b335'
+    drupal/jquery_ui_draggable: 2.1.0
     drupal/jquery_ui_slider: 2.1.0
     drupal/jquery_ui_touch_punch: 1.1.1
     drupal/json_field: 1.4.0
@@ -90,12 +90,12 @@ packages:
     drupal/media_bulk_upload: 3.0.2
     drupal/menu_breadcrumb: 2.0.0-alpha0
     drupal/menu_item_extras: 3.0.2
-    drupal/metatag: 2.1.0
-    drupal/multivalue_form_element: 1.0.0-beta6
-    drupal/node_revision_delete: 2.0.0-rc1
+    drupal/metatag: 2.1.1
+    drupal/multivalue_form_element: 1.0.0-beta7
+    drupal/node_revision_delete: 2.0.0
     drupal/nouislider_js: 15.8.1
     drupal/other_view_filter: 1.3.0
-    drupal/pantheon_advanced_page_cache: 2.3.1
+    drupal/pantheon_advanced_page_cache: 2.3.3
     drupal/paragraphs: 1.18.0
     drupal/pathauto: 1.13.0
     drupal/queue_ui: 3.1.3
