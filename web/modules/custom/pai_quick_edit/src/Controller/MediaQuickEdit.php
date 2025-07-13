@@ -6,18 +6,14 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityFieldManager;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormBuilder;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class MediaQuickEdit. Simple controller to quickly edit Media entities.
  */
-class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
-
-  use ContainerAwareTrait;
+class MediaQuickEdit extends ControllerBase {
 
   /**
    * The entity type manager.
@@ -57,7 +53,7 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
   /**
    * Constructor.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager, EntityFieldManager $entity_field_manager, FormBuilder $form_builder) {
+  public function __construct(ContainerInterface $container, EntityTypeManagerInterface $entity_type_manager, EntityFieldManager $entity_field_manager, FormBuilder $form_builder) {
     $this->entityTypeManager = $entity_type_manager;
     $this->mediaStorage = $this->entityTypeManager->getStorage('media');
     $this->fileStorage = $this->entityTypeManager->getStorage('file');
@@ -69,7 +65,9 @@ class MediaQuickEdit extends ControllerBase implements ContainerAwareInterface {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
+
     return new static(
+      $container,
       $container->get('entity_type.manager'),
       $container->get('entity_field.manager'),
       $container->get('form_builder')

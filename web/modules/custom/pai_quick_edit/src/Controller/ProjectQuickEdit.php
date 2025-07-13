@@ -15,9 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Class MediaQuickEdit. Simple controller to quickly edit Media entities.
  */
-class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface {
-
-  use ContainerAwareTrait;
+class ProjectQuickEdit extends ControllerBase {
 
   /**
    * The entity type manager.
@@ -50,7 +48,7 @@ class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface
   /**
    * Constructor.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager, EntityFieldManager $entity_field_manager, FormBuilder $form_builder) {
+  public function __construct(ContainerInterface $container, EntityTypeManagerInterface $entity_type_manager, EntityFieldManager $entity_field_manager, FormBuilder $form_builder) {
     $this->entityTypeManager = $entity_type_manager;
     $this->nodeStorage = $this->entityTypeManager->getStorage('node');
     // $this->fileStorage = $this->entityTypeManager->getStorage('file');
@@ -63,6 +61,7 @@ class ProjectQuickEdit extends ControllerBase implements ContainerAwareInterface
    */
   public static function create(ContainerInterface $container) {
     return new static(
+      $container,
       $container->get('entity_type.manager'),
       $container->get('entity_field.manager'),
       $container->get('form_builder')
