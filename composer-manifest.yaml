@@ -46,11 +46,11 @@ packages:
     drupal/config_filter: 2.4.0
     drupal/config_inspector: 2.1.9
     drupal/config_split: 2.0.2
-    drupal/core: 10.4.6
-    drupal/core-composer-scaffold: 10.4.6
+    drupal/core: 10.4.8
+    drupal/core-composer-scaffold: 10.4.8
     drupal/core-dev: 10.0.9
-    drupal/core-project-message: 10.4.6
-    drupal/core-recommended: 10.4.6
+    drupal/core-project-message: 10.4.8
+    drupal/core-recommended: 10.4.8
     drupal/crop: 2.4.0
     drupal/ctools: 4.1.0
     drupal/datalayer: 2.1.0
