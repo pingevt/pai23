@@ -192,6 +192,9 @@
         "CKEditor5 modal thingy https://www.drupal.org/project/drupal/issues/3328425": "https://www.drupal.org/files/issues/2024-06-21/3328425-27.patch",
         "AJAX with exposed filters https://www.drupal.org/project/drupal/issues/3121172": "https://www.drupal.org/files/issues/2024-04-26/core-3121172-29.patch",
         "Remove trailing slashes from void elements https://www.drupal.org/project/drupal/issues/1388926": "./patches/trailing_slashes.patch"
+      },
+      "drupal/other_view_filter": {
+        "Fixes for D11 compatabilityhttps://www.drupal.org/project/other_view_filter/issues/3433752": "./patches/d11-other_view_filter.diff"
       }
     }
   },

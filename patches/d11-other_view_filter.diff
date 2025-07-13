@@ -1,0 +1,13 @@
+diff --git a/other_view_filter.info.yml b/other_view_filter.info.yml
+index 21a530f3ef4cf21c82461da09ebd8e7f6ec9b155..c39b8f3823c3266c411ec9578feb232ed97cd852 100644
+--- a/other_view_filter.info.yml
++++ b/other_view_filter.info.yml
+@@ -2,7 +2,7 @@ name: 'Other View filter'
+ description: 'Adds a filter to views that uses the results of another view.'
+ type: module
+ package: Views
+-core_version_requirement: ^8 || ^9 || ^10
++core_version_requirement: ^8 || ^9 || ^10 || ^11
+ 
+ dependencies:
+   - drupal:views
