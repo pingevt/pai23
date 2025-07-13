@@ -79,7 +79,7 @@ packages:
     drupal/imagick: 1.12.0
     drupal/jquery_ui: 1.7.0
     drupal/jquery_ui_datepicker: 2.1.1
-    drupal/jquery_ui_draggable: 2.0.0
+    drupal/jquery_ui_draggable: 'dev-2.x:323520ac52a53f29c8f7ef9563278d772ff2b335'
     drupal/jquery_ui_slider: 2.1.0
     drupal/jquery_ui_touch_punch: 1.1.1
     drupal/json_field: 1.4.0

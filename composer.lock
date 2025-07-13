@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f25f431753ee7781825dfa62aca142a3",
+    "content-hash": "c885fe4ec748355d0eb97493395313ac",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4545,17 +4545,11 @@
         },
         {
             "name": "drupal/jquery_ui_draggable",
-            "version": "2.0.0",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_ui_draggable.git",
-                "reference": "2.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_ui_draggable-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "13a8f4bf037449cd176ddb967fc9cba9a466a705"
+                "reference": "323520ac52a53f29c8f7ef9563278d772ff2b335"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10",
@@ -4563,12 +4557,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1670871516",
+                    "version": "2.x-dev",
+                    "datestamp": "1670617978",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -16420,6 +16417,7 @@
     "stability-flags": {
         "drupal/entity_clone": 10,
         "drupal/entity_usage": 10,
+        "drupal/jquery_ui_draggable": 20,
         "drupal/multivalue_form_element": 10,
         "drupal/ultimate_cron": 10,
         "enyo/dropzone": 10,
