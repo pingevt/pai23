@@ -18,60 +18,26 @@ required: false
 translatable: false
 default_value:
   -
+    target_uuid: 84f78f42-fbad-4a01-ae5c-15a4f9f44b3a
     display_id: block_1
     options:
       title: 0
       argument: ''
     title: 0
     argument: null
-    target_uuid: 84f78f42-fbad-4a01-ae5c-15a4f9f44b3a
 default_value_callback: ''
 settings:
   handler: 'default:view'
   handler_settings:
     target_bundles: null
-    auto_create: 0
+    auto_create: false
   plugin_types:
     block: block
-    default: 0
-    page: 0
-    feed: 0
-    attachment: 0
-    entity_browser: 0
   preselect_views:
     homepage_grid: homepage_grid
     project_gallery: project_gallery
     work: work
-    articles_needing_editing: 0
-    blc_test_results: 0
-    blc_test_result_summary: 0
-    block_content: 0
-    content: 0
-    content_recent: 0
-    editoria11y_dismissals: 0
-    editoria11y_results: 0
-    files: 0
-    frontpage: 0
-    html_val_test_results: 0
-    html_val_test_result_summary: 0
-    images_wo_alt: 0
-    lighthouse_test_result: 0
-    media: 0
-    media_library: 0
-    paragraphs_library: 0
-    paragraphs_library_browser: 0
-    pchr_test_results: 0
-    redirect: 0
-    redirect_404: 0
-    tag_checker_test_results: 0
-    tag_checker_test_result_summary: 0
-    taxonomy_term: 0
-    tests: 0
-    test_results: 0
-    timing_log: 0
-    user_admin_people: 0
-    watchdog: 0
-    who_s_new: 0
-    who_s_online: 0
-    wpt_test_results: 0
+  enabled_settings:
+    argument: argument
+    title: title
 field_type: viewsreference
