@@ -115,7 +115,7 @@ packages:
     drupal/views_ajax_history: 1.8.0
     drupal/views_bulk_operations: 4.3.4
     drupal/viewsreference: 2.0.0-beta10
-    drush/drush: 12.5.3
+    drush/drush: 13.6.2
     egulias/email-validator: 4.0.4
     enyo/dropzone: 6.0.0-beta.2
     ezyang/htmlpurifier: v4.18.0
@@ -128,6 +128,7 @@ packages:
     joachim-n/composer-manifest: 1.1.5
     justinrainbow/json-schema: 5.2.12
     kint-php/kint: 4.2.3
+    laravel/prompts: v0.3.6
     league/color-extractor: 0.4.0
     league/container: 4.2.3
     masterminds/html5: 2.9.0

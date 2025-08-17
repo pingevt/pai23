@@ -102,7 +102,7 @@
     "drupal/views_ajax_history": "^1.8",
     "drupal/views_bulk_operations": "^4.2",
     "drupal/viewsreference": "^2.0@beta",
-    "drush/drush": "^12 || ^13",
+    "drush/drush": "^13",
     "enyo/dropzone": "^6.0@beta",
     "joachim-n/composer-manifest": "^1.1",
     "league/color-extractor": "^0.4.0",
