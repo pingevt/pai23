@@ -60,6 +60,7 @@ module:
   help: 0
   highlightjs_input_filter: 0
   image: 0
+  image_api_upload: 0
   imagick: 0
   img_processor: 0
   jquery_ui: 0
