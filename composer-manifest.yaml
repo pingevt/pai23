@@ -167,6 +167,7 @@ packages:
     phpunit/php-timer: 5.0.3
     phpunit/phpunit: 9.6.23
     pingevt/external_site_monitor: '1.x-dev:ec434eb836c65029ed9d4bc33408bb63b71dfc8e'
+    pingevt/image_api_upload: '1.x-dev:2efc144aa04a7c199500dc5dad5b133ed8f6cdb6'
     pingevt/timing_monitor: 1.1.0-alpha1
     pingevt/vis_reg_result: 1.1.0-alpha1
     politsin/jquery-ui-touch-punch: '1.0'

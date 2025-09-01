@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c364db47fd6f645091a2b7576a47f22",
+    "content-hash": "36fb793eb4449cc9b0dad6181c31aa7a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8831,6 +8831,47 @@
             "time": "2025-07-12T18:31:52+00:00"
         },
         {
+            "name": "pingevt/image_api_upload",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pingevt/image_api_upload.git",
+                "reference": "2efc144aa04a7c199500dc5dad5b133ed8f6cdb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pingevt/image_api_upload/zipball/2efc144aa04a7c199500dc5dad5b133ed8f6cdb6",
+                "reference": "2efc144aa04a7c199500dc5dad5b133ed8f6cdb6",
+                "shasum": ""
+            },
+            "require": {
+                "bluecadet/bc_drupal_package_manager": "^1.0",
+                "composer/installers": "^1.9||^2.0",
+                "melbahja/semver": "^1.0.0",
+                "oomphinc/composer-installers-extender": "^2.0",
+                "php": "^8.1 || ^8.2 || ^8.3"
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pete Inge",
+                    "email": "pete.inge@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Drupal Module for uploading images with metadata.",
+            "support": {
+                "issues": "https://github.com/pingevt/image_api_upload/issues",
+                "source": "https://github.com/pingevt/image_api_upload/tree/1.x"
+            },
+            "time": "2025-09-01T20:17:03+00:00"
+        },
+        {
             "name": "pingevt/timing_monitor",
             "version": "1.1.0-alpha1",
             "source": {
@@ -16478,7 +16519,8 @@
         "drupal/viewsreference": 10,
         "enyo/dropzone": 10,
         "pantheon-upstreams/upstream-configuration": 20,
-        "pingevt/external_site_monitor": 20
+        "pingevt/external_site_monitor": 20,
+        "pingevt/image_api_upload": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
