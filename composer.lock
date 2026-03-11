@@ -8790,12 +8790,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pingevt/external_site_monitor.git",
-                "reference": "ec434eb836c65029ed9d4bc33408bb63b71dfc8e"
+                "reference": "92c548c5bb95d879d053ef5bc25c192561caa694"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/ec434eb836c65029ed9d4bc33408bb63b71dfc8e",
-                "reference": "ec434eb836c65029ed9d4bc33408bb63b71dfc8e",
+                "url": "https://api.github.com/repos/pingevt/external_site_monitor/zipball/92c548c5bb95d879d053ef5bc25c192561caa694",
+                "reference": "92c548c5bb95d879d053ef5bc25c192561caa694",
                 "shasum": ""
             },
             "require": {
@@ -8826,9 +8826,9 @@
             "description": "Drupal Module for running tests on external sites.",
             "support": {
                 "issues": "https://github.com/pingevt/external_site_monitor/issues",
-                "source": "https://github.com/pingevt/external_site_monitor/tree/1.x"
+                "source": "https://github.com/pingevt/external_site_monitor/tree/1.0.1-rc2"
             },
-            "time": "2025-07-12T18:31:52+00:00"
+            "time": "2026-03-11T01:25:25+00:00"
         },
         {
             "name": "pingevt/image_api_upload",
