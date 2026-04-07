@@ -11,7 +11,7 @@ use Drupal\Core\Render\Element;
 use Drupal\pai_utility\Entity\TaxonomyTerm;
 
 /**
- * Impliments hook_form_alter()
+ * Implements hook_form_alter()
  */
 function pai_utility_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
@@ -67,7 +67,7 @@ function pai_utility_token_info() {
 }
 
 /**
- * Implements hook_tokens().
+ *   hook_tokens().
  */
 function pai_utility_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
   $replacements = [];
@@ -95,4 +95,14 @@ function pai_utility_tokens($type, $tokens, array $data, array $options, Bubblea
   }
 
   return $replacements;
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function pai_utility_preprocess_page(&$variables) {
+  $request = \Drupal::request();
+  // Gets all request headers
+  $headers = $request->headers->all();
+  \Drupal::logger('pai_utility::request')->info('Request headers: <pre>' . print_r($headers, TRUE) . '</pre>');
 }
